@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Glossary - Project Documentation</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../assets/stylesheets/panzoom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <meta name="panzoom-theme" content="mkdocs">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Project Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EXECUTIVE-SUMMARY/" class="nav-link">Executive Summary</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Quickstart</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../QUICK-START-ARCHITECT/" class="dropdown-item">Architect</a>
+</li>
+                                    
+<li>
+    <a href="../QUICK-START-DEVELOPER/" class="dropdown-item">Developer</a>
+</li>
+                                    
+<li>
+    <a href="../QUICK-START-EXECUTIVE/" class="dropdown-item">Executive</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Current State</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/" class="dropdown-item">System Architecture</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/" class="dropdown-item">Data Architecture</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/1-architecture/1.3-api-integration-catalog/" class="dropdown-item">API Integration Catalog</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/1-architecture/1.4-project-inventory/" class="dropdown-item">Project Inventory</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Business</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/" class="dropdown-item">Business Domain Model</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/2-business/2.2-requirements-specification/" class="dropdown-item">Requirements Specification</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/2-business/2.3-compliance-regulatory/" class="dropdown-item">Compliance & Regulatory</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/2-business/2.4-user-experience-analysis/" class="dropdown-item">User Experience Analysis</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/2-business/2.5-localization-i18n/" class="dropdown-item">Localization & I18n</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Modernization</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Strategy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../MODERNIZATION/2-strategy/2.1-executive-summary/" class="dropdown-item">Executive Summary</a>
+</li>
+            
+<li>
+    <a href="../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/" class="dropdown-item">Stakeholder Matrix</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Generation Summaries</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../generation-summaries/architecture-documentation-summary/" class="dropdown-item">Architecture Documentation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../generation-summaries/business-documentation-summary/" class="dropdown-item">Business Documentation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../generation-summaries/compilation-summary/" class="dropdown-item">Compilation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../generation-summaries/pre-analysis-summary/" class="dropdown-item">Pre-Analysis Summary</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Glossary</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../generation-summaries/pre-analysis-summary/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#agathasstorefront-technical-glossary" class="nav-link">Agathas.Storefront - Technical Glossary</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-of-contents" class="nav-link">📋 Table of Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#general-terms" class="nav-link">General Terms</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#architecture-design-patterns" class="nav-link">Architecture &amp; Design Patterns</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#technologies-frameworks" class="nav-link">Technologies &amp; Frameworks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#database-orm" class="nav-link">Database &amp; ORM</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#security-compliance" class="nav-link">Security &amp; Compliance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#business-domain-e-commerce" class="nav-link">Business Domain - E-Commerce</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#development-operations" class="nav-link">Development &amp; Operations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#acronyms-abbreviations" class="nav-link">Acronyms &amp; Abbreviations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#related-documentation" class="nav-link">Related Documentation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="agathasstorefront-technical-glossary">Agathas.Storefront - Technical Glossary</h1>
+<blockquote>
+<p><strong>Comprehensive glossary of technical terms, acronyms, and domain-specific concepts used across the <code>.solutiondocs</code> documentation</strong></p>
+</blockquote>
+<p><strong>Last Updated</strong>: 2026-06-09<br />
+<strong>Version</strong>: 1.0<br />
+<strong>Related Documents</strong>: All <code>.solutiondocs</code> documentation</p>
+<hr />
+<h2 id="table-of-contents">📋 Table of Contents</h2>
+<ul>
+<li><a href="#general-terms">General Terms</a></li>
+<li><a href="#architecture--design-patterns">Architecture &amp; Design Patterns</a></li>
+<li><a href="#technologies--frameworks">Technologies &amp; Frameworks</a></li>
+<li><a href="#database--orm">Database &amp; ORM</a></li>
+<li><a href="#security--compliance">Security &amp; Compliance</a></li>
+<li><a href="#business-domain---e-commerce">Business Domain - E-Commerce</a></li>
+<li><a href="#development--operations">Development &amp; Operations</a></li>
+<li><a href="#acronyms--abbreviations">Acronyms &amp; Abbreviations</a></li>
+<li><a href="#related-documentation">Related Documentation</a></li>
+</ul>
+<hr />
+<h2 id="general-terms">General Terms</h2>
+<h3 id="12-factor-app">12-Factor App</h3>
+<p>A methodology for building modern, cloud-native applications with twelve principles: codebase, dependencies, config, backing services, build/release/run, processes, port binding, concurrency, disposability, dev/prod parity, logs, and admin processes.</p>
+<p><strong>Agathas.Storefront Status</strong>: Achieves 4/12 factors (codebase, dependencies, build/release, logs partially)<br />
+<strong>Reference</strong>: <a href="analysis/cloud-readiness.json">Cloud Readiness Assessment</a></p>
+<h3 id="c4-model">C4 Model</h3>
+<p>A hierarchical approach to architecture diagramming with 4 levels: <strong>C</strong>ontext (system in environment), <strong>C</strong>ontainer (high-level tech choices), <strong>C</strong>omponent (internal structure), <strong>C</strong>ode (class diagrams/implementation).</p>
+<p><strong>Usage</strong>: All architecture diagrams in this documentation use C4 model conventions<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/">System Architecture</a></p>
+<h3 id="monolithic-architecture">Monolithic Architecture</h3>
+<p>An architectural pattern where all components of an application are built as a single, indivisible unit. Contrast with microservices where components are independently deployable.</p>
+<p><strong>Agathas.Storefront Implementation</strong>: Single deployable web application with all layers bundled<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/#architectural-patterns">System Architecture</a></p>
+<h3 id="technical-debt">Technical Debt</h3>
+<p>The implied cost of rework caused by choosing quick/easy solutions instead of better approaches. Includes outdated technologies, missing tests, poor documentation, and code quality issues.</p>
+<p><strong>Agathas.Storefront Status</strong>: High technical debt due to technology obsolescence, zero test coverage, scalability limitations<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/#technical-debt-analysis">System Architecture - Technical Debt</a></p>
+<hr />
+<h2 id="architecture-design-patterns">Architecture &amp; Design Patterns</h2>
+<h3 id="aggregate-root">Aggregate Root</h3>
+<p>A Domain-Driven Design pattern where one entity serves as the entry point to an aggregate (cluster of related entities). All external access goes through the aggregate root, which enforces invariants.</p>
+<p><strong>Agathas.Storefront Implementation</strong>: 4 aggregate roots: <code>ProductTitle</code>, <code>Basket</code>, <code>Order</code>, <code>Customer</code><br />
+<strong>Code Location</strong>: <code>Agathas.Storefront.Model</code> namespace<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/#aggregate-overview">Business Domain Model</a></p>
+<h3 id="dependency-injection-di">Dependency Injection (DI)</h3>
+<p>A design pattern where dependencies are provided to a class from external sources rather than created internally, enabling loose coupling and testability.</p>
+<p><strong>Agathas.Storefront Implementation</strong>: StructureMap 2.5 IoC container configured in <code>BootStrapper.cs</code><br />
+<strong>Code Location</strong>: <code>Agathas.Storefront.UI.Web.MVC/BootStrapper.cs</code><br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/#architectural-patterns">System Architecture</a></p>
+<h3 id="domain-driven-design-ddd">Domain-Driven Design (DDD)</h3>
+<p>An approach to software development that emphasizes collaboration between technical and domain experts, using a rich domain model that reflects business concepts.</p>
+<p><strong>Agathas.Storefront Maturity</strong>: High - implements entities, value objects, aggregates, domain events, ubiquitous language, and encapsulated business rules<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/">Business Domain Model</a></p>
+<h3 id="factory-pattern">Factory Pattern</h3>
+<p>A creational design pattern that provides an interface for creating objects without specifying exact classes, delegating instantiation logic to factory methods.</p>
+<p><strong>Agathas.Storefront Implementation</strong>: <code>IoCControllerFactory</code> creates MVC controllers via StructureMap<br />
+<strong>Code Location</strong>: <code>Agathas.Storefront.Controllers/IoCControllerFactory.cs</code><br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/#adr-004-structuremap-for-dependency-injection">System Architecture - ADR-004</a></p>
+<h3 id="layered-architecture-n-tier">Layered Architecture (N-Tier)</h3>
+<p>An architectural pattern organizing code into horizontal layers, each with specific responsibilities. Dependencies flow downward; higher layers depend on lower layers but not vice versa.</p>
+<p><strong>Agathas.Storefront Layers</strong>: 5 layers - Presentation (MVC), Services, Domain, Data Access, Infrastructure<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/#level-2-container-diagram">System Architecture - Level 2 Container Diagram</a></p>
+<h3 id="repository-pattern">Repository Pattern</h3>
+<p>A design pattern that abstracts data access behind an interface, providing collection-like access to domain objects without exposing database implementation details.</p>
+<p><strong>Agathas.Storefront Implementation</strong>: Repository interfaces in <code>Agathas.Storefront.Model</code>, implementations in <code>Agathas.Storefront.Repository.NHibernate</code><br />
+<strong>Code Examples</strong>: <code>IProductRepository</code>, <code>IBasketRepository</code>, <code>IOrderRepository</code>, <code>ICustomerRepository</code><br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/#repository-pattern">Data Architecture</a></p>
+<h3 id="state-pattern">State Pattern</h3>
+<p>A behavioral design pattern that allows an object to change its behavior based on internal state, encapsulating state-specific behavior in separate state classes.</p>
+<p><strong>Agathas.Storefront Implementation</strong>: Order lifecycle management with <code>OrderState</code> enum (Pending, Processing, Shipped, Delivered, Cancelled)<br />
+<strong>Code Location</strong>: <code>Agathas.Storefront.Model/Orders/OrderState.cs</code><br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/#order-aggregate">Business Domain Model - Order Aggregate</a></p>
+<h3 id="unit-of-work-pattern">Unit of Work Pattern</h3>
+<p>A pattern that maintains a list of objects affected by a business transaction and coordinates writing changes to the database, ensuring all changes succeed or fail as a single unit.</p>
+<p><strong>Agathas.Storefront Implementation</strong>: <code>NHUnitOfWork</code> class wrapping NHibernate ISession with transaction management<br />
+<strong>Code Location</strong>: <code>Agathas.Storefront.Repository.NHibernate/NHUnitOfWork.cs</code><br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/#unit-of-work-pattern">Data Architecture</a></p>
+<h3 id="value-object">Value Object</h3>
+<p>A Domain-Driven Design concept for objects that have no conceptual identity, defined only by their attributes. Two value objects with identical attributes are considered equal.</p>
+<p><strong>Agathas.Storefront Examples</strong>: <code>Address</code>, <code>Payment</code>, <code>ProductSize</code>, <code>ProductColor</code><br />
+<strong>Code Location</strong>: <code>Agathas.Storefront.Model</code> namespace<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/#value-objects">Business Domain Model</a></p>
+<hr />
+<h2 id="technologies-frameworks">Technologies &amp; Frameworks</h2>
+<h3 id="net-framework">.NET Framework</h3>
+<p>Microsoft's software framework for building Windows applications. Includes Common Language Runtime (CLR), Base Class Library (BCL), and APIs for various application types.</p>
+<p><strong>Agathas.Storefront Version</strong>: 3.5 (2008) and 4.0 (2010)<br />
+<strong>Status</strong>: ⚠️ Out of mainstream support, obsolete<br />
+<strong>Modernization Target</strong>: .NET 6+ or .NET 8 LTS<br />
+<strong>Reference</strong>: <a href="analysis/technology-inventory.json">Technology Inventory</a></p>
+<h3 id="aspnet-mvc">ASP.NET MVC</h3>
+<p>Microsoft's web application framework implementing the Model-View-Controller pattern for building web applications with separation of concerns.</p>
+<p><strong>Agathas.Storefront Version</strong>: ASP.NET MVC 2 (released March 2010)<br />
+<strong>Status</strong>: ⚠️ Obsolete, 15+ years old<br />
+<strong>Key Features Used</strong>: Controllers, Views (ASPX), Model Binding, Routing, Action Filters<br />
+<strong>Modernization Target</strong>: ASP.NET Core MVC 6+ or Razor Pages<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/#technology-stack">System Architecture</a></p>
+<h3 id="automapper">AutoMapper</h3>
+<p>An object-to-object mapping library that eliminates tedious mapping code between DTOs and domain entities using convention-based configuration.</p>
+<p><strong>Agathas.Storefront Version</strong>: AutoMapper 1.1 (circa 2010)<br />
+<strong>Usage</strong>: Mapping domain entities to view models, service requests/responses to domain objects<br />
+<strong>Code Location</strong>: <code>AutoMapperBootStrapper.cs</code> in Controllers and Services projects<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/#level-3-component-diagram">System Architecture - Component Diagram</a></p>
+<h3 id="jquery">jQuery</h3>
+<p>A fast, small JavaScript library simplifying HTML DOM manipulation, event handling, animation, and Ajax for rapid web development.</p>
+<p><strong>Agathas.Storefront Version</strong>: jQuery 1.3.2 (released February 2009)<br />
+<strong>Status</strong>: ⚠️ CRITICAL - Known security vulnerabilities (CVE-2011-4969, CVE-2012-6708, CVE-2015-9251)<br />
+<strong>Usage</strong>: Form validation, AJAX basket updates, UI interactions<br />
+<strong>Modernization Target</strong>: Modern JavaScript framework (React, Vue, or vanilla JS ES6+)<br />
+<strong>Reference</strong>: <a href="analysis/vulnerability-assessment.json">Vulnerability Assessment</a></p>
+<h3 id="log4net">Log4Net</h3>
+<p>A flexible logging framework for .NET applications, part of the Apache Logging Services project, supporting multiple output targets and log levels.</p>
+<p><strong>Agathas.Storefront Version</strong>: Log4Net 1.2<br />
+<strong>Configuration</strong>: File-based logging to <code>C:\logs\</code><br />
+<strong>Status</strong>: ⚠️ Not cloud-compatible (local file system dependency)<br />
+<strong>Code Location</strong>: <code>Agathas.Storefront.Infrastructure/Logging/</code><br />
+<strong>Modernization Target</strong>: Structured logging with cloud-native sink (Application Insights, ELK, CloudWatch)<br />
+<strong>Reference</strong>: <a href="analysis/observability-setup.json">Observability Setup</a></p>
+<h3 id="structuremap">StructureMap</h3>
+<p>An Inversion of Control (IoC) container for .NET providing dependency injection capabilities with convention-based registration and lifecycle management.</p>
+<p><strong>Agathas.Storefront Version</strong>: StructureMap 2.5<br />
+<strong>Status</strong>: ⚠️ Outdated (current version 4.x, but recommend built-in DI)<br />
+<strong>Configuration</strong>: <code>BootStrapper.cs</code> with registry scanning<br />
+<strong>Usage</strong>: Controller factory, service resolution throughout application<br />
+<strong>Modernization Target</strong>: Built-in ASP.NET Core Dependency Injection<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/#adr-004-structuremap-for-dependency-injection">System Architecture - ADR-004</a></p>
+<hr />
+<h2 id="database-orm">Database &amp; ORM</h2>
+<h3 id="nhibernate">NHibernate</h3>
+<p>An open-source Object-Relational Mapping (ORM) framework for .NET, porting Hibernate from Java, providing automatic persistence for .NET objects to relational databases.</p>
+<p><strong>Agathas.Storefront Version</strong>: NHibernate 2.1 (circa 2009)<br />
+<strong>Status</strong>: ⚠️ Outdated (current version 5.x)<br />
+<strong>Mapping Strategy</strong>: XML-based mappings (HBM.XML files)<br />
+<strong>Features Used</strong>: Lazy loading, first-level cache, transactions, criteria queries<br />
+<strong>Code Location</strong>: <code>Agathas.Storefront.Repository.NHibernate</code> project<br />
+<strong>Modernization Target</strong>: Entity Framework Core 6+ with code-first migrations<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/">Data Architecture</a></p>
+<h3 id="sql-server-express-localdb">SQL Server Express LocalDB</h3>
+<p>A lightweight version of SQL Server Express targeted at developers, supporting automatic database file attachment without service installation.</p>
+<p><strong>Agathas.Storefront Version</strong>: SQL Server Express with User Instance mode<br />
+<strong>Database Files</strong>: 
+- <code>App_Data\Shop.mdf</code> - Main application database (15 tables, 9 entities)
+- <code>App_Data\aspnetdb.mdf</code> - ASP.NET Membership database
+<strong>Status</strong>: ⚠️ User Instance mode deprecated, not production-ready<br />
+<strong>Limitations</strong>: Single-server only, cannot scale horizontally, no high availability<br />
+<strong>Modernization Target</strong>: Managed database service (Azure SQL, RDS, Cloud SQL)<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/#database-technology">Data Architecture</a></p>
+<h3 id="lazy-loading">Lazy Loading</h3>
+<p>An ORM pattern where related entities are not loaded from database until explicitly accessed, reducing initial query overhead but risking N+1 query problems.</p>
+<p><strong>Agathas.Storefront Implementation</strong>: Enabled by default in NHibernate configuration<br />
+<strong>Risk</strong>: N+1 query problems evident in product listing and order history (from analysis)<br />
+<strong>Evidence</strong>: No eager loading configured in repository layer<br />
+<strong>Reference</strong>: <a href="analysis/query-performance.json">Query Performance Analysis</a></p>
+<h3 id="hbmxml-mapping">HBM.XML Mapping</h3>
+<p>NHibernate's XML-based mapping format defining how .NET classes map to database tables and columns, alternative to attributes or fluent configuration.</p>
+<p><strong>Agathas.Storefront Usage</strong>: All entity mappings defined in XML files<br />
+<strong>Location</strong>: <code>Agathas.Storefront.Repository.NHibernate/Mapping/*.hbm.xml</code><br />
+<strong>Entities Mapped</strong>: Product, ProductTitle, Basket, BasketItem, Order, OrderItem, Customer, DeliveryAddress<br />
+<strong>Modernization Target</strong>: Entity Framework Core code-first with Fluent API<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/#orm-mappings">Data Architecture - ORM Mappings</a></p>
+<hr />
+<h2 id="security-compliance">Security &amp; Compliance</h2>
+<h3 id="aspnet-membership">ASP.NET Membership</h3>
+<p>Microsoft's legacy authentication and authorization system providing user account management, password storage, and role management for ASP.NET applications.</p>
+<p><strong>Agathas.Storefront Version</strong>: ASP.NET Membership 2.0<br />
+<strong>Database</strong>: <code>aspnetdb.mdf</code> with standard membership schema<br />
+<strong>Status</strong>: ⚠️ Deprecated - Microsoft recommends ASP.NET Core Identity<br />
+<strong>Features Used</strong>: Forms authentication, user registration, login<br />
+<strong>Security Issues</strong>: Outdated password hashing (SHA1), no MFA support<br />
+<strong>Modernization Target</strong>: ASP.NET Core Identity or external identity provider<br />
+<strong>Reference</strong>: <a href="analysis/security-controls.json">Security Controls</a></p>
+<h3 id="cve-common-vulnerabilities-and-exposures">CVE (Common Vulnerabilities and Exposures)</h3>
+<p>A standardized identifier for publicly known cybersecurity vulnerabilities, maintained by MITRE Corporation.</p>
+<p><strong>Agathas.Storefront Critical CVEs</strong>:
+- jQuery 1.3.2: CVE-2011-4969, CVE-2012-6708, CVE-2015-9251 (XSS vulnerabilities)
+- .NET Framework 3.5/4.0: Multiple security patches no longer available<br />
+<strong>Reference</strong>: <a href="analysis/vulnerability-assessment.json">Vulnerability Assessment</a></p>
+<h3 id="gdpr-general-data-protection-regulation">GDPR (General Data Protection Regulation)</h3>
+<p>European Union regulation on data protection and privacy requiring organizations to protect EU citizens' personal data and privacy rights.</p>
+<p><strong>Agathas.Storefront Status</strong>: ❌ Non-compliant<br />
+<strong>Missing Requirements</strong>: Data subject rights (erasure, portability, access), consent management, cookie consent, privacy by design, DPIA, breach notification<br />
+<strong>Risk</strong>: Fines up to 4% of annual revenue or €20M (whichever is greater)<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/2-business/2.3-compliance-regulatory/#gdpr-compliance">Compliance and Regulatory</a></p>
+<h3 id="pci-dss-payment-card-industry-data-security-standard">PCI DSS (Payment Card Industry Data Security Standard)</h3>
+<p>Security standard for organizations handling credit cards, requiring secure handling, storage, and transmission of cardholder data.</p>
+<p><strong>Agathas.Storefront Status</strong>: ✅ Compliant via delegation to PayPal<br />
+<strong>Strategy</strong>: No cardholder data stored or processed locally; all payment processing delegated to PayPal Payment Gateway<br />
+<strong>Scope</strong>: SAQ A (Simplest compliance level - no direct card handling)<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/2-business/2.3-compliance-regulatory/#pci-dss-compliance">Compliance and Regulatory</a></p>
+<h3 id="plaintext-secrets">Plaintext Secrets</h3>
+<p>Security anti-pattern where sensitive credentials (passwords, API keys, connection strings) are stored unencrypted in configuration files or source code.</p>
+<p><strong>Agathas.Storefront Issue</strong>: <code>Web.config</code> contains plaintext connection strings, SMTP credentials, PayPal API credentials<br />
+<strong>Risk</strong>: High - credentials exposed in source control, accessible to anyone with file system access<br />
+<strong>Evidence</strong>: <code>Web.config</code> lines 15-35 (connection strings), lines 87-95 (mailSettings)<br />
+<strong>Remediation</strong>: Environment variables, Key Vault, Secret Manager, encrypted configuration sections<br />
+<strong>Reference</strong>: <a href="analysis/vulnerability-assessment.json">Vulnerability Assessment</a></p>
+<h3 id="wcag-web-content-accessibility-guidelines">WCAG (Web Content Accessibility Guidelines)</h3>
+<p>International standards for making web content accessible to people with disabilities, published by W3C Web Accessibility Initiative.</p>
+<p><strong>Agathas.Storefront Status</strong>: ❌ Unknown/Not tested<br />
+<strong>Target Level</strong>: WCAG 2.1 Level AA<br />
+<strong>Likely Issues</strong>: No ARIA labels, keyboard navigation unknown, color contrast unknown, screen reader compatibility untested<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/2-business/2.3-compliance-regulatory/#wcag-accessibility">Compliance and Regulatory</a></p>
+<hr />
+<h2 id="business-domain-e-commerce">Business Domain - E-Commerce</h2>
+<h3 id="aggregate-ddd">Aggregate (DDD)</h3>
+<p>A cluster of domain objects (entities and value objects) treated as a single unit for data changes, with a root entity controlling access and enforcing invariants.</p>
+<p><strong>Agathas.Storefront Aggregates</strong>:
+1. <strong>Product Aggregate</strong> (Root: ProductTitle) - Product catalog with variants (sizes/colors)
+2. <strong>Basket Aggregate</strong> (Root: Basket) - Shopping cart with items and delivery options
+3. <strong>Order Aggregate</strong> (Root: Order) - Placed order with items, payment, shipping
+4. <strong>Customer Aggregate</strong> (Root: Customer) - Customer account with delivery addresses</p>
+<p><strong>Reference</strong>: <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/#aggregate-overview">Business Domain Model</a></p>
+<h3 id="basket-shopping-cart">Basket (Shopping Cart)</h3>
+<p>E-commerce domain concept representing a customer's temporary collection of products intended for purchase, including quantities and delivery selections.</p>
+<p><strong>Agathas.Storefront Implementation</strong>: <code>Basket</code> aggregate root with <code>BasketItem</code> entities<br />
+<strong>Business Rules</strong>: No duplicate products (increases quantity instead), quantity &gt; 0, delivery option required for checkout<br />
+<strong>Code Location</strong>: <code>Agathas.Storefront.Model/Basket/Basket.cs</code><br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/#basket-aggregate">Business Domain Model - Basket Aggregate</a></p>
+<h3 id="domain-event">Domain Event</h3>
+<p>A pattern for communicating significant occurrences within the domain to other parts of the system, enabling loose coupling between aggregates.</p>
+<p><strong>Agathas.Storefront Implementation</strong>: <code>OrderSubmittedEvent</code> published when order is placed<br />
+<strong>Infrastructure</strong>: Static <code>DomainEvents</code> class with in-process handler registration<br />
+<strong>Current Usage</strong>: Low - only 1 event implemented (opportunity to expand)<br />
+<strong>Code Location</strong>: <code>Agathas.Storefront.Model/Orders/OrderSubmittedEvent.cs</code><br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/#domain-events">Business Domain Model - Domain Events</a></p>
+<h3 id="order-lifecycle">Order Lifecycle</h3>
+<p>The sequence of states an order transitions through from creation to completion or cancellation.</p>
+<p><strong>Agathas.Storefront States</strong>: Pending → Processing → Shipped → Delivered (or Cancelled)<br />
+<strong>Implementation</strong>: State Pattern with <code>OrderState</code> enum<br />
+<strong>State Transitions</strong>: Validated and controlled by business rules in <code>Order</code> class<br />
+<strong>Code Location</strong>: <code>Agathas.Storefront.Model/Orders/Order.cs</code><br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/#order-lifecycle-state-machine">Business Domain Model - Order State Machine</a></p>
+<h3 id="product-variant">Product Variant</h3>
+<p>E-commerce concept where a master product (e.g., "Designer Dress") has multiple purchasable variants differing by attributes like size and color.</p>
+<p><strong>Agathas.Storefront Model</strong>: <code>ProductTitle</code> (master) → multiple <code>Product</code> (variants) with <code>ProductSize</code> and <code>ProductColor</code><br />
+<strong>Pricing</strong>: Defined at ProductTitle level, inherited by all variants<br />
+<strong>Code Location</strong>: <code>Agathas.Storefront.Model/Products/</code><br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/#product-aggregate">Business Domain Model - Product Aggregate</a></p>
+<hr />
+<h2 id="development-operations">Development &amp; Operations</h2>
+<h3 id="cicd-continuous-integration-continuous-deployment">CI/CD (Continuous Integration / Continuous Deployment)</h3>
+<p>DevOps practices automating code integration, testing, and deployment to reduce manual effort and increase release frequency.</p>
+<p><strong>Agathas.Storefront Status</strong>: ❌ Not implemented<br />
+<strong>Current Process</strong>: Manual build in Visual Studio, manual deployment to IIS<br />
+<strong>Impact</strong>: Slow deployment, high risk of human error, no automated testing<br />
+<strong>Modernization Target</strong>: GitHub Actions, Azure DevOps, or similar CI/CD platform<br />
+<strong>Reference</strong>: <a href="analysis/deployment-process.json">Deployment Process</a></p>
+<h3 id="iis-internet-information-services">IIS (Internet Information Services)</h3>
+<p>Microsoft's web server for hosting ASP.NET applications on Windows, providing HTTP request handling, application pooling, and SSL/TLS termination.</p>
+<p><strong>Agathas.Storefront Hosting</strong>: IIS 7.0+ or IIS Express for local development<br />
+<strong>Configuration</strong>: Integrated Pipeline mode, .NET Framework 4.0 app pool<br />
+<strong>Status</strong>: ⚠️ Tied to Windows hosting, not cloud-native<br />
+<strong>Modernization Target</strong>: Cross-platform hosting (Kestrel, containerized deployment)<br />
+<strong>Reference</strong>: <a href="analysis/infrastructure-topology.json">Infrastructure Topology</a></p>
+<h3 id="msbuild">MSBuild</h3>
+<p>Microsoft's build platform for compiling .NET applications, processing project files (.csproj) and orchestrating build tasks.</p>
+<p><strong>Agathas.Storefront Usage</strong>: Visual Studio 2010+ project format, solution-level builds<br />
+<strong>Build Time</strong>: Not measured (no CI/CD pipeline)<br />
+<strong>Modernization Target</strong>: SDK-style project format (.NET 6+), faster builds<br />
+<strong>Reference</strong>: <a href="analysis/build-process.json">Build Process</a></p>
+<h3 id="user-instance-sql-server">User Instance (SQL Server)</h3>
+<p>A SQL Server Express feature allowing automatic database file attachment per user, deprecated in SQL Server 2012 in favor of LocalDB.</p>
+<p><strong>Agathas.Storefront Usage</strong>: Connection string includes <code>AttachDbFilename</code> with <code>User Instance=true</code><br />
+<strong>Status</strong>: ⚠️ Deprecated, not supported in modern SQL Server<br />
+<strong>Issues</strong>: Not production-ready, cannot scale, requires full SQL Server on client<br />
+<strong>Evidence</strong>: <code>Web.config</code> connection string (line 18)<br />
+<strong>Modernization Target</strong>: Managed database service with proper connection pooling<br />
+<strong>Reference</strong>: <a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/#database-technology">Data Architecture - Database Technology</a></p>
+<hr />
+<h2 id="acronyms-abbreviations">Acronyms &amp; Abbreviations</h2>
+<table>
+<thead>
+<tr>
+<th>Acronym</th>
+<th>Full Term</th>
+<th>Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ADR</strong></td>
+<td>Architecture Decision Record</td>
+<td>Documents key architectural decisions with context, rationale, and consequences</td>
+</tr>
+<tr>
+<td><strong>API</strong></td>
+<td>Application Programming Interface</td>
+<td>Programmatic interface for system integration</td>
+</tr>
+<tr>
+<td><strong>ASPX</strong></td>
+<td>Active Server Pages Extended</td>
+<td>ASP.NET view template format (predecessor to Razor)</td>
+</tr>
+<tr>
+<td><strong>BCL</strong></td>
+<td>Base Class Library</td>
+<td>Core .NET Framework library with fundamental types and utilities</td>
+</tr>
+<tr>
+<td><strong>C4</strong></td>
+<td>Context, Container, Component, Code</td>
+<td>Hierarchical architecture diagramming approach</td>
+</tr>
+<tr>
+<td><strong>CLR</strong></td>
+<td>Common Language Runtime</td>
+<td>.NET execution environment providing memory management and type safety</td>
+</tr>
+<tr>
+<td><strong>CSS</strong></td>
+<td>Cascading Style Sheets</td>
+<td>Styling language for HTML presentation</td>
+</tr>
+<tr>
+<td><strong>CVE</strong></td>
+<td>Common Vulnerabilities and Exposures</td>
+<td>Standardized security vulnerability identifiers</td>
+</tr>
+<tr>
+<td><strong>DDD</strong></td>
+<td>Domain-Driven Design</td>
+<td>Software design approach centering on domain model and ubiquitous language</td>
+</tr>
+<tr>
+<td><strong>DI</strong></td>
+<td>Dependency Injection</td>
+<td>Design pattern providing dependencies from external sources</td>
+</tr>
+<tr>
+<td><strong>DTO</strong></td>
+<td>Data Transfer Object</td>
+<td>Object carrying data between application layers or processes</td>
+</tr>
+<tr>
+<td><strong>GDPR</strong></td>
+<td>General Data Protection Regulation</td>
+<td>EU data protection and privacy regulation</td>
+</tr>
+<tr>
+<td><strong>HBM</strong></td>
+<td>Hibernate Mapping</td>
+<td>XML-based ORM mapping format (NHibernate)</td>
+</tr>
+<tr>
+<td><strong>HTML</strong></td>
+<td>HyperText Markup Language</td>
+<td>Standard markup language for web pages</td>
+</tr>
+<tr>
+<td><strong>HTTP</strong></td>
+<td>HyperText Transfer Protocol</td>
+<td>Application protocol for web communication</td>
+</tr>
+<tr>
+<td><strong>HTTPS</strong></td>
+<td>HTTP Secure</td>
+<td>Encrypted version of HTTP using SSL/TLS</td>
+</tr>
+<tr>
+<td><strong>IoC</strong></td>
+<td>Inversion of Control</td>
+<td>Design principle inverting control flow for loose coupling</td>
+</tr>
+<tr>
+<td><strong>JSON</strong></td>
+<td>JavaScript Object Notation</td>
+<td>Lightweight data interchange format</td>
+</tr>
+<tr>
+<td><strong>LOC</strong></td>
+<td>Lines of Code</td>
+<td>Code metric measuring codebase size</td>
+</tr>
+<tr>
+<td><strong>MFA</strong></td>
+<td>Multi-Factor Authentication</td>
+<td>Security mechanism requiring multiple authentication factors</td>
+</tr>
+<tr>
+<td><strong>MVC</strong></td>
+<td>Model-View-Controller</td>
+<td>Architectural pattern separating concerns into three components</td>
+</tr>
+<tr>
+<td><strong>NHibernate</strong></td>
+<td>NHibernate ORM</td>
+<td>.NET Object-Relational Mapping framework (Hibernate port)</td>
+</tr>
+<tr>
+<td><strong>ORM</strong></td>
+<td>Object-Relational Mapping</td>
+<td>Technique mapping between objects and relational database tables</td>
+</tr>
+<tr>
+<td><strong>PCI DSS</strong></td>
+<td>Payment Card Industry Data Security Standard</td>
+<td>Security standard for payment card handling</td>
+</tr>
+<tr>
+<td><strong>REST</strong></td>
+<td>Representational State Transfer</td>
+<td>Architectural style for web APIs</td>
+</tr>
+<tr>
+<td><strong>SMTP</strong></td>
+<td>Simple Mail Transfer Protocol</td>
+<td>Internet standard for email transmission</td>
+</tr>
+<tr>
+<td><strong>SQL</strong></td>
+<td>Structured Query Language</td>
+<td>Language for relational database management</td>
+</tr>
+<tr>
+<td><strong>SSL/TLS</strong></td>
+<td>Secure Sockets Layer / Transport Layer Security</td>
+<td>Cryptographic protocols for secure communication</td>
+</tr>
+<tr>
+<td><strong>UI</strong></td>
+<td>User Interface</td>
+<td>Visual elements users interact with</td>
+</tr>
+<tr>
+<td><strong>UX</strong></td>
+<td>User Experience</td>
+<td>Overall experience of users interacting with system</td>
+</tr>
+<tr>
+<td><strong>WCAG</strong></td>
+<td>Web Content Accessibility Guidelines</td>
+<td>Web accessibility standards for people with disabilities</td>
+</tr>
+<tr>
+<td><strong>XML</strong></td>
+<td>eXtensible Markup Language</td>
+<td>Markup language for structured data representation</td>
+</tr>
+<tr>
+<td><strong>XSS</strong></td>
+<td>Cross-Site Scripting</td>
+<td>Security vulnerability allowing malicious script injection</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="related-documentation">Related Documentation</h2>
+<h3 id="for-architecture-understanding">For Architecture Understanding</h3>
+<ul>
+<li><a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/">System Architecture</a> - Complete C4 model and architectural patterns</li>
+<li><a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/">Data Architecture</a> - Database design and ORM patterns</li>
+<li><a href="../CURRENT-STATE/1-architecture/1.4-project-inventory/">Project Inventory</a> - Project structure and dependencies</li>
+</ul>
+<h3 id="for-business-context">For Business Context</h3>
+<ul>
+<li><a href="../CURRENT-STATE/2-business/2.1-business-domain-model/">Business Domain Model</a> - DDD aggregates and business rules</li>
+<li><a href="../CURRENT-STATE/2-business/2.2-requirements-specification/">Requirements Specification</a> - Functional/non-functional requirements</li>
+<li><a href="../CURRENT-STATE/2-business/2.3-compliance-regulatory/">Compliance and Regulatory</a> - GDPR, PCI DSS, WCAG status</li>
+</ul>
+<h3 id="for-modernization-planning">For Modernization Planning</h3>
+<ul>
+<li><a href="../MODERNIZATION/2-strategy/2.1-executive-summary/">Executive Summary</a> - Modernization vision and approach</li>
+<li><a href="../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/">Stakeholder Matrix</a> - Stakeholder analysis and communication</li>
+</ul>
+<h3 id="for-quick-start">For Quick Start</h3>
+<ul>
+<li><a href="../QUICK-START-EXECUTIVE/">QUICK-START-EXECUTIVE.md</a> - 5-minute overview for executives</li>
+<li><a href="../QUICK-START-ARCHITECT/">QUICK-START-ARCHITECT.md</a> - Technical deep-dive for architects</li>
+<li><a href="../QUICK-START-DEVELOPER/">QUICK-START-DEVELOPER.md</a> - Developer onboarding guide</li>
+</ul>
+<hr />
+<p><strong>Document Version</strong>: 1.0<br />
+<strong>Last Updated</strong>: 2026-06-09<br />
+<strong>Status</strong>: Current<br />
+<strong>Maintained By</strong>: Documentation Compiler Agent</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+        <script src="../assets/javascripts/panzoom.min.js"></script>
+        <script src="../assets/javascripts/zoompan.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

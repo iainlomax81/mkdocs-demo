@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Developer - Project Documentation</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../assets/stylesheets/panzoom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <meta name="panzoom-theme" content="mkdocs">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Project Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../EXECUTIVE-SUMMARY/" class="nav-link">Executive Summary</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Quickstart</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../QUICK-START-ARCHITECT/" class="dropdown-item">Architect</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Developer</a>
+</li>
+                                    
+<li>
+    <a href="../QUICK-START-EXECUTIVE/" class="dropdown-item">Executive</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Current State</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/" class="dropdown-item">System Architecture</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/" class="dropdown-item">Data Architecture</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/1-architecture/1.3-api-integration-catalog/" class="dropdown-item">API Integration Catalog</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/1-architecture/1.4-project-inventory/" class="dropdown-item">Project Inventory</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Business</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/" class="dropdown-item">Business Domain Model</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/2-business/2.2-requirements-specification/" class="dropdown-item">Requirements Specification</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/2-business/2.3-compliance-regulatory/" class="dropdown-item">Compliance & Regulatory</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/2-business/2.4-user-experience-analysis/" class="dropdown-item">User Experience Analysis</a>
+</li>
+            
+<li>
+    <a href="../CURRENT-STATE/2-business/2.5-localization-i18n/" class="dropdown-item">Localization & I18n</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Modernization</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Strategy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../MODERNIZATION/2-strategy/2.1-executive-summary/" class="dropdown-item">Executive Summary</a>
+</li>
+            
+<li>
+    <a href="../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/" class="dropdown-item">Stakeholder Matrix</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Generation Summaries</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../generation-summaries/architecture-documentation-summary/" class="dropdown-item">Architecture Documentation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../generation-summaries/business-documentation-summary/" class="dropdown-item">Business Documentation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../generation-summaries/compilation-summary/" class="dropdown-item">Compilation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../generation-summaries/pre-analysis-summary/" class="dropdown-item">Pre-Analysis Summary</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GLOSSARY/" class="nav-link">Glossary</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../QUICK-START-ARCHITECT/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../QUICK-START-EXECUTIVE/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#developer-quick-start-agathasstorefront-modernization" class="nav-link">Developer Quick Start - Agathas.Storefront Modernization</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-of-contents" class="nav-link">📋 Table of Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#quick-start-overview" class="nav-link">🚀 Quick Start Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#development-environment-setup" class="nav-link">💻 Development Environment Setup</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#codebase-overview" class="nav-link">📂 Codebase Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#local-development-workflow" class="nav-link">🔄 Local Development Workflow</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#understanding-the-architecture" class="nav-link">🏗️ Understanding the Architecture</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#common-development-tasks" class="nav-link">🛠️ Common Development Tasks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#testing-guidelines" class="nav-link">🧪 Testing Guidelines</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#troubleshooting" class="nav-link">🐛 Troubleshooting</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#contributing-guidelines" class="nav-link">🤝 Contributing Guidelines</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#resources-references" class="nav-link">📚 Resources &amp; References</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#next-steps-for-new-developers" class="nav-link">🎯 Next Steps for New Developers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#getting-help" class="nav-link">🆘 Getting Help</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="developer-quick-start-agathasstorefront-modernization">Developer Quick Start - Agathas.Storefront Modernization</h1>
+<blockquote>
+<p><strong>Hands-on guide for developers joining the Agathas.Storefront modernization project - from zero to productive quickly</strong></p>
+</blockquote>
+<p><strong>Target Audience</strong>: Developers, QA Engineers, DevOps Engineers joining the modernization team<br />
+<strong>Prerequisites</strong>: C# development experience, basic cloud concepts, git proficiency<br />
+<strong>Est. Setup Time</strong>: 2-4 hours (depends on download speeds and machine specs)<br />
+<strong>Last Updated</strong>: 2026-06-09</p>
+<hr />
+<h2 id="table-of-contents">📋 Table of Contents</h2>
+<ul>
+<li><a href="#quick-start-overview">Quick Start Overview</a></li>
+<li><a href="#development-environment-setup">Development Environment Setup</a></li>
+<li><a href="#codebase-overview">Codebase Overview</a></li>
+<li><a href="#local-development-workflow">Local Development Workflow</a></li>
+<li><a href="#understanding-the-architecture">Understanding the Architecture</a></li>
+<li><a href="#common-development-tasks">Common Development Tasks</a></li>
+<li><a href="#testing-guidelines">Testing Guidelines</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#contributing-guidelines">Contributing Guidelines</a></li>
+<li><a href="#resources--references">Resources &amp; References</a></li>
+</ul>
+<hr />
+<h2 id="quick-start-overview">🚀 Quick Start Overview</h2>
+<h3 id="what-youll-be-working-on">What You'll Be Working On</h3>
+<p><strong>Agathas.Storefront</strong> is an e-commerce platform currently undergoing modernization from legacy ASP.NET MVC 2 (.NET Framework 3.5/4.0, circa 2010) to modern .NET 6+/ASP.NET Core with cloud-native capabilities.</p>
+<p><strong>Current State</strong>:
+- 7 Visual Studio projects in layered architecture (Presentation, Controllers, Services, Domain, Data Access, Infrastructure)
+- Domain-Driven Design with excellent aggregate boundaries (Product, Basket, Order, Customer)
+- 6,104 lines of code across 192 classes
+- Zero automated tests (this is changing - Phase 1 priority!)
+- Manual deployment to IIS on Windows</p>
+<p><strong>Modernization Phases</strong>:
+1. <strong>Phase 1</strong> (CURRENT): Establish testing foundation, eliminate critical vulnerabilities
+2. <strong>Phase 2</strong>: Cloud migration with containerization, managed database, responsive design
+3. <strong>Phase 3</strong>: Framework modernization (.NET 6+, ASP.NET Core, EF Core)
+4. <strong>Phase 4</strong>: Optimization and feature enhancement</p>
+<p><strong>Your Role</strong>: Help modernize this well-architected application while preserving its excellent domain model</p>
+<p><strong>Key Documents for Developers</strong>:
+1. <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/">System Architecture</a> (45 min) - Understand layered architecture and patterns
+2. <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/">Business Domain Model</a> (30 min) - Understand business logic and aggregates
+3. <a href="../GLOSSARY/">GLOSSARY.md</a> (reference) - Terminology and technology definitions</p>
+<hr />
+<h2 id="development-environment-setup">💻 Development Environment Setup</h2>
+<h3 id="prerequisites-checklist">Prerequisites Checklist</h3>
+<p>Install the following tools before proceeding:</p>
+<h4 id="required-tools">Required Tools</h4>
+<ul>
+<li>[ ] <strong>Visual Studio 2022</strong> (Community, Professional, or Enterprise)</li>
+<li>Download: https://visualstudio.microsoft.com/</li>
+<li>Workloads: ASP.NET and web development, .NET desktop development</li>
+<li>
+<p>Verify: Open Visual Studio → Help → About</p>
+</li>
+<li>
+<p>[ ] <strong>.NET Framework 3.5 Developer Pack</strong> (for current codebase)</p>
+</li>
+<li>Download: https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1</li>
+<li>
+<p>Verify: <code>reg query "HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.5"</code></p>
+</li>
+<li>
+<p>[ ] <strong>.NET Framework 4.0 Developer Pack</strong> (for current codebase)</p>
+</li>
+<li>Download: https://dotnet.microsoft.com/download/dotnet-framework/net40</li>
+<li>
+<p>Verify: <code>reg query "HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full"</code></p>
+</li>
+<li>
+<p>[ ] <strong>.NET 6 SDK</strong> or <strong>.NET 8 SDK</strong> (for modernization target)</p>
+</li>
+<li>Download: https://dotnet.microsoft.com/download</li>
+<li>
+<p>Verify: <code>dotnet --version</code> (should show 6.x or 8.x)</p>
+</li>
+<li>
+<p>[ ] <strong>SQL Server Express 2022</strong> (or LocalDB)</p>
+</li>
+<li>Download: https://www.microsoft.com/en-us/sql-server/sql-server-downloads (Express edition)</li>
+<li>Purpose: Local database for development</li>
+<li>
+<p>Verify: SQL Server Management Studio can connect to <code>localhost\SQLEXPRESS</code></p>
+</li>
+<li>
+<p>[ ] <strong>Git</strong></p>
+</li>
+<li>Download: https://git-scm.com/downloads</li>
+<li>Verify: <code>git --version</code></li>
+</ul>
+<h4 id="recommended-tools">Recommended Tools</h4>
+<ul>
+<li>[ ] <strong>SQL Server Management Studio (SSMS)</strong></li>
+<li>Download: https://aka.ms/ssmsfullsetup</li>
+<li>
+<p>Purpose: Database management and query testing</p>
+</li>
+<li>
+<p>[ ] <strong>Postman</strong> or <strong>Insomnia</strong></p>
+</li>
+<li>Download: https://www.postman.com/ or https://insomnia.rest/</li>
+<li>
+<p>Purpose: API testing (for future API development)</p>
+</li>
+<li>
+<p>[ ] <strong>ReSharper</strong> or <strong>Rider</strong> (optional, but helpful)</p>
+</li>
+<li>Purpose: Code analysis, refactoring, navigation</li>
+</ul>
+<hr />
+<h3 id="repository-setup">Repository Setup</h3>
+<h4 id="1-clone-repository">1. Clone Repository</h4>
+<div class="highlight"><pre><span></span><code><span class="c"># Clone the repository (replace with actual repository URL)</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="no">[organization]</span><span class="p">/</span><span class="n">Agathas</span><span class="p">.</span><span class="n">Storefront</span><span class="p">.</span><span class="n">git</span>
+<span class="nb">cd </span><span class="n">Agathas</span><span class="p">.</span><span class="n">Storefront</span>
+
+<span class="c"># Verify all files present</span>
+<span class="n">git</span> <span class="n">status</span>
+</code></pre></div>
+<h4 id="2-restore-nuget-packages">2. Restore NuGet Packages</h4>
+<div class="highlight"><pre><span></span><code><span class="c"># Option 1: Visual Studio (recommended)</span>
+<span class="c"># Open Agathas.Storefront.sln in Visual Studio</span>
+<span class="c"># Right-click solution → Restore NuGet Packages</span>
+
+<span class="c"># Option 2: Command line</span>
+<span class="n">nuget</span> <span class="n">restore</span> <span class="n">Agathas</span><span class="p">.</span><span class="n">Storefront</span><span class="p">.</span><span class="n">sln</span>
+</code></pre></div>
+<p><strong>Expected Packages</strong> (from analysis):
+- ASP.NET MVC 2.0
+- NHibernate 2.1
+- StructureMap 2.5
+- AutoMapper 1.1
+- Log4Net 1.2
+- jQuery 1.3.2 (in Scripts folder)</p>
+<h4 id="3-database-setup">3. Database Setup</h4>
+<p><strong>Create Local Databases</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Option 1: Use existing MDF files (if provided)</span>
+<span class="c1">-- Files should be in Agathas.Storefront.UI.Web.MVC/App_Data/</span>
+<span class="c1">-- Shop.mdf (main database)</span>
+<span class="c1">-- aspnetdb.mdf (membership database)</span>
+<span class="c1">-- User Instance mode will attach these automatically on first run</span>
+
+<span class="c1">-- Option 2: Create databases manually (if MDF files not provided)</span>
+<span class="c1">-- Open SQL Server Management Studio</span>
+<span class="c1">-- Connect to localhost\SQLEXPRESS</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">Shop</span><span class="p">;</span>
+<span class="k">GO</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">aspnetdb</span><span class="p">;</span>
+<span class="k">GO</span>
+
+<span class="c1">-- Then run schema creation scripts (if provided in /Database folder)</span>
+</code></pre></div>
+<p><strong>Connection String Configuration</strong>:</p>
+<p>Check <code>Agathas.Storefront.UI.Web.MVC/Web.config</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;connectionStrings&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- BEFORE: User Instance mode (may not work on modern SQL Server) --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;add</span><span class="w"> </span><span class="na">name=</span><span class="s">"Shop"</span><span class="w"> </span><span class="na">connectionString=</span><span class="s">"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Shop.mdf;User Instance=true;Integrated Security=SSPI"</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- AFTER: Standard connection (if User Instance fails) --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;add</span><span class="w"> </span><span class="na">name=</span><span class="s">"Shop"</span><span class="w"> </span><span class="na">connectionString=</span><span class="s">"Data Source=.\SQLEXPRESS;Initial Catalog=Shop;Integrated Security=SSPI"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/connectionStrings&gt;</span>
+</code></pre></div>
+<p><strong>Note</strong>: SQL Server User Instance is deprecated. If connection fails, switch to standard connection string and create databases manually.</p>
+<h4 id="4-build-solution">4. Build Solution</h4>
+<div class="highlight"><pre><span></span><code><span class="c"># Option 1: Visual Studio</span>
+<span class="c"># Open Agathas.Storefront.sln</span>
+<span class="c"># Build → Build Solution (Ctrl+Shift+B)</span>
+
+<span class="c"># Option 2: MSBuild command line</span>
+<span class="n">msbuild</span> <span class="n">Agathas</span><span class="p">.</span><span class="n">Storefront</span><span class="p">.</span><span class="n">sln</span> <span class="p">/</span><span class="n">p</span><span class="p">:</span><span class="n">Configuration</span><span class="p">=</span><span class="n">Debug</span>
+</code></pre></div>
+<p><strong>Expected Build Output</strong>: All 7 projects build successfully
+- Agathas.Storefront.UI.Web.MVC
+- Agathas.Storefront.Controllers
+- Agathas.Storefront.Services
+- Agathas.Storefront.Model
+- Agathas.Storefront.Repository.NHibernate
+- Agathas.Storefront.Infrastructure</p>
+<p><strong>Build Warnings</strong>: Some warnings expected due to obsolete framework (ignore for now)</p>
+<h4 id="5-run-application">5. Run Application</h4>
+<p><strong>Option 1: IIS Express (Recommended)</strong>:
+<div class="highlight"><pre><span></span><code>1. Open Agathas.Storefront.sln in Visual Studio
+2. Set Agathas.Storefront.UI.Web.MVC as startup project (right-click → Set as Startup Project)
+3. Press F5 (Start Debugging) or Ctrl+F5 (Start Without Debugging)
+4. Browser should open to http://localhost:[port]/
+</code></pre></div></p>
+<p><strong>Option 2: Local IIS</strong>:
+<div class="highlight"><pre><span></span><code>1. Open IIS Manager
+2. Create new application pool (.NET Framework 4.0, Integrated pipeline)
+3. Add website pointing to Agathas.Storefront.UI.Web.MVC folder
+4. Browse site in IIS Manager
+</code></pre></div></p>
+<p><strong>Expected Result</strong>: Home page loads showing product catalog</p>
+<p><strong>Common First-Run Issues</strong>: See <a href="#troubleshooting">Troubleshooting</a> section</p>
+<hr />
+<h2 id="codebase-overview">📂 Codebase Overview</h2>
+<h3 id="project-structure">Project Structure</h3>
+<div class="highlight"><pre><span></span><code>Agathas.Storefront.sln
+├── Agathas.Storefront.UI.Web.MVC           # Presentation Layer
+│   ├── Views/                               # ASPX views (master pages, user controls)
+│   ├── Content/                             # CSS, images
+│   ├── Scripts/                             # jQuery, JavaScript
+│   ├── App_Data/                            # Database files (Shop.mdf, aspnetdb.mdf)
+│   ├── Global.asax                          # Application startup, routing
+│   └── Web.config                           # Configuration (connection strings, settings)
+│
+├── Agathas.Storefront.Controllers          # Controllers Layer
+│   ├── Controllers/                         # MVC controllers (9 controllers)
+│   ├── ViewModels/                          # View models for presentation
+│   ├── JsonDTOs/                            # JSON data transfer objects for AJAX
+│   ├── ActionArguments/                     # Custom action argument handling
+│   ├── AutoMapperBootStrapper.cs            # AutoMapper configuration
+│   └── IoCControllerFactory.cs              # StructureMap controller factory
+│
+├── Agathas.Storefront.Services             # Services Layer
+│   ├── Implementations/                     # Service implementations (4 services)
+│   ├── Interfaces/                          # Service interfaces
+│   ├── ViewModels/                          # Service-layer DTOs
+│   ├── Messaging/                           # Request/Response message objects
+│   ├── DomainEventHandlers/                 # Domain event subscribers
+│   ├── Mapping/                             # AutoMapper profiles
+│   └── AutoMapperBootStrapper.cs            # AutoMapper configuration
+│
+├── Agathas.Storefront.Model                # Domain Model Layer
+│   ├── Basket/                              # Basket aggregate (Basket, BasketItem)
+│   ├── Orders/                              # Order aggregate (Order, OrderItem, Payment)
+│   ├── Products/                            # Product aggregate (Product, ProductTitle, Brand, Category)
+│   ├── Customers/                           # Customer aggregate (Customer, DeliveryAddress)
+│   ├── Shipping/                            # Shipping value objects
+│   ├── Address.cs                           # Address value object
+│   ├── AddressBusinessRules.cs              # Address validation rules
+│   └── (Business Rules classes)             # Domain business rules
+│
+├── Agathas.Storefront.Repository.NHibernate  # Data Access Layer
+│   ├── Repositories/                        # Repository implementations
+│   ├── Mapping/                             # NHibernate HBM.XML mappings
+│   ├── SessionStorage/                      # NHibernate session management
+│   └── NHUnitOfWork.cs                      # Unit of Work implementation
+│
+└── Agathas.Storefront.Infrastructure        # Infrastructure Layer
+    ├── Authentication/                      # Forms Auth + Janrain integration
+    ├── Email/                               # SMTP email service
+    ├── Payments/                            # PayPal payment integration
+    ├── Logging/                             # Log4Net logging
+    ├── Configuration/                       # Configuration management
+    └── Helpers/                             # Utility classes
+</code></pre></div>
+<h3 id="technology-stack">Technology Stack</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Technologies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Presentation</strong></td>
+<td>ASP.NET MVC 2, ASPX views, jQuery 1.3.2, CSS</td>
+</tr>
+<tr>
+<td><strong>Controllers</strong></td>
+<td>ASP.NET MVC 2 controllers, AutoMapper 1.1</td>
+</tr>
+<tr>
+<td><strong>Services</strong></td>
+<td>C# 3.5, AutoMapper 1.1, Domain Events</td>
+</tr>
+<tr>
+<td><strong>Domain</strong></td>
+<td>C# 3.5 pure domain logic (DDD patterns)</td>
+</tr>
+<tr>
+<td><strong>Data Access</strong></td>
+<td>NHibernate 2.1, HBM.XML mappings, SQL Server</td>
+</tr>
+<tr>
+<td><strong>Infrastructure</strong></td>
+<td>Log4Net 1.2, StructureMap 2.5, Forms Authentication</td>
+</tr>
+<tr>
+<td><strong>Database</strong></td>
+<td>SQL Server Express LocalDB</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evidence</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/">System Architecture</a>, <a href="../CURRENT-STATE/1-architecture/1.4-project-inventory/">Project Inventory</a></p>
+<hr />
+<h2 id="local-development-workflow">🔄 Local Development Workflow</h2>
+<h3 id="typical-development-cycle">Typical Development Cycle</h3>
+<ol>
+<li>
+<p><strong>Pull Latest Code</strong>:
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">main</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Create Feature Branch</strong>:
+<div class="highlight"><pre><span></span><code><span class="c"># Branch naming convention: feature/[ticket-id]-brief-description</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">-b</span> <span class="n">feature</span><span class="p">/</span><span class="n">MOD</span><span class="p">-</span><span class="n">123-add-product-search</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Make Code Changes</strong>: Edit files in Visual Studio</p>
+</li>
+<li>
+<p><strong>Build and Test Locally</strong>:
+<div class="highlight"><pre><span></span><code><span class="c"># Build solution</span>
+<span class="n">msbuild</span> <span class="n">Agathas</span><span class="p">.</span><span class="n">Storefront</span><span class="p">.</span><span class="n">sln</span> <span class="p">/</span><span class="n">p</span><span class="p">:</span><span class="n">Configuration</span><span class="p">=</span><span class="n">Debug</span>
+
+<span class="c"># Run application (F5 in Visual Studio)</span>
+<span class="c"># Manual testing in browser</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Commit Changes</strong>:
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">add</span> <span class="p">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="n">-m</span> <span class="s2">"MOD-123: Add product search functionality"</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Push to Remote</strong>:
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">feature</span><span class="p">/</span><span class="n">MOD</span><span class="p">-</span><span class="n">123-add-product-search</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Create Pull Request</strong>: In GitHub/Azure DevOps/GitLab</p>
+</li>
+<li>
+<p><strong>Code Review</strong>: Address feedback, update PR</p>
+</li>
+<li>
+<p><strong>Merge to Main</strong>: After approval and CI/CD checks pass</p>
+</li>
+</ol>
+<hr />
+<h2 id="understanding-the-architecture">🏗️ Understanding the Architecture</h2>
+<h3 id="domain-driven-design-patterns">Domain-Driven Design Patterns</h3>
+<p><strong>Aggregates</strong> (Business Entity Clusters):</p>
+<ol>
+<li><strong>Product Aggregate</strong> (Root: <code>ProductTitle</code>)</li>
+<li>Purpose: Product catalog with variants (size/color)</li>
+<li>Entities: ProductTitle, Product, Brand, Category</li>
+<li>Value Objects: ProductSize, ProductColor</li>
+<li>
+<p>Location: <code>Agathas.Storefront.Model/Products/</code></p>
+</li>
+<li>
+<p><strong>Basket Aggregate</strong> (Root: <code>Basket</code>)</p>
+</li>
+<li>Purpose: Shopping cart management</li>
+<li>Entities: Basket, BasketItem</li>
+<li>Business Rules: No duplicate products (quantity increases), quantity &gt; 0, delivery required</li>
+<li>
+<p>Location: <code>Agathas.Storefront.Model/Basket/</code></p>
+</li>
+<li>
+<p><strong>Order Aggregate</strong> (Root: <code>Order</code>)</p>
+</li>
+<li>Purpose: Placed order with state management</li>
+<li>Entities: Order, OrderItem</li>
+<li>Value Objects: Payment, ShippingService</li>
+<li>State Machine: Pending → Processing → Shipped → Delivered (or Cancelled)</li>
+<li>
+<p>Location: <code>Agathas.Storefront.Model/Orders/</code></p>
+</li>
+<li>
+<p><strong>Customer Aggregate</strong> (Root: <code>Customer</code>)</p>
+</li>
+<li>Purpose: Customer account with addresses</li>
+<li>Entities: Customer, DeliveryAddress</li>
+<li>Location: <code>Agathas.Storefront.Model/Customers/</code></li>
+</ol>
+<p><strong>Reference</strong>: <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/#aggregate-overview">Business Domain Model</a></p>
+<hr />
+<h3 id="request-flow-current-architecture">Request Flow (Current Architecture)</h3>
+<div class="highlight"><pre><span></span><code>HTTP Request
+    ↓
+IIS / ASP.NET Runtime
+    ↓
+Global.asax (Routing)
+    ↓
+IoCControllerFactory (StructureMap DI)
+    ↓
+MVC Controller (e.g., ProductController)
+    ↓
+Service Layer (e.g., ProductService)
+    ↓
+Domain Model (e.g., ProductTitle aggregate)
+    ↓
+Repository Interface (e.g., IProductRepository)
+    ↓
+Repository Implementation (e.g., ProductRepository - NHibernate)
+    ↓
+Database (SQL Server)
+    ↓
+(Response flows back up the stack)
+    ↓
+View (ASPX) with ViewModel
+    ↓
+HTML Response to Browser
+</code></pre></div>
+<p><strong>Key Points</strong>:
+- <strong>Controllers</strong> handle HTTP, map to view models
+- <strong>Services</strong> orchestrate business logic, coordinate aggregates
+- <strong>Domain</strong> enforces business rules, maintains invariants
+- <strong>Repositories</strong> abstract data access
+- <strong>No database logic in domain</strong> (pure business logic)</p>
+<hr />
+<h2 id="common-development-tasks">🛠️ Common Development Tasks</h2>
+<h3 id="task-1-add-a-new-business-rule-to-domain-model">Task 1: Add a New Business Rule to Domain Model</h3>
+<p><strong>Scenario</strong>: Add validation rule "Order total must be &gt; $10"</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>
+<p><strong>Locate Domain Entity</strong>: <code>Agathas.Storefront.Model/Orders/Order.cs</code></p>
+</li>
+<li>
+<p><strong>Add Business Rule</strong>:
+<div class="highlight"><pre><span></span><code><span class="c1">// In Order.cs</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Order</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Existing code...</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="n">TotalAmount</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// New method</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ValidateMinimumOrderAmount</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="n">MinimumOrderAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.00m</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">TotalAmount</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MinimumOrderAmount</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">DomainException</span><span class="p">(</span>
+<span class="w">                </span><span class="s">$"Order total must be at least ${MinimumOrderAmount}. Current total: ${TotalAmount}"</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Call from constructor or setter</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SetTotalAmount</span><span class="p">(</span><span class="kt">decimal</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">TotalAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ValidateMinimumOrderAmount</span><span class="p">();</span><span class="w"> </span><span class="c1">// Enforce invariant</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Update Unit Tests</strong> (FUTURE - tests don't exist yet, but will in Phase 1):
+<div class="highlight"><pre><span></span><code><span class="na">[Test]</span>
+<span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Order_WithTotalLessThan10_ThrowsDomainException</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Arrange</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Order</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Act &amp; Assert</span>
+<span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">Throws</span><span class="o">&lt;</span><span class="n">DomainException</span><span class="o">&gt;</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">order</span><span class="p">.</span><span class="n">SetTotalAmount</span><span class="p">(</span><span class="mf">5.00m</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Build and Test</strong>: Ensure no existing functionality broken</p>
+</li>
+</ol>
+<hr />
+<h3 id="task-2-add-a-new-mvc-endpoint">Task 2: Add a New MVC Endpoint</h3>
+<p><strong>Scenario</strong>: Add endpoint to get order history for a customer</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>
+<p><strong>Create Service Method</strong> in <code>Agathas.Storefront.Services/Implementations/OrderService.cs</code>:
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">OrderService</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IOrderService</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">IOrderRepository</span><span class="w"> </span><span class="n">_orderRepository</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">GetOrderHistoryResponse</span><span class="w"> </span><span class="nf">GetOrderHistory</span><span class="p">(</span><span class="n">GetOrderHistoryRequest</span><span class="w"> </span><span class="n">request</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">customer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_customerRepository</span><span class="p">.</span><span class="n">GetById</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">CustomerId</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">customer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ArgumentException</span><span class="p">(</span><span class="s">"Customer not found"</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_orderRepository</span><span class="p">.</span><span class="n">GetOrdersByCustomer</span><span class="p">(</span><span class="n">customer</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GetOrderHistoryResponse</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Orders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Mapper</span><span class="p">.</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">OrderViewModel</span><span class="o">&gt;</span><span class="p">(</span><span class="n">o</span><span class="p">)).</span><span class="n">ToList</span><span class="p">()</span>
+<span class="w">        </span><span class="p">};</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Add Controller Action</strong> in <code>Agathas.Storefront.Controllers/Controllers/OrderController.cs</code>:
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">OrderController</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">BaseController</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">IOrderService</span><span class="w"> </span><span class="n">_orderService</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">OrderController</span><span class="p">(</span><span class="n">IOrderService</span><span class="w"> </span><span class="n">orderService</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">_orderService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">orderService</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">ActionResult</span><span class="w"> </span><span class="nf">History</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">customerId</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GetOrderHistoryRequest</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">CustomerId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">customerId</span><span class="w"> </span><span class="p">};</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_orderService</span><span class="p">.</span><span class="n">GetOrderHistory</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">viewModel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OrderHistoryPageView</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Orders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">Orders</span>
+<span class="w">        </span><span class="p">};</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">View</span><span class="p">(</span><span class="s">"OrderHistory"</span><span class="p">,</span><span class="w"> </span><span class="n">viewModel</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Create View</strong> <code>Views/Order/OrderHistory.aspx</code>:
+<div class="highlight"><pre><span></span><code>&lt;%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage&lt;OrderHistoryPageView&gt;" %&gt;
+
+&lt;asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server"&gt;
+    Order History
+&lt;/asp:Content&gt;
+
+&lt;asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server"&gt;
+    &lt;h2&gt;Order History&lt;/h2&gt;
+
+    &lt;% foreach (var order in Model.Orders) { %&gt;
+        &lt;div class="order"&gt;
+            &lt;h3&gt;Order #&lt;%= order.Id %&gt;&lt;/h3&gt;
+            &lt;p&gt;Date: &lt;%= order.OrderDate.ToShortDateString() %&gt;&lt;/p&gt;
+            &lt;p&gt;Total: $&lt;%= order.TotalAmount %&gt;&lt;/p&gt;
+            &lt;p&gt;Status: &lt;%= order.OrderState %&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;% } %&gt;
+&lt;/asp:Content&gt;
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Add Routing</strong> (if custom route needed) in <code>Global.asax.cs</code>:
+<div class="highlight"><pre><span></span><code><span class="n">routes</span><span class="p">.</span><span class="n">MapRoute</span><span class="p">(</span>
+<span class="w">    </span><span class="s">"OrderHistory"</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"Order/History/{customerId}"</span><span class="p">,</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">controller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Order"</span><span class="p">,</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"History"</span><span class="w"> </span><span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Test</strong>: Navigate to <code>/Order/History/123</code> in browser</p>
+</li>
+</ol>
+<hr />
+<h3 id="task-3-query-data-with-nhibernate">Task 3: Query Data with NHibernate</h3>
+<p><strong>Scenario</strong>: Get all products in a specific category</p>
+<p><strong>Repository Method</strong>:
+<div class="highlight"><pre><span></span><code><span class="c1">// IProductRepository interface</span>
+<span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IProductRepository</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">IList</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetProductsByCategory</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">categoryId</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// ProductRepository implementation</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ProductRepository</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IProductRepository</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">ISession</span><span class="w"> </span><span class="n">_session</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">IList</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetProductsByCategory</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">categoryId</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">_session</span>
+<span class="w">            </span><span class="p">.</span><span class="n">CreateCriteria</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="w">            </span><span class="p">.</span><span class="n">CreateAlias</span><span class="p">(</span><span class="s">"ProductTitle"</span><span class="p">,</span><span class="w"> </span><span class="s">"pt"</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">CreateAlias</span><span class="p">(</span><span class="s">"pt.Category"</span><span class="p">,</span><span class="w"> </span><span class="s">"cat"</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Restrictions</span><span class="p">.</span><span class="n">Eq</span><span class="p">(</span><span class="s">"cat.Id"</span><span class="p">,</span><span class="w"> </span><span class="n">categoryId</span><span class="p">))</span>
+<span class="w">            </span><span class="p">.</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Note</strong>: Criteria API is NHibernate-specific. In Phase 3 (EF Core migration), this becomes:
+<div class="highlight"><pre><span></span><code><span class="c1">// EF Core equivalent</span>
+<span class="k">return</span><span class="w"> </span><span class="n">_context</span><span class="p">.</span><span class="n">Products</span>
+<span class="w">    </span><span class="p">.</span><span class="n">Include</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">ProductTitle</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">ThenInclude</span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">pt</span><span class="p">.</span><span class="n">Category</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">ProductTitle</span><span class="p">.</span><span class="n">Category</span><span class="p">.</span><span class="n">Id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">categoryId</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">ToList</span><span class="p">();</span>
+</code></pre></div></p>
+<hr />
+<h2 id="testing-guidelines">🧪 Testing Guidelines</h2>
+<h3 id="current-state-phase-0-zero-tests">Current State (Phase 0): Zero Tests</h3>
+<p><strong>Reality</strong>: No test projects in solution currently. This is a CRITICAL GAP being addressed in Phase 1.</p>
+<h3 id="phase-1-goal-60-test-coverage">Phase 1 Goal: 60%+ Test Coverage</h3>
+<p><strong>Test Types to Implement</strong>:</p>
+<ol>
+<li>
+<p><strong>Unit Tests</strong> (Domain Model):
+<div class="highlight"><pre><span></span><code><span class="c1">// Example: Testing Basket business rules</span>
+<span class="na">[TestFixture]</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">BasketTests</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="na">[Test]</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Add_SameProductTwice_IncreasesQuantityOfExistingItem</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Arrange</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">basket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Basket</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Product</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Test Product"</span><span class="w"> </span><span class="p">};</span>
+
+<span class="w">        </span><span class="c1">// Act</span>
+<span class="w">        </span><span class="n">basket</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">product</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">basket</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">product</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Same product again</span>
+
+<span class="w">        </span><span class="c1">// Assert</span>
+<span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="n">That</span><span class="p">(</span><span class="n">basket</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Count</span><span class="p">,</span><span class="w"> </span><span class="n">Is</span><span class="p">.</span><span class="n">EqualTo</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span><span class="w"> </span><span class="c1">// Only 1 item</span>
+<span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="n">That</span><span class="p">(</span><span class="n">basket</span><span class="p">.</span><span class="n">Items</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Quantity</span><span class="p">,</span><span class="w"> </span><span class="n">Is</span><span class="p">.</span><span class="n">EqualTo</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// Quantity = 2</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="na">[Test]</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Add_ProductWithQuantityZero_ThrowsException</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Arrange</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">basket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Basket</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Product</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">};</span>
+
+<span class="w">        </span><span class="c1">// Act &amp; Assert</span>
+<span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="n">Throws</span><span class="o">&lt;</span><span class="n">DomainException</span><span class="o">&gt;</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">basket</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">product</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Integration Tests</strong> (Repository Layer):
+<div class="highlight"><pre><span></span><code><span class="na">[TestFixture]</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ProductRepositoryTests</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">ISession</span><span class="w"> </span><span class="n">_session</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">IProductRepository</span><span class="w"> </span><span class="n">_repository</span><span class="p">;</span>
+
+<span class="w">    </span><span class="na">[SetUp]</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Setup</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Initialize test database, NHibernate session</span>
+<span class="w">        </span><span class="n">_session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TestSessionFactory</span><span class="p">.</span><span class="n">CreateSession</span><span class="p">();</span>
+<span class="w">        </span><span class="n">_repository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProductRepository</span><span class="p">(</span><span class="n">_session</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="na">[Test]</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">GetById_ExistingProduct_ReturnsProduct</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Arrange</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateTestProduct</span><span class="p">();</span>
+<span class="w">        </span><span class="n">_session</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="n">product</span><span class="p">);</span>
+<span class="w">        </span><span class="n">_session</span><span class="p">.</span><span class="n">Flush</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Act</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_repository</span><span class="p">.</span><span class="n">GetById</span><span class="p">(</span><span class="n">product</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Assert</span>
+<span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="n">That</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">Is</span><span class="p">.</span><span class="n">Not</span><span class="p">.</span><span class="n">Null</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="n">That</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">Id</span><span class="p">,</span><span class="w"> </span><span class="n">Is</span><span class="p">.</span><span class="n">EqualTo</span><span class="p">(</span><span class="n">product</span><span class="p">.</span><span class="n">Id</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="na">[TearDown]</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">TearDown</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">_session</span><span class="o">?.</span><span class="n">Dispose</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>E2E Tests</strong> (Critical User Journeys):
+<div class="highlight"><pre><span></span><code><span class="c1">// Using Selenium WebDriver or similar</span>
+<span class="na">[TestFixture]</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CheckoutE2ETests</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">IWebDriver</span><span class="w"> </span><span class="n">_driver</span><span class="p">;</span>
+
+<span class="w">    </span><span class="na">[Test]</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">CompleteCheckout_WithValidData_CreatesOrder</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Arrange</span>
+<span class="w">        </span><span class="n">_driver</span><span class="p">.</span><span class="n">Navigate</span><span class="p">().</span><span class="n">GoToUrl</span><span class="p">(</span><span class="s">"http://localhost/"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">LoginAsTestUser</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Act</span>
+<span class="w">        </span><span class="n">AddProductToBasket</span><span class="p">(</span><span class="s">"Test Product"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">SelectDeliveryOption</span><span class="p">(</span><span class="s">"Standard Delivery"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">ClickCheckout</span><span class="p">();</span>
+<span class="w">        </span><span class="n">EnterPaymentDetails</span><span class="p">();</span>
+<span class="w">        </span><span class="n">SubmitOrder</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Assert</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">confirmationPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_driver</span><span class="p">.</span><span class="n">FindElement</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">Id</span><span class="p">(</span><span class="s">"order-confirmation"</span><span class="p">));</span>
+<span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="n">That</span><span class="p">(</span><span class="n">confirmationPage</span><span class="p">.</span><span class="n">Displayed</span><span class="p">,</span><span class="w"> </span><span class="n">Is</span><span class="p">.</span><span class="n">True</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+</ol>
+<p><strong>Testing Framework</strong>: xUnit or NUnit (to be decided in Phase 1)</p>
+<hr />
+<h2 id="troubleshooting">🐛 Troubleshooting</h2>
+<h3 id="issue-1-sql-server-user-instance-not-supported">Issue 1: SQL Server User Instance Not Supported</h3>
+<p><strong>Symptom</strong>: Error on startup: "User Instance feature is not supported on this version of SQL Server"</p>
+<p><strong>Cause</strong>: SQL Server User Instance mode deprecated in SQL Server 2012+</p>
+<p><strong>Solution</strong>:</p>
+<ol>
+<li>
+<p><strong>Create databases manually</strong> in SQL Server:
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">Shop</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">aspnetdb</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Update connection strings</strong> in <code>Web.config</code>:
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- BEFORE --&gt;</span>
+<span class="nt">&lt;add</span><span class="w"> </span><span class="na">name=</span><span class="s">"Shop"</span><span class="w"> </span><span class="na">connectionString=</span><span class="s">"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Shop.mdf;User Instance=true;Integrated Security=SSPI"</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="cm">&lt;!-- AFTER --&gt;</span>
+<span class="nt">&lt;add</span><span class="w"> </span><span class="na">name=</span><span class="s">"Shop"</span><span class="w"> </span><span class="na">connectionString=</span><span class="s">"Data Source=.\SQLEXPRESS;Initial Catalog=Shop;Integrated Security=SSPI"</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Run database schema scripts</strong> (if provided in <code>/Database</code> folder)</p>
+</li>
+</ol>
+<hr />
+<h3 id="issue-2-nuget-package-restore-fails">Issue 2: NuGet Package Restore Fails</h3>
+<p><strong>Symptom</strong>: Error: "Unable to find version '2.1.0' of package 'NHibernate'"</p>
+<p><strong>Cause</strong>: Old NuGet package versions may not be available on default NuGet.org feed</p>
+<p><strong>Solution</strong>:</p>
+<ol>
+<li><strong>Add fallback package source</strong> in Visual Studio:</li>
+<li>Tools → NuGet Package Manager → Package Manager Settings</li>
+<li>Package Sources → Add new source</li>
+<li>
+<p>Name: "NuGet v2", Source: <code>https://packages.nuget.org/api/v2/</code></p>
+</li>
+<li>
+<p><strong>Manually download packages</strong> (last resort):</p>
+</li>
+<li>Search https://www.nuget.org/packages for specific versions</li>
+<li>Download .nupkg files</li>
+<li>Place in local folder, add as package source</li>
+</ol>
+<hr />
+<h3 id="issue-3-build-warnings-about-obsolete-apis">Issue 3: Build Warnings About Obsolete APIs</h3>
+<p><strong>Symptom</strong>: Warnings like "System.Web.Mvc.Html.LinkExtensions.ActionLink is obsolete"</p>
+<p><strong>Cause</strong>: .NET Framework 3.5/4.0 APIs have obsolete warnings in modern Visual Studio</p>
+<p><strong>Solution</strong>: <strong>Ignore for now</strong> - these warnings are expected in legacy codebase. Will be resolved in Phase 3 (.NET 6+ migration).</p>
+<hr />
+<h3 id="issue-4-jquery-132-script-errors-in-browser-console">Issue 4: jQuery 1.3.2 Script Errors in Browser Console</h3>
+<p><strong>Symptom</strong>: JavaScript errors in browser console related to jQuery</p>
+<p><strong>Cause</strong>: jQuery 1.3.2 is very old and may conflict with modern browser features</p>
+<p><strong>Solution</strong>: 
+- <strong>For now</strong>: Test in Chrome or Firefox (better backward compatibility)
+- <strong>Phase 1 fix</strong>: Update to jQuery 3.6+ (security vulnerability fix)</p>
+<hr />
+<h3 id="issue-5-missing-log-files-directory">Issue 5: Missing Log Files Directory</h3>
+<p><strong>Symptom</strong>: Application crashes with "Access denied" or "Directory not found" for <code>C:\logs\</code></p>
+<p><strong>Cause</strong>: Log4Net configured to write to <code>C:\logs\</code> but directory doesn't exist or insufficient permissions</p>
+<p><strong>Solution</strong>:</p>
+<ol>
+<li>
+<p><strong>Create logs directory</strong>:
+<div class="highlight"><pre><span></span><code><span class="n">mkdir</span> <span class="n">C</span><span class="p">:\</span><span class="n">logs</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Grant permissions</strong> (if needed):
+<div class="highlight"><pre><span></span><code><span class="n">icacls</span> <span class="n">C</span><span class="p">:\</span><span class="n">logs</span> <span class="p">/</span><span class="n">grant</span> <span class="s2">"IIS AppPool\DefaultAppPool:(OI)(CI)F"</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>OR change log path</strong> in <code>Web.config</code> to App_Data:
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;log4net&gt;</span>
+<span class="w">  </span><span class="nt">&lt;appender</span><span class="w"> </span><span class="na">name=</span><span class="s">"FileAppender"</span><span class="w"> </span><span class="na">type=</span><span class="s">"log4net.Appender.FileAppender"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;file</span><span class="w"> </span><span class="na">value=</span><span class="s">"App_Data\application.log"</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- Changed from C:\logs\ --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/appender&gt;</span>
+<span class="nt">&lt;/log4net&gt;</span>
+</code></pre></div></p>
+</li>
+</ol>
+<hr />
+<h2 id="contributing-guidelines">🤝 Contributing Guidelines</h2>
+<h3 id="code-style">Code Style</h3>
+<p><strong>Follow Existing Conventions</strong>:
+- <strong>Naming</strong>: PascalCase for classes/methods, camelCase for parameters/locals
+- <strong>Braces</strong>: Opening brace on same line (<code>if (condition) {</code>)
+- <strong>Indentation</strong>: 4 spaces (no tabs)
+- <strong>Line Length</strong>: Max 120 characters (not strictly enforced)</p>
+<p><strong>Evidence</strong>: <a href="analysis/coding-standards.json">Coding Standards</a></p>
+<h3 id="pull-request-process">Pull Request Process</h3>
+<ol>
+<li><strong>Create Feature Branch</strong> from <code>main</code></li>
+<li><strong>Make Changes</strong> with clear, focused commits</li>
+<li><strong>Self-Review</strong> code before submitting PR</li>
+<li><strong>Create PR</strong> with:</li>
+<li>Title: <code>[Ticket-ID] Brief description</code></li>
+<li>Description: What changed, why, any testing notes</li>
+<li>Link to ticket/issue</li>
+<li><strong>Address Review Comments</strong> promptly</li>
+<li><strong>Squash Commits</strong> (if requested) before merge</li>
+</ol>
+<h3 id="commit-message-format">Commit Message Format</h3>
+<div class="highlight"><pre><span></span><code>[MOD-123] Add product search by category
+
+- Implement IProductRepository.GetProductsByCategory
+- Add ProductController.Search action
+- Create Search.aspx view
+- Update routing for /Product/Search
+
+Closes MOD-123
+</code></pre></div>
+<h3 id="branch-naming">Branch Naming</h3>
+<ul>
+<li><strong>Features</strong>: <code>feature/MOD-123-product-search</code></li>
+<li><strong>Bugfixes</strong>: <code>bugfix/MOD-456-fix-basket-calculation</code></li>
+<li><strong>Hotfixes</strong>: <code>hotfix/MOD-789-security-patch</code></li>
+</ul>
+<hr />
+<h2 id="resources-references">📚 Resources &amp; References</h2>
+<h3 id="documentation">Documentation</h3>
+<ul>
+<li><a href="../">README.md</a> - Documentation suite overview and navigation</li>
+<li><a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/">System Architecture</a> - Complete C4 model, patterns, ADRs</li>
+<li><a href="../CURRENT-STATE/2-business/2.1-business-domain-model/">Business Domain Model</a> - DDD aggregates, business rules</li>
+<li><a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/">Data Architecture</a> - Database schema, ORM mappings</li>
+<li><a href="../GLOSSARY/">GLOSSARY.md</a> - Technical terms and acronyms</li>
+</ul>
+<h3 id="quick-starts">Quick Starts</h3>
+<ul>
+<li><a href="../QUICK-START-EXECUTIVE/">QUICK-START-EXECUTIVE.md</a> - Strategic overview (for context)</li>
+<li><a href="../QUICK-START-ARCHITECT/">QUICK-START-ARCHITECT.md</a> - Architecture deep-dive</li>
+</ul>
+<h3 id="external-references">External References</h3>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/previous-versions/aspnet/dd410597(v=vs.100)">ASP.NET MVC 2 Documentation</a></li>
+<li><a href="https://nhibernate.info/doc/">NHibernate Documentation</a></li>
+<li><a href="https://martinfowler.com/bliki/DomainDrivenDesign.html">Domain-Driven Design</a> - Martin Fowler</li>
+</ul>
+<h3 id="analysis-artifacts">Analysis Artifacts</h3>
+<ul>
+<li><a href="analysis/api-catalog.json">API Catalog</a> - All endpoints documented</li>
+<li><a href="analysis/business-rules.json">Business Rules</a> - 40+ rules cataloged</li>
+<li><a href="analysis/code-metrics.json">Code Metrics</a> - LOC, complexity, class counts</li>
+<li><a href="analysis/dependency-graph.json">Dependency Graph</a> - Project dependencies</li>
+</ul>
+<hr />
+<h2 id="next-steps-for-new-developers">🎯 Next Steps for New Developers</h2>
+<ol>
+<li><strong>✅ Complete Setup</strong>: Ensure local environment working (all prerequisites installed, solution builds, application runs)</li>
+<li><strong>📖 Read Core Documentation</strong>: </li>
+<li><a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/">System Architecture</a> (45 min)</li>
+<li><a href="../CURRENT-STATE/2-business/2.1-business-domain-model/">Business Domain Model</a> (30 min)</li>
+<li><strong>🔍 Explore Codebase</strong>: </li>
+<li>Walk through request flow for a simple operation (e.g., viewing product details)</li>
+<li>Understand how aggregates work (start with Basket - simplest)</li>
+<li><strong>🛠️ Pick First Task</strong>: Ask team lead for beginner-friendly task (e.g., add validation rule, create new view)</li>
+<li><strong>💬 Ask Questions</strong>: Team is here to help - no question is too basic!</li>
+</ol>
+<hr />
+<h2 id="getting-help">🆘 Getting Help</h2>
+<h3 id="documentation-questions">Documentation Questions</h3>
+<ul>
+<li><strong>Terminology unclear?</strong> Check <a href="../GLOSSARY/">GLOSSARY.md</a></li>
+<li><strong>Architecture questions?</strong> See <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/">System Architecture</a></li>
+<li><strong>Business logic questions?</strong> See <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/">Business Domain Model</a></li>
+</ul>
+<h3 id="development-issues">Development Issues</h3>
+<ul>
+<li><strong>Setup problems?</strong> See <a href="#troubleshooting">Troubleshooting</a> section above</li>
+<li><strong>Code questions?</strong> Ask senior developer or tech lead</li>
+<li><strong>Testing questions?</strong> Wait for Phase 1 testing framework (coming soon)</li>
+</ul>
+<h3 id="communication-channels">Communication Channels</h3>
+<ul>
+<li><strong>Team Chat</strong>: [Slack/Teams channel TBD]</li>
+<li><strong>Email</strong>: [team-email@example.com]</li>
+<li><strong>Stand-ups</strong>: [Schedule TBD]</li>
+</ul>
+<hr />
+<p><strong>Document Version</strong>: 1.0<br />
+<strong>Last Updated</strong>: 2026-06-09<br />
+<strong>Target Audience</strong>: Developers, QA Engineers, DevOps Engineers<br />
+<strong>Setup Time</strong>: 2-4 hours<br />
+<strong>Status</strong>: Current</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+        <script src="../assets/javascripts/panzoom.min.js"></script>
+        <script src="../assets/javascripts/zoompan.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

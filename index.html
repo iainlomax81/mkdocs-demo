@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Project Documentation</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="assets/stylesheets/panzoom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <meta name="panzoom-theme" content="mkdocs">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Project Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="EXECUTIVE-SUMMARY/" class="nav-link">Executive Summary</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Quickstart</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="QUICK-START-ARCHITECT/" class="dropdown-item">Architect</a>
+</li>
+                                    
+<li>
+    <a href="QUICK-START-DEVELOPER/" class="dropdown-item">Developer</a>
+</li>
+                                    
+<li>
+    <a href="QUICK-START-EXECUTIVE/" class="dropdown-item">Executive</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Current State</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="CURRENT-STATE/1-architecture/1.1-system-architecture/" class="dropdown-item">System Architecture</a>
+</li>
+            
+<li>
+    <a href="CURRENT-STATE/1-architecture/1.2-data-architecture/" class="dropdown-item">Data Architecture</a>
+</li>
+            
+<li>
+    <a href="CURRENT-STATE/1-architecture/1.3-api-integration-catalog/" class="dropdown-item">API Integration Catalog</a>
+</li>
+            
+<li>
+    <a href="CURRENT-STATE/1-architecture/1.4-project-inventory/" class="dropdown-item">Project Inventory</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Business</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="CURRENT-STATE/2-business/2.1-business-domain-model/" class="dropdown-item">Business Domain Model</a>
+</li>
+            
+<li>
+    <a href="CURRENT-STATE/2-business/2.2-requirements-specification/" class="dropdown-item">Requirements Specification</a>
+</li>
+            
+<li>
+    <a href="CURRENT-STATE/2-business/2.3-compliance-regulatory/" class="dropdown-item">Compliance & Regulatory</a>
+</li>
+            
+<li>
+    <a href="CURRENT-STATE/2-business/2.4-user-experience-analysis/" class="dropdown-item">User Experience Analysis</a>
+</li>
+            
+<li>
+    <a href="CURRENT-STATE/2-business/2.5-localization-i18n/" class="dropdown-item">Localization & I18n</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Modernization</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Strategy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="MODERNIZATION/2-strategy/2.1-executive-summary/" class="dropdown-item">Executive Summary</a>
+</li>
+            
+<li>
+    <a href="MODERNIZATION/2-strategy/2.2-stakeholder-matrix/" class="dropdown-item">Stakeholder Matrix</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Generation Summaries</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="generation-summaries/architecture-documentation-summary/" class="dropdown-item">Architecture Documentation Summary</a>
+</li>
+                                    
+<li>
+    <a href="generation-summaries/business-documentation-summary/" class="dropdown-item">Business Documentation Summary</a>
+</li>
+                                    
+<li>
+    <a href="generation-summaries/compilation-summary/" class="dropdown-item">Compilation Summary</a>
+</li>
+                                    
+<li>
+    <a href="generation-summaries/pre-analysis-summary/" class="dropdown-item">Pre-Analysis Summary</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="GLOSSARY/" class="nav-link">Glossary</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="EXECUTIVE-SUMMARY/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#agathasstorefront-solution-documentation" class="nav-link">Agathas.Storefront - Solution Documentation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#documentation-overview" class="nav-link">Documentation Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#quick-start" class="nav-link">Quick Start</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#document-inventory" class="nav-link">Document Inventory</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#key-findings-summary" class="nav-link">Key Findings Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#documentation-standards" class="nav-link">Documentation Standards</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#related-resources" class="nav-link">Related Resources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#getting-help" class="nav-link">Getting Help</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="agathasstorefront-solution-documentation">Agathas.Storefront - Solution Documentation</h1>
+<blockquote>
+<p><strong>Comprehensive technical and business documentation for Agathas.Storefront e-commerce platform</strong></p>
+</blockquote>
+<hr />
+<h2 id="documentation-overview">Documentation Overview</h2>
+<p>This documentation suite provides a complete analysis of Agathas.Storefront, a classic ASP.NET MVC 2 e-commerce application built circa 2010. The documentation was generated through comprehensive codebase analysis following industry-standard architectural documentation patterns (C4 Model, ADR, Domain-Driven Design).</p>
+<h3 id="purpose">Purpose</h3>
+<ul>
+<li><strong>For New Team Members</strong>: Accelerate onboarding with comprehensive system understanding</li>
+<li><strong>For Business Stakeholders</strong>: Provide visibility into system capabilities, risks, and modernization opportunities</li>
+<li><strong>For Technical Teams</strong>: Document architecture, dependencies, and technical debt for informed decision-making</li>
+<li><strong>For Operations</strong>: Enable effective system maintenance, deployment, and incident response</li>
+<li><strong>For Architects</strong>: Facilitate modernization planning and architectural evolution</li>
+</ul>
+<h3 id="documentation-generation">Documentation Generation</h3>
+<ul>
+<li><strong>Generated</strong>: 2026-06-09</li>
+<li><strong>Generation Method</strong>: Multi-phase automated analysis of codebase structure, configuration files, and architectural patterns</li>
+<li><strong>Coverage</strong>: 7 projects spanning 6,104 lines of code across 192 classes</li>
+<li><strong>Analysis Scope</strong>: 60 analysis artifacts, 9 business documents, 4 architecture documents</li>
+<li><strong>Analysis Tool</strong>: GitHub Copilot in documentation-compiler mode with custom analysis agents</li>
+</ul>
+<h3 id="generation-process">Generation Process</h3>
+<ol>
+<li><strong>Pre-Analysis Phase</strong> (60 JSON artifacts)</li>
+<li>Discovery &amp; inventory analysis (9 files)</li>
+<li>Architecture mapping (6 files)</li>
+<li>Business context analysis (6 files)</li>
+<li>UI/screen analysis (10 files)</li>
+<li>Security &amp; compliance analysis (5 files)</li>
+<li>Testing &amp; quality analysis (6 files)</li>
+<li>Operations &amp; infrastructure analysis (6 files)</li>
+<li>Performance analysis (4 files)</li>
+<li>Developer experience analysis (4 files)</li>
+<li>
+<p>Modernization readiness assessment (4 files)</p>
+</li>
+<li>
+<p><strong>Business Documentation Phase</strong> (7 documents)</p>
+</li>
+<li>Current state business analysis (5 documents)</li>
+<li>
+<p>Modernization strategy (2 documents)</p>
+</li>
+<li>
+<p><strong>Architecture Documentation Phase</strong> (4 documents)</p>
+</li>
+<li>
+<p>Current state architecture (4 documents)</p>
+</li>
+<li>
+<p><strong>Documentation Compilation Phase</strong> (this document)</p>
+</li>
+<li>Generic binding documents for navigation</li>
+<li>Role-based quick start guides</li>
+<li>Technical glossary</li>
+</ol>
+<h3 id="how-to-navigate">How to Navigate</h3>
+<p>Each document in this suite focuses on a specific architectural or business concern. Documents are interconnected with cross-references and follow consistent formatting standards including:</p>
+<ul>
+<li><strong>Mermaid Diagrams</strong>: Visual representations of architecture, workflows, and relationships</li>
+<li><strong>Structured Tables</strong>: Organized data for easy reference and comparison</li>
+<li><strong>Evidence-Based Analysis</strong>: All findings grounded in actual codebase observations with citations</li>
+<li><strong>Actionable Recommendations</strong>: Practical guidance with complexity assessment and supporting evidence</li>
+</ul>
+<h3 id="maintenance-guidelines">Maintenance Guidelines</h3>
+<p>This documentation should be treated as a living artifact:</p>
+<ol>
+<li><strong>Review Quarterly</strong>: Verify accuracy against current system state</li>
+<li><strong>Update on Major Changes</strong>: Reflect architectural decisions, technology upgrades, or process changes</li>
+<li><strong>Version Control</strong>: Maintain documentation in repository alongside code</li>
+<li><strong>Stakeholder Validation</strong>: Bi-annual review with business and technical leadership</li>
+<li><strong>Tool-Assisted Updates</strong>: Re-run analysis tools periodically for metrics refresh</li>
+</ol>
+<hr />
+<h2 id="quick-start">Quick Start</h2>
+<p>Choose your starting point based on your role and information needs:</p>
+<h3 id="for-new-developers-engineers">🎯 For New Developers &amp; Engineers</h3>
+<p><strong>Goal</strong>: Get productive quickly on the modernization project</p>
+<p><strong>Start Here</strong>:
+1. <a href="QUICK-START-DEVELOPER/">QUICK-START-DEVELOPER.md</a> (15 minutes) - Environment setup and development workflow
+2. <a href="CURRENT-STATE/1-architecture/1.1-system-architecture/">CURRENT-STATE/1-architecture/1.1-system-architecture.md</a> (30 minutes) - Understand the layered architecture and DDD patterns
+3. <a href="GLOSSARY/">GLOSSARY.md</a> (reference) - Terminology and technology definitions</p>
+<p><strong>Key Questions Answered</strong>:
+- What is the technology stack and architecture?
+- How do I set up my development environment?
+- What are the coding standards and patterns used?
+- Where do I find specific functionality in the codebase?</p>
+<hr />
+<h3 id="for-executives-business-leaders">💼 For Executives &amp; Business Leaders</h3>
+<p><strong>Goal</strong>: Understand business value, risks, and modernization strategy</p>
+<p><strong>Start Here</strong>:
+1. <a href="QUICK-START-EXECUTIVE/">QUICK-START-EXECUTIVE.md</a> (5 minutes) - Strategic overview and key decision points
+2. <a href="EXECUTIVE-SUMMARY/">EXECUTIVE-SUMMARY.md</a> (15 minutes) - Comprehensive business and technical findings
+3. <a href="MODERNIZATION/2-strategy/2.1-executive-summary/">MODERNIZATION/2-strategy/2.1-executive-summary.md</a> (10 minutes) - Modernization vision and approach</p>
+<p><strong>Key Questions Answered</strong>:
+- What are the critical business risks with the current platform?
+- Why is modernization necessary now?
+- What is the recommended modernization strategy?
+- What business outcomes should we expect?</p>
+<hr />
+<h3 id="for-architects-technical-leads">🏗️ For Architects &amp; Technical Leads</h3>
+<p><strong>Goal</strong>: Deep understanding of architecture, technical debt, and modernization approach</p>
+<p><strong>Start Here</strong>:
+1. <a href="QUICK-START-ARCHITECT/">QUICK-START-ARCHITECT.md</a> (30 minutes) - Architecture overview and modernization patterns
+2. <a href="CURRENT-STATE/1-architecture/1.1-system-architecture/">CURRENT-STATE/1-architecture/1.1-system-architecture.md</a> (45 minutes) - Complete C4 model documentation
+3. <a href="CURRENT-STATE/1-architecture/1.2-data-architecture/">CURRENT-STATE/1-architecture/1.2-data-architecture.md</a> (30 minutes) - Database design and ORM patterns
+4. <a href="MODERNIZATION/2-strategy/2.1-executive-summary/">MODERNIZATION/2-strategy/2.1-executive-summary.md</a> (20 minutes) - Modernization approach and decision rationale</p>
+<p><strong>Key Questions Answered</strong>:
+- What architectural patterns are currently used?
+- What are the critical technical debt areas?
+- What is the target architecture?
+- What are the key architectural decisions and trade-offs?</p>
+<hr />
+<h3 id="for-business-analysts-product-managers">📊 For Business Analysts &amp; Product Managers</h3>
+<p><strong>Goal</strong>: Understand business domain, processes, and requirements</p>
+<p><strong>Start Here</strong>:
+1. <a href="CURRENT-STATE/2-business/2.1-business-domain-model/">CURRENT-STATE/2-business/2.1-business-domain-model.md</a> (30 minutes) - Domain entities, aggregates, and business rules
+2. <a href="CURRENT-STATE/2-business/2.2-requirements-specification/">CURRENT-STATE/2-business/2.2-requirements-specification.md</a> (25 minutes) - Functional and non-functional requirements
+3. <a href="CURRENT-STATE/2-business/2.4-user-experience-analysis/">CURRENT-STATE/2-business/2.4-user-experience-analysis.md</a> (20 minutes) - User journeys and UI patterns
+4. <a href="MODERNIZATION/2-strategy/2.2-stakeholder-matrix/">MODERNIZATION/2-strategy/2.2-stakeholder-matrix.md</a> (15 minutes) - Stakeholder needs and priorities</p>
+<p><strong>Key Questions Answered</strong>:
+- What are the core business capabilities?
+- What business rules govern the system?
+- What are the user journeys and workflows?
+- What functional gaps exist?</p>
+<hr />
+<h3 id="for-security-compliance-teams">🔒 For Security &amp; Compliance Teams</h3>
+<p><strong>Goal</strong>: Understand security posture and compliance gaps</p>
+<p><strong>Start Here</strong>:
+1. <a href="CURRENT-STATE/2-business/2.3-compliance-regulatory/">CURRENT-STATE/2-business/2.3-compliance-regulatory.md</a> (30 minutes) - GDPR, PCI DSS, accessibility compliance status
+2. <a href="analysis/security-controls.json">analysis/security-controls.json</a> (reference) - Current security implementations
+3. <a href="analysis/vulnerability-assessment.json">analysis/vulnerability-assessment.json</a> (reference) - Known vulnerabilities</p>
+<p><strong>Key Questions Answered</strong>:
+- What are the critical security vulnerabilities?
+- Is the system GDPR compliant?
+- How is PCI DSS compliance achieved?
+- What are the compliance gaps?</p>
+<hr />
+<h3 id="for-operations-devops-teams">🔧 For Operations &amp; DevOps Teams</h3>
+<p><strong>Goal</strong>: Understand deployment, monitoring, and operational requirements</p>
+<p><strong>Start Here</strong>:
+1. <a href="analysis/deployment-process.json">analysis/deployment-process.json</a> (reference) - Current deployment approach
+2. <a href="analysis/observability-setup.json">analysis/observability-setup.json</a> (reference) - Monitoring and logging configuration
+3. <a href="analysis/infrastructure-topology.json">analysis/infrastructure-topology.json</a> (reference) - Infrastructure architecture</p>
+<p><strong>Key Questions Answered</strong>:
+- How is the application currently deployed?
+- What monitoring and logging is in place?
+- What are the operational pain points?
+- What disaster recovery capabilities exist?</p>
+<hr />
+<h2 id="document-inventory">Document Inventory</h2>
+<h3 id="generic-documentation-root-folder">Generic Documentation (Root Folder)</h3>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Purpose</th>
+<th>Audience</th>
+<th>Updated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./">README.md</a></td>
+<td>Main documentation index and navigation</td>
+<td>All</td>
+<td>2026-06-09</td>
+</tr>
+<tr>
+<td><a href="EXECUTIVE-SUMMARY/">EXECUTIVE-SUMMARY.md</a></td>
+<td>Consolidated executive overview with strategic recommendations</td>
+<td>Executives, Leadership</td>
+<td>2026-06-09</td>
+</tr>
+<tr>
+<td><a href="GLOSSARY/">GLOSSARY.md</a></td>
+<td>Technical terms, acronyms, and domain concepts</td>
+<td>All (reference)</td>
+<td>2026-06-09</td>
+</tr>
+<tr>
+<td><a href="QUICK-START-EXECUTIVE/">QUICK-START-EXECUTIVE.md</a></td>
+<td>5-minute strategic overview for executives</td>
+<td>Executives</td>
+<td>2026-06-09</td>
+</tr>
+<tr>
+<td><a href="QUICK-START-ARCHITECT/">QUICK-START-ARCHITECT.md</a></td>
+<td>Technical deep-dive for architects</td>
+<td>Architects, Technical Leads</td>
+<td>2026-06-09</td>
+</tr>
+<tr>
+<td><a href="QUICK-START-DEVELOPER/">QUICK-START-DEVELOPER.md</a></td>
+<td>Hands-on developer onboarding guide</td>
+<td>Developers, Engineers</td>
+<td>2026-06-09</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pre-analysis-artifacts-analysis">Pre-Analysis Artifacts (analysis/)</h3>
+<p><strong>60 JSON files</strong> providing detailed analysis across 10 categories:</p>
+<ul>
+<li><strong>Discovery &amp; Inventory</strong> (9 files): project-inventory, technology-inventory, dependency-graph, configuration-inventory, code-metrics, api-catalog, file-storage, caching-architecture, i18n-inventory</li>
+<li><strong>Architecture</strong> (6 files): application-layers, architectural-patterns, integration-points, data-architecture, messaging-patterns, state-management</li>
+<li><strong>Business</strong> (6 files): business-rules, business-processes, automated-processes, domain-events, user-journeys, regulatory-requirements</li>
+<li><strong>UI/UX</strong> (10 files): ui-inventory, form-validation, screen-workflows, data-binding, ui-components, input-controls, layout-patterns, ui-state-management, dialog-patterns, data-grids</li>
+<li><strong>Security</strong> (5 files): security-controls, vulnerability-assessment, compliance-status, data-protection, access-control</li>
+<li><strong>Quality</strong> (6 files): test-coverage, testing-tools, test-automation, test-metrics, quality-gates, accessibility-assessment</li>
+<li><strong>Operations</strong> (6 files): infrastructure-topology, deployment-process, observability-setup, capacity-analysis, dr-backup, incident-response</li>
+<li><strong>Performance</strong> (4 files): performance-profile, query-performance, memory-analysis, cache-effectiveness</li>
+<li><strong>Developer Experience</strong> (4 files): build-process, dev-environment, coding-standards, documentation-inventory</li>
+<li><strong>Modernization Readiness</strong> (4 files): cloud-readiness, containerization-assessment, refactoring-candidates, technology-obsolescence</li>
+</ul>
+<h3 id="current-state-documentation-current-state">Current State Documentation (CURRENT-STATE/)</h3>
+<h4 id="architecture-1-architecture">Architecture (1-architecture/)</h4>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Focus</th>
+<th>Pages</th>
+<th>Updated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="CURRENT-STATE/1-architecture/1.1-system-architecture/">1.1-system-architecture.md</a></td>
+<td>C4 model, patterns, ADRs, technical debt</td>
+<td>~50</td>
+<td>2026-06-09</td>
+</tr>
+<tr>
+<td><a href="CURRENT-STATE/1-architecture/1.2-data-architecture/">1.2-data-architecture.md</a></td>
+<td>Database design, ORM patterns, data flows</td>
+<td>~40</td>
+<td>2026-06-09</td>
+</tr>
+<tr>
+<td><a href="CURRENT-STATE/1-architecture/1.3-api-integration-catalog/">1.3-api-integration-catalog.md</a></td>
+<td>Internal APIs, external integrations</td>
+<td>~30</td>
+<td>2026-06-09</td>
+</tr>
+<tr>
+<td><a href="CURRENT-STATE/1-architecture/1.4-project-inventory/">1.4-project-inventory.md</a></td>
+<td>Project structure, dependencies</td>
+<td>~15</td>
+<td>2026-06-09</td>
+</tr>
+</tbody>
+</table>
+<h4 id="business-2-business">Business (2-business/)</h4>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Focus</th>
+<th>Pages</th>
+<th>Updated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="CURRENT-STATE/2-business/2.1-business-domain-model/">2.1-business-domain-model.md</a></td>
+<td>DDD aggregates, entities, business rules</td>
+<td>~35</td>
+<td>2026-06-09</td>
+</tr>
+<tr>
+<td><a href="CURRENT-STATE/2-business/2.2-requirements-specification/">2.2-requirements-specification.md</a></td>
+<td>Functional/non-functional requirements</td>
+<td>~30</td>
+<td>2026-06-09</td>
+</tr>
+<tr>
+<td><a href="CURRENT-STATE/2-business/2.3-compliance-regulatory/">2.3-compliance-regulatory.md</a></td>
+<td>GDPR, PCI DSS, accessibility compliance</td>
+<td>~40</td>
+<td>2026-06-09</td>
+</tr>
+<tr>
+<td><a href="CURRENT-STATE/2-business/2.4-user-experience-analysis/">2.4-user-experience-analysis.md</a></td>
+<td>User journeys, UI patterns, accessibility</td>
+<td>~25</td>
+<td>2026-06-09</td>
+</tr>
+<tr>
+<td><a href="CURRENT-STATE/2-business/2.5-localization-i18n/">2.5-localization-i18n.md</a></td>
+<td>Internationalization capabilities</td>
+<td>~15</td>
+<td>2026-06-09</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modernization-documentation-modernization">Modernization Documentation (MODERNIZATION/)</h3>
+<h4 id="strategy-2-strategy">Strategy (2-strategy/)</h4>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Focus</th>
+<th>Pages</th>
+<th>Updated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="MODERNIZATION/2-strategy/2.1-executive-summary/">2.1-executive-summary.md</a></td>
+<td>Business case, modernization approach</td>
+<td>~25</td>
+<td>2026-06-09</td>
+</tr>
+<tr>
+<td><a href="MODERNIZATION/2-strategy/2.2-stakeholder-matrix/">2.2-stakeholder-matrix.md</a></td>
+<td>Stakeholder analysis, communication plan</td>
+<td>~20</td>
+<td>2026-06-09</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="key-findings-summary">Key Findings Summary</h2>
+<h3 id="architectural-strengths">Architectural Strengths ✅</h3>
+<ol>
+<li><strong>Excellent Domain-Driven Design</strong>: Rich domain model with aggregates (Product, Basket, Order, Customer), value objects, domain events, and encapsulated business rules</li>
+<li><strong>Clean Layered Architecture</strong>: 5-layer separation with unidirectional dependencies (Presentation → Services → Domain → Data → Infrastructure)</li>
+<li><strong>Strong Patterns</strong>: Repository, Unit of Work, Dependency Injection (StructureMap), State pattern, Factory pattern</li>
+<li><strong>High Testability</strong>: Interface-based design enables testing (though no tests currently exist)</li>
+<li><strong>Good Separation of Concerns</strong>: Cross-cutting concerns isolated in Infrastructure layer</li>
+</ol>
+<h3 id="critical-issues">Critical Issues ❌</h3>
+<ol>
+<li><strong>Technology Obsolescence</strong> (CRITICAL): .NET Framework 3.5/4.0, ASP.NET MVC 2 (2010), jQuery 1.3.2 with CVEs</li>
+<li><strong>GDPR Non-Compliance</strong> (CRITICAL): No data subject rights, consent management, privacy controls</li>
+<li><strong>No Mobile Support</strong> (CRITICAL): Fixed-width desktop design, poor mobile experience</li>
+<li><strong>Cannot Scale Horizontally</strong> (HIGH): In-process session state, LocalDB, file logging</li>
+<li><strong>Zero Automated Testing</strong> (HIGH): No unit, integration, or E2E tests</li>
+<li><strong>Security Vulnerabilities</strong> (HIGH): Plaintext secrets in Web.config, outdated authentication, SQL injection risks</li>
+<li><strong>No Observability</strong> (MEDIUM): File-based logging only, no APM, metrics, or tracing</li>
+<li><strong>No CI/CD</strong> (MEDIUM): Manual deployment, no automation</li>
+</ol>
+<h3 id="business-impact">Business Impact</h3>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Current Impact</th>
+<th>Risk if Not Addressed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Non-responsive design</td>
+<td>Lost mobile sales (70%+ traffic)</td>
+<td>Revenue decline, competitive disadvantage</td>
+</tr>
+<tr>
+<td>GDPR non-compliance</td>
+<td>Legal risk</td>
+<td>Fines up to 4% revenue or €20M</td>
+</tr>
+<tr>
+<td>Technology obsolescence</td>
+<td>Developer recruitment challenges</td>
+<td>Inability to maintain, security breaches</td>
+</tr>
+<tr>
+<td>Scalability limits</td>
+<td>Growth constrained</td>
+<td>Cannot handle traffic spikes, poor resilience</td>
+</tr>
+<tr>
+<td>No automated testing</td>
+<td>Slow development cycles</td>
+<td>High bug risk during modernization</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="documentation-standards">Documentation Standards</h2>
+<h3 id="diagramming-standards">Diagramming Standards</h3>
+<ul>
+<li><strong>C4 Model</strong>: All architecture diagrams follow C4 conventions (Context, Container, Component, Code)</li>
+<li><strong>Mermaid</strong>: All diagrams use Mermaid syntax for version control and reproducibility</li>
+<li><strong>Consistency</strong>: Standardized colors, shapes, and terminology across all diagrams</li>
+</ul>
+<h3 id="evidence-based-analysis">Evidence-Based Analysis</h3>
+<p>All findings in this documentation are grounded in actual codebase evidence:
+- <strong>Code References</strong>: File paths, class names, line numbers cited
+- <strong>Configuration Evidence</strong>: Web.config, packages.config, project files referenced
+- <strong>Metrics</strong>: Derived from static analysis (code-metrics.json)
+- <strong>No Speculation</strong>: All claims supported by concrete evidence</p>
+<h3 id="no-ungrounded-estimates">No Ungrounded Estimates</h3>
+<p>This documentation suite follows strict evidence-based estimation principles:
+- ❌ <strong>Prohibited</strong>: Timelines, costs, effort, or risk probabilities without documented basis
+- ✅ <strong>Acceptable</strong>: Logical sequencing, qualitative assessments (HIGH/MEDIUM/LOW), architectural recommendations
+- ⚠️ <strong>When Unknown</strong>: Explicit explanation of WHY data unavailable, WHAT needed, WHERE to obtain</p>
+<hr />
+<h2 id="related-resources">Related Resources</h2>
+<h3 id="external-documentation">External Documentation</h3>
+<ul>
+<li><strong>ASP.NET MVC 2 Documentation</strong>: <a href="https://docs.microsoft.com/en-us/previous-versions/aspnet/dd410597(v=vs.100)">Microsoft Docs Archive</a></li>
+<li><strong>NHibernate 2.1 Reference</strong>: <a href="https://nhibernate.info/doc/">NHibernate Documentation</a></li>
+<li><strong>Domain-Driven Design</strong>: Eric Evans, "Domain-Driven Design: Tackling Complexity in the Heart of Software"</li>
+<li><strong>C4 Model</strong>: <a href="https://c4model.com">c4model.com</a></li>
+</ul>
+<h3 id="analysis-tools">Analysis Tools</h3>
+<ul>
+<li><strong>GitHub Copilot</strong>: Code analysis and documentation generation</li>
+<li><strong>Visual Studio</strong>: Solution/project structure analysis</li>
+<li><strong>Mermaid</strong>: Diagram generation and visualization</li>
+</ul>
+<hr />
+<h2 id="getting-help">Getting Help</h2>
+<h3 id="documentation-questions">Documentation Questions</h3>
+<ul>
+<li><strong>For clarification</strong>: Review the <a href="GLOSSARY/">GLOSSARY.md</a> for terminology definitions</li>
+<li><strong>For detailed analysis</strong>: Refer to specific analysis JSON files in <code>analysis/</code> folder</li>
+<li><strong>For architecture details</strong>: See comprehensive architecture documents in <code>CURRENT-STATE/1-architecture/</code></li>
+<li><strong>For business context</strong>: See business documents in <code>CURRENT-STATE/2-business/</code></li>
+</ul>
+<h3 id="next-steps">Next Steps</h3>
+<ol>
+<li><strong>Read your role-specific quick start guide</strong> (see Quick Start section above)</li>
+<li><strong>Review the EXECUTIVE-SUMMARY.md</strong> for overall system understanding</li>
+<li><strong>Explore detailed documentation</strong> based on your specific interests</li>
+<li><strong>Reference GLOSSARY.md</strong> when encountering unfamiliar terms</li>
+</ol>
+<hr />
+<p><strong>Document Version</strong>: 1.0<br />
+<strong>Last Updated</strong>: 2026-06-09<br />
+<strong>Generated By</strong>: Documentation Compiler Agent<br />
+<strong>Status</strong>: Current</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+        <script src="assets/javascripts/panzoom.min.js"></script>
+        <script src="assets/javascripts/zoompan.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-10-09 12:43:58.601359+00:00
+-->

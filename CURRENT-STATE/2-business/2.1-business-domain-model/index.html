@@ -1,0 +1,2883 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../../img/favicon.ico" rel="shortcut icon"/>
+<title>Business Domain Model - Project Documentation</title>
+<link href="../../../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../../css/fontawesome.min.css" rel="stylesheet"/>
+<link href="../../../css/brands.min.css" rel="stylesheet"/>
+<link href="../../../css/solid.min.css" rel="stylesheet"/>
+<link href="../../../css/v4-font-face.min.css" rel="stylesheet"/>
+<link href="../../../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/panzoom.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<meta name="panzoom-theme" content="mkdocs">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="../../..">Project Documentation</a>
+<!-- Expander button -->
+<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="../../..">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../EXECUTIVE-SUMMARY/">Executive Summary</a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Quickstart</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-ARCHITECT/">Architect</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-DEVELOPER/">Developer</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-EXECUTIVE/">Executive</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-current="page" aria-expanded="false" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button">Current State</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Architecture</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../1-architecture/1.1-system-architecture/">System Architecture</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../1-architecture/1.2-data-architecture/">Data Architecture</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../1-architecture/1.3-api-integration-catalog/">API Integration Catalog</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../1-architecture/1.4-project-inventory/">Project Inventory</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Business</a>
+<ul class="dropdown-menu">
+<li>
+<a aria-current="page" class="dropdown-item active" href="./">Business Domain Model</a>
+</li>
+<li>
+<a class="dropdown-item" href="../2.2-requirements-specification/">Requirements Specification</a>
+</li>
+<li>
+<a class="dropdown-item" href="../2.3-compliance-regulatory/">Compliance &amp; Regulatory</a>
+</li>
+<li>
+<a class="dropdown-item" href="../2.4-user-experience-analysis/">User Experience Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../2.5-localization-i18n/">Localization &amp; I18n</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Modernization</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Strategy</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../MODERNIZATION/2-strategy/2.1-executive-summary/">Executive Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/">Stakeholder Matrix</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Generation Summaries</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/architecture-documentation-summary/">Architecture Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/business-documentation-summary/">Business Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/compilation-summary/">Compilation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/pre-analysis-summary/">Pre-Analysis Summary</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../GLOSSARY/">Glossary</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ms-md-auto">
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#mkdocs_search_modal" data-bs-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../1-architecture/1.4-project-inventory/" rel="prev">
+<i class="fa fa-arrow-left"></i> Previous
+                                </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../2.2-requirements-specification/" rel="next">
+                                    Next <i class="fa fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#21-business-domain-model">2.1 Business Domain Model</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#executive-summary">Executive Summary</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#1-business-domain-overview">1. Business Domain Overview</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#2-domain-entities-and-aggregates">2. Domain Entities and Aggregates</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#3-business-workflows-and-processes">3. Business Workflows and Processes</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#4-business-rules-catalog">4. Business Rules Catalog</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#5-domain-events">5. Domain Events</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#6-business-invariants-and-constraints">6. Business Invariants and Constraints</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#7-domain-driven-design-elements">7. Domain-Driven Design Elements</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#8-business-process-patterns">8. Business Process Patterns</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#9-business-domain-metrics">9. Business Domain Metrics</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#10-summary-and-modernization-implications">10. Summary and Modernization Implications</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#11-recommendations">11. Recommendations</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="21-business-domain-model">2.1 Business Domain Model</h1>
+<p><strong>Document Version:</strong> 1.0<br/>
+<strong>Date:</strong> 2026-06-09<br/>
+<strong>Status:</strong> Current State Analysis</p>
+<hr/>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The Agathas Storefront is an e-commerce platform operating in the retail domain, specifically focused on online product sales with shopping cart, checkout, and order management capabilities. The system implements a rich domain model following Domain-Driven Design (DDD) principles with well-encapsulated business rules and clear aggregate boundaries.</p>
+<p><strong>Key Domain Characteristics:</strong>
+- <strong>Domain Type:</strong> E-commerce / Online Retail
+- <strong>Primary Business Functions:</strong> Product catalog browsing, shopping cart management, checkout processing, customer account management, and order fulfillment
+- <strong>Domain Model Maturity:</strong> High - implements DDD patterns with aggregate roots, value objects, domain events, and encapsulated business rules
+- <strong>Business Rule Encapsulation:</strong> Excellent - business rules are encapsulated within domain entities using dedicated business rule classes</p>
+<p><strong>Domain Model Highlights:</strong>
+- 4 core aggregates (Product, Basket, Order, Customer) with well-defined boundaries
+- Rich domain entities with encapsulated business logic
+- Business rules enforced through dedicated rule classes (e.g., <code>BasketBusinessRules</code>, <code>OrderBusinessRules</code>)
+- Domain events for cross-aggregate coordination
+- Value objects for address, payment, and shipping concepts</p>
+<hr/>
+<h2 id="1-business-domain-overview">1. Business Domain Overview</h2>
+<h3 id="11-domain-description">1.1 Domain Description</h3>
+<p>The Agathas Storefront operates in the <strong>e-commerce retail domain</strong>, providing a complete online shopping experience from product discovery through order fulfillment. The business domain encompasses:</p>
+<p><strong>Core Business Areas:</strong>
+1. <strong>Product Catalog Management</strong> - Managing product hierarchies, categories, brands, sizes, and colors
+2. <strong>Shopping Experience</strong> - Enabling customers to browse, search, filter, and add products to shopping basket
+3. <strong>Customer Management</strong> - Managing customer accounts, profiles, delivery addresses, and authentication
+4. <strong>Order Processing</strong> - Handling checkout, payment processing, order submission, and order history
+5. <strong>Payment Integration</strong> - Integrating with external payment provider (PayPal) for secure payment processing
+6. <strong>Shipping Management</strong> - Managing delivery options, shipping services, and courier information</p>
+<p><strong>Business Model:</strong>
+- B2C (Business-to-Consumer) e-commerce platform
+- Product-based sales (physical goods with size/color variations)
+- Single-currency operation (determined by payment provider configuration)
+- Third-party payment processing (PayPal)
+- Customer account-based purchasing (registration required for checkout)</p>
+<h3 id="12-domain-boundaries">1.2 Domain Boundaries</h3>
+<p>The domain is bounded by the following context boundaries:</p>
+<p><strong>Within Domain (Internal):</strong>
+- Product catalog and categorization
+- Shopping basket state management
+- Customer account and profile management
+- Order lifecycle management
+- Business rule validation and enforcement
+- Domain event coordination</p>
+<p><strong>Outside Domain (External Integrations):</strong>
+- Payment processing (delegated to PayPal)
+- Social authentication (delegated to Janrain)
+- Email notifications (delegated to SMTP service)
+- Product content management (assumed external)</p>
+<p><strong>Domain Context Map:</strong>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">graph LR
+    A[Storefront Domain] --&gt;|Payment Request| B[PayPal Payment Context]
+    A --&gt;|Social Login| C[Janrain Auth Context]
+    A --&gt;|Email Notification| D[Email Service Context]
+    B --&gt;|Payment Confirmation| A
+    C --&gt;|Auth Token| A
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div></p>
+<h3 id="13-business-capabilities">1.3 Business Capabilities</h3>
+<p>The system provides the following business capabilities mapped to domain areas:</p>
+<table>
+<thead>
+<tr>
+<th>Business Capability</th>
+<th>Description</th>
+<th>Domain Area</th>
+<th>Implementation Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Discovery</td>
+<td>Browse categories, search, filter products</td>
+<td>Product Catalog</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Product Comparison</td>
+<td>View detailed product information</td>
+<td>Product Catalog</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Cart Management</td>
+<td>Add/remove items, update quantities</td>
+<td>Shopping</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Customer Registration</td>
+<td>Create account, manage profile</td>
+<td>Customer Management</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Social Login</td>
+<td>Authenticate via social providers</td>
+<td>Customer Management</td>
+<td>✅ Implemented (Janrain)</td>
+</tr>
+<tr>
+<td>Address Management</td>
+<td>Save/manage delivery addresses</td>
+<td>Customer Management</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Checkout Processing</td>
+<td>Submit order, select delivery</td>
+<td>Order Processing</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Payment Processing</td>
+<td>Secure payment via PayPal</td>
+<td>Payment Integration</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Order History</td>
+<td>View past orders and status</td>
+<td>Order Management</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Email Notifications</td>
+<td>Order confirmation emails</td>
+<td>Communication</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Product Recommendations</td>
+<td>Featured products display</td>
+<td>Marketing</td>
+<td>⚠️ Basic</td>
+</tr>
+<tr>
+<td>Multi-currency</td>
+<td>Support multiple currencies</td>
+<td>Internationalization</td>
+<td>❌ Not Implemented</td>
+</tr>
+<tr>
+<td>Multi-language</td>
+<td>Support multiple languages</td>
+<td>Internationalization</td>
+<td>❌ Not Implemented</td>
+</tr>
+<tr>
+<td>Inventory Management</td>
+<td>Track stock levels</td>
+<td>Operations</td>
+<td>❌ Not Implemented</td>
+</tr>
+<tr>
+<td>Returns Processing</td>
+<td>Handle returns/refunds</td>
+<td>Customer Service</td>
+<td>❌ Not Implemented</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="2-domain-entities-and-aggregates">2. Domain Entities and Aggregates</h2>
+<p>The system implements a rich domain model with four primary aggregates, each representing a distinct business concept with clear boundaries and consistency requirements.</p>
+<h3 id="21-aggregate-overview">2.1 Aggregate Overview</h3>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">graph TB
+    subgraph "Product Aggregate"
+        PT[ProductTitle<br/>Master Product] --&gt; P[Product<br/>Variant]
+        P --&gt; PS[ProductSize]
+        P --&gt; PC[ProductColor]
+        PT --&gt; B[Brand]
+        PT --&gt; C[Category]
+    end
+
+    subgraph "Basket Aggregate"
+        BK[Basket<br/>Shopping Cart] --&gt; BI[BasketItem]
+        BI -.references.-&gt; P
+        BK --&gt; DO[DeliveryOption]
+    end
+
+    subgraph "Order Aggregate"
+        O[Order] --&gt; OI[OrderItem]
+        O --&gt; PM[Payment]
+        O --&gt; SS[ShippingService]
+        O --&gt; OS[OrderState]
+    end
+
+    subgraph "Customer Aggregate"
+        CU[Customer] --&gt; DA[DeliveryAddress]
+    end
+
+    BK -.owned by.-&gt; CU
+    O -.placed by.-&gt; CU
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<h3 id="22-product-aggregate">2.2 Product Aggregate</h3>
+<p><strong>Aggregate Root:</strong> <code>ProductTitle</code> (located in <code>Agathas.Storefront.Model.Products</code>)</p>
+<p><strong>Purpose:</strong> Represents the product catalog with master products and their variants (size/color combinations).</p>
+<p><strong>Business Concept:</strong> In retail, a "product" (e.g., "Designer Dress") comes in multiple variants (Small/Red, Medium/Blue, etc.). The ProductTitle represents the master product, while Product represents individual variants that can be purchased.</p>
+<p><strong>Entities within Aggregate:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Type</th>
+<th>Description</th>
+<th>Key Properties</th>
+<th>Business Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ProductTitle</code></td>
+<td>Aggregate Root</td>
+<td>Master product definition</td>
+<td>Name, Description, Price, ImageUrl, Brand, Category</td>
+<td>Price is defined at ProductTitle level</td>
+</tr>
+<tr>
+<td><code>Product</code></td>
+<td>Entity</td>
+<td>Specific product variant</td>
+<td>Size, Color, ProductTitle reference</td>
+<td>Must reference a valid ProductTitle</td>
+</tr>
+<tr>
+<td><code>ProductSize</code></td>
+<td>Value Object</td>
+<td>Size attribute (S, M, L, XL, etc.)</td>
+<td>Name</td>
+<td>Predefined set of sizes</td>
+</tr>
+<tr>
+<td><code>ProductColor</code></td>
+<td>Value Object</td>
+<td>Color attribute</td>
+<td>Name</td>
+<td>Predefined set of colors</td>
+</tr>
+<tr>
+<td><code>Brand</code></td>
+<td>Entity</td>
+<td>Product brand/manufacturer</td>
+<td>Name</td>
+<td>Referenced by ProductTitle</td>
+</tr>
+<tr>
+<td><code>Category</code></td>
+<td>Entity</td>
+<td>Product categorization</td>
+<td>Name, ParentCategory</td>
+<td>Hierarchical structure</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Business Rules (from <a href="Agathas.Storefront.Model/AddressBusinessRules.cs">AddressBusinessRules.cs</a> and domain classes):</strong>
+- Product variants inherit price from ProductTitle
+- Each Product must have exactly one size and one color
+- Product references are immutable after creation
+- Category hierarchy allows nested categorization</p>
+<p><strong>Relationships:</strong>
+- One ProductTitle → Many Products (variants)
+- One Brand → Many ProductTitles
+- One Category → Many ProductTitles
+- Product → One ProductTitle (immutable reference)</p>
+<h3 id="23-basket-aggregate">2.3 Basket Aggregate</h3>
+<p><strong>Aggregate Root:</strong> <code>Basket</code> (located in <a href="Agathas.Storefront.Model/Basket/Basket.cs">Agathas.Storefront.Model/Basket/Basket.cs</a>)</p>
+<p><strong>Purpose:</strong> Manages the customer's shopping cart, including items, quantities, and delivery options.</p>
+<p><strong>Business Concept:</strong> A shopping basket that temporarily holds products the customer intends to purchase. The basket calculates totals including delivery costs and enforces business rules about item quantities and delivery requirements.</p>
+<p><strong>Entities within Aggregate:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Type</th>
+<th>Description</th>
+<th>Key Properties</th>
+<th>Business Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Basket</code></td>
+<td>Aggregate Root</td>
+<td>Shopping cart</td>
+<td>Items (collection), DeliveryOption, BasketTotal, ItemsTotal</td>
+<td>Must have delivery option before checkout</td>
+</tr>
+<tr>
+<td><code>BasketItem</code></td>
+<td>Entity</td>
+<td>Line item in basket</td>
+<td>Product (reference), Quantity, Basket (parent)</td>
+<td>Quantity must be &gt; 0</td>
+</tr>
+<tr>
+<td><code>DeliveryOption</code></td>
+<td>Entity</td>
+<td>Selected delivery method</td>
+<td>Cost, Name</td>
+<td>Required before proceeding to checkout</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Business Rules (from <a href="../../analysis/business-rules.json">business-rules.json</a>):</strong>
+1. <strong>No Duplicate Products:</strong> Cannot add same product twice; instead increases quantity of existing item
+2. <strong>Quantity Validation:</strong> Each basket item must have quantity &gt; 0
+3. <strong>Total Calculation:</strong> Basket total = sum of (item price × quantity) + delivery cost
+4. <strong>Delivery Requirement:</strong> Delivery option must be selected before checkout
+5. <strong>Item Addition:</strong> Adding product creates new BasketItem or increments existing item quantity</p>
+<p><strong>Implementation Location:</strong> 
+- Business rules enforced in <code>Basket.Add()</code> method (lines 38-41)
+- Quantity validation in <code>BasketItem.IncreaseItemQtyBy()</code> and <code>BasketItem.DecreaseItemQtyBy()</code>
+- Total calculation in <code>Basket.BasketTotal</code> property (line 26)</p>
+<p><strong>State Transitions:</strong>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">stateDiagram-v2
+    [*] --&gt; Empty: Create Basket
+    Empty --&gt; HasItems: Add First Product
+    HasItems --&gt; HasItems: Add/Remove Products
+    HasItems --&gt; ReadyForCheckout: Select Delivery Option
+    ReadyForCheckout --&gt; HasItems: Change Delivery Option
+    ReadyForCheckout --&gt; [*]: Convert to Order
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div></p>
+<h3 id="24-order-aggregate">2.4 Order Aggregate</h3>
+<p><strong>Aggregate Root:</strong> <code>Order</code> (located in <a href="Agathas.Storefront.Model/Orders/Order.cs">Agathas.Storefront.Model/Orders/Order.cs</a>)</p>
+<p><strong>Purpose:</strong> Represents a customer's purchase order with payment and fulfillment information.</p>
+<p><strong>Business Concept:</strong> An immutable record of a customer's purchase, including items ordered, payment received, shipping details, and order status. Orders follow a state machine pattern for lifecycle management.</p>
+<p><strong>Entities within Aggregate:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Type</th>
+<th>Description</th>
+<th>Key Properties</th>
+<th>Business Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Order</code></td>
+<td>Aggregate Root</td>
+<td>Purchase order</td>
+<td>Items, Payment, ShippingService, State, Created, Customer</td>
+<td>Must have at least one item</td>
+</tr>
+<tr>
+<td><code>OrderItem</code></td>
+<td>Entity</td>
+<td>Ordered product line item</td>
+<td>Product, Quantity, Price (snapshot)</td>
+<td>Price captured at order time</td>
+</tr>
+<tr>
+<td><code>Payment</code></td>
+<td>Value Object</td>
+<td>Payment transaction</td>
+<td>Amount, PaymentProvider, TransactionId, PaymentDate</td>
+<td>Amount must match order total</td>
+</tr>
+<tr>
+<td><code>OrderState</code></td>
+<td>State Pattern</td>
+<td>Order lifecycle state</td>
+<td>Current state</td>
+<td>State transitions controlled</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Order States (State Machine):</strong></p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">stateDiagram-v2
+    [*] --&gt; Open: Create Order
+    Open --&gt; PaymentReceived: SetPayment()
+    PaymentReceived --&gt; Submitted: Submit()
+    Submitted --&gt; [*]
+
+    note right of PaymentReceived: Payment amount must<br/>match order total
+    note right of Submitted: Triggers OrderSubmittedEvent<br/>Sends confirmation email
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Key Business Rules (from <a href="../../analysis/business-rules.json">business-rules.json</a>):</strong>
+1. <strong>Minimum Items:</strong> Order must have at least one order item
+2. <strong>Payment Matching:</strong> Payment amount must exactly match order total
+3. <strong>Immutability After Payment:</strong> Cannot modify order after payment received
+4. <strong>No Duplicate Payment:</strong> Cannot pay for already-paid order
+5. <strong>State Progression:</strong> Order state transitions follow strict sequence (Open → PaymentReceived → Submitted)
+6. <strong>Price Snapshot:</strong> OrderItem captures product price at time of order (protects against price changes)</p>
+<p><strong>Implementation Location:</strong>
+- State machine in <a href="Agathas.Storefront.Model/Orders/States/">Agathas.Storefront.Model/Orders/States/</a> folder
+- Business rules in <code>Order.SetPayment()</code> method
+- State transitions in <code>OrderState</code> implementations</p>
+<p><strong>Domain Events:</strong>
+- <code>OrderSubmittedEvent</code> - Raised when order transitions to Submitted state (triggers email notification)</p>
+<h3 id="25-customer-aggregate">2.5 Customer Aggregate</h3>
+<p><strong>Aggregate Root:</strong> <code>Customer</code> (located in <code>Agathas.Storefront.Model.Customers</code>)</p>
+<p><strong>Purpose:</strong> Represents a registered customer with account details and delivery addresses.</p>
+<p><strong>Business Concept:</strong> A customer account that maintains authentication credentials, profile information, and saved delivery addresses for streamlined checkout.</p>
+<p><strong>Entities within Aggregate:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Type</th>
+<th>Description</th>
+<th>Key Properties</th>
+<th>Business Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Customer</code></td>
+<td>Aggregate Root</td>
+<td>Customer account</td>
+<td>EmailAddress, FirstName, Surname, DeliveryAddresses</td>
+<td>Email must be unique and valid</td>
+</tr>
+<tr>
+<td><code>DeliveryAddress</code></td>
+<td>Entity</td>
+<td>Saved shipping address</td>
+<td>StreetAddress, City, Postcode, FirstName, Surname</td>
+<td>Must pass address validation</td>
+</tr>
+<tr>
+<td><code>EmailAddress</code></td>
+<td>Value Object</td>
+<td>Customer email</td>
+<td>Email string</td>
+<td>Validated via EmailValidationSpecification</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Business Rules (from <a href="Agathas.Storefront.Model/AddressBusinessRules.cs">AddressBusinessRules.cs</a> and <a href="../../analysis/business-rules.json">business-rules.json</a>):</strong>
+1. <strong>Unique Email:</strong> Customer email address must be unique across all customers
+2. <strong>Email Validation:</strong> Email must be in valid format (enforced by <code>EmailValidationSpecification</code>)
+3. <strong>Checkout Address Requirement:</strong> Customer must have at least one delivery address before completing checkout
+4. <strong>Address Validation:</strong> All address fields must be populated and valid</p>
+<p><strong>Implementation Location:</strong>
+- Email validation in <code>EmailValidationSpecification</code> class
+- Address business rules in <code>AddressBusinessRules.cs</code>
+- Customer business rules in <code>CustomerBusinessRules</code> class</p>
+<h3 id="26-supporting-entities">2.6 Supporting Entities</h3>
+<p><strong>Shipping Entities:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Description</th>
+<th>Business Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DeliveryOption</code></td>
+<td>Available delivery method</td>
+<td>Presented during basket checkout</td>
+</tr>
+<tr>
+<td><code>ShippingService</code></td>
+<td>Shipping service provider</td>
+<td>Attached to delivery option</td>
+</tr>
+<tr>
+<td><code>Courier</code></td>
+<td>Courier company</td>
+<td>Performs physical delivery</td>
+</tr>
+</tbody>
+</table>
+<p><strong>State Pattern Entities:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Description</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OrderStates.Open</code></td>
+<td>Initial order state</td>
+<td>Order being created</td>
+</tr>
+<tr>
+<td><code>OrderStates.PaymentReceived</code></td>
+<td>Payment confirmed</td>
+<td>Order paid, awaiting submission</td>
+</tr>
+<tr>
+<td><code>OrderStates.Submitted</code></td>
+<td>Order submitted</td>
+<td>Order complete, in fulfillment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="27-aggregate-boundaries-and-consistency">2.7 Aggregate Boundaries and Consistency</h3>
+<p><strong>Design Principles:</strong>
+1. <strong>Transaction Boundaries:</strong> Each aggregate is a transaction boundary - changes within an aggregate are atomic
+2. <strong>Identity References:</strong> Aggregates reference each other by ID, not by object reference
+3. <strong>Consistency Enforcement:</strong> Business rules are enforced within aggregate boundaries
+4. <strong>Aggregate Independence:</strong> Each aggregate can be modified independently</p>
+<p><strong>Consistency Rules:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aggregate</th>
+<th>Consistency Scope</th>
+<th>Transaction Boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product</td>
+<td>Product catalog integrity</td>
+<td>ProductTitle + variants</td>
+</tr>
+<tr>
+<td>Basket</td>
+<td>Cart totals and delivery</td>
+<td>Basket + items</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>Order totals and payment</td>
+<td>Order + items + payment</td>
+</tr>
+<tr>
+<td>Customer</td>
+<td>Customer profile and addresses</td>
+<td>Customer + addresses</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cross-Aggregate Operations:</strong>
+- Basket → Product: Reference by ID (eventual consistency acceptable)
+- Order → Customer: Reference by ID (eventual consistency acceptable)
+- OrderItem → Product: Snapshot product details (no reference after creation)</p>
+<hr/>
+<h2 id="3-business-workflows-and-processes">3. Business Workflows and Processes</h2>
+<p>The system implements six core business workflows that support the end-to-end e-commerce experience from product discovery through post-purchase order tracking.</p>
+<h3 id="31-product-browsing-workflow">3.1 Product Browsing Workflow</h3>
+<p><strong>Business Purpose:</strong> Enable customers to discover and explore products through category navigation and filtering.</p>
+<p><strong>Actors:</strong> Anonymous User, Registered Customer</p>
+<p><strong>Trigger:</strong> User lands on home page or navigates to category</p>
+<p><strong>Workflow Steps:</strong></p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    actor User
+    participant Home
+    participant Category
+    participant Filter
+    participant ProductDetail
+
+    User-&gt;&gt;Home: Browse Home Page
+    Home-&gt;&gt;User: Display Featured Products
+    User-&gt;&gt;Category: Click Category
+    Category-&gt;&gt;User: Display Products in Category
+    User-&gt;&gt;Filter: Apply Refinements/Filters
+    Filter-&gt;&gt;User: Display Filtered Results
+    User-&gt;&gt;ProductDetail: Click Product
+    ProductDetail-&gt;&gt;User: Show Product Details
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Business Rules:</strong>
+- Featured products displayed on home page
+- Products organized by hierarchical categories
+- Filtering by size, color, brand, price range
+- Product details show all available variants (size/color combinations)</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>ProductController.Index()</code>, <code>ProductController.Detail()</code>
+- Service: <code>ProductCatalogService.GetFeaturedProducts()</code>, <code>ProductCatalogService.GetProductsByCategory()</code>
+- Queries: <code>ProductSearchRequestQueryGenerator</code> for filtering</p>
+<p><strong>Business Value:</strong> Enables product discovery, critical for conversion</p>
+<h3 id="32-shopping-workflow">3.2 Shopping Workflow</h3>
+<p><strong>Business Purpose:</strong> Allow customers to build a shopping basket with desired products and quantities.</p>
+<p><strong>Actors:</strong> Anonymous User, Registered Customer</p>
+<p><strong>Trigger:</strong> User clicks "Add to Basket" on product page</p>
+<p><strong>Workflow Steps:</strong></p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    actor User
+    participant ProductPage
+    participant Basket
+    participant BasketService
+    participant Domain
+
+    User-&gt;&gt;ProductPage: Select Size/Color
+    User-&gt;&gt;ProductPage: Click "Add to Basket"
+    ProductPage-&gt;&gt;BasketService: AddProductToBasket(productId, qty)
+    BasketService-&gt;&gt;Domain: basket.Add(product)
+    Domain-&gt;&gt;Domain: Check if product exists
+    alt Product Already in Basket
+        Domain-&gt;&gt;Domain: Increase Quantity
+    else New Product
+        Domain-&gt;&gt;Domain: Create New BasketItem
+    end
+    Domain-&gt;&gt;BasketService: Updated Basket
+    BasketService-&gt;&gt;User: Display Basket Summary
+    User-&gt;&gt;Basket: View Basket
+    User-&gt;&gt;Basket: Update Quantities
+    User-&gt;&gt;Basket: Select Delivery Option
+    Basket-&gt;&gt;User: Show Updated Total
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Business Rules:</strong>
+1. Adding same product increases quantity (no duplicates)
+2. Quantity must be &gt; 0
+3. Basket total includes items + delivery cost
+4. Delivery option must be selected before checkout
+5. Basket persists in cookie storage for anonymous users</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>BasketController.Add()</code>, <code>BasketController.Index()</code>, <code>BasketController.UpdateQuantity()</code>
+- Service: <code>BasketService.AddProductToBasket()</code>, <code>BasketService.UpdateBasketItemQuantity()</code>
+- Domain: <a href="Agathas.Storefront.Model/Basket/Basket.cs#L38-L41">Basket.Add()</a> enforces business rules
+- Storage: Cookie-based basket storage via <code>CookieBasketRepository</code></p>
+<p><strong>Business Value:</strong> Core e-commerce functionality, essential for sales</p>
+<h3 id="33-checkout-and-order-submission-workflow">3.3 Checkout and Order Submission Workflow</h3>
+<p><strong>Business Purpose:</strong> Convert shopping basket into a confirmed order with payment.</p>
+<p><strong>Actors:</strong> Registered Customer (registration required before checkout)</p>
+<p><strong>Trigger:</strong> User clicks "Proceed to Checkout" from basket</p>
+<p><strong>Workflow Steps:</strong></p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    actor Customer
+    participant Basket
+    participant Auth
+    participant Checkout
+    participant Order
+    participant PayPal
+    participant Email
+
+    Customer-&gt;&gt;Basket: Click "Checkout"
+    Basket-&gt;&gt;Auth: Check Authentication
+    alt Not Authenticated
+        Auth-&gt;&gt;Customer: Redirect to Login/Register
+        Customer-&gt;&gt;Auth: Login or Register
+    end
+    Auth-&gt;&gt;Checkout: Display Checkout Page
+    Checkout-&gt;&gt;Customer: Show Basket + Delivery Addresses
+    Customer-&gt;&gt;Checkout: Select Delivery Address
+    Customer-&gt;&gt;Checkout: Confirm Order
+    Checkout-&gt;&gt;Order: Create Order from Basket
+    Order-&gt;&gt;Customer: Capture Order Details
+    Customer-&gt;&gt;PayPal: Redirect to PayPal
+    PayPal-&gt;&gt;Customer: Present Payment UI
+    Customer-&gt;&gt;PayPal: Complete Payment
+    PayPal-&gt;&gt;Order: Payment Callback (Success/Cancel)
+    alt Payment Successful
+        Order-&gt;&gt;Order: SetPayment(payment)
+        Order-&gt;&gt;Order: Submit() → State: Submitted
+        Order-&gt;&gt;Email: Trigger OrderSubmittedEvent
+        Email-&gt;&gt;Customer: Send Confirmation Email
+        Order-&gt;&gt;Customer: Display Order Confirmation
+    else Payment Failed/Cancelled
+        Order-&gt;&gt;Customer: Display Error Message
+    end
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Business Rules:</strong>
+1. Customer must be authenticated (registration required)
+2. Customer must have at least one delivery address
+3. Delivery option must be selected in basket
+4. Order total must match payment amount
+5. Order becomes immutable after payment received
+6. Cannot pay for already-paid order
+7. Order state progresses: Open → PaymentReceived → Submitted</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>CheckoutController.Index()</code>, <code>CheckoutController.Submit()</code>, <code>PaymentController.Callback()</code>
+- Service: <code>OrderService.CreateOrderFromBasket()</code>, <code>OrderService.SetPayment()</code>
+- Domain: <a href="Agathas.Storefront.Model/Orders/Order.cs">Order.SetPayment()</a> enforces state transitions
+- Events: <code>OrderSubmittedEvent</code> triggers email notification via <code>OrderSubmittedHandler</code>
+- Integration: PayPal Standard Payments (form POST to sandbox.paypal.com)</p>
+<p><strong>Business Value:</strong> Revenue generation, order fulfillment initiation</p>
+<p><strong>Payment Flow Detail:</strong></p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">graph LR
+    A[Order Created] --&gt; B[Redirect to PayPal]
+    B --&gt; C{Payment Outcome}
+    C --&gt;|Success| D[PayPal Callback: Success]
+    C --&gt;|Cancel| E[PayPal Callback: Cancel]
+    C --&gt;|Fail| F[PayPal Callback: Error]
+    D --&gt; G[SetPayment + Submit]
+    G --&gt; H[Send Email]
+    H --&gt; I[Show Confirmation]
+    E --&gt; J[Show Basket]
+    F --&gt; J
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<h3 id="34-account-management-workflow">3.4 Account Management Workflow</h3>
+<p><strong>Business Purpose:</strong> Allow customers to create accounts, manage profiles, and save delivery addresses.</p>
+<p><strong>Actors:</strong> Customer, Anonymous User (for registration)</p>
+<p><strong>Workflow Steps:</strong></p>
+<p><strong>Registration Flow:</strong>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    actor User
+    participant Register
+    participant Validation
+    participant Customer
+    participant Membership
+    participant Email
+
+    User-&gt;&gt;Register: Click "Register"
+    Register-&gt;&gt;User: Display Registration Form
+    User-&gt;&gt;Register: Submit Email, Password, Name
+    Register-&gt;&gt;Validation: Validate Email Uniqueness
+    alt Email Already Exists
+        Validation-&gt;&gt;User: Error: Email Taken
+    else Email Available
+        Validation-&gt;&gt;Customer: Create Customer Entity
+        Customer-&gt;&gt;Membership: Create Membership Account
+        Membership-&gt;&gt;Email: Send Welcome Email (if configured)
+        Membership-&gt;&gt;User: Auto-Login + Redirect
+    end
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div></p>
+<p><strong>Login Flow:</strong>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    actor User
+    participant Login
+    participant LocalAuth
+    participant SocialAuth
+    participant Session
+
+    User-&gt;&gt;Login: Navigate to Login Page
+    alt Local Authentication
+        User-&gt;&gt;LocalAuth: Enter Email + Password
+        LocalAuth-&gt;&gt;LocalAuth: Validate Credentials
+        LocalAuth-&gt;&gt;Session: Create Auth Cookie
+    else Social Authentication
+        User-&gt;&gt;SocialAuth: Click Social Provider (Janrain)
+        SocialAuth-&gt;&gt;SocialAuth: Redirect to Provider
+        SocialAuth-&gt;&gt;SocialAuth: Receive Auth Token
+        SocialAuth-&gt;&gt;Session: Create Auth Cookie
+    end
+    Session-&gt;&gt;User: Redirect to Original Page
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div></p>
+<p><strong>Profile Management:</strong>
+- View/Edit customer profile (name, email)
+- Add/edit/delete delivery addresses
+- View order history</p>
+<p><strong>Business Rules:</strong>
+1. Email must be unique across all customers
+2. Email must be valid format
+3. Password must meet minimum strength requirements (defined in membership provider)
+4. At least one delivery address required for checkout
+5. Address must have all required fields (street, city, postcode, name)</p>
+<p><strong>Implementation:</strong>
+- Controllers: <code>AccountRegisterController</code>, <code>AccountLogOnController</code>, <code>CustomerController</code>
+- Services: <code>CustomerService.CreateCustomer()</code>, <code>CustomerService.AddDeliveryAddress()</code>
+- Authentication: ASP.NET Forms Authentication + Janrain social auth
+- Validation: <code>EmailValidationSpecification</code>, <code>AddressBusinessRules</code></p>
+<p><strong>Business Value:</strong> Customer retention, streamlined repeat purchases</p>
+<h3 id="35-order-management-workflow">3.5 Order Management Workflow</h3>
+<p><strong>Business Purpose:</strong> Enable customers to track order history and review past purchases.</p>
+<p><strong>Actors:</strong> Registered Customer</p>
+<p><strong>Trigger:</strong> Customer navigates to "My Orders"</p>
+<p><strong>Workflow Steps:</strong></p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    actor Customer
+    participant Orders
+    participant OrderService
+    participant OrderDetail
+
+    Customer-&gt;&gt;Orders: Click "My Orders"
+    Orders-&gt;&gt;OrderService: GetOrdersForCustomer(customerId)
+    OrderService-&gt;&gt;Orders: Return Order List
+    Orders-&gt;&gt;Customer: Display Order History
+    Customer-&gt;&gt;OrderDetail: Click Order
+    OrderDetail-&gt;&gt;OrderService: GetOrderDetail(orderId)
+    OrderService-&gt;&gt;OrderDetail: Return Order + Items + Payment
+    OrderDetail-&gt;&gt;Customer: Display Order Details
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Displayed Information:</strong>
+- Order date and order number
+- Order status (Submitted)
+- Items ordered (product, size, color, quantity, price)
+- Shipping method and cost
+- Payment amount and date
+- Delivery address</p>
+<p><strong>Business Rules:</strong>
+- Customers can only view their own orders
+- Order history sorted by date (newest first)
+- Order details immutable (display only)</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>OrderController.Index()</code>, <code>OrderController.Detail()</code>
+- Service: <code>OrderService.GetOrdersForCustomer()</code>
+- Repository: <code>OrderRepository.FindBy()</code> with customer filter</p>
+<p><strong>Business Value:</strong> Customer service, transparency, reduces support inquiries</p>
+<h3 id="36-payment-processing-workflow">3.6 Payment Processing Workflow</h3>
+<p><strong>Business Purpose:</strong> Securely process customer payments through external payment provider.</p>
+<p><strong>Actors:</strong> Customer, PayPal Payment Gateway, System</p>
+<p><strong>Integration Pattern:</strong> Server-to-Server with Browser Redirect</p>
+<p><strong>Workflow Steps:</strong></p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    actor Customer
+    participant Storefront
+    participant PayPal
+    participant PayPalCallback
+    participant Order
+
+    Storefront-&gt;&gt;Customer: Display Order Summary
+    Customer-&gt;&gt;Storefront: Click "Pay Now"
+    Storefront-&gt;&gt;Storefront: Generate PayPal Form
+    Storefront-&gt;&gt;Customer: Auto-Submit Form to PayPal
+    Customer-&gt;&gt;PayPal: Browser Redirect (POST)
+    PayPal-&gt;&gt;Customer: Display Payment UI
+    Customer-&gt;&gt;PayPal: Enter Payment Method
+    PayPal-&gt;&gt;PayPal: Process Payment
+    PayPal-&gt;&gt;PayPalCallback: Callback with Result
+    PayPalCallback-&gt;&gt;Order: Update Order with Payment
+    alt Payment Success
+        Order-&gt;&gt;Order: SetPayment() → Submit()
+        Order-&gt;&gt;Customer: Confirmation Page
+    else Payment Cancelled
+        Order-&gt;&gt;Customer: Basket Page (retry)
+    else Payment Failed
+        Order-&gt;&gt;Customer: Error Page
+    end
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Payment Request Data Sent to PayPal:</strong>
+- Business email (merchant account)
+- Order total amount
+- Currency code
+- Item details (name, quantity, amount)
+- Return URL (success)
+- Cancel URL (cancel/failure)
+- Notify URL (IPN callback - not implemented)</p>
+<p><strong>Payment Response Handling:</strong>
+- Success: <code>PaymentController.Callback()</code> receives transaction ID and amount
+- Validation: System validates amount matches order total
+- Order Update: <code>Order.SetPayment()</code> creates Payment value object
+- State Transition: Order state changes to PaymentReceived → Submitted
+- Email: OrderSubmittedEvent triggers confirmation email</p>
+<p><strong>Business Rules:</strong>
+1. Payment amount must exactly match order total
+2. No credit card data stored in application (PCI DSS compliance via delegation)
+3. Cannot change order after payment received
+4. Payment transaction ID captured for reconciliation
+5. Payment provider is PayPal (configurable via Web.config)</p>
+<p><strong>Implementation:</strong>
+- Controller: <a href="Agathas.Storefront.Controllers/Controllers/PaymentController.cs">PaymentController</a>
+- Service: <code>PayPalPaymentService</code> (in Infrastructure layer)
+- Configuration: PayPal endpoint and business email in Web.config
+- Security: HTTPS required for payment processing</p>
+<p><strong>Business Value:</strong> Secure payment processing, PCI DSS compliance delegation, customer trust</p>
+<h3 id="37-workflow-dependencies-and-sequencing">3.7 Workflow Dependencies and Sequencing</h3>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">graph TD
+    A[Product Browsing] --&gt; B[Shopping/Basket]
+    B --&gt; C{Authenticated?}
+    C --&gt;|No| D[Account Registration/Login]
+    C --&gt;|Yes| E[Checkout]
+    D --&gt; E
+    E --&gt; F[Payment Processing]
+    F --&gt;|Success| G[Order Created]
+    F --&gt;|Failure| B
+    G --&gt; H[Order Management]
+
+    style A fill:#e1f5ff
+    style B fill:#e1f5ff
+    style D fill:#fff4e1
+    style E fill:#ffe1e1
+    style F fill:#ffe1e1
+    style G fill:#e1ffe1
+    style H fill:#e1ffe1
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Workflow Characteristics:</strong>
+- <strong>Linear Progression:</strong> Most workflows follow a linear path (browsing → basket → checkout → payment → confirmation)
+- <strong>Registration Gate:</strong> Checkout requires authentication (registration or login)
+- <strong>Stateful Operations:</strong> Basket state persists across sessions (cookie storage)
+- <strong>External Dependencies:</strong> Payment workflow depends on PayPal availability
+- <strong>Error Handling:</strong> Payment failures return user to basket for retry</p>
+<hr/>
+<h2 id="4-business-rules-catalog">4. Business Rules Catalog</h2>
+<p>The system implements comprehensive business rules encapsulated within domain entities and dedicated business rule classes. Business rules are enforced at the domain layer, ensuring data integrity and business logic consistency.</p>
+<h3 id="41-business-rule-organization">4.1 Business Rule Organization</h3>
+<p><strong>Architecture Pattern:</strong> Dedicated business rule classes that encapsulate validation and business logic separate from domain entities.</p>
+<p><strong>Implementation Approach:</strong>
+- <code>BusinessRule&lt;T&gt;</code> base class provides validation framework
+- Dedicated rule classes per aggregate: <code>BasketBusinessRules</code>, <code>OrderBusinessRules</code>, <code>CustomerBusinessRules</code>, <code>AddressBusinessRules</code>
+- Specification pattern for complex validations: <code>EmailValidationSpecification</code>
+- Rules invoked from domain entity methods before state changes</p>
+<p><strong>Rule Enforcement Locations:</strong>
+1. <strong>Domain Entities:</strong> Rules embedded in entity methods (e.g., <code>Basket.Add()</code>, <code>Order.SetPayment()</code>)
+2. <strong>Business Rule Classes:</strong> Dedicated classes in <a href="Agathas.Storefront.Model/">Agathas.Storefront.Model</a> namespace
+3. <strong>Validation Specifications:</strong> Specification pattern classes for reusable validations
+4. <strong>Service Layer:</strong> Workflow-level validations in service implementations</p>
+<h3 id="42-basket-business-rules">4.2 Basket Business Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Rule Name</th>
+<th>Description</th>
+<th>Enforcement</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BR-BSK-001</td>
+<td>No Duplicate Products</td>
+<td>Cannot add the same product to basket twice; system increases quantity of existing item instead</td>
+<td><a href="Agathas.Storefront.Model/Basket/Basket.cs#L38-L41">Basket.Add()</a></td>
+<td>⚠️ CRITICAL - Affects basket integrity</td>
+</tr>
+<tr>
+<td>BR-BSK-002</td>
+<td>Positive Quantity</td>
+<td>Each basket item must have quantity &gt; 0</td>
+<td><code>BasketItem.Qty</code> setter, <code>IncreaseItemQtyBy()</code>, <code>DecreaseItemQtyBy()</code></td>
+<td>⚠️ CRITICAL - Prevents invalid quantities</td>
+</tr>
+<tr>
+<td>BR-BSK-003</td>
+<td>Total Calculation</td>
+<td>Basket total = Σ(item price × quantity) + delivery cost</td>
+<td><a href="Agathas.Storefront.Model/Basket/Basket.cs#L26">Basket.BasketTotal</a> property</td>
+<td>⚠️ CRITICAL - Revenue impact</td>
+</tr>
+<tr>
+<td>BR-BSK-004</td>
+<td>Delivery Requirement</td>
+<td>Delivery option must be selected before checkout</td>
+<td><code>Basket.SetDeliveryOption()</code>, validated in checkout controller</td>
+<td>⚠️ HIGH - Prevents incomplete orders</td>
+</tr>
+<tr>
+<td>BR-BSK-005</td>
+<td>Item Price Snapshot</td>
+<td>Item price comes from ProductTitle at time of addition</td>
+<td><code>BasketItem.Product.Price</code> reference</td>
+<td>ℹ️ MEDIUM - Price consistency</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Implementation Evidence:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// From Basket.cs</span>
+<span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Add</span><span class="p">(</span><span class="n">Product</span><span class="w"> </span><span class="n">product</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">BasketContainsAnItemFor</span><span class="p">(</span><span class="n">product</span><span class="p">))</span>
+<span class="w">        </span><span class="n">GetItemFor</span><span class="p">(</span><span class="n">product</span><span class="p">).</span><span class="n">IncreaseItemQtyBy</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// BR-BSK-001</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">_items</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">BasketItemFactory</span><span class="p">.</span><span class="n">CreateItemFor</span><span class="p">(</span><span class="n">product</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="k">public</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="n">BasketTotal</span><span class="w"> </span><span class="c1">// BR-BSK-003</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">ItemsTotal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DeliveryCost</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="43-order-business-rules">4.3 Order Business Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Rule Name</th>
+<th>Description</th>
+<th>Enforcement</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BR-ORD-001</td>
+<td>Minimum Items</td>
+<td>Order must have at least one order item</td>
+<td>Order constructor, <code>OrderBusinessRules</code></td>
+<td>⚠️ CRITICAL - Order validity</td>
+</tr>
+<tr>
+<td>BR-ORD-002</td>
+<td>Payment Amount Match</td>
+<td>Payment amount must exactly match order total</td>
+<td><a href="Agathas.Storefront.Model/Orders/Order.cs">Order.SetPayment()</a></td>
+<td>⚠️ CRITICAL - Financial accuracy</td>
+</tr>
+<tr>
+<td>BR-ORD-003</td>
+<td>Immutability After Payment</td>
+<td>Cannot modify order after payment received</td>
+<td>Order state machine, <code>OrderBusinessRules</code></td>
+<td>⚠️ CRITICAL - Audit integrity</td>
+</tr>
+<tr>
+<td>BR-ORD-004</td>
+<td>No Duplicate Payment</td>
+<td>Cannot pay for order that already has payment</td>
+<td><code>Order.SetPayment()</code> validation</td>
+<td>⚠️ CRITICAL - Prevents double-charging</td>
+</tr>
+<tr>
+<td>BR-ORD-005</td>
+<td>State Progression</td>
+<td>Order state must progress: Open → PaymentReceived → Submitted</td>
+<td>State pattern classes in <a href="Agathas.Storefront.Model/Orders/States/">Orders/States/</a></td>
+<td>⚠️ HIGH - Workflow integrity</td>
+</tr>
+<tr>
+<td>BR-ORD-006</td>
+<td>Price Snapshot</td>
+<td>OrderItem captures product price at order time</td>
+<td><code>OrderItem</code> creation from <code>BasketItem</code></td>
+<td>ℹ️ HIGH - Protects against price changes</td>
+</tr>
+<tr>
+<td>BR-ORD-007</td>
+<td>Order Timestamp</td>
+<td>Order creation timestamp captured and immutable</td>
+<td><code>Order.Created</code> property (set in constructor)</td>
+<td>ℹ️ MEDIUM - Audit trail</td>
+</tr>
+<tr>
+<td>BR-ORD-008</td>
+<td>Total Calculation</td>
+<td>Order total = Σ(item price × quantity) + shipping charge</td>
+<td><code>Order.Total()</code> method</td>
+<td>⚠️ CRITICAL - Revenue impact</td>
+</tr>
+</tbody>
+</table>
+<p><strong>State Transition Rules:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Current State</th>
+<th>Allowed Transitions</th>
+<th>Trigger</th>
+<th>Business Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open</td>
+<td>→ PaymentReceived</td>
+<td><code>SetPayment(payment)</code></td>
+<td>Payment amount = Order total</td>
+</tr>
+<tr>
+<td>PaymentReceived</td>
+<td>→ Submitted</td>
+<td><code>Submit()</code></td>
+<td>Payment must be set</td>
+</tr>
+<tr>
+<td>Submitted</td>
+<td>None</td>
+<td>N/A</td>
+<td>Terminal state, immutable</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Implementation Evidence:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// From Order.cs</span>
+<span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SetPayment</span><span class="p">(</span><span class="n">Payment</span><span class="w"> </span><span class="n">payment</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_payment</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span><span class="w"> </span><span class="c1">// BR-ORD-004</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">InvalidOperationException</span><span class="p">(</span><span class="s">"Cannot set payment for already paid order"</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">payment</span><span class="p">.</span><span class="n">Amount</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">Total</span><span class="p">())</span><span class="w"> </span><span class="c1">// BR-ORD-002</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">InvalidOperationException</span><span class="p">(</span><span class="s">"Payment amount must match order total"</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">_payment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">payment</span><span class="p">;</span>
+<span class="w">    </span><span class="n">_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrderStates</span><span class="p">.</span><span class="n">PaymentReceived</span><span class="p">;</span><span class="w"> </span><span class="c1">// BR-ORD-005</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="44-customer-business-rules">4.4 Customer Business Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Rule Name</th>
+<th>Description</th>
+<th>Enforcement</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BR-CUS-001</td>
+<td>Unique Email</td>
+<td>Customer email address must be unique across all customers</td>
+<td>ASP.NET Membership Provider, <code>CustomerService</code></td>
+<td>⚠️ CRITICAL - Account integrity</td>
+</tr>
+<tr>
+<td>BR-CUS-002</td>
+<td>Email Validation</td>
+<td>Email must be in valid format</td>
+<td><code>EmailValidationSpecification</code> class</td>
+<td>⚠️ HIGH - Data quality</td>
+</tr>
+<tr>
+<td>BR-CUS-003</td>
+<td>Checkout Address</td>
+<td>Customer must have at least one delivery address before checkout</td>
+<td>Checkout controller validation</td>
+<td>⚠️ HIGH - Order fulfillment</td>
+</tr>
+<tr>
+<td>BR-CUS-004</td>
+<td>Profile Required Fields</td>
+<td>Customer must have first name and surname</td>
+<td><code>Customer</code> entity properties, registration form</td>
+<td>ℹ️ MEDIUM - Customer communication</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Implementation Evidence:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// From EmailValidationSpecification.cs</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">EmailValidationSpecification</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ISpecification</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsSatisfiedBy</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">email</span><span class="p">)</span><span class="w"> </span><span class="c1">// BR-CUS-002</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Regex</span><span class="p">.</span><span class="n">IsMatch</span><span class="p">(</span><span class="n">email</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="s">@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="45-address-business-rules">4.5 Address Business Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Rule Name</th>
+<th>Description</th>
+<th>Enforcement</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BR-ADR-001</td>
+<td>Required Fields</td>
+<td>Address must have street, city, postcode, first name, surname</td>
+<td><code>AddressBusinessRules</code> class</td>
+<td>⚠️ HIGH - Shipping accuracy</td>
+</tr>
+<tr>
+<td>BR-ADR-002</td>
+<td>Postcode Format</td>
+<td>Postcode must be in valid format (not enforced per country)</td>
+<td>Basic validation in <code>AddressBusinessRules</code></td>
+<td>ℹ️ MEDIUM - Delivery success</td>
+</tr>
+<tr>
+<td>BR-ADR-003</td>
+<td>Address Ownership</td>
+<td>Delivery address must belong to the customer placing order</td>
+<td>Checkout validation</td>
+<td>⚠️ HIGH - Security</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Implementation Location:</strong> <a href="Agathas.Storefront.Model/AddressBusinessRules.cs">AddressBusinessRules.cs</a></p>
+<h3 id="46-product-business-rules">4.6 Product Business Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Rule Name</th>
+<th>Description</th>
+<th>Enforcement</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BR-PRD-001</td>
+<td>Price at ProductTitle</td>
+<td>Product price defined at ProductTitle level, inherited by variants</td>
+<td>Database schema, domain model</td>
+<td>ℹ️ HIGH - Price consistency</td>
+</tr>
+<tr>
+<td>BR-PRD-002</td>
+<td>Variant Attributes</td>
+<td>Each Product must have exactly one size and one color</td>
+<td><code>Product</code> entity properties</td>
+<td>ℹ️ MEDIUM - Catalog integrity</td>
+</tr>
+<tr>
+<td>BR-PRD-003</td>
+<td>Immutable ProductTitle Reference</td>
+<td>Product reference to ProductTitle is immutable after creation</td>
+<td>Domain model design</td>
+<td>ℹ️ MEDIUM - Data integrity</td>
+</tr>
+</tbody>
+</table>
+<h3 id="47-payment-business-rules">4.7 Payment Business Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Rule Name</th>
+<th>Description</th>
+<th>Enforcement</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BR-PAY-001</td>
+<td>External Processing</td>
+<td>All payment processing delegated to PayPal</td>
+<td><code>PayPalPaymentService</code></td>
+<td>⚠️ CRITICAL - PCI DSS compliance</td>
+</tr>
+<tr>
+<td>BR-PAY-002</td>
+<td>No Card Storage</td>
+<td>No credit card data stored in application</td>
+<td>System design</td>
+<td>⚠️ CRITICAL - Security compliance</td>
+</tr>
+<tr>
+<td>BR-PAY-003</td>
+<td>Transaction ID Capture</td>
+<td>Payment transaction ID captured from PayPal for reconciliation</td>
+<td><code>Payment</code> value object</td>
+<td>ℹ️ HIGH - Financial audit</td>
+</tr>
+<tr>
+<td>BR-PAY-004</td>
+<td>Amount Validation</td>
+<td>Payment amount from PayPal validated against order total</td>
+<td><code>PaymentController.Callback()</code></td>
+<td>⚠️ CRITICAL - Fraud prevention</td>
+</tr>
+<tr>
+<td>BR-PAY-005</td>
+<td>Currency Consistency</td>
+<td>Single currency per transaction (from PayPal config)</td>
+<td>PayPal integration</td>
+<td>ℹ️ HIGH - Financial accuracy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="48-shipping-business-rules">4.8 Shipping Business Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Rule Name</th>
+<th>Description</th>
+<th>Enforcement</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BR-SHP-001</td>
+<td>Delivery Option Required</td>
+<td>Delivery option must be selected in basket before checkout</td>
+<td>Basket and Checkout validation</td>
+<td>⚠️ HIGH - Order completion</td>
+</tr>
+<tr>
+<td>BR-SHP-002</td>
+<td>Shipping Cost Included</td>
+<td>Shipping cost included in order total</td>
+<td><code>Order.Total()</code> calculation</td>
+<td>⚠️ CRITICAL - Revenue accuracy</td>
+</tr>
+<tr>
+<td>BR-SHP-003</td>
+<td>Service Availability</td>
+<td>Delivery options presented based on available shipping services</td>
+<td><code>DeliveryOption</code> entity</td>
+<td>ℹ️ MEDIUM - Customer experience</td>
+</tr>
+</tbody>
+</table>
+<h3 id="49-authentication-business-rules">4.9 Authentication Business Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Rule Name</th>
+<th>Description</th>
+<th>Enforcement</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BR-AUT-001</td>
+<td>Checkout Authentication</td>
+<td>User must be authenticated before checkout</td>
+<td>Checkout controller, Forms Authentication</td>
+<td>⚠️ CRITICAL - Order attribution</td>
+</tr>
+<tr>
+<td>BR-AUT-002</td>
+<td>Password Strength</td>
+<td>Password must meet minimum strength requirements</td>
+<td>ASP.NET Membership Provider configuration</td>
+<td>ℹ️ HIGH - Account security</td>
+</tr>
+<tr>
+<td>BR-AUT-003</td>
+<td>Social Auth Option</td>
+<td>Users can authenticate via social providers (Janrain)</td>
+<td>Janrain integration</td>
+<td>ℹ️ MEDIUM - User convenience</td>
+</tr>
+<tr>
+<td>BR-AUT-004</td>
+<td>Session Timeout</td>
+<td>Authentication session expires after inactivity</td>
+<td>Forms Authentication configuration</td>
+<td>ℹ️ MEDIUM - Security</td>
+</tr>
+</tbody>
+</table>
+<h3 id="410-cross-aggregate-business-rules">4.10 Cross-Aggregate Business Rules</h3>
+<p>These rules span multiple aggregates and are enforced at the service layer:</p>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Rule Name</th>
+<th>Description</th>
+<th>Enforcement</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BR-CRS-001</td>
+<td>Order from Basket</td>
+<td>Order can only be created from a valid basket with delivery option</td>
+<td><code>OrderService.CreateOrderFromBasket()</code></td>
+<td>⚠️ CRITICAL - Order integrity</td>
+</tr>
+<tr>
+<td>BR-CRS-002</td>
+<td>Customer Order Association</td>
+<td>Order must be associated with authenticated customer</td>
+<td><code>OrderService.CreateOrderFromBasket()</code></td>
+<td>⚠️ CRITICAL - Order attribution</td>
+</tr>
+<tr>
+<td>BR-CRS-003</td>
+<td>Product Reference Snapshot</td>
+<td>Order items snapshot product details (no live reference)</td>
+<td>Mapping from Basket to Order</td>
+<td>ℹ️ HIGH - Price stability</td>
+</tr>
+</tbody>
+</table>
+<h3 id="411-business-rule-priority-classification">4.11 Business Rule Priority Classification</h3>
+<p><strong>🔴 CRITICAL Rules:</strong> Must never be violated; system integrity depends on these
+- Payment amount validation
+- No duplicate payments
+- Order immutability after payment
+- No card data storage
+- Price calculation accuracy</p>
+<p><strong>🟡 HIGH Rules:</strong> Important for business operations; violations cause significant issues
+- Unique email addresses
+- Delivery option requirement
+- Authentication before checkout
+- Address validation</p>
+<p><strong>🔵 MEDIUM Rules:</strong> Enhance user experience and data quality; violations are tolerable
+- Email format validation
+- Profile required fields
+- Product variant attributes</p>
+<h3 id="412-business-rule-violations-and-error-handling">4.12 Business Rule Violations and Error Handling</h3>
+<p><strong>Validation Strategy:</strong>
+1. <strong>Pre-condition Validation:</strong> Rules checked before domain operations
+2. <strong>Domain Exceptions:</strong> <code>InvalidOperationException</code> thrown for rule violations
+3. <strong>Service Layer Validation:</strong> Workflow-level checks in service methods
+4. <strong>UI Validation:</strong> Client-side and server-side form validation</p>
+<p><strong>Error Communication:</strong>
+- Domain exceptions caught by controllers
+- Error messages displayed to user via view models
+- Validation failures prevent state changes
+- Transaction rollback on validation failures (via UnitOfWork)</p>
+<hr/>
+<h2 id="5-domain-events">5. Domain Events</h2>
+<p>The system implements a Domain Events pattern for cross-aggregate coordination and side effects, enabling loose coupling between domain concerns.</p>
+<h3 id="51-domain-events-overview">5.1 Domain Events Overview</h3>
+<p><strong>Pattern Implementation:</strong> In-process synchronous domain events using static dispatcher</p>
+<p><strong>Purpose:</strong> Decouple order submission from email notification, allowing the order aggregate to remain focused on order management while external concerns (email) are handled by separate handlers.</p>
+<p><strong>Architecture:</strong>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">graph LR
+    A[Order.Submit] --&gt; B[Raise OrderSubmittedEvent]
+    B --&gt; C[DomainEvents Dispatcher]
+    C --&gt; D[OrderSubmittedHandler]
+    D --&gt; E[IEmailService]
+    E --&gt; F[Send Confirmation Email]
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div></p>
+<p><strong>Key Characteristics:</strong>
+- <strong>Execution Model:</strong> Synchronous in-process (not message queue)
+- <strong>Transaction Scope:</strong> Handlers execute within the same transaction as the domain operation
+- <strong>Registration:</strong> Handlers registered via StructureMap IoC container
+- <strong>Dispatch:</strong> Static <code>DomainEvents.Raise&lt;T&gt;()</code> method</p>
+<h3 id="52-implemented-domain-events">5.2 Implemented Domain Events</h3>
+<h4 id="ordersubmittedevent">OrderSubmittedEvent</h4>
+<p><strong>Location:</strong> <code>Agathas.Storefront.Model.Orders.Events.OrderSubmittedEvent</code></p>
+<p><strong>Purpose:</strong> Notifies the system that an order has been successfully submitted and paid.</p>
+<p><strong>Trigger:</strong> When order transitions to Submitted state via <code>Order.State.Submit()</code></p>
+<p><strong>Event Data:</strong>
+- Complete Order aggregate (Order entity with items, payment, shipping)
+- Customer information
+- Order timestamp
+- Payment confirmation</p>
+<p><strong>Handlers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Handler</th>
+<th>Action</th>
+<th>Purpose</th>
+<th>Transaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OrderSubmittedHandler</code></td>
+<td>Sends order confirmation email</td>
+<td>Customer notification</td>
+<td>Same transaction</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Handler Implementation:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// From OrderSubmittedHandler.cs (in Agathas.Storefront.Services.DomainEventHandlers)</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">OrderSubmittedHandler</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IDomainEventHandler</span><span class="o">&lt;</span><span class="n">OrderSubmittedEvent</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">IEmailService</span><span class="w"> </span><span class="n">_emailService</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Handle</span><span class="p">(</span><span class="n">OrderSubmittedEvent</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">_emailService</span><span class="p">.</span><span class="n">SendOrderConfirmation</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">Order</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Event Raising Location:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// From Order.cs - Submitted state</span>
+<span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Submit</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">_order</span><span class="p">.</span><span class="n">State</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OrderStates</span><span class="p">.</span><span class="n">Submitted</span><span class="p">;</span>
+<span class="w">    </span><span class="n">DomainEvents</span><span class="p">.</span><span class="n">Raise</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">OrderSubmittedEvent</span><span class="p">(</span><span class="n">_order</span><span class="p">));</span><span class="w"> </span><span class="c1">// Event raised here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Business Impact:</strong>
+- Ensures customers receive order confirmation immediately after payment
+- Decouples order domain logic from email infrastructure
+- Allows additional handlers to be added without modifying Order entity</p>
+<h3 id="53-domain-event-infrastructure">5.3 Domain Event Infrastructure</h3>
+<p><strong>Dispatcher:</strong> <code>DomainEvents</code> static class (in <code>Agathas.Storefront.Infrastructure.Domain</code>)</p>
+<p><strong>Handler Interface:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IDomainEventHandler</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IDomainEvent</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Handle</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">args</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Handler Factory:</strong> <code>IDomainEventHandlerFactory</code> resolves handlers from IoC container (StructureMap)</p>
+<p><strong>Registration:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// From StructureMap registry</span>
+<span class="n">For</span><span class="o">&lt;</span><span class="n">IDomainEventHandler</span><span class="o">&lt;</span><span class="n">OrderSubmittedEvent</span><span class="o">&gt;&gt;</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="n">Use</span><span class="o">&lt;</span><span class="n">OrderSubmittedHandler</span><span class="o">&gt;</span><span class="p">();</span>
+</code></pre></div></p>
+<p><strong>Execution Flow:</strong>
+1. Domain entity raises event: <code>DomainEvents.Raise(new OrderSubmittedEvent(order))</code>
+2. Dispatcher resolves handlers from factory: <code>_factory.GetHandlersFor&lt;OrderSubmittedEvent&gt;()</code>
+3. Each handler executed synchronously: <code>handler.Handle(eventArgs)</code>
+4. Execution within same transaction as domain operation
+5. Transaction commits only if all handlers succeed</p>
+<h3 id="54-domain-events-usage-pattern">5.4 Domain Events Usage Pattern</h3>
+<p><strong>When to Use Domain Events:</strong>
+✅ <strong>Use for:</strong>
+- Cross-aggregate coordination (e.g., Order → Email notification)
+- Side effects that should happen "when X happens" (e.g., "when order submitted, send email")
+- Decoupling domain logic from infrastructure concerns
+- Audit logging and event sourcing (future)
+- Workflow orchestration across aggregates</p>
+<p>❌ <strong>Don't Use for:</strong>
+- Intra-aggregate operations (use direct method calls)
+- External API calls that could fail independently (use message queue instead)
+- Long-running operations (current synchronous implementation blocks transaction)</p>
+<h3 id="55-domain-events-and-business-workflows">5.5 Domain Events and Business Workflows</h3>
+<p>Domain events play a critical role in the order submission workflow:</p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    participant Client
+    participant OrderService
+    participant Order
+    participant DomainEvents
+    participant OrderSubmittedHandler
+    participant EmailService
+
+    Client-&gt;&gt;OrderService: SubmitOrder(orderId)
+    OrderService-&gt;&gt;Order: SetPayment(payment)
+    Order-&gt;&gt;Order: State = PaymentReceived
+    OrderService-&gt;&gt;Order: Submit()
+    Order-&gt;&gt;Order: State = Submitted
+    Order-&gt;&gt;DomainEvents: Raise(OrderSubmittedEvent)
+    DomainEvents-&gt;&gt;OrderSubmittedHandler: Handle(event)
+    OrderSubmittedHandler-&gt;&gt;EmailService: SendOrderConfirmation(order)
+    EmailService--&gt;&gt;OrderSubmittedHandler: Email sent
+    OrderSubmittedHandler--&gt;&gt;DomainEvents: Completed
+    DomainEvents--&gt;&gt;Order: Event handled
+    Order--&gt;&gt;OrderService: Order submitted
+    OrderService-&gt;&gt;OrderService: UnitOfWork.Commit()
+    OrderService--&gt;&gt;Client: Success
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Transaction Boundary:</strong> All operations (order state change + email sending) occur within single transaction. If email fails, order submission rolls back.</p>
+<h3 id="56-potential-domain-events-not-yet-implemented">5.6 Potential Domain Events (Not Yet Implemented)</h3>
+<p>The following domain events could enhance the system's capabilities:</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Aggregate</th>
+<th>Purpose</th>
+<th>Potential Handlers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CustomerRegisteredEvent</code></td>
+<td>Customer</td>
+<td>Customer account created</td>
+<td>Send welcome email, Create loyalty account</td>
+</tr>
+<tr>
+<td><code>BasketAbandonedEvent</code></td>
+<td>Basket</td>
+<td>Basket inactive for X days</td>
+<td>Send reminder email, Trigger remarketing</td>
+</tr>
+<tr>
+<td><code>ProductAddedToBasketEvent</code></td>
+<td>Basket</td>
+<td>Product added to cart</td>
+<td>Update analytics, Trigger recommendations</td>
+</tr>
+<tr>
+<td><code>PaymentFailedEvent</code></td>
+<td>Order</td>
+<td>Payment processing failed</td>
+<td>Log incident, Notify support</td>
+</tr>
+<tr>
+<td><code>OrderCancelledEvent</code></td>
+<td>Order</td>
+<td>Order cancelled by customer</td>
+<td>Refund payment, Update inventory</td>
+</tr>
+<tr>
+<td><code>DeliveryAddressChangedEvent</code></td>
+<td>Customer</td>
+<td>Customer changed address</td>
+<td>Validate address, Update shipping quotes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="57-domain-events-maturity-assessment">5.7 Domain Events Maturity Assessment</h3>
+<p><strong>Current Maturity Level:</strong> 🟡 <strong>Basic Implementation</strong></p>
+<p><strong>Strengths:</strong>
+- ✅ Clean pattern implementation with dispatcher and handlers
+- ✅ Proper separation of concerns (Order doesn't know about Email)
+- ✅ Extensible design (easy to add new handlers)
+- ✅ IoC container integration for handler resolution</p>
+<p><strong>Limitations:</strong>
+- ⚠️ Only one event implemented (underutilized pattern)
+- ⚠️ Synchronous execution (blocks transaction, could cause issues with slow external services)
+- ⚠️ No event persistence (events lost if system crashes)
+- ⚠️ No retry mechanism if handler fails
+- ⚠️ Email failure causes order submission to fail (tight coupling despite event pattern)</p>
+<p><strong>Modernization Opportunities:</strong>
+- Implement asynchronous event handling with message queue (e.g., Azure Service Bus, RabbitMQ)
+- Add event sourcing for audit trail and replay capability
+- Implement eventual consistency for non-critical handlers
+- Add retry and dead-letter queue for failed events
+- Persist events for analysis and debugging</p>
+<hr/>
+<h2 id="6-business-invariants-and-constraints">6. Business Invariants and Constraints</h2>
+<h3 id="61-system-wide-invariants">6.1 System-Wide Invariants</h3>
+<p>These are fundamental truths that must always hold across the system:</p>
+<table>
+<thead>
+<tr>
+<th>Invariant</th>
+<th>Description</th>
+<th>Enforcement</th>
+<th>Criticality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INV-001: Order-Payment Consistency</td>
+<td>Order total always equals payment amount for paid orders</td>
+<td>Domain validation in <code>Order.SetPayment()</code></td>
+<td>🔴 CRITICAL</td>
+</tr>
+<tr>
+<td>INV-002: Basket-Order Transformation</td>
+<td>Every order originates from a basket</td>
+<td>Service layer validation</td>
+<td>🔴 CRITICAL</td>
+</tr>
+<tr>
+<td>INV-003: Customer-Order Association</td>
+<td>Every order belongs to exactly one customer</td>
+<td>Database foreign key + domain model</td>
+<td>🔴 CRITICAL</td>
+</tr>
+<tr>
+<td>INV-004: Price Non-Negativity</td>
+<td>All prices (product, shipping, total) must be ≥ 0</td>
+<td>Domain entity property validation</td>
+<td>🔴 CRITICAL</td>
+</tr>
+<tr>
+<td>INV-005: Quantity Positivity</td>
+<td>All quantities (basket, order items) must be &gt; 0</td>
+<td>Domain entity property validation</td>
+<td>🔴 CRITICAL</td>
+</tr>
+<tr>
+<td>INV-006: Email Uniqueness</td>
+<td>Each customer email is unique</td>
+<td>Database unique constraint + membership provider</td>
+<td>🟡 HIGH</td>
+</tr>
+<tr>
+<td>INV-007: State Machine Integrity</td>
+<td>Order state transitions follow defined path</td>
+<td>State pattern implementation</td>
+<td>🟡 HIGH</td>
+</tr>
+<tr>
+<td>INV-008: Aggregate Boundary Isolation</td>
+<td>Aggregates reference each other by ID only</td>
+<td>Domain model design</td>
+<td>🔵 MEDIUM</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-aggregate-specific-invariants">6.2 Aggregate-Specific Invariants</h3>
+<p><strong>Basket Aggregate:</strong>
+- Basket contains zero or more items (empty basket is valid)
+- Each basket item references a valid product
+- Delivery option is optional until checkout
+- Basket totals are derived, never stored</p>
+<p><strong>Order Aggregate:</strong>
+- Order must have at least one order item
+- Order items are immutable after order creation
+- Payment is optional until submission (null for unpaid orders)
+- Order state is always valid (Open, PaymentReceived, or Submitted)
+- Created timestamp is immutable</p>
+<p><strong>Customer Aggregate:</strong>
+- Customer must have valid email address
+- Customer can have zero or more delivery addresses
+- Delivery addresses belong to exactly one customer</p>
+<p><strong>Product Aggregate:</strong>
+- ProductTitle must have a price &gt; 0
+- Product must reference a valid ProductTitle
+- Product must have size and color</p>
+<h3 id="63-temporal-constraints">6.3 Temporal Constraints</h3>
+<table>
+<thead>
+<tr>
+<th>Constraint</th>
+<th>Description</th>
+<th>Enforcement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Order Creation Time</td>
+<td>Order.Created set at construction, never modified</td>
+<td>Immutable property</td>
+</tr>
+<tr>
+<td>Payment Date</td>
+<td>Payment.PaymentDate set when payment received</td>
+<td>Immutable value object</td>
+</tr>
+<tr>
+<td>Session Timeout</td>
+<td>User session expires after inactivity period</td>
+<td>Forms Authentication configuration</td>
+</tr>
+<tr>
+<td>Basket Persistence</td>
+<td>Basket persists in cookie with expiration</td>
+<td>Cookie storage mechanism</td>
+</tr>
+</tbody>
+</table>
+<h3 id="64-cardinality-constraints">6.4 Cardinality Constraints</h3>
+<p><strong>One-to-Many Relationships:</strong>
+- Customer → DeliveryAddresses (1:N)
+- Customer → Orders (1:N)
+- Basket → BasketItems (1:N)
+- Order → OrderItems (1:N)
+- ProductTitle → Products (1:N)
+- Category → ProductTitles (1:N)
+- Brand → ProductTitles (1:N)</p>
+<p><strong>One-to-One Relationships:</strong>
+- Order → Payment (1:0..1) - payment optional until order submitted
+- Basket → DeliveryOption (1:0..1) - delivery option optional until checkout</p>
+<p><strong>Many-to-One Relationships:</strong>
+- Product → ProductTitle (N:1)
+- Product → ProductSize (N:1)
+- Product → ProductColor (N:1)
+- BasketItem → Product (N:1)
+- OrderItem → Product (N:1) - snapshot reference</p>
+<hr/>
+<h2 id="7-domain-driven-design-elements">7. Domain-Driven Design Elements</h2>
+<h3 id="71-ddd-pattern-implementation">7.1 DDD Pattern Implementation</h3>
+<p>The Agathas Storefront is an excellent example of Domain-Driven Design implementation with clear strategic and tactical patterns.</p>
+<p><strong>Strategic DDD Patterns Implemented:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Implementation</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bounded Context</td>
+<td>Storefront context bounded by product catalog, ordering, and customer management</td>
+<td>Project structure and namespace organization</td>
+</tr>
+<tr>
+<td>Ubiquitous Language</td>
+<td>Domain terms (Basket, Order, ProductTitle, DeliveryAddress) match business language</td>
+<td>Entity and class naming</td>
+</tr>
+<tr>
+<td>Context Map</td>
+<td>External contexts: Payment (PayPal), Auth (Janrain), Email (SMTP)</td>
+<td>Integration points documented</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tactical DDD Patterns Implemented:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Implementation</th>
+<th>Evidence</th>
+<th>Quality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aggregate Roots</td>
+<td>Basket, Order, Customer, ProductTitle marked with <code>IAggregateRoot</code></td>
+<td><a href="Agathas.Storefront.Model/Basket/Basket.cs#L10">Basket.cs</a>, <a href="Agathas.Storefront.Model/Orders/Order.cs#L13">Order.cs</a></td>
+<td>⭐⭐⭐⭐⭐ Excellent</td>
+</tr>
+<tr>
+<td>Entities</td>
+<td>OrderItem, BasketItem, Product, DeliveryAddress extend <code>EntityBase&lt;T&gt;</code></td>
+<td>Model project classes</td>
+<td>⭐⭐⭐⭐⭐ Excellent</td>
+</tr>
+<tr>
+<td>Value Objects</td>
+<td>Payment, EmailAddress, Address (partial)</td>
+<td>Immutable objects with value equality</td>
+<td>⭐⭐⭐⭐ Good</td>
+</tr>
+<tr>
+<td>Repositories</td>
+<td><code>IRepository&lt;T&gt;</code>, <code>IBasketRepository</code>, <code>IOrderRepository</code> interfaces</td>
+<td>Repository project</td>
+<td>⭐⭐⭐⭐⭐ Excellent</td>
+</tr>
+<tr>
+<td>Domain Events</td>
+<td><code>OrderSubmittedEvent</code>, <code>IDomainEventHandler&lt;T&gt;</code></td>
+<td>Events namespace</td>
+<td>⭐⭐⭐ Basic (underutilized)</td>
+</tr>
+<tr>
+<td>Domain Services</td>
+<td><code>BasketService</code>, <code>OrderService</code>, <code>CustomerService</code></td>
+<td>Services project</td>
+<td>⭐⭐⭐⭐ Good</td>
+</tr>
+<tr>
+<td>Specification Pattern</td>
+<td><code>EmailValidationSpecification</code></td>
+<td>Model project</td>
+<td>⭐⭐⭐ Basic</td>
+</tr>
+<tr>
+<td>Factory Pattern</td>
+<td><code>BasketItemFactory</code></td>
+<td>Model project</td>
+<td>⭐⭐⭐⭐ Good</td>
+</tr>
+<tr>
+<td>State Pattern</td>
+<td><code>OrderStates.Open</code>, <code>OrderStates.PaymentReceived</code>, <code>OrderStates.Submitted</code></td>
+<td><a href="Agathas.Storefront.Model/Orders/States/">Orders/States/</a></td>
+<td>⭐⭐⭐⭐⭐ Excellent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-aggregate-root-design-quality">7.2 Aggregate Root Design Quality</h3>
+<p><strong>Assessment:</strong> ⭐⭐⭐⭐⭐ Excellent</p>
+<p><strong>Evidence:</strong>
+- Clear aggregate boundaries (Basket, Order, Customer, ProductTitle)
+- Aggregate roots marked with <code>IAggregateRoot</code> interface
+- Entities accessed only through aggregate root
+- Business rules enforced by aggregate root
+- Repository pattern provides access only to aggregate roots</p>
+<p><strong>Example from Basket Aggregate:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Basket</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">EntityBase</span><span class="o">&lt;</span><span class="n">Guid</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">IAggregateRoot</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">IList</span><span class="o">&lt;</span><span class="n">BasketItem</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_items</span><span class="p">;</span><span class="w"> </span><span class="c1">// Encapsulated collection</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Add</span><span class="p">(</span><span class="n">Product</span><span class="w"> </span><span class="n">product</span><span class="p">)</span><span class="w"> </span><span class="c1">// Only way to add items</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Business rules enforced here</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// BasketItem cannot be created directly; accessed only through Basket</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="73-value-object-implementation">7.3 Value Object Implementation</h3>
+<p><strong>Implemented Value Objects:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Value Object</th>
+<th>Properties</th>
+<th>Immutability</th>
+<th>Equality</th>
+<th>Quality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Payment</code></td>
+<td>Amount, PaymentProvider, TransactionId, PaymentDate</td>
+<td>✅ Yes</td>
+<td>Value-based</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td><code>EmailAddress</code></td>
+<td>Email string</td>
+<td>✅ Yes</td>
+<td>Value-based</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td><code>Address</code> (partial)</td>
+<td>Street, City, Postcode</td>
+<td>⚠️ Partial</td>
+<td>Reference-based (entity)</td>
+<td>⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Opportunity for Improvement:</strong>
+- <code>DeliveryAddress</code> currently implemented as entity; could be value object since addresses are immutable once set
+- Consider implementing Money value object for price/amount handling with currency
+- Product attributes (Size, Color) could be richer value objects with validation</p>
+<h3 id="74-repository-pattern-quality">7.4 Repository Pattern Quality</h3>
+<p><strong>Assessment:</strong> ⭐⭐⭐⭐⭐ Excellent</p>
+<p><strong>Design:</strong>
+- Generic <code>IRepository&lt;T&gt;</code> interface with common operations
+- Aggregate-specific repositories (<code>IBasketRepository</code>, <code>IOrderRepository</code>, <code>ICustomerRepository</code>)
+- Repository pattern completely abstracts persistence
+- NHibernate implementation in separate project
+- Unit of Work pattern for transaction management</p>
+<p><strong>Repository Interface Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IAggregateRoot</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Save</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">entity</span><span class="p">);</span>
+<span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Delete</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">entity</span><span class="p">);</span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="nf">FindBy</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
+<span class="w">    </span><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">FindBy</span><span class="p">(</span><span class="n">IQuery</span><span class="w"> </span><span class="n">query</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="75-domain-service-pattern">7.5 Domain Service Pattern</h3>
+<p><strong>Implemented Domain Services:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Purpose</th>
+<th>Aggregate Orchestration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BasketService</code></td>
+<td>Orchestrates basket operations, mapping between basket and view models</td>
+<td>Basket aggregate</td>
+</tr>
+<tr>
+<td><code>OrderService</code></td>
+<td>Converts basket to order, handles payment and submission workflow</td>
+<td>Basket + Order + Customer aggregates</td>
+</tr>
+<tr>
+<td><code>CustomerService</code></td>
+<td>Manages customer registration, authentication, profile updates</td>
+<td>Customer aggregate</td>
+</tr>
+<tr>
+<td><code>ProductCatalogService</code></td>
+<td>Queries product catalog with filtering and search</td>
+<td>Product aggregate</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Service Layer Responsibilities:</strong>
+- Coordinate operations across multiple aggregates
+- Map between domain entities and view models (DTOs)
+- Implement workflow-level validation
+- Manage transaction boundaries via Unit of Work</p>
+<h3 id="76-ubiquitous-language-evidence">7.6 Ubiquitous Language Evidence</h3>
+<p>The system demonstrates strong adherence to ubiquitous language with business terms reflected in code:</p>
+<table>
+<thead>
+<tr>
+<th>Business Term</th>
+<th>Code Representation</th>
+<th>Usage Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopping Basket</td>
+<td><code>Basket</code> class</td>
+<td>"Customer adds products to their basket"</td>
+</tr>
+<tr>
+<td>Checkout</td>
+<td><code>CheckoutController</code>, <code>CheckoutService</code></td>
+<td>"Customer proceeds to checkout"</td>
+</tr>
+<tr>
+<td>Delivery Address</td>
+<td><code>DeliveryAddress</code> entity</td>
+<td>"Select delivery address for order"</td>
+</tr>
+<tr>
+<td>Product Title</td>
+<td><code>ProductTitle</code> entity</td>
+<td>"Master product that has variants"</td>
+</tr>
+<tr>
+<td>Order Submission</td>
+<td><code>Order.Submit()</code></td>
+<td>"Order is submitted after payment received"</td>
+</tr>
+<tr>
+<td>Payment Received</td>
+<td><code>OrderStates.PaymentReceived</code></td>
+<td>"Order state after payment confirmed"</td>
+</tr>
+<tr>
+<td>Courier</td>
+<td><code>Courier</code> entity</td>
+<td>"Company that delivers the order"</td>
+</tr>
+<tr>
+<td>Basket Item</td>
+<td><code>BasketItem</code> entity</td>
+<td>"Line item in shopping basket"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Consistency:</strong> Domain terminology is consistent across:
+- Domain entities
+- Service method names
+- Controller action names
+- View names
+- Database table names (via NHibernate mappings)
+- UI text and labels</p>
+<hr/>
+<h2 id="8-business-process-patterns">8. Business Process Patterns</h2>
+<h3 id="81-state-machine-pattern-order-lifecycle">8.1 State Machine Pattern (Order Lifecycle)</h3>
+<p><strong>Pattern:</strong> State Pattern for order status management</p>
+<p><strong>Implementation:</strong> <a href="Agathas.Storefront.Model/Orders/States/">Agathas.Storefront.Model/Orders/States/</a></p>
+<p><strong>Business Value:</strong> Ensures orders follow valid lifecycle transitions, preventing invalid operations (e.g., cannot pay twice, cannot modify after payment).</p>
+<p><strong>State Diagram:</strong>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">stateDiagram-v2
+    [*] --&gt; Open: CreateOrder()
+    Open --&gt; PaymentReceived: SetPayment()
+    PaymentReceived --&gt; Submitted: Submit()
+    Submitted --&gt; [*]
+
+    note right of Open: Editable, no payment
+    note right of PaymentReceived: Paid, not yet submitted
+    note right of Submitted: Complete, immutable
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div></p>
+<p><strong>State Classes:</strong>
+- <code>IOrderState</code> interface defines allowed operations
+- <code>OpenState</code> - allows payment
+- <code>PaymentReceivedState</code> - allows submission
+- <code>SubmittedState</code> - terminal state, no further operations</p>
+<p><strong>Business Operations by State:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Open</th>
+<th>PaymentReceived</th>
+<th>Submitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SetPayment()</td>
+<td>✅ Allowed</td>
+<td>❌ Denied</td>
+<td>❌ Denied</td>
+</tr>
+<tr>
+<td>Submit()</td>
+<td>❌ Denied</td>
+<td>✅ Allowed</td>
+<td>❌ Denied</td>
+</tr>
+<tr>
+<td>Modify Items</td>
+<td>✅ Allowed</td>
+<td>❌ Denied</td>
+<td>❌ Denied</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-saga-pattern-checkout-process">8.2 Saga Pattern (Checkout Process)</h3>
+<p><strong>Pattern:</strong> Long-running business transaction spanning multiple aggregates</p>
+<p><strong>Implementation:</strong> Orchestrated by <code>OrderService</code> and <code>CheckoutController</code></p>
+<p><strong>Steps:</strong>
+1. <strong>Validate Basket</strong> - Ensure basket has items and delivery option
+2. <strong>Authenticate Customer</strong> - Verify user logged in
+3. <strong>Create Order</strong> - Convert basket to order aggregate
+4. <strong>Process Payment</strong> - Redirect to PayPal, await callback
+5. <strong>Submit Order</strong> - Update order state, trigger domain event
+6. <strong>Send Confirmation</strong> - Email sent via event handler</p>
+<p><strong>Compensation Logic:</strong>
+- Payment failure → Return to basket (order not saved)
+- Payment cancelled → Return to basket
+- Email failure → Order still submitted (email is best-effort)</p>
+<p><strong>Transaction Boundaries:</strong>
+- Basket validation: Read-only
+- Order creation: Transaction
+- Payment processing: External (PayPal transaction)
+- Order submission + email: Single transaction (synchronous domain event)</p>
+<h3 id="83-strategy-pattern-delivery-options">8.3 Strategy Pattern (Delivery Options)</h3>
+<p><strong>Pattern:</strong> Strategy Pattern for different delivery/shipping options</p>
+<p><strong>Implementation:</strong> <code>DeliveryOption</code> entity with associated <code>ShippingService</code></p>
+<p><strong>Business Purpose:</strong> Different delivery methods (Standard, Express, Next-Day) with varying costs</p>
+<p><strong>Usage:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">basket</span><span class="p">.</span><span class="n">SetDeliveryOption</span><span class="p">(</span><span class="n">deliveryOption</span><span class="p">);</span><span class="w"> </span><span class="c1">// Strategy selected by customer</span>
+<span class="kt">decimal</span><span class="w"> </span><span class="n">deliveryCost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">basket</span><span class="p">.</span><span class="n">DeliveryCost</span><span class="p">();</span><span class="w"> </span><span class="c1">// Cost calculated by selected strategy</span>
+</code></pre></div></p>
+<h3 id="84-factory-pattern-entity-creation">8.4 Factory Pattern (Entity Creation)</h3>
+<p><strong>Pattern:</strong> Factory Pattern for creating complex entities</p>
+<p><strong>Implementation:</strong> <code>BasketItemFactory</code></p>
+<p><strong>Business Purpose:</strong> Encapsulates business rules for creating basket items (e.g., capturing product price, setting initial quantity)</p>
+<p><strong>Usage:</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">basketItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BasketItemFactory</span><span class="p">.</span><span class="n">CreateItemFor</span><span class="p">(</span><span class="n">product</span><span class="p">,</span><span class="w"> </span><span class="n">basket</span><span class="p">);</span>
+<span class="c1">// Ensures business rules applied consistently</span>
+</code></pre></div></p>
+<hr/>
+<h2 id="9-business-domain-metrics">9. Business Domain Metrics</h2>
+<h3 id="91-domain-complexity-metrics">9.1 Domain Complexity Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of Aggregates</td>
+<td>4</td>
+<td>✅ Good - manageable complexity</td>
+</tr>
+<tr>
+<td>Number of Domain Entities</td>
+<td>15</td>
+<td>✅ Good - focused domain</td>
+</tr>
+<tr>
+<td>Number of Value Objects</td>
+<td>3</td>
+<td>⚠️ Could add more (Money, Address)</td>
+</tr>
+<tr>
+<td>Business Rules (Documented)</td>
+<td>40+</td>
+<td>✅ Excellent - well-defined</td>
+</tr>
+<tr>
+<td>Domain Events</td>
+<td>1</td>
+<td>⚠️ Underutilized pattern</td>
+</tr>
+<tr>
+<td>Aggregate Complexity (avg entities per aggregate)</td>
+<td>3.75</td>
+<td>✅ Good - not too complex</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-business-rule-coverage">9.2 Business Rule Coverage</h3>
+<table>
+<thead>
+<tr>
+<th>Aggregate</th>
+<th>Rules Defined</th>
+<th>Enforcement Quality</th>
+<th>Coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basket</td>
+<td>5</td>
+<td>⭐⭐⭐⭐⭐ Excellent</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>8</td>
+<td>⭐⭐⭐⭐⭐ Excellent</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Customer</td>
+<td>4</td>
+<td>⭐⭐⭐⭐ Good</td>
+<td>90%</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>3</td>
+<td>⭐⭐⭐ Adequate</td>
+<td>80%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-domain-model-maturity">9.3 Domain Model Maturity</h3>
+<p><strong>Overall Maturity:</strong> ⭐⭐⭐⭐ 4/5 (Mature)</p>
+<p><strong>Strengths:</strong>
+- ✅ Rich domain model with encapsulated behavior
+- ✅ Clear aggregate boundaries
+- ✅ Comprehensive business rules enforcement
+- ✅ Proper use of DDD tactical patterns
+- ✅ State machine for order lifecycle
+- ✅ Repository and Unit of Work patterns</p>
+<p><strong>Areas for Enhancement:</strong>
+- ⚠️ Limited domain events usage (only 1 event)
+- ⚠️ Value objects could be richer (Money, Address as value object)
+- ⚠️ No explicit domain service contracts (services in service layer, not domain)
+- ⚠️ Specification pattern underutilized (only email validation)</p>
+<hr/>
+<h2 id="10-summary-and-modernization-implications">10. Summary and Modernization Implications</h2>
+<h3 id="101-domain-model-strengths">10.1 Domain Model Strengths</h3>
+<ol>
+<li><strong>Rich Domain Model:</strong> Business logic encapsulated in domain entities, not anemic data model</li>
+<li><strong>DDD Alignment:</strong> Excellent use of Domain-Driven Design patterns and principles</li>
+<li><strong>Business Rule Enforcement:</strong> Comprehensive validation and business rules at domain layer</li>
+<li><strong>Clear Boundaries:</strong> Well-defined aggregate boundaries with proper encapsulation</li>
+<li><strong>Testability:</strong> Domain logic testable independently of infrastructure</li>
+<li><strong>Maintainability:</strong> Clean separation of concerns makes code easy to understand and modify</li>
+</ol>
+<h3 id="102-business-value-delivered">10.2 Business Value Delivered</h3>
+<table>
+<thead>
+<tr>
+<th>Business Capability</th>
+<th>Implementation Quality</th>
+<th>Business Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Discovery</td>
+<td>⭐⭐⭐⭐ Good</td>
+<td>High - Enables sales</td>
+</tr>
+<tr>
+<td>Shopping Cart</td>
+<td>⭐⭐⭐⭐⭐ Excellent</td>
+<td>Critical - Core function</td>
+</tr>
+<tr>
+<td>Checkout Process</td>
+<td>⭐⭐⭐⭐ Good</td>
+<td>Critical - Revenue generation</td>
+</tr>
+<tr>
+<td>Payment Processing</td>
+<td>⭐⭐⭐⭐ Good</td>
+<td>Critical - Secure &amp; compliant</td>
+</tr>
+<tr>
+<td>Customer Accounts</td>
+<td>⭐⭐⭐⭐ Good</td>
+<td>High - Customer retention</td>
+</tr>
+<tr>
+<td>Order Management</td>
+<td>⭐⭐⭐ Adequate</td>
+<td>Medium - Basic functionality</td>
+</tr>
+</tbody>
+</table>
+<h3 id="103-domain-model-preservation-in-modernization">10.3 Domain Model Preservation in Modernization</h3>
+<p><strong>Domain Logic to Preserve:</strong>
+- ✅ Aggregate boundaries and roots
+- ✅ Business rule classes and validation logic
+- ✅ State machine pattern for order lifecycle
+- ✅ Domain events infrastructure (expand usage)
+- ✅ Repository abstractions
+- ✅ Entity relationships and cardinality</p>
+<p><strong>Domain Logic to Enhance:</strong>
+- 🔄 Add more domain events for better decoupling
+- 🔄 Implement richer value objects (Money, Address)
+- 🔄 Expand specification pattern for complex queries
+- 🔄 Add domain services for cross-aggregate operations
+- 🔄 Implement eventual consistency for non-critical operations</p>
+<h3 id="104-modernization-impact-on-domain">10.4 Modernization Impact on Domain</h3>
+<p><strong>Low Impact Changes (Domain Preserved):</strong>
+- Migrating to cloud hosting
+- Updating UI framework
+- Modernizing data access (NHibernate → EF Core)
+- Implementing API layer</p>
+<p><strong>Medium Impact Changes (Domain Enhanced):</strong>
+- Adding multi-currency support (Money value object)
+- Implementing inventory management (new aggregate)
+- Adding product recommendations (new domain service)
+- Implementing returns processing (new workflow)</p>
+<p><strong>High Impact Changes (Domain Redesign Required):</strong>
+- Multi-tenant architecture (bounded context changes)
+- Marketplace model (new aggregates and workflows)
+- Subscription model (new domain concepts)</p>
+<h3 id="105-domain-model-readiness-for-cloud">10.5 Domain Model Readiness for Cloud</h3>
+<p><strong>Readiness Score:</strong> 🟢 <strong>High (85%)</strong></p>
+<p><strong>Cloud-Ready Aspects:</strong>
+- ✅ Stateless domain logic (no in-memory caching in entities)
+- ✅ Repository abstraction (easy to swap persistence)
+- ✅ Interface-based design (DI-friendly)
+- ✅ Transaction boundaries well-defined (Unit of Work)
+- ✅ No dependencies on infrastructure within domain</p>
+<p><strong>Enhancements Needed:</strong>
+- ⚠️ Asynchronous domain events (message queue integration)
+- ⚠️ Distributed transaction handling (Saga pattern)
+- ⚠️ Event sourcing for audit trail (optional)</p>
+<hr/>
+<h2 id="11-recommendations">11. Recommendations</h2>
+<h3 id="111-short-term-recommendations-domain-enhancement">11.1 Short-Term Recommendations (Domain Enhancement)</h3>
+<ol>
+<li><strong>Expand Domain Events:</strong> Implement additional domain events (CustomerRegistered, BasketAbandoned, PaymentFailed) for better decoupling</li>
+<li><strong>Enrich Value Objects:</strong> Implement Money value object for currency handling, Address value object for immutability</li>
+<li><strong>Increase Specification Usage:</strong> Expand specification pattern for product filtering and complex queries</li>
+<li><strong>Document Ubiquitous Language:</strong> Create domain glossary to maintain consistency</li>
+<li><strong>Add Domain Unit Tests:</strong> Ensure all business rules have comprehensive unit test coverage</li>
+</ol>
+<h3 id="112-long-term-recommendations-modernization">11.2 Long-Term Recommendations (Modernization)</h3>
+<ol>
+<li><strong>Asynchronous Domain Events:</strong> Migrate to message queue (Azure Service Bus) for domain events to enable eventual consistency</li>
+<li><strong>Event Sourcing:</strong> Consider implementing event sourcing for Order aggregate for complete audit trail</li>
+<li><strong>CQRS Enhancement:</strong> Separate read models from write models for better scalability</li>
+<li><strong>Domain Services Expansion:</strong> Move more cross-aggregate logic into explicit domain services</li>
+<li><strong>Multi-Currency Support:</strong> Implement Money value object with currency conversion for international expansion</li>
+</ol>
+<h3 id="113-business-capability-gaps-to-address">11.3 Business Capability Gaps to Address</h3>
+<table>
+<thead>
+<tr>
+<th>Capability Gap</th>
+<th>Business Impact</th>
+<th>Priority</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inventory Management</td>
+<td>Cannot track stock, overselling risk</td>
+<td>🔴 HIGH</td>
+<td>Add Inventory aggregate with stock tracking</td>
+</tr>
+<tr>
+<td>Returns Processing</td>
+<td>Manual process, poor customer experience</td>
+<td>🟡 MEDIUM</td>
+<td>Implement Returns aggregate with refund workflow</td>
+</tr>
+<tr>
+<td>Product Recommendations</td>
+<td>Lost cross-sell opportunities</td>
+<td>🟡 MEDIUM</td>
+<td>Add Recommendation domain service</td>
+</tr>
+<tr>
+<td>Multi-currency</td>
+<td>Cannot serve international markets</td>
+<td>🟡 MEDIUM</td>
+<td>Implement Money value object with conversion</td>
+</tr>
+<tr>
+<td>Order Tracking</td>
+<td>Limited visibility after submission</td>
+<td>🔵 LOW</td>
+<td>Add Order state for shipping/delivery</td>
+</tr>
+<tr>
+<td>Promotions/Discounts</td>
+<td>Cannot run marketing campaigns</td>
+<td>🟡 MEDIUM</td>
+<td>Add Promotion aggregate with discount rules</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p><strong>Document End</strong></p>
+<p><strong>Related Documents:</strong>
+- <a href="../2.2-requirements-specification/">2.2 Requirements Specification</a>
+- <a href="../2.3-compliance-regulatory/">2.3 Compliance and Regulatory</a>
+- <a href="../1-architecture/1.1-system-overview.md">Architecture Overview</a>
+- <a href="../1-architecture/1.3-data-architecture.md">Data Architecture</a></p>
+<p><strong>Change Log:</strong>
+| Date | Version | Author | Changes |
+|------|---------|--------|---------|
+| 2026-06-09 | 1.0 | Business Analyst AI | Initial comprehensive domain model documentation |</p></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script src="../../../js/bootstrap.bundle.min.js"></script>
+<script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script src="../../../js/base.js"></script>
+<script src="../../../search/main.js"></script>
+<script src="../../../assets/javascripts/panzoom.min.js"></script>
+<script src="../../../assets/javascripts/zoompan.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>

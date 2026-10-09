@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../../img/favicon.ico" rel="shortcut icon"/>
+<title>Data Architecture - Project Documentation</title>
+<link href="../../../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../../css/fontawesome.min.css" rel="stylesheet"/>
+<link href="../../../css/brands.min.css" rel="stylesheet"/>
+<link href="../../../css/solid.min.css" rel="stylesheet"/>
+<link href="../../../css/v4-font-face.min.css" rel="stylesheet"/>
+<link href="../../../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/panzoom.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<meta name="panzoom-theme" content="mkdocs">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="../../..">Project Documentation</a>
+<!-- Expander button -->
+<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="../../..">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../EXECUTIVE-SUMMARY/">Executive Summary</a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Quickstart</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-ARCHITECT/">Architect</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-DEVELOPER/">Developer</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-EXECUTIVE/">Executive</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-current="page" aria-expanded="false" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button">Current State</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Architecture</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../1.1-system-architecture/">System Architecture</a>
+</li>
+<li>
+<a aria-current="page" class="dropdown-item active" href="./">Data Architecture</a>
+</li>
+<li>
+<a class="dropdown-item" href="../1.3-api-integration-catalog/">API Integration Catalog</a>
+</li>
+<li>
+<a class="dropdown-item" href="../1.4-project-inventory/">Project Inventory</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Business</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../2-business/2.1-business-domain-model/">Business Domain Model</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../2-business/2.2-requirements-specification/">Requirements Specification</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../2-business/2.3-compliance-regulatory/">Compliance &amp; Regulatory</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../2-business/2.4-user-experience-analysis/">User Experience Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../2-business/2.5-localization-i18n/">Localization &amp; I18n</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Modernization</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Strategy</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../MODERNIZATION/2-strategy/2.1-executive-summary/">Executive Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/">Stakeholder Matrix</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Generation Summaries</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/architecture-documentation-summary/">Architecture Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/business-documentation-summary/">Business Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/compilation-summary/">Compilation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/pre-analysis-summary/">Pre-Analysis Summary</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../GLOSSARY/">Glossary</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ms-md-auto">
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#mkdocs_search_modal" data-bs-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../1.1-system-architecture/" rel="prev">
+<i class="fa fa-arrow-left"></i> Previous
+                                </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../1.3-api-integration-catalog/" rel="next">
+                                    Next <i class="fa fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#data-architecture-agathasstorefront">Data Architecture - Agathas.Storefront</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#table-of-contents">Table of Contents</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#overview">Overview</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#data-storage-inventory">Data Storage Inventory</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#database-schema-documentation">Database Schema Documentation</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#data-flow-diagrams">Data Flow Diagrams</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#orm-and-data-access-patterns">ORM and Data Access Patterns</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#data-security-and-compliance">Data Security and Compliance</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#performance-considerations">Performance Considerations</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#backup-and-recovery">Backup and Recovery</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#data-migration-and-etl">Data Migration and ETL</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#monitoring-and-diagnostics">Monitoring and Diagnostics</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#future-considerations">Future Considerations</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#document-metadata">Document Metadata</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="data-architecture-agathasstorefront">Data Architecture - Agathas.Storefront</h1>
+<blockquote>
+<p>This document provides comprehensive documentation of all data storage systems, database schemas, data flow patterns, access methods, and security considerations within the system.</p>
+</blockquote>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#data-storage-inventory">Data Storage Inventory</a></li>
+<li><a href="#database-schema-documentation">Database Schema Documentation</a></li>
+<li><a href="#data-flow-diagrams">Data Flow Diagrams</a></li>
+<li><a href="#orm-and-data-access-patterns">ORM and Data Access Patterns</a></li>
+<li><a href="#data-security-and-compliance">Data Security and Compliance</a></li>
+<li><a href="#performance-considerations">Performance Considerations</a></li>
+<li><a href="#backup-and-recovery">Backup and Recovery</a></li>
+<li><a href="#data-migration-and-etl">Data Migration and ETL</a></li>
+<li><a href="#monitoring-and-diagnostics">Monitoring and Diagnostics</a></li>
+<li><a href="#future-considerations">Future Considerations</a></li>
+</ul>
+<hr/>
+<h2 id="overview">Overview</h2>
+<p>The Agathas.Storefront application utilizes a dual-database architecture with SQL Server Express LocalDB instances for both application data and ASP.NET Membership authentication. Data access is implemented through NHibernate 2.1 ORM with HBM.XML mapping files, following Repository and Unit of Work patterns for clean separation between domain and data layers.</p>
+<p>The data architecture demonstrates strong Domain-Driven Design principles with well-defined aggregates (Basket, Order, Customer, Product) and proper enforcement of aggregate boundaries. All data access flows through repository abstractions, with NHibernate providing automatic change tracking and lazy loading capabilities. Transactions are explicitly managed through the Unit of Work pattern, scoped to HTTP request boundaries for web operations.</p>
+<p>Despite the solid architectural patterns, the implementation relies on SQL Server User Instance mode with file-based databases (<code>AttachDbFilename</code>), which is deprecated and unsuitable for production. The database schema is inferred from HBM.XML mappings rather than explicit DDL scripts, making schema versioning and deployment challenging.</p>
+<p><strong>Data Architecture Summary:</strong>
+- <strong>Primary Database:</strong> SQL Server Express LocalDB (User Instance mode) - Application data
+- <strong>Secondary Database:</strong> SQL Server Express LocalDB - ASP.NET Membership (authentication)
+- <strong>Data Access:</strong> NHibernate 2.1 ORM with HBM.XML mappings
+- <strong>Data Volume:</strong> Unknown (cannot determine from static analysis; requires production metrics)
+- <strong>Transaction Volume:</strong> Unknown (requires production monitoring data)</p>
+<hr/>
+<h2 id="data-storage-inventory">Data Storage Inventory</h2>
+<h3 id="databases">Databases</h3>
+<h4 id="primary-database">Primary Database</h4>
+<table>
+<thead>
+<tr>
+<th>Database Name</th>
+<th>Type</th>
+<th>Version</th>
+<th>Purpose</th>
+<th>Size</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shop</td>
+<td>SQL Server Express</td>
+<td>LocalDB (User Instance)</td>
+<td>Primary application data storage (products, orders, customers, baskets)</td>
+<td>Unknown (static analysis limitation)</td>
+<td><code>App_Data\Shop.mdf</code></td>
+</tr>
+<tr>
+<td>aspnetdb</td>
+<td>SQL Server Express</td>
+<td>LocalDB (User Instance)</td>
+<td>ASP.NET Membership Provider (user authentication)</td>
+<td>Unknown</td>
+<td><code>App_Data\aspnetdb.mdf</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Connection Details:</strong>
+<div class="highlight"><pre><span></span><code>Shop Database:
+  Connection String: Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|Shop.mdf;Integrated Security=True;User Instance=True
+  Authentication: Windows Integrated Security
+  User Instance: True (DEPRECATED - removed in SQL Server 2014+)
+  Max Pool Size: 100 (default ADO.NET setting)
+  Connection Timeout: 15 seconds (default)
+
+aspnetdb Database:
+  Connection String: Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|aspnetdb.mdf;Integrated Security=True;User Instance=True
+  Authentication: Windows Integrated Security
+  Purpose: ASP.NET Membership tables (aspnet_Users, aspnet_Membership, aspnet_Profile)
+</code></pre></div></p>
+<p><strong>Critical Issues:</strong>
+- ❌ User Instance feature deprecated in SQL Server 2012, removed in SQL Server 2014
+- ❌ File-based attach mode not suitable for production (no backup automation, poor performance, no redundancy)
+- ❌ <code>|DataDirectory|</code> maps to <code>App_Data\</code> folder (file system coupling)</p>
+<h4 id="no-secondary-databases">No Secondary Databases</h4>
+<ul>
+<li>No read replicas</li>
+<li>No analytics database</li>
+<li>No data warehouse</li>
+<li>No separate reporting database</li>
+</ul>
+<h3 id="file-storage">File Storage</h3>
+<table>
+<thead>
+<tr>
+<th>Storage Type</th>
+<th>Technology</th>
+<th>Purpose</th>
+<th>Size</th>
+<th>Access Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Database Files</td>
+<td>NTFS File System</td>
+<td>SQL Server MDF/LDF files</td>
+<td>Unknown</td>
+<td>Direct file access by SQL Server User Instance</td>
+</tr>
+<tr>
+<td>Log Files</td>
+<td>NTFS File System</td>
+<td>Log4Net rolling file appender</td>
+<td>Unknown</td>
+<td>File system write via Log4Net</td>
+</tr>
+<tr>
+<td>Static Content</td>
+<td>NTFS File System</td>
+<td>CSS, JavaScript, images</td>
+<td>Small (&lt; 10 MB estimated)</td>
+<td>IIS serves directly from <code>Content\</code> and <code>Scripts\</code> folders</td>
+</tr>
+</tbody>
+</table>
+<p><strong>File Storage Structure:</strong>
+<div class="highlight"><pre><span></span><code>Agathas.Storefront.UI.Web.MVC/
+├── App_Data/
+│   ├── Shop.mdf (Application database)
+│   ├── Shop_log.ldf (Transaction log)
+│   ├── aspnetdb.mdf (Membership database)
+│   └── aspnetdb_log.ldf (Membership transaction log)
+├── Content/
+│   ├── Site.css
+│   └── Images/
+│       └── Structure/ (layout images)
+└── Scripts/
+    ├── jquery-1.3.2.js
+    ├── jquery-1.3.2.min.js
+    ├── jquery.validate.js
+    ├── MicrosoftAjax.js
+    └── MicrosoftMvcAjax.js
+
+External (configured):
+C:\logs\ (Log4Net file appender output)
+</code></pre></div></p>
+<h3 id="caching">Caching</h3>
+<table>
+<thead>
+<tr>
+<th>Cache Name</th>
+<th>Technology</th>
+<th>Purpose</th>
+<th>Size</th>
+<th>TTL Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NHibernate First-Level Cache</td>
+<td>In-memory (per ISession)</td>
+<td>Entity caching within single Unit of Work</td>
+<td>Small (session lifetime)</td>
+<td>Session scope (disposed per request)</td>
+</tr>
+<tr>
+<td>NHibernate Second-Level Cache</td>
+<td>Not configured</td>
+<td>Cross-session entity caching</td>
+<td>N/A</td>
+<td>Not implemented</td>
+</tr>
+<tr>
+<td>Application Cache</td>
+<td>Not implemented</td>
+<td>Page/data output caching</td>
+<td>N/A</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cache Configuration:</strong>
+- <strong>NHibernate First-Level Cache:</strong> Automatic (built into ISession)
+- <strong>Eviction Policy:</strong> Session dispose (per HTTP request)
+- <strong>Persistence:</strong> In-memory only
+- <strong>Distribution:</strong> Single process (not shared across web servers)</p>
+<p><strong>Caching Gaps:</strong>
+- ❌ No second-level NHibernate cache configured
+- ❌ No distributed cache (Redis/Memcached) for multi-server scaling
+- ❌ No output caching for product catalog pages
+- ❌ Product catalog service decorator (<code>CachedProductCatalogService</code>) exists but not registered in IoC</p>
+<h3 id="message-queues">Message Queues</h3>
+<p><strong>Not Implemented</strong> - No asynchronous messaging infrastructure</p>
+<ul>
+<li>❌ No message queue (RabbitMQ, Azure Service Bus, MSMQ)</li>
+<li>❌ All processing is synchronous within HTTP request</li>
+<li>❌ Domain events are in-process only (not distributed)</li>
+</ul>
+<h3 id="configuration-storage">Configuration Storage</h3>
+<table>
+<thead>
+<tr>
+<th>Storage Type</th>
+<th>Location</th>
+<th>Purpose</th>
+<th>Access Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web.config</td>
+<td>File system (<code>Agathas.Storefront.UI.Web.MVC\Web.config</code>)</td>
+<td>Application settings, connection strings, mail settings</td>
+<td><code>ConfigurationManager.AppSettings</code> and <code>ConfigurationManager.ConnectionStrings</code></td>
+</tr>
+<tr>
+<td>Plaintext Secrets</td>
+<td>Web.config (INSECURE)</td>
+<td>PayPal credentials, Janrain API key, SMTP password</td>
+<td>Direct config read</td>
+</tr>
+<tr>
+<td>No Key Vault</td>
+<td>N/A</td>
+<td>Secrets management not implemented</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>No Feature Flags</td>
+<td>N/A</td>
+<td>Feature toggles not implemented</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critical Security Issues:</strong>
+- ❌ Secrets stored in plaintext in Web.config (PCI-DSS violation)
+- ❌ Configuration changes require app restart
+- ❌ No encryption of connectionStrings section</p>
+<hr/>
+<h2 id="database-schema-documentation">Database Schema Documentation</h2>
+<h3 id="schema-overview">Schema Overview</h3>
+<p>The database schema is organized around Domain-Driven Design aggregates, with NHibernate HBM.XML mappings defining the structure. Schema is inferred from mappings rather than explicit DDL scripts.</p>
+<p><strong>Naming Conventions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Convention</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PascalCase Tables</td>
+<td>Standard SQL Server naming</td>
+<td><code>ProductTitle</code>, <code>BasketItem</code>, <code>DeliveryAddress</code></td>
+</tr>
+<tr>
+<td>PascalCase Columns</td>
+<td>Property-style naming</td>
+<td><code>ProductId</code>, <code>FirstName</code>, <code>CreatedDate</code></td>
+</tr>
+<tr>
+<td>FK Suffix</td>
+<td>Foreign key columns</td>
+<td><code>CustomerId</code>, <code>OrderId</code>, <code>ProductTitleId</code></td>
+</tr>
+<tr>
+<td>No Prefixes</td>
+<td>No tbl_ or similar prefixes</td>
+<td><code>Customer</code> (not <code>tbl_Customer</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Schema Organization:</strong>
+- <strong>dbo schema only</strong> - No custom schemas defined
+- <strong>15 core tables</strong> - Product, ProductTitle, ProductSize, ProductColor, Brand, Category, Basket, BasketItem, Order, OrderItem, Payment, Customer, DeliveryAddress, DeliveryOption, ShippingService, Courier
+- <strong>No views</strong> - Direct table access only
+- <strong>No stored procedures</strong> - All queries via NHibernate</p>
+<h3 id="entity-relationship-diagram">Entity Relationship Diagram</h3>
+<blockquote>
+<p><strong>Accessibility Note:</strong> This diagram shows five aggregate clusters: Product Catalog (ProductTitle, Product, Brand, Category, ProductSize, ProductColor), Shopping Basket (Basket, BasketItem), Order Processing (Order, OrderItem, Payment), Customer Management (Customer, DeliveryAddress), and Shipping (DeliveryOption, ShippingService, Courier). Products are linked to baskets through basket items, which convert to order items when orders are submitted. Customers have multiple delivery addresses and place orders.</p>
+</blockquote>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">erDiagram
+    ProductTitle ||--o{ Product : "has variants"
+    ProductTitle {
+        int ProductTitleId PK
+        string Name
+        string Description
+        int BrandId FK
+        int CategoryId FK
+        datetime CreatedDate
+    }
+
+    Product ||--o{ BasketItem : "added to"
+    Product ||--o{ OrderItem : "purchased in"
+    Product {
+        int ProductId PK
+        int ProductTitleId FK
+        string SKU
+        decimal Price
+        int ProductSizeId FK
+        int ProductColorId FK
+        int StockQuantity
+        bool IsActive
+    }
+
+    Brand ||--o{ ProductTitle : "manufactures"
+    Brand {
+        int BrandId PK
+        string Name
+        string Description
+    }
+
+    Category ||--o{ ProductTitle : "categorizes"
+    Category {
+        int CategoryId PK
+        string Name
+        string Description
+        int ParentCategoryId FK
+    }
+
+    ProductSize ||--o{ Product : "specifies"
+    ProductSize {
+        int ProductSizeId PK
+        string SizeName
+        string SizeCode
+    }
+
+    ProductColor ||--o{ Product : "specifies"
+    ProductColor {
+        int ProductColorId PK
+        string ColorName
+        string HexCode
+    }
+
+    Customer ||--o{ Basket : "owns"
+    Customer ||--o{ Order : "places"
+    Customer ||--o{ DeliveryAddress : "has"
+    Customer {
+        int CustomerId PK
+        string FirstName
+        string LastName
+        string Email
+        string PhoneNumber
+        datetime CreatedDate
+        bool IsActive
+    }
+
+    Basket ||--o{ BasketItem : "contains"
+    Basket {
+        guid BasketId PK
+        int CustomerId FK
+        decimal TotalAmount
+        datetime CreatedDate
+        datetime LastUpdated
+    }
+
+    BasketItem {
+        int BasketItemId PK
+        guid BasketId FK
+        int ProductId FK
+        int Quantity
+        decimal UnitPrice
+        decimal TotalPrice
+    }
+
+    Order ||--|{ OrderItem : "contains"
+    Order ||--|| Payment : "paid via"
+    Order ||--|| DeliveryAddress : "ships to"
+    Order ||--|| DeliveryOption : "uses"
+    Order {
+        int OrderId PK
+        int CustomerId FK
+        string OrderNumber
+        decimal TotalAmount
+        string Status
+        datetime OrderDate
+        datetime SubmittedDate
+        int DeliveryAddressId FK
+        int DeliveryOptionId FK
+    }
+
+    OrderItem {
+        int OrderItemId PK
+        int OrderId FK
+        int ProductId FK
+        string ProductName
+        int Quantity
+        decimal UnitPrice
+        decimal TotalPrice
+    }
+
+    Payment {
+        int PaymentId PK
+        int OrderId FK
+        string PaymentMethod
+        string TransactionId
+        decimal Amount
+        string PaymentStatus
+        datetime PaymentDate
+    }
+
+    DeliveryAddress {
+        int DeliveryAddressId PK
+        int CustomerId FK
+        string AddressLine1
+        string AddressLine2
+        string City
+        string StateProvince
+        string PostalCode
+        string Country
+        bool IsDefault
+    }
+
+    DeliveryOption ||--|| ShippingService : "provided by"
+    DeliveryOption {
+        int DeliveryOptionId PK
+        string OptionName
+        decimal Cost
+        int EstimatedDays
+        int ShippingServiceId FK
+    }
+
+    ShippingService ||--|| Courier : "operated by"
+    ShippingService {
+        int ShippingServiceId PK
+        string ServiceName
+        int CourierId FK
+    }
+
+    Courier {
+        int CourierId PK
+        string CourierName
+        string TrackingUrlTemplate
+    }
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<h3 id="understanding-the-entity-relationship-diagram">Understanding the Entity Relationship Diagram</h3>
+<p><strong>Key Entity Groups:</strong></p>
+<ol>
+<li><strong>Product Catalog Aggregate</strong></li>
+<li><strong>ProductTitle</strong>: Master product record (e.g., "Nike Air Max Running Shoe")</li>
+<li><strong>Product</strong>: Specific variant with size/color (e.g., "Nike Air Max, Size 10, Blue")</li>
+<li><strong>Brand</strong>: Product manufacturer/brand</li>
+<li><strong>Category</strong>: Product categorization (hierarchical with <code>ParentCategoryId</code>)</li>
+<li><strong>ProductSize</strong>: Reference data for sizes (S, M, L, 10, 11, etc.)</li>
+<li>
+<p><strong>ProductColor</strong>: Reference data for colors</p>
+</li>
+<li>
+<p><strong>Basket Aggregate</strong></p>
+</li>
+<li><strong>Basket</strong>: Shopping cart for customer session/account</li>
+<li>
+<p><strong>BasketItem</strong>: Individual products in basket with quantity and price snapshot</p>
+</li>
+<li>
+<p><strong>Order Aggregate</strong></p>
+</li>
+<li><strong>Order</strong>: Submitted order (aggregate root)</li>
+<li><strong>OrderItem</strong>: Products in order (converted from BasketItem on submission)</li>
+<li>
+<p><strong>Payment</strong>: Payment details for order (one-to-one relationship)</p>
+</li>
+<li>
+<p><strong>Customer Aggregate</strong></p>
+</li>
+<li><strong>Customer</strong>: Customer account information</li>
+<li>
+<p><strong>DeliveryAddress</strong>: Multiple shipping addresses per customer</p>
+</li>
+<li>
+<p><strong>Shipping Reference Data</strong></p>
+</li>
+<li><strong>DeliveryOption</strong>: Available shipping methods with cost and estimated days</li>
+<li><strong>ShippingService</strong>: Shipping service details</li>
+<li><strong>Courier</strong>: Courier company providing shipping</li>
+</ol>
+<p><strong>Key Relationships Explained:</strong></p>
+<ol>
+<li>
+<p><strong>Product Variants</strong>
+<div class="highlight"><pre><span></span><code>ProductTitle (1) → Product (Many)
+Cardinality: One-to-many
+Description: A single product title (e.g., "Nike Air Max") has multiple variant products 
+differentiated by size and color combinations.
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Basket to Order Conversion</strong>
+<div class="highlight"><pre><span></span><code>BasketItem → OrderItem (data copy on order submission)
+Description: When customer submits order, basket items are copied to order items, 
+freezing product name and price at time of purchase.
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Customer Addresses</strong>
+<div class="highlight"><pre><span></span><code>Customer (1) → DeliveryAddress (Many)
+Cardinality: One-to-many
+Description: Customers can have multiple saved shipping addresses with one marked as default.
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Order Payment</strong>
+<div class="highlight"><pre><span></span><code>Order (1) → Payment (1)
+Cardinality: One-to-one
+Description: Each order has exactly one payment record (no split payments supported).
+</code></pre></div></p>
+</li>
+</ol>
+<p><strong>Critical Design Patterns:</strong></p>
+<ul>
+<li><strong>Soft Delete</strong>: <code>IsActive</code> boolean columns on Product and Customer for logical deletion</li>
+<li><strong>Price Snapshotting</strong>: OrderItem stores <code>UnitPrice</code> and <code>ProductName</code> at time of purchase (not foreign key to Product)</li>
+<li><strong>Aggregate Roots</strong>: Basket, Order, Customer, ProductTitle are aggregate roots with cascading operations</li>
+<li><strong>Audit Trail</strong>: CreatedDate, LastUpdated, OrderDate, SubmittedDate for temporal tracking</li>
+<li><strong>Hierarchical Categories</strong>: Category table has self-referencing <code>ParentCategoryId</code> for tree structure</li>
+</ul>
+<hr/>
+<h2 id="data-flow-diagrams">Data Flow Diagrams</h2>
+<h3 id="read-operation-flow-product-catalog-browse">Read Operation Flow (Product Catalog Browse)</h3>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">flowchart TD
+    A[User Request: /Product/GetProductsByCategory?id=5] --&gt; B[ProductController]
+    B --&gt; C[IProductCatalogService]
+    C --&gt; D[ProductRepository.FindBy Query]
+    D --&gt; E{NHibernate<br/>First-Level<br/>Cache Hit?}
+    E --&gt;|Yes| F[Return Cached Entity]
+    E --&gt;|No| G[Execute SQL Query]
+    G --&gt; H[(SQL Server<br/>Shop.mdf)]
+    H --&gt; I[NHibernate Maps<br/>ResultSet to Entities]
+    I --&gt; J[Store in Session Cache]
+    J --&gt; F
+    F --&gt; K[Service Layer]
+    K --&gt; L[AutoMapper:<br/>Entity → ViewModel]
+    L --&gt; M[Controller]
+    M --&gt; N[View: ProductSearchResult.aspx]
+    N --&gt; O[HTML Response to Browser]
+
+    style H fill:#f9f,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:2px
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<h3 id="write-operation-flow-add-item-to-basket">Write Operation Flow (Add Item to Basket)</h3>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">flowchart TD
+    A[User Action: Add Product to Basket] --&gt; B[POST /Basket/Add]
+    B --&gt; C[BasketController]
+    C --&gt; D{User<br/>Authenticated?}
+    D --&gt;|No| E[Redirect to Login]
+    D --&gt;|Yes| F[IBasketService]
+    F --&gt; G[Begin Unit of Work<br/>NHibernate Session]
+    G --&gt; H[BasketRepository.FindBy basketId]
+    H --&gt; I{Basket<br/>Exists?}
+    I --&gt;|No| J[Create New Basket]
+    I --&gt;|Yes| K[Load Basket Aggregate]
+    J --&gt; K
+    K --&gt; L[ProductRepository.FindBy productId]
+    L --&gt; M[Load Product Entity]
+    M --&gt; N[Basket.AddItem<br/>Domain Logic]
+    N --&gt; O{Quantity<br/>Valid?}
+    O --&gt;|No| P[Throw DomainException]
+    O --&gt;|Yes| Q[Create/Update BasketItem]
+    Q --&gt; R[Basket.RecalculateTotal<br/>Business Rule]
+    R --&gt; S[Mark Basket as Modified<br/>NHibernate Change Tracking]
+    S --&gt; T[UnitOfWork.Commit]
+    T --&gt; U[NHibernate Flush:<br/>Generate SQL]
+    U --&gt; V{Transaction<br/>Success?}
+    V --&gt;|No| W[Rollback + Log Error]
+    V --&gt;|Yes| X[(SQL Server<br/>INSERT/UPDATE)]
+    X --&gt; Y[COMMIT Transaction]
+    Y --&gt; Z[Return Success Response]
+    Z --&gt; AA[Controller Redirect to /Basket]
+    P --&gt; AB[Return Error to User]
+
+    style X fill:#f9f,stroke:#333,stroke-width:2px
+    style N fill:#bfb,stroke:#333,stroke-width:2px
+    style R fill:#bfb,stroke:#333,stroke-width:2px
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<h3 id="order-submission-flow-complex-transaction">Order Submission Flow (Complex Transaction)</h3>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    participant User
+    participant CheckoutCtrl as CheckoutController
+    participant OrderSvc as OrderService
+    participant BasketRepo as BasketRepository
+    participant OrderRepo as OrderRepository
+    participant UoW as Unit of Work
+    participant Domain as Order Aggregate
+    participant Events as Domain Events
+    participant EmailSvc as Email Service
+    participant PayPal as PayPal Gateway
+    participant DB as SQL Server
+
+    User-&gt;&gt;CheckoutCtrl: POST /Checkout/SubmitOrder
+    activate CheckoutCtrl
+    CheckoutCtrl-&gt;&gt;OrderSvc: SubmitOrder(request)
+    activate OrderSvc
+
+    OrderSvc-&gt;&gt;UoW: Begin Transaction
+    activate UoW
+
+    OrderSvc-&gt;&gt;BasketRepo: FindBy(basketId)
+    BasketRepo-&gt;&gt;DB: SELECT Basket, BasketItems
+    DB--&gt;&gt;BasketRepo: Basket Data
+    BasketRepo--&gt;&gt;OrderSvc: Basket Aggregate
+
+    OrderSvc-&gt;&gt;Domain: Order.CreateFromBasket(basket)
+    activate Domain
+    Note over Domain: Domain Logic:<br/>- Convert BasketItems to OrderItems<br/>- Validate delivery address<br/>- Calculate shipping<br/>- Set initial state (Open)
+    Domain--&gt;&gt;OrderSvc: New Order Entity
+    deactivate Domain
+
+    OrderSvc-&gt;&gt;OrderRepo: Save(order)
+    OrderRepo-&gt;&gt;DB: INSERT Order, OrderItems, Payment
+
+    OrderSvc-&gt;&gt;Domain: order.Submit()
+    activate Domain
+    Note over Domain: State Transition:<br/>Open → Submitted
+    Domain-&gt;&gt;Events: Raise OrderSubmittedEvent
+    deactivate Domain
+
+    Events-&gt;&gt;EmailSvc: Handle OrderSubmittedEvent
+    activate EmailSvc
+    EmailSvc-&gt;&gt;EmailSvc: Send Order Confirmation Email
+    deactivate EmailSvc
+
+    OrderSvc-&gt;&gt;UoW: Commit()
+    UoW-&gt;&gt;DB: COMMIT TRANSACTION
+    deactivate UoW
+
+    OrderSvc--&gt;&gt;CheckoutCtrl: SubmitOrderResponse(orderId)
+    deactivate OrderSvc
+
+    CheckoutCtrl-&gt;&gt;PayPal: Redirect with Order Details
+    PayPal--&gt;&gt;User: Payment Page
+
+    deactivate CheckoutCtrl
+
+    Note over User,PayPal: User completes payment on PayPal
+
+    PayPal-&gt;&gt;CheckoutCtrl: Callback /Payment/Complete?orderId=X
+    activate CheckoutCtrl
+    CheckoutCtrl-&gt;&gt;OrderSvc: UpdatePaymentStatus(orderId, paymentData)
+    OrderSvc-&gt;&gt;OrderRepo: Load Order
+    OrderRepo--&gt;&gt;OrderSvc: Order Entity
+    OrderSvc-&gt;&gt;Domain: order.RecordPayment(paymentData)
+    OrderSvc-&gt;&gt;OrderRepo: Save(order)
+    OrderSvc-&gt;&gt;UoW: Commit()
+    CheckoutCtrl--&gt;&gt;User: Order Confirmation Page
+    deactivate CheckoutCtrl
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Data Flow Characteristics:</strong></p>
+<ul>
+<li><strong>Synchronous Processing</strong>: All operations block HTTP request thread</li>
+<li><strong>Transaction Boundaries</strong>: Unit of Work per HTTP request, explicit commit</li>
+<li><strong>Domain Events</strong>: In-process only (email sent synchronously within transaction)</li>
+<li><strong>No Async</strong>: No background jobs, queues, or eventual consistency patterns</li>
+<li><strong>Lazy Loading</strong>: Related entities loaded on-demand (N+1 query risk)</li>
+</ul>
+<hr/>
+<h2 id="orm-and-data-access-patterns">ORM and Data Access Patterns</h2>
+<h3 id="nhibernate-configuration">NHibernate Configuration</h3>
+<p><strong>Framework:</strong> NHibernate 2.1.0.2002</p>
+<p><strong>Mapping Approach:</strong> HBM.XML (Hibernate Mapping XML) files</p>
+<p><strong>Location:</strong> <code>Agathas.Storefront.Repository.NHibernate/Mapping/*.hbm.xml</code></p>
+<p><strong>Example Mapping:</strong>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8" ?&gt;</span>
+<span class="nt">&lt;hibernate-mapping</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"urn:nhibernate-mapping-2.2"</span>
+<span class="w">                   </span><span class="na">assembly=</span><span class="s">"Agathas.Storefront.Model"</span>
+<span class="w">                   </span><span class="na">namespace=</span><span class="s">"Agathas.Storefront.Model"</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;class</span><span class="w"> </span><span class="na">name=</span><span class="s">"Basket"</span><span class="w"> </span><span class="na">table=</span><span class="s">"Basket"</span><span class="w"> </span><span class="na">lazy=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;id</span><span class="w"> </span><span class="na">name=</span><span class="s">"Id"</span><span class="w"> </span><span class="na">column=</span><span class="s">"BasketId"</span><span class="w"> </span><span class="na">type=</span><span class="s">"Guid"</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;generator</span><span class="w"> </span><span class="na">class=</span><span class="s">"guid.comb"</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/id&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">"CreatedDate"</span><span class="w"> </span><span class="na">column=</span><span class="s">"CreatedDate"</span><span class="w"> </span><span class="na">type=</span><span class="s">"DateTime"</span><span class="w"> </span><span class="na">not-null=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">"Total"</span><span class="w"> </span><span class="na">column=</span><span class="s">"TotalAmount"</span><span class="w"> </span><span class="na">type=</span><span class="s">"Decimal"</span><span class="w"> </span><span class="na">precision=</span><span class="s">"18"</span><span class="w"> </span><span class="na">scale=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;many-to-one</span><span class="w"> </span><span class="na">name=</span><span class="s">"Customer"</span><span class="w"> </span><span class="na">column=</span><span class="s">"CustomerId"</span><span class="w"> </span><span class="na">class=</span><span class="s">"Customer"</span><span class="w"> </span><span class="na">not-null=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;bag</span><span class="w"> </span><span class="na">name=</span><span class="s">"Items"</span><span class="w"> </span><span class="na">cascade=</span><span class="s">"all-delete-orphan"</span><span class="w"> </span><span class="na">inverse=</span><span class="s">"true"</span><span class="w"> </span><span class="na">lazy=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;key</span><span class="w"> </span><span class="na">column=</span><span class="s">"BasketId"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;one-to-many</span><span class="w"> </span><span class="na">class=</span><span class="s">"BasketItem"</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/bag&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/class&gt;</span>
+<span class="nt">&lt;/hibernate-mapping&gt;</span>
+</code></pre></div></p>
+<p><strong>Configuration Details:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dialect</td>
+<td>MsSql2005Dialect</td>
+<td>SQL Server 2005+ compatibility</td>
+</tr>
+<tr>
+<td>Driver</td>
+<td>SqlClientDriver</td>
+<td>ADO.NET SQL Server driver</td>
+</tr>
+<tr>
+<td>Connection Provider</td>
+<td>DriverConnectionProvider</td>
+<td>Standard ADO.NET connection</td>
+</tr>
+<tr>
+<td>Lazy Loading</td>
+<td>Enabled (LinFu proxies)</td>
+<td>Defer loading of related entities</td>
+</tr>
+<tr>
+<td>Batch Size</td>
+<td>10</td>
+<td>Batch INSERT/UPDATE operations</td>
+</tr>
+<tr>
+<td>Show SQL</td>
+<td>True (development)</td>
+<td>Log generated SQL to console/log</td>
+</tr>
+<tr>
+<td>Second-Level Cache</td>
+<td>Disabled</td>
+<td>No cross-session caching</td>
+</tr>
+<tr>
+<td>Query Cache</td>
+<td>Disabled</td>
+<td>No query result caching</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Session Management:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">// NHibernate session factory (singleton)</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">NHibernateSessionFactory</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">ISessionFactory</span><span class="w"> </span><span class="n">_sessionFactory</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">ISessionFactory</span><span class="w"> </span><span class="nf">GetSessionFactory</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_sessionFactory</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Configuration</span><span class="p">();</span>
+<span class="w">            </span><span class="n">configuration</span><span class="p">.</span><span class="n">Configure</span><span class="p">();</span><span class="w"> </span><span class="c1">// Read from hibernate.cfg.xml</span>
+<span class="w">            </span><span class="n">configuration</span><span class="p">.</span><span class="n">AddAssembly</span><span class="p">(</span><span class="s">"Agathas.Storefront.Repository.NHibernate"</span><span class="p">);</span>
+<span class="w">            </span><span class="n">_sessionFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">configuration</span><span class="p">.</span><span class="n">BuildSessionFactory</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">_sessionFactory</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Unit of Work manages session per HTTP request</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">NHUnitOfWork</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IUnitOfWork</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">ISession</span><span class="w"> </span><span class="n">_session</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">NHUnitOfWork</span><span class="p">(</span><span class="n">ISessionFactory</span><span class="w"> </span><span class="n">sessionFactory</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">_session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sessionFactory</span><span class="p">.</span><span class="n">OpenSession</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">ISession</span><span class="w"> </span><span class="nf">GetSession</span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_session</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Commit</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">transaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_session</span><span class="p">.</span><span class="n">BeginTransaction</span><span class="p">())</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">_session</span><span class="p">.</span><span class="n">Flush</span><span class="p">();</span><span class="w"> </span><span class="c1">// Write pending changes</span>
+<span class="w">            </span><span class="n">transaction</span><span class="p">.</span><span class="n">Commit</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Dispose</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">_session</span><span class="o">?.</span><span class="n">Dispose</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Session Storage:</strong> HTTP Context (one session per web request)</p>
+<h3 id="repository-pattern-implementation">Repository Pattern Implementation</h3>
+<p><strong>Pattern:</strong> Generic Repository with specialized interfaces</p>
+<p><strong>Base Repository:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Repository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IRepository</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">class</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="n">ISession</span><span class="w"> </span><span class="n">Session</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Repository</span><span class="p">(</span><span class="n">IUnitOfWork</span><span class="w"> </span><span class="n">unitOfWork</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unitOfWork</span><span class="p">.</span><span class="n">GetSession</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">FindBy</span><span class="p">(</span><span class="n">IQuery</span><span class="w"> </span><span class="n">query</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">criteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="n">BuildCriteria</span><span class="p">(</span><span class="n">Session</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">criteria</span><span class="p">.</span><span class="n">UniqueResult</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">FindAll</span><span class="p">(</span><span class="n">IQuery</span><span class="w"> </span><span class="n">query</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">criteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="n">BuildCriteria</span><span class="p">(</span><span class="n">Session</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">criteria</span><span class="p">.</span><span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Save</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">entity</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Session</span><span class="p">.</span><span class="n">SaveOrUpdate</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Delete</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">entity</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Session</span><span class="p">.</span><span class="n">Delete</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Specialized Repository Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">BasketRepository</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Repository</span><span class="o">&lt;</span><span class="n">Basket</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">IBasketRepository</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">BasketRepository</span><span class="p">(</span><span class="n">IUnitOfWork</span><span class="w"> </span><span class="n">unitOfWork</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">base</span><span class="p">(</span><span class="n">unitOfWork</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">Basket</span><span class="w"> </span><span class="nf">FindByCustomerId</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">customerId</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Session</span><span class="p">.</span><span class="n">Query</span><span class="o">&lt;</span><span class="n">Basket</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="w">            </span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">Customer</span><span class="p">.</span><span class="n">Id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">customerId</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">Fetch</span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">Items</span><span class="p">)</span><span class="w"> </span><span class="c1">// Eager load basket items</span>
+<span class="w">            </span><span class="p">.</span><span class="n">SingleOrDefault</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="query-object-pattern">Query Object Pattern</h3>
+<p><strong>Purpose:</strong> Abstract query construction from repository</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ProductsByCategoryQuery</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IQuery</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_categoryId</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">ProductsByCategoryQuery</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">categoryId</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">_categoryId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">categoryId</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">ICriteria</span><span class="w"> </span><span class="nf">BuildCriteria</span><span class="p">(</span><span class="n">ISession</span><span class="w"> </span><span class="n">session</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="n">CreateCriteria</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="w">            </span><span class="p">.</span><span class="n">CreateAlias</span><span class="p">(</span><span class="s">"ProductTitle"</span><span class="p">,</span><span class="w"> </span><span class="s">"pt"</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Restrictions</span><span class="p">.</span><span class="n">Eq</span><span class="p">(</span><span class="s">"pt.Category.Id"</span><span class="p">,</span><span class="w"> </span><span class="n">_categoryId</span><span class="p">))</span>
+<span class="w">            </span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Restrictions</span><span class="p">.</span><span class="n">Eq</span><span class="p">(</span><span class="s">"IsActive"</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">))</span>
+<span class="w">            </span><span class="p">.</span><span class="n">SetMaxResults</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Usage in repository</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProductsByCategoryQuery</span><span class="p">(</span><span class="n">categoryId</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">products</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repository</span><span class="p">.</span><span class="n">FindAll</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
+</code></pre></div></p>
+<h3 id="lazy-loading-and-n1-problem">Lazy Loading and N+1 Problem</h3>
+<p><strong>Lazy Loading Configuration:</strong> Enabled via LinFu proxies</p>
+<p><strong>N+1 Problem Risk:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// BAD: N+1 queries</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">baskets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">basketRepository</span><span class="p">.</span><span class="n">FindAll</span><span class="p">();</span>
+<span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">basket</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">baskets</span><span class="p">)</span><span class="w"> </span><span class="c1">// 1 query</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">basket</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span><span class="w"> </span><span class="c1">// N queries (one per basket)</span>
+<span class="p">}</span>
+
+<span class="c1">// GOOD: Eager loading</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">baskets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="n">Query</span><span class="o">&lt;</span><span class="n">Basket</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="n">Fetch</span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">Items</span><span class="p">)</span><span class="w"> </span><span class="c1">// Single JOIN query</span>
+<span class="w">    </span><span class="p">.</span><span class="n">ToList</span><span class="p">();</span>
+</code></pre></div></p>
+<p><strong>Eager Loading Strategies:</strong>
+- <strong>Fetch</strong> in Query Objects for known access patterns
+- <strong>Join Fetch</strong> in HBM.XML for required associations
+- <strong>Batch fetching</strong> with <code>batch-size</code> attribute</p>
+<h3 id="data-access-patterns-summary">Data Access Patterns Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Implementation</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Repository</strong></td>
+<td>Generic + Specialized repositories</td>
+<td><code>Agathas.Storefront.Repository.NHibernate/Repositories/</code></td>
+</tr>
+<tr>
+<td><strong>Unit of Work</strong></td>
+<td>NHibernate ISession wrapper</td>
+<td><code>Agathas.Storefront.Repository.NHibernate/NHUnitOfWork.cs</code></td>
+</tr>
+<tr>
+<td><strong>Query Object</strong></td>
+<td>Criteria API abstraction</td>
+<td><code>Agathas.Storefront.Infrastructure/Querying/</code></td>
+</tr>
+<tr>
+<td><strong>Identity Map</strong></td>
+<td>NHibernate first-level cache</td>
+<td>Automatic (ISession)</td>
+</tr>
+<tr>
+<td><strong>Lazy Loading</strong></td>
+<td>LinFu dynamic proxies</td>
+<td>Configured in HBM.XML</td>
+</tr>
+<tr>
+<td><strong>Change Tracking</strong></td>
+<td>Automatic dirty checking</td>
+<td>NHibernate ISession</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="data-security-and-compliance">Data Security and Compliance</h2>
+<h3 id="authentication-data-storage">Authentication Data Storage</h3>
+<p><strong>ASP.NET Membership Provider:</strong> <code>aspnetdb.mdf</code></p>
+<p><strong>Key Tables:</strong>
+- <code>aspnet_Users</code> - User IDs and application membership
+- <code>aspnet_Membership</code> - Passwords (hashed), email, security Q&amp;A
+- <code>aspnet_Profile</code> - User profile data (key-value pairs)</p>
+<p><strong>Password Storage:</strong>
+- <strong>Hash Algorithm:</strong> SHA1 (default for ASP.NET Membership in .NET 3.5/4.0)
+- <strong>Salting:</strong> Yes (automatic per-user salt)
+- <strong>Iteration:</strong> Single hash iteration (weak by modern standards)
+- <strong>Security Assessment:</strong> ⚠️ SHA1 considered cryptographically broken; vulnerable to collision attacks</p>
+<p><strong>Recommendation:</strong> Migrate to ASP.NET Core Identity with PBKDF2, bcrypt, or Argon2 hashing</p>
+<h3 id="sensitive-data-inventory">Sensitive Data Inventory</h3>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Storage Location</th>
+<th>Encryption</th>
+<th>Compliance Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Customer PII</strong></td>
+<td>Customer table (FirstName, LastName, Email, Phone)</td>
+<td>❌ None (plaintext)</td>
+<td>GDPR, CCPA</td>
+</tr>
+<tr>
+<td><strong>Passwords</strong></td>
+<td>aspnet_Membership.Password</td>
+<td>⚠️ SHA1 hashed (weak)</td>
+<td>PCI-DSS (if payment data involved)</td>
+</tr>
+<tr>
+<td><strong>Payment Transaction IDs</strong></td>
+<td>Payment.TransactionId</td>
+<td>❌ None (plaintext)</td>
+<td>PCI-DSS SAQ A (relies on PayPal for card data)</td>
+</tr>
+<tr>
+<td><strong>Delivery Addresses</strong></td>
+<td>DeliveryAddress table</td>
+<td>❌ None (plaintext)</td>
+<td>GDPR (personal data)</td>
+</tr>
+<tr>
+<td><strong>Order History</strong></td>
+<td>Order, OrderItem tables</td>
+<td>❌ None (plaintext)</td>
+<td>GDPR (transaction history)</td>
+</tr>
+<tr>
+<td><strong>Connection Strings</strong></td>
+<td>Web.config</td>
+<td>❌ Plaintext</td>
+<td>Internal security risk</td>
+</tr>
+<tr>
+<td><strong>API Keys</strong></td>
+<td>Web.config (PayPal, Janrain, SMTP)</td>
+<td>❌ Plaintext</td>
+<td>PCI-DSS, security best practices</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critical Compliance Gaps:</strong></p>
+<ol>
+<li><strong>PCI-DSS:</strong></li>
+<li>✅ <strong>Compliance Maintained:</strong> Application does NOT store credit card data (offloaded to PayPal)</li>
+<li>⚠️ <strong>SAQ A Applicable:</strong> Merchant redirects customers to PayPal for payment</li>
+<li>
+<p>❌ <strong>Risk:</strong> API keys in plaintext could expose PayPal business account</p>
+</li>
+<li>
+<p><strong>GDPR (EU General Data Protection Regulation):</strong></p>
+</li>
+<li>❌ <strong>Data Encryption:</strong> No encryption at rest for personal data</li>
+<li>❌ <strong>Right to Erasure:</strong> No "soft delete" or anonymization for customer data removal</li>
+<li>❌ <strong>Data Breach Notification:</strong> No audit logging to detect breaches</li>
+<li>
+<p>❌ <strong>Consent Management:</strong> No consent tracking for data processing</p>
+</li>
+<li>
+<p><strong>CCPA (California Consumer Privacy Act):</strong></p>
+</li>
+<li>❌ <strong>Data Inventory:</strong> No metadata tracking what personal data is stored</li>
+<li>❌ <strong>Data Deletion:</strong> No automated deletion workflow</li>
+</ol>
+<h3 id="data-encryption">Data Encryption</h3>
+<p><strong>Encryption at Rest:</strong>
+- ❌ <strong>Database:</strong> SQL Server Express does not support Transparent Data Encryption (TDE) - feature only in Enterprise Edition
+- ❌ <strong>File System:</strong> No BitLocker or file-level encryption detected
+- ❌ <strong>Backups:</strong> No encrypted backups</p>
+<p><strong>Encryption in Transit:</strong>
+- ⚠️ <strong>HTTPS:</strong> Dependent on IIS configuration (not enforced in application code)
+- ❌ <strong>No HSTS:</strong> HTTP Strict Transport Security not configured
+- ❌ <strong>No Certificate Pinning:</strong> Not applicable for web applications</p>
+<p><strong>Recommended Encryption Strategy:</strong></p>
+<ol>
+<li><strong>Immediate:</strong></li>
+<li>Encrypt Web.config sections: <code>aspnet_regiis -pe "connectionStrings" -app "/AgathsStorefront"</code></li>
+<li>
+<p>Enforce HTTPS via <code>[RequireHttps]</code> attribute on all controllers</p>
+</li>
+<li>
+<p><strong>Short-term:</strong></p>
+</li>
+<li>Migrate secrets to Azure Key Vault or AWS Secrets Manager</li>
+<li>
+<p>Implement column-level encryption for sensitive fields (use Always Encrypted if migrating to Azure SQL)</p>
+</li>
+<li>
+<p><strong>Long-term:</strong></p>
+</li>
+<li>Full database encryption (TDE if using SQL Server Enterprise or Azure SQL)</li>
+<li>Implement encryption key rotation</li>
+<li>Audit logging for data access</li>
+</ol>
+<h3 id="sql-injection-prevention">SQL Injection Prevention</h3>
+<p><strong>Protection Mechanism:</strong> NHibernate parameterized queries</p>
+<p><strong>Risk Assessment:</strong> ✅ Low</p>
+<p>All database access flows through NHibernate ORM, which uses parameterized queries by default:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Safe: NHibernate parameterizes automatically</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="n">Get</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span><span class="p">(</span><span class="n">productId</span><span class="p">);</span>
+
+<span class="c1">// Safe: Criteria API uses parameters</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">criteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="n">CreateCriteria</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Restrictions</span><span class="p">.</span><span class="n">Eq</span><span class="p">(</span><span class="s">"Id"</span><span class="p">,</span><span class="w"> </span><span class="n">productId</span><span class="p">));</span><span class="w"> </span><span class="c1">// Parameter binding</span>
+
+<span class="c1">// Safe: Query object pattern abstracts criteria</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ProductsByCategoryQuery</span><span class="p">(</span><span class="n">categoryId</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">products</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repository</span><span class="p">.</span><span class="n">FindAll</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>Risk Areas:</strong>
+- ⚠️ No evidence of raw SQL or HQL queries with string concatenation
+- ✅ All queries go through Repository abstraction
+- ✅ No stored procedures with dynamic SQL</p>
+<hr/>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<h3 id="query-performance">Query Performance</h3>
+<p><strong>Identified Performance Risks:</strong></p>
+<ol>
+<li><strong>N+1 Query Problem:</strong></li>
+<li><strong>Risk:</strong> Lazy loading can trigger multiple queries</li>
+<li><strong>Example:</strong> Loading baskets, then accessing <code>basket.Items</code> in loop (1 + N queries)</li>
+<li>
+<p><strong>Mitigation:</strong> Use <code>Fetch()</code> or eager loading in HBM.XML for known access patterns</p>
+</li>
+<li>
+<p><strong>No Second-Level Caching:</strong></p>
+</li>
+<li><strong>Impact:</strong> Every product catalog request hits database</li>
+<li>
+<p><strong>Mitigation:</strong> Enable NHibernate second-level cache (SysCache2 provider for ASP.NET cache or migrate to Redis)</p>
+</li>
+<li>
+<p><strong>No Query Result Caching:</strong></p>
+</li>
+<li><strong>Impact:</strong> Repeated identical queries (e.g., "get featured products") execute each time</li>
+<li>
+<p><strong>Mitigation:</strong> Enable NHibernate query cache</p>
+</li>
+<li>
+<p><strong>Batch Size Not Optimized:</strong></p>
+</li>
+<li><strong>Current:</strong> Batch size = 10</li>
+<li><strong>Recommendation:</strong> Increase to 25-50 for bulk INSERT/UPDATE operations</li>
+</ol>
+<p><strong>Database Index Strategy:</strong></p>
+<p>Cannot determine actual indexes from static analysis (requires SSMS or schema inspection). Recommended indexes based on query patterns:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Product catalog searches (frequently queried)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_Product_ProductTitleId</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Product</span><span class="p">(</span><span class="n">ProductTitleId</span><span class="p">)</span><span class="w"> </span><span class="n">INCLUDE</span><span class="w"> </span><span class="p">(</span><span class="n">Price</span><span class="p">,</span><span class="w"> </span><span class="n">IsActive</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_Product_IsActive_Price</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Product</span><span class="p">(</span><span class="n">IsActive</span><span class="p">,</span><span class="w"> </span><span class="n">Price</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_ProductTitle_CategoryId</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ProductTitle</span><span class="p">(</span><span class="n">CategoryId</span><span class="p">)</span><span class="w"> </span><span class="n">INCLUDE</span><span class="w"> </span><span class="p">(</span><span class="n">Name</span><span class="p">,</span><span class="w"> </span><span class="n">BrandId</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_ProductTitle_BrandId</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ProductTitle</span><span class="p">(</span><span class="n">BrandId</span><span class="p">);</span>
+
+<span class="c1">-- Basket operations</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_Basket_CustomerId</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Basket</span><span class="p">(</span><span class="n">CustomerId</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_BasketItem_BasketId</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">BasketItem</span><span class="p">(</span><span class="n">BasketId</span><span class="p">)</span><span class="w"> </span><span class="n">INCLUDE</span><span class="w"> </span><span class="p">(</span><span class="n">ProductId</span><span class="p">,</span><span class="w"> </span><span class="n">Quantity</span><span class="p">,</span><span class="w"> </span><span class="n">UnitPrice</span><span class="p">);</span>
+
+<span class="c1">-- Order queries</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_Order_CustomerId_OrderDate</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">Order</span><span class="p">(</span><span class="n">CustomerId</span><span class="p">,</span><span class="w"> </span><span class="n">OrderDate</span><span class="w"> </span><span class="k">DESC</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_Order_OrderNumber</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">Order</span><span class="p">(</span><span class="n">OrderNumber</span><span class="p">);</span><span class="w"> </span><span class="c1">-- Unique index for order lookup</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_OrderItem_OrderId</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">OrderItem</span><span class="p">(</span><span class="n">OrderId</span><span class="p">)</span><span class="w"> </span><span class="n">INCLUDE</span><span class="w"> </span><span class="p">(</span><span class="n">ProductId</span><span class="p">,</span><span class="w"> </span><span class="n">Quantity</span><span class="p">,</span><span class="w"> </span><span class="n">UnitPrice</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="connection-pool-management">Connection Pool Management</h3>
+<p><strong>ADO.NET Connection Pooling:</strong> Enabled by default</p>
+<p><strong>Settings (default):</strong>
+- Max Pool Size: 100
+- Min Pool Size: 0
+- Connection Timeout: 15 seconds
+- Connection Lifetime: 0 (never removed from pool)</p>
+<p><strong>NHibernate Session Management:</strong>
+- <strong>Scope:</strong> One ISession per HTTP request (via <code>InstanceScope.HttpContext</code> in StructureMap)
+- <strong>Risk:</strong> Long-running requests hold connections
+- <strong>Mitigation:</strong> Keep HTTP requests short; move long operations to background jobs</p>
+<h3 id="performance-monitoring-gaps">Performance Monitoring Gaps</h3>
+<p><strong>Current State:</strong>
+- ❌ No query execution time logging
+- ❌ No slow query identification
+- ❌ No connection pool monitoring
+- ❌ No APM (Application Performance Monitoring)
+- ✅ <code>show_sql</code> enabled (logs all SQL) - useful for development but should be disabled in production</p>
+<p><strong>Recommendations:</strong>
+1. Integrate NHibernate with SQL Server Profiler or Extended Events for query analysis
+2. Add Application Insights or similar APM tool
+3. Log slow queries (&gt; 1 second) with stack traces
+4. Monitor connection pool exhaustion events</p>
+<hr/>
+<h2 id="backup-and-recovery">Backup and Recovery</h2>
+<h3 id="current-backup-strategy">Current Backup Strategy</h3>
+<p><strong>Status:</strong> ❌ <strong>No Automated Backups Detected</strong></p>
+<p><strong>Current State:</strong>
+- SQL Server User Instance mode relies on MDF file copies
+- No SQL Server Agent (not available in User Instance mode)
+- No automated backup jobs
+- Manual file system backups only (if implemented by operations team)</p>
+<p><strong>Recovery Capabilities:</strong>
+- <strong>RPO (Recovery Point Objective):</strong> Unknown - depends on manual backup frequency
+- <strong>RTO (Recovery Time Objective):</strong> Unknown - no documented recovery procedure
+- <strong>Point-in-Time Recovery:</strong> ❌ Not possible with current architecture</p>
+<p><strong>Critical Gaps:</strong>
+- No backup schedule
+- No backup retention policy
+- No offsite backup storage
+- No backup testing/validation
+- No disaster recovery plan
+- No high availability (single database file)</p>
+<h3 id="recommended-backup-strategy">Recommended Backup Strategy</h3>
+<p><strong>Immediate (Switch to SQL Server Express Standard Instance):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Full backup (daily at 2 AM)</span>
+<span class="n">BACKUP</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">AgathesShop</span>
+<span class="k">TO</span><span class="w"> </span><span class="n">DISK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'C:\SQLBackups\AgathesShop_Full.bak'</span>
+<span class="k">WITH</span><span class="w"> </span><span class="n">INIT</span><span class="p">,</span><span class="w"> </span><span class="n">FORMAT</span><span class="p">,</span><span class="w"> </span><span class="n">COMPRESSION</span><span class="p">;</span>
+
+<span class="c1">-- Transaction log backup (every 15 minutes)</span>
+<span class="n">BACKUP</span><span class="w"> </span><span class="n">LOG</span><span class="w"> </span><span class="n">AgathesShop</span>
+<span class="k">TO</span><span class="w"> </span><span class="n">DISK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'C:\SQLBackups\AgathesShop_Log.trn'</span>
+<span class="k">WITH</span><span class="w"> </span><span class="n">INIT</span><span class="p">,</span><span class="w"> </span><span class="n">FORMAT</span><span class="p">,</span><span class="w"> </span><span class="n">COMPRESSION</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>SQL Server Agent Job Schedule:</strong>
+- Full backup: Daily at 2:00 AM
+- Transaction log backup: Every 15 minutes
+- Backup retention: 7 days local, 30 days offsite</p>
+<p><strong>Short-Term (Production-Ready):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Backup Type</th>
+<th>Frequency</th>
+<th>Retention</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full Backup</td>
+<td>Daily (2 AM)</td>
+<td>7 days local, 30 days cloud</td>
+<td>Local disk + Azure Blob Storage / AWS S3</td>
+</tr>
+<tr>
+<td>Differential Backup</td>
+<td>Every 6 hours</td>
+<td>2 days</td>
+<td>Local disk</td>
+</tr>
+<tr>
+<td>Transaction Log Backup</td>
+<td>Every 15 minutes</td>
+<td>2 days local, 7 days cloud</td>
+<td>Local disk + cloud</td>
+</tr>
+<tr>
+<td>Backup Validation</td>
+<td>Weekly</td>
+<td>N/A</td>
+<td>Restore test to separate instance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Long-Term (Cloud Migration):</strong></p>
+<ul>
+<li><strong>Azure SQL Database:</strong> Automatic backups with point-in-time restore (7-35 days retention)</li>
+<li><strong>AWS RDS:</strong> Automatic snapshots with point-in-time recovery</li>
+<li><strong>Geo-Replication:</strong> Active-passive replica in different region for disaster recovery</li>
+</ul>
+<hr/>
+<h2 id="data-migration-and-etl">Data Migration and ETL</h2>
+<h3 id="current-state">Current State</h3>
+<p><strong>No ETL Processes Detected:</strong>
+- ❌ No data import jobs
+- ❌ No data export functionality
+- ❌ No integration with external data sources
+- ❌ No data warehouse or analytics database</p>
+<p><strong>Schema Versioning:</strong>
+- ❌ No database migration scripts
+- ❌ Schema inferred from NHibernate HBM.XML mappings
+- ❌ No version control for database schema
+- ❌ No rollback capability for schema changes</p>
+<p><strong>Deployment Process:</strong>
+- Manual database creation (via HBM.XML schema export or manual script execution)
+- No automated schema updates during deployment</p>
+<h3 id="recommended-data-migration-strategy">Recommended Data Migration Strategy</h3>
+<p><strong>Schema Versioning Tools:</strong></p>
+<p>Option 1: <strong>FluentMigrator</strong> (C#-based migrations)
+<div class="highlight"><pre><span></span><code><span class="na">[Migration(20260609001)]</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AddProductColorTable</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Migration</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Up</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Create</span><span class="p">.</span><span class="n">Table</span><span class="p">(</span><span class="s">"ProductColor"</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">WithColumn</span><span class="p">(</span><span class="s">"ProductColorId"</span><span class="p">).</span><span class="n">AsInt32</span><span class="p">().</span><span class="n">PrimaryKey</span><span class="p">().</span><span class="n">Identity</span><span class="p">()</span>
+<span class="w">            </span><span class="p">.</span><span class="n">WithColumn</span><span class="p">(</span><span class="s">"ColorName"</span><span class="p">).</span><span class="n">AsString</span><span class="p">(</span><span class="mi">50</span><span class="p">).</span><span class="n">NotNullable</span><span class="p">()</span>
+<span class="w">            </span><span class="p">.</span><span class="n">WithColumn</span><span class="p">(</span><span class="s">"HexCode"</span><span class="p">).</span><span class="n">AsString</span><span class="p">(</span><span class="mi">7</span><span class="p">).</span><span class="n">NotNullable</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Down</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Delete</span><span class="p">.</span><span class="n">Table</span><span class="p">(</span><span class="s">"ProductColor"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Option 2: <strong>DbUp</strong> (SQL script-based migrations)</p>
+<p>Option 3: <strong>Entity Framework Core Migrations</strong> (if migrating from NHibernate to EF Core)</p>
+<p><strong>Migration Workflow:</strong>
+1. Create migration script for each schema change
+2. Version migrations in source control
+3. Automated deployment applies pending migrations
+4. Rollback capability via Down() methods</p>
+<p><strong>Data Seeding:</strong>
+- Create seed data scripts for reference data (ProductSize, ProductColor, DeliveryOption, etc.)
+- Idempotent scripts (can run multiple times safely)</p>
+<hr/>
+<h2 id="monitoring-and-diagnostics">Monitoring and Diagnostics</h2>
+<h3 id="current-monitoring-capabilities">Current Monitoring Capabilities</h3>
+<p><strong>Limited Monitoring:</strong>
+- ✅ Log4Net file logging (application logs only)
+- ❌ No database query logging (except <code>show_sql</code> in development)
+- ❌ No connection pool monitoring
+- ❌ No slow query detection
+- ❌ No deadlock monitoring
+- ❌ No index usage statistics
+- ❌ No storage capacity alerts</p>
+<p><strong>Observability Gaps:</strong>
+- Cannot identify slow queries without SQL Server Profiler
+- No real-time metrics dashboard
+- No alerting on database errors
+- No tracking of data growth over time</p>
+<h3 id="recommended-monitoring-strategy">Recommended Monitoring Strategy</h3>
+<p><strong>Database Monitoring:</strong></p>
+<ol>
+<li><strong>Query Performance:</strong></li>
+<li>Enable SQL Server Extended Events to capture slow queries (&gt; 1 second)</li>
+<li>Log queries with execution time and parameters</li>
+<li>
+<p>Identify N+1 query patterns</p>
+</li>
+<li>
+<p><strong>Connection Pool:</strong></p>
+</li>
+<li>Monitor active connections vs. pool size</li>
+<li>Alert on pool exhaustion events</li>
+<li>
+<p>Track connection wait times</p>
+</li>
+<li>
+<p><strong>Storage:</strong></p>
+</li>
+<li>Database file size growth trends</li>
+<li>Transaction log size</li>
+<li>
+<p>Disk space remaining alerts</p>
+</li>
+<li>
+<p><strong>Errors:</strong></p>
+</li>
+<li>Deadlock detection and logging</li>
+<li>Timeout errors</li>
+<li>Constraint violations</li>
+</ol>
+<p><strong>Monitoring Tools:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SQL Server Management Studio (SSMS)</strong></td>
+<td>Ad-hoc query analysis</td>
+<td>Immediate</td>
+</tr>
+<tr>
+<td><strong>SQL Server Extended Events</strong></td>
+<td>Query performance tracking</td>
+<td>Immediate</td>
+</tr>
+<tr>
+<td><strong>Application Insights</strong></td>
+<td>End-to-end request tracking (after .NET upgrade)</td>
+<td>Short-term</td>
+</tr>
+<tr>
+<td><strong>Azure Monitor / AWS CloudWatch</strong></td>
+<td>Cloud database monitoring</td>
+<td>Long-term (cloud migration)</td>
+</tr>
+<tr>
+<td><strong>Datadog / New Relic</strong></td>
+<td>Unified APM + database monitoring</td>
+<td>Short-term</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Metrics to Track:</strong></p>
+<ul>
+<li>Average query execution time</li>
+<li>95th/99th percentile query latency</li>
+<li>Database CPU utilization</li>
+<li>Memory usage</li>
+<li>Transaction log growth rate</li>
+<li>Index fragmentation</li>
+<li>Cache hit ratios</li>
+<li>Connection pool statistics</li>
+</ul>
+<hr/>
+<h2 id="future-considerations">Future Considerations</h2>
+<h3 id="short-term-improvements-0-6-months">Short-Term Improvements (0-6 months)</h3>
+<ol>
+<li><strong>Migrate from User Instance to Standard SQL Server Express:</strong></li>
+<li>Priority: P0 (Critical)</li>
+<li>Effort: 2-4 weeks</li>
+<li>
+<p>Benefit: Production-ready database, automated backups, better performance</p>
+</li>
+<li>
+<p><strong>Implement Schema Versioning:</strong></p>
+</li>
+<li>Priority: P1 (High)</li>
+<li>Effort: 1-2 weeks</li>
+<li>Tool: FluentMigrator or DbUp</li>
+<li>
+<p>Benefit: Automated deployments, rollback capability</p>
+</li>
+<li>
+<p><strong>Enable NHibernate Second-Level Caching:</strong></p>
+</li>
+<li>Priority: P1 (High)</li>
+<li>Effort: 1-2 weeks</li>
+<li>Technology: Redis or NHibernate SysCache2 provider</li>
+<li>
+<p>Benefit: Reduce database load, faster product catalog</p>
+</li>
+<li>
+<p><strong>Add Database Monitoring:</strong></p>
+</li>
+<li>Priority: P1 (High)</li>
+<li>Effort: 1 week</li>
+<li>Tool: SQL Server Extended Events + custom dashboard</li>
+<li>
+<p>Benefit: Identify slow queries and bottlenecks</p>
+</li>
+<li>
+<p><strong>Implement Automated Backups:</strong></p>
+</li>
+<li>Priority: P0 (Critical)</li>
+<li>Effort: 1 week</li>
+<li>Schedule: Full daily, transaction log every 15 minutes</li>
+<li>Benefit: Data protection, disaster recovery</li>
+</ol>
+<h3 id="medium-term-improvements-6-12-months">Medium-Term Improvements (6-12 months)</h3>
+<ol>
+<li><strong>Upgrade NHibernate to 5.x:</strong></li>
+<li>Benefit: Performance improvements, bug fixes, modern features</li>
+<li>
+<p>Effort: 4-6 weeks (testing required)</p>
+</li>
+<li>
+<p><strong>Add Read Replicas:</strong></p>
+</li>
+<li>Purpose: Offload reporting and analytics queries</li>
+<li>Technology: SQL Server replication or Azure SQL read replicas</li>
+<li>
+<p>Benefit: Better performance for write operations</p>
+</li>
+<li>
+<p><strong>Implement Data Encryption at Rest:</strong></p>
+</li>
+<li>SQL Server TDE (requires Enterprise or Azure SQL)</li>
+<li>Column-level encryption for PII fields</li>
+<li>
+<p>Benefit: GDPR/CCPA compliance, security</p>
+</li>
+<li>
+<p><strong>Add Audit Logging:</strong></p>
+</li>
+<li>Track all data access and modifications</li>
+<li>Compliance requirement (GDPR, SOX, HIPAA)</li>
+<li>Tool: SQL Server Audit or application-level logging</li>
+</ol>
+<h3 id="long-term-improvements-12-months">Long-Term Improvements (12+ months)</h3>
+<ol>
+<li><strong>Cloud Migration:</strong></li>
+<li><strong>Azure SQL Database</strong> or <strong>AWS RDS for SQL Server</strong></li>
+<li>Benefit: Managed service, automatic backups, high availability, geo-replication</li>
+<li>
+<p>Effort: 2-3 months</p>
+</li>
+<li>
+<p><strong>Consider Alternative ORMs:</strong></p>
+</li>
+<li><strong>Entity Framework Core:</strong> Modern, well-supported, async/await</li>
+<li><strong>Dapper:</strong> Lightweight, high-performance for read-heavy scenarios</li>
+<li>
+<p>Evaluation: EF Core for new .NET, keep NHibernate for existing domain model</p>
+</li>
+<li>
+<p><strong>Microservices Data Strategy:</strong></p>
+</li>
+<li>If decomposing monolith, consider database-per-service pattern</li>
+<li>Event-driven data synchronization</li>
+<li>
+<p>CQRS with separate read/write models</p>
+</li>
+<li>
+<p><strong>Data Warehouse for Analytics:</strong></p>
+</li>
+<li>Separate analytics database (Azure Synapse, AWS Redshift, Snowflake)</li>
+<li>ETL pipeline to sync transactional data</li>
+<li>Business intelligence dashboards</li>
+</ol>
+<hr/>
+<h2 id="document-metadata">Document Metadata</h2>
+<ul>
+<li><strong>Document Version:</strong> 1.0</li>
+<li><strong>Last Updated:</strong> 2026-06-09</li>
+<li><strong>Author:</strong> Software Architecture Analyzer</li>
+<li><strong>System:</strong> Agathas.Storefront E-commerce Application</li>
+<li><strong>Status:</strong> Draft</li>
+<li><strong>Next Review:</strong> Upon completion of database modernization</li>
+<li><strong>Document History:</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-06-09</td>
+<td>Software Architecture Analyzer</td>
+<td>Initial creation based on codebase analysis</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p><strong>Note:</strong> This document reflects the data architecture as inferred from NHibernate HBM.XML mappings and code analysis. Actual database schema, indexes, and performance characteristics should be validated against the physical database using SQL Server Management Studio or Azure Data Studio.</p></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script src="../../../js/bootstrap.bundle.min.js"></script>
+<script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script src="../../../js/base.js"></script>
+<script src="../../../search/main.js"></script>
+<script src="../../../assets/javascripts/panzoom.min.js"></script>
+<script src="../../../assets/javascripts/zoompan.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>

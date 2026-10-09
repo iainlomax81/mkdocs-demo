@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../../img/favicon.ico" rel="shortcut icon"/>
+<title>API Integration Catalog - Project Documentation</title>
+<link href="../../../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../../css/fontawesome.min.css" rel="stylesheet"/>
+<link href="../../../css/brands.min.css" rel="stylesheet"/>
+<link href="../../../css/solid.min.css" rel="stylesheet"/>
+<link href="../../../css/v4-font-face.min.css" rel="stylesheet"/>
+<link href="../../../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/panzoom.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<meta name="panzoom-theme" content="mkdocs">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="../../..">Project Documentation</a>
+<!-- Expander button -->
+<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="../../..">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../EXECUTIVE-SUMMARY/">Executive Summary</a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Quickstart</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-ARCHITECT/">Architect</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-DEVELOPER/">Developer</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-EXECUTIVE/">Executive</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-current="page" aria-expanded="false" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button">Current State</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Architecture</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../1.1-system-architecture/">System Architecture</a>
+</li>
+<li>
+<a class="dropdown-item" href="../1.2-data-architecture/">Data Architecture</a>
+</li>
+<li>
+<a aria-current="page" class="dropdown-item active" href="./">API Integration Catalog</a>
+</li>
+<li>
+<a class="dropdown-item" href="../1.4-project-inventory/">Project Inventory</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Business</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../2-business/2.1-business-domain-model/">Business Domain Model</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../2-business/2.2-requirements-specification/">Requirements Specification</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../2-business/2.3-compliance-regulatory/">Compliance &amp; Regulatory</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../2-business/2.4-user-experience-analysis/">User Experience Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../2-business/2.5-localization-i18n/">Localization &amp; I18n</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Modernization</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Strategy</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../MODERNIZATION/2-strategy/2.1-executive-summary/">Executive Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/">Stakeholder Matrix</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Generation Summaries</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/architecture-documentation-summary/">Architecture Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/business-documentation-summary/">Business Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/compilation-summary/">Compilation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/pre-analysis-summary/">Pre-Analysis Summary</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../GLOSSARY/">Glossary</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ms-md-auto">
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#mkdocs_search_modal" data-bs-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../1.2-data-architecture/" rel="prev">
+<i class="fa fa-arrow-left"></i> Previous
+                                </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../1.4-project-inventory/" rel="next">
+                                    Next <i class="fa fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#api-integration-catalog-agathasstorefront">API Integration Catalog - Agathas.Storefront</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#table-of-contents">Table of Contents</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#executive-summary">Executive Summary</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#mvc-endpoint-catalog">MVC Endpoint Catalog</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#external-api-dependencies">External API Dependencies</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#integration-sequence-diagrams">Integration Sequence Diagrams</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#api-security-analysis">API Security Analysis</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#performance-characteristics">Performance Characteristics</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#api-limitations-and-constraints">API Limitations and Constraints</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#monitoring-and-observability">Monitoring and Observability</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#migration-recommendations">Migration Recommendations</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#document-metadata">Document Metadata</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="api-integration-catalog-agathasstorefront">API Integration Catalog - Agathas.Storefront</h1>
+<blockquote>
+<p>This document provides a comprehensive catalog of all HTTP endpoints (MVC actions), external integration points, and integration patterns used within the system.</p>
+</blockquote>
+<p><strong>IMPORTANT NOTE:</strong> Agathas.Storefront is an ASP.NET MVC 2 server-side web application, NOT a REST API. This document catalogs MVC controller endpoints (for web page requests) and external service integrations. The application does not expose a standalone REST API for external consumers.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#executive-summary">Executive Summary</a></li>
+<li><a href="#mvc-endpoint-catalog">MVC Endpoint Catalog</a></li>
+<li><a href="#external-api-dependencies">External API Dependencies</a></li>
+<li><a href="#integration-sequence-diagrams">Integration Sequence Diagrams</a></li>
+<li><a href="#api-security-analysis">API Security Analysis</a></li>
+<li><a href="#performance-characteristics">Performance Characteristics</a></li>
+<li><a href="#api-limitations-and-constraints">API Limitations and Constraints</a></li>
+<li><a href="#monitoring-and-observability">Monitoring and Observability</a></li>
+<li><a href="#migration-recommendations">Migration Recommendations</a></li>
+</ul>
+<hr/>
+<h2 id="executive-summary">Executive Summary</h2>
+<h3 id="overview">Overview</h3>
+<p>Agathas.Storefront implements a traditional server-side MVC architecture with 9 controllers and approximately 30 HTTP endpoints serving HTML pages to web browsers. The application integrates with 3 external services (PayPal for payments, Janrain for social authentication, SMTP for email) but does not expose a REST API for third-party consumption.</p>
+<p>All HTTP endpoints follow ASP.NET MVC 2 conventions with server-side rendering using ASPX views. A small number of endpoints return JSON for AJAX operations (product search, basket quantity updates). Authentication uses Forms Authentication with session cookies.</p>
+<p>The architecture is monolithic with no API gateway, no rate limiting, and no API versioning. External integrations use simple protocols (HTTP POST redirects for PayPal, OAuth callbacks for Janrain, SMTP for email).</p>
+<h3 id="key-statistics">Key Statistics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Count</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MVC Controllers</strong></td>
+<td>9</td>
+<td>HTTP endpoints for web page requests</td>
+</tr>
+<tr>
+<td><strong>Total Endpoints</strong></td>
+<td>~30</td>
+<td>GET/POST actions serving HTML or JSON</td>
+</tr>
+<tr>
+<td><strong>External Integrations</strong></td>
+<td>3</td>
+<td>PayPal, Janrain, SMTP email</td>
+</tr>
+<tr>
+<td><strong>Authentication Methods</strong></td>
+<td>2</td>
+<td>Forms Authentication (local), Janrain (social login)</td>
+</tr>
+<tr>
+<td><strong>API Protocols</strong></td>
+<td>HTTP</td>
+<td>ASP.NET MVC routing, no REST/GraphQL</td>
+</tr>
+<tr>
+<td><strong>Average Response Time</strong></td>
+<td>Unknown</td>
+<td>No monitoring data available</td>
+</tr>
+<tr>
+<td><strong>Daily API Calls</strong></td>
+<td>Unknown</td>
+<td>Production metrics not available</td>
+</tr>
+</tbody>
+</table>
+<h3 id="technology-summary">Technology Summary</h3>
+<p><strong>HTTP Technologies:</strong>
+- <strong>MVC Framework:</strong> ASP.NET MVC 2 (server-side rendering)
+- <strong>Internal Endpoints:</strong> HTTP GET/POST to MVC controllers
+- <strong>AJAX Endpoints:</strong> JSON responses for specific operations (product search, basket updates)
+- <strong>External Protocols:</strong> HTTPS Form POST (PayPal), OAuth callback (Janrain), SMTP
+- <strong>Authentication:</strong> ASP.NET Forms Authentication (cookie-based)
+- <strong>API Gateway:</strong> None
+- <strong>Documentation:</strong> None (no Swagger/OpenAPI)</p>
+<hr/>
+<h2 id="mvc-endpoint-catalog">MVC Endpoint Catalog</h2>
+<h3 id="overview_1">Overview</h3>
+<p>The application exposes HTTP endpoints through 9 ASP.NET MVC controllers. Most endpoints return HTML views (ASPX templates) for browser rendering. A few endpoints return JSON for AJAX requests.</p>
+<p><strong>Endpoint Structure:</strong>
+<div class="highlight"><pre><span></span><code>https://[domain]/[Controller]/[Action]?[parameters]
+
+Examples:
+https://agathas-storefront.com/Product/GetProductsByCategory?categoryId=5
+https://agathas-storefront.com/Basket/Add?productId=123
+https://agathas-storefront.com/Order/Detail/456
+</code></pre></div></p>
+<p><strong>Routing Convention:</strong> Default ASP.NET MVC routing (controller/action/id)</p>
+<p><strong>No API Versioning:</strong> All endpoints are unversioned (no v1, v2 prefixes)</p>
+<h3 id="controller-catalog">Controller Catalog</h3>
+<h4 id="1-homecontroller">1. HomeController</h4>
+<p><strong>Path:</strong> <code>/</code> or <code>/Home/Index</code></p>
+<p><strong>Purpose:</strong> Landing page with featured products</p>
+<p><strong>Authentication:</strong> Not required</p>
+<p><strong>Endpoints:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>Purpose</th>
+<th>Returns</th>
+<th>Auth Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/</code> or <code>/Home/Index</code></td>
+<td>Display home page with featured products</td>
+<td>HTML (HomePageView)</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dependencies:</strong>
+- IProductCatalogService.GetFeaturedProducts()
+- Categories for navigation menu</p>
+<hr/>
+<h4 id="2-productcontroller">2. ProductController</h4>
+<p><strong>Path:</strong> <code>/Product/*</code></p>
+<p><strong>Purpose:</strong> Product catalog browsing, search, and detail pages</p>
+<p><strong>Base Class:</strong> ProductCatalogBaseController</p>
+<p><strong>Endpoints:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>Purpose</th>
+<th>Returns</th>
+<th>Auth Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/Product/GetProductsByCategory/{categoryId}</code></td>
+<td>Browse products by category</td>
+<td>HTML (ProductSearchResultView)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/Product/GetProductsByAjax</code></td>
+<td>AJAX product search with filters</td>
+<td>JSON (product list)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/Product/Detail/{id}</code></td>
+<td>Product detail page</td>
+<td>HTML (ProductDetailView)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/Product/Search?query={query}</code></td>
+<td>Text search for products</td>
+<td>HTML (ProductSearchResultView)</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AJAX Endpoint Details - GetProductsByAjax:</strong>
+<div class="highlight"><pre><span></span><code><span class="err">POST /Product/GetProductsByAjax</span>
+<span class="err">Content-Type: application/json</span>
+
+<span class="err">Request Body:</span>
+<span class="err">{</span>
+<span class="err">  "categoryId": 5,</span>
+<span class="err">  "brandIds": [1, 3, 7],</span>
+<span class="err">  "sizeIds": [10, 11],</span>
+<span class="err">  "colorIds": [2],</span>
+<span class="err">  "minPrice": 50.00,</span>
+<span class="err">  "maxPrice": 200.00,</span>
+<span class="err">  "sortBy": "PriceAsc",</span>
+<span class="err">  "pageNumber": 1,</span>
+<span class="err">  "pageSize": 20</span>
+<span class="err">}</span>
+
+<span class="err">Response (200 OK):</span>
+<span class="err">{</span>
+<span class="err">  "success": true,</span>
+<span class="err">  "products": [</span>
+<span class="err">    {</span>
+<span class="err">      "productId": 123,</span>
+<span class="err">      "name": "Nike Air Max",</span>
+<span class="err">      "price": 89.99,</span>
+<span class="err">      "imageUrl": "/content/images/products/123.jpg",</span>
+<span class="err">      "brandName": "Nike",</span>
+<span class="err">      "sizes": ["10", "11", "12"]</span>
+<span class="err">    },</span>
+<span class="err">    // ... more products</span>
+<span class="err">  ],</span>
+<span class="err">  "totalCount": 47,</span>
+<span class="err">  "pageNumber": 1,</span>
+<span class="err">  "pageSize": 20</span>
+<span class="err">}</span>
+</code></pre></div></p>
+<p><strong>Dependencies:</strong>
+- IProductCatalogService
+- IProductRepository
+- ICategoryRepository
+- IBrandRepository</p>
+<p><strong>Performance Notes:</strong>
+- No caching implemented
+- Database query per request
+- Lazy loading can trigger N+1 queries</p>
+<hr/>
+<h4 id="3-basketcontroller">3. BasketController</h4>
+<p><strong>Path:</strong> <code>/Basket/*</code></p>
+<p><strong>Purpose:</strong> Shopping basket (cart) management</p>
+<p><strong>Endpoints:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>Purpose</th>
+<th>Returns</th>
+<th>Auth Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/Basket</code> or <code>/Basket/Index</code></td>
+<td>View shopping basket</td>
+<td>HTML (BasketDetailView)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/Basket/Add?productId={id}</code></td>
+<td>Add product to basket</td>
+<td>Redirect to /Basket</td>
+<td>No</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/Basket/UpdateQuantity</code></td>
+<td>AJAX update basket item quantity</td>
+<td>JSON (success/failure)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/Basket/Remove?productId={id}</code></td>
+<td>Remove item from basket</td>
+<td>Redirect to /Basket</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AJAX Endpoint - UpdateQuantity:</strong>
+<div class="highlight"><pre><span></span><code><span class="err">POST /Basket/UpdateQuantity</span>
+<span class="err">Content-Type: application/json</span>
+
+<span class="err">Request Body:</span>
+<span class="err">{</span>
+<span class="err">  "basketItemId": 456,</span>
+<span class="err">  "quantity": 3</span>
+<span class="err">}</span>
+
+<span class="err">Response (200 OK):</span>
+<span class="err">{</span>
+<span class="err">  "success": true,</span>
+<span class="err">  "message": "Quantity updated",</span>
+<span class="err">  "basketTotal": 267.97,</span>
+<span class="err">  "itemTotal": 89.99</span>
+<span class="err">}</span>
+
+<span class="err">Response (400 Bad Request):</span>
+<span class="err">{</span>
+<span class="err">  "success": false,</span>
+<span class="err">  "message": "Quantity must be greater than zero"</span>
+<span class="err">}</span>
+</code></pre></div></p>
+<p><strong>Session Management:</strong>
+- Basket ID stored in cookie for anonymous users
+- Basket linked to CustomerId for authenticated users</p>
+<p><strong>Dependencies:</strong>
+- IBasketService
+- IBasketRepository
+- IProductRepository
+- Unit of Work for transactions</p>
+<hr/>
+<h4 id="4-checkoutcontroller">4. CheckoutController</h4>
+<p><strong>Path:</strong> <code>/Checkout/*</code></p>
+<p><strong>Purpose:</strong> Order checkout workflow</p>
+<p><strong>Authentication:</strong> <strong>REQUIRED</strong> - <code>[Authorize]</code> attribute enforces login</p>
+<p><strong>Endpoints:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>Purpose</th>
+<th>Returns</th>
+<th>Auth Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/Checkout</code> or <code>/Checkout/Index</code></td>
+<td>Display checkout page with order summary</td>
+<td>HTML (CheckoutView)</td>
+<td><strong>YES</strong></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/Checkout/SubmitOrder</code></td>
+<td>Submit order and redirect to PayPal</td>
+<td>Redirect to PayPal</td>
+<td><strong>YES</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>SubmitOrder Flow:</strong>
+1. Validate basket not empty
+2. Validate delivery address
+3. Create Order entity from Basket
+4. Persist Order to database
+5. Raise OrderSubmittedEvent (triggers email)
+6. Redirect to PayPal with order details</p>
+<p><strong>Dependencies:</strong>
+- IOrderService
+- IBasketService
+- IPaymentService (PayPal integration)
+- IEmailService</p>
+<hr/>
+<h4 id="5-paymentcontroller">5. PaymentController</h4>
+<p><strong>Path:</strong> <code>/Payment/*</code></p>
+<p><strong>Purpose:</strong> Payment processing callbacks from PayPal</p>
+<p><strong>Authentication:</strong> Not required (PayPal callback)</p>
+<p><strong>Endpoints:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>Purpose</th>
+<th>Returns</th>
+<th>Auth Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/Payment/Complete?orderId={id}&amp;...</code></td>
+<td>PayPal success callback</td>
+<td>HTML (OrderConfirmationView)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/Payment/Cancel?orderId={id}</code></td>
+<td>PayPal cancellation callback</td>
+<td>HTML (PaymentCancelledView)</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PayPal Callback Parameters:</strong>
+<div class="highlight"><pre><span></span><code>orderId: Internal order ID
+tx: PayPal transaction ID
+st: Payment status (Completed, Pending, Failed)
+amt: Payment amount
+cc: Currency code
+</code></pre></div></p>
+<p><strong>Payment Complete Flow:</strong>
+1. Receive callback from PayPal
+2. Validate transaction ID and amount
+3. Update Order.Payment with transaction details
+4. Mark order as paid
+5. Display confirmation page to customer</p>
+<p><strong>Security Note:</strong> No signature verification on PayPal callbacks (basic integration)</p>
+<hr/>
+<h4 id="6-ordercontroller">6. OrderController</h4>
+<p><strong>Path:</strong> <code>/Order/*</code></p>
+<p><strong>Purpose:</strong> Order history and detail viewing</p>
+<p><strong>Authentication:</strong> <strong>REQUIRED</strong> - <code>[Authorize]</code> attribute</p>
+<p><strong>Endpoints:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>Purpose</th>
+<th>Returns</th>
+<th>Auth Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/Order</code> or <code>/Order/Index</code></td>
+<td>Customer's order history</td>
+<td>HTML (OrderSummaryView)</td>
+<td><strong>YES</strong></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/Order/Detail/{orderId}</code></td>
+<td>Specific order details</td>
+<td>HTML (OrderDetailView)</td>
+<td><strong>YES</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Authorization:</strong>
+- Users can only view their own orders
+- Order.CustomerId must match authenticated user's CustomerId</p>
+<p><strong>Dependencies:</strong>
+- IOrderService
+- IOrderRepository</p>
+<hr/>
+<h4 id="7-customercontroller">7. CustomerController</h4>
+<p><strong>Path:</strong> <code>/Customer/*</code></p>
+<p><strong>Purpose:</strong> Customer account and profile management</p>
+<p><strong>Authentication:</strong> <strong>REQUIRED</strong> - <code>[Authorize]</code> attribute</p>
+<p><strong>Endpoints:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>Purpose</th>
+<th>Returns</th>
+<th>Auth Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/Customer</code> or <code>/Customer/Index</code></td>
+<td>Customer profile page</td>
+<td>HTML (CustomerDetailView)</td>
+<td><strong>YES</strong></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/Customer/Edit</code></td>
+<td>Update customer details</td>
+<td>Redirect to /Customer</td>
+<td><strong>YES</strong></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/Customer/ManageAddresses</code></td>
+<td>Manage delivery addresses</td>
+<td>HTML (DeliveryAddressView)</td>
+<td><strong>YES</strong></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/Customer/AddAddress</code></td>
+<td>Add new delivery address</td>
+<td>Redirect to /Customer/ManageAddresses</td>
+<td><strong>YES</strong></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/Customer/DeleteAddress?id={id}</code></td>
+<td>Delete delivery address</td>
+<td>Redirect to /Customer/ManageAddresses</td>
+<td><strong>YES</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dependencies:</strong>
+- ICustomerService
+- ICustomerRepository</p>
+<hr/>
+<h4 id="8-accountlogoncontroller">8. AccountLogOnController</h4>
+<p><strong>Path:</strong> <code>/Account/LogOn</code></p>
+<p><strong>Purpose:</strong> User authentication (login)</p>
+<p><strong>Authentication:</strong> Not required (public endpoint)</p>
+<p><strong>Endpoints:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>Purpose</th>
+<th>Returns</th>
+<th>Auth Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/Account/LogOn</code></td>
+<td>Display login form</td>
+<td>HTML (LogOnView)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/Account/LogOn</code></td>
+<td>Authenticate user credentials</td>
+<td>Redirect to returnUrl or /</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/Account/LogOut</code></td>
+<td>Log out user</td>
+<td>Redirect to /</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/Account/ExternalLogOn?provider={provider}</code></td>
+<td>Initiate Janrain social login</td>
+<td>Redirect to Janrain</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/Account/ExternalLogOnCallback</code></td>
+<td>Janrain OAuth callback</td>
+<td>Redirect to / or profile setup</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Local Login Flow:</strong>
+1. User submits username/password
+2. Validate against ASP.NET Membership database
+3. Create Forms Authentication cookie on success
+4. Redirect to return URL or home page</p>
+<p><strong>Janrain Social Login Flow:</strong>
+1. User clicks "Sign in with Facebook/Google/Twitter"
+2. Redirect to Janrain authentication
+3. Janrain redirects back to <code>/Account/ExternalLogOnCallback</code> with token
+4. Validate token with Janrain API
+5. Create or link user account
+6. Create Forms Authentication cookie
+7. Redirect to home or profile completion</p>
+<p><strong>Dependencies:</strong>
+- ILocalAuthenticationService (ASP.NET Membership)
+- IExternalAuthenticationService (Janrain)
+- ICustomerService</p>
+<hr/>
+<h4 id="9-accountregistercontroller">9. AccountRegisterController</h4>
+<p><strong>Path:</strong> <code>/Account/Register</code></p>
+<p><strong>Purpose:</strong> User registration (create new account)</p>
+<p><strong>Authentication:</strong> Not required (public endpoint)</p>
+<p><strong>Endpoints:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>Purpose</th>
+<th>Returns</th>
+<th>Auth Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/Account/Register</code></td>
+<td>Display registration form</td>
+<td>HTML (RegisterView)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/Account/Register</code></td>
+<td>Create new user account</td>
+<td>Redirect to / with auto-login</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Registration Flow:</strong>
+1. User submits registration form (email, password, name, etc.)
+2. Validate email uniqueness
+3. Validate password strength
+4. Create ASP.NET Membership user (hashed password)
+5. Create Customer entity
+6. Auto-login user (create Forms Authentication cookie)
+7. Redirect to home page</p>
+<p><strong>Validation Rules:</strong>
+- Email must be valid format and unique
+- Password minimum 6 characters (ASP.NET Membership default)
+- Required fields: FirstName, LastName, Email, Password</p>
+<p><strong>Dependencies:</strong>
+- ILocalAuthenticationService
+- ICustomerService
+- ICustomerRepository</p>
+<hr/>
+<h3 id="endpoint-summary-by-http-method">Endpoint Summary by HTTP Method</h3>
+<p><strong>GET Endpoints (HTML Views):</strong> 15 endpoints
+- Home page
+- Product browsing (category, detail, search)
+- Basket view
+- Checkout page
+- Order history and details
+- Customer profile and addresses
+- Login and registration forms</p>
+<p><strong>POST Endpoints (Form Submissions):</strong> 10 endpoints
+- Add to basket, remove from basket
+- Submit order
+- Update customer profile
+- Add/delete delivery address
+- Login and registration
+- Logout</p>
+<p><strong>AJAX Endpoints (JSON Responses):</strong> 2 endpoints
+- Product search with filters (POST <code>/Product/GetProductsByAjax</code>)
+- Basket quantity update (POST <code>/Basket/UpdateQuantity</code>)</p>
+<hr/>
+<h2 id="external-api-dependencies">External API Dependencies</h2>
+<h3 id="1-paypal-standard-payments">1. PayPal Standard Payments</h3>
+<p><strong>Provider:</strong> PayPal Inc.</p>
+<p><strong>Purpose:</strong> Credit card payment processing for customer orders</p>
+<p><strong>Integration Type:</strong> Redirect-based payment (PayPal Standard Payments)</p>
+<p><strong>Protocol:</strong> HTTPS Form POST</p>
+<p><strong>Direction:</strong> Bidirectional (redirect to PayPal, callback from PayPal)</p>
+<p><strong>Frequency:</strong> Per order submission (on-demand)</p>
+<p><strong>Integration Flow:</strong></p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    participant Customer
+    participant App as Agathas.Storefront
+    participant PayPal as PayPal Gateway
+
+    Customer-&gt;&gt;App: POST /Checkout/SubmitOrder
+    App-&gt;&gt;App: Create Order in database
+    App-&gt;&gt;PayPal: Redirect with Form POST<br/>(order details, amounts, return URL)
+    activate PayPal
+    PayPal-&gt;&gt;Customer: Display payment page
+    Customer-&gt;&gt;PayPal: Enter payment details
+    PayPal-&gt;&gt;PayPal: Process payment
+    PayPal-&gt;&gt;App: Redirect to /Payment/Complete?orderId=X&amp;tx=ABC123
+    deactivate PayPal
+    App-&gt;&gt;App: Update Order.Payment with transaction ID
+    App-&gt;&gt;Customer: Display order confirmation
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Endpoints:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Endpoint</th>
+<th>Method</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Process Payment</td>
+<td><code>https://www.sandbox.paypal.com/cgi-bin/webscr</code></td>
+<td>POST</td>
+<td>Redirect customer to PayPal for payment</td>
+</tr>
+<tr>
+<td>Payment Callback</td>
+<td><code>https://[app-domain]/Payment/Complete</code></td>
+<td>GET</td>
+<td>Receive payment completion notification</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Authentication:</strong>
+- <strong>Method:</strong> Business email configuration (no API key for Standard Payments)
+- <strong>Credentials Storage:</strong> Web.config <code>&lt;appSettings&gt;</code> <strong>PLAINTEXT</strong> (security issue)
+- <strong>Configuration:</strong>
+  - <code>PayPalBusinessEmail</code>: Merchant's PayPal account email
+  - <code>PayPalReturnUrl</code>: Success callback URL
+  - <code>PayPalCancelUrl</code>: Cancellation callback URL</p>
+<p><strong>Data Format:</strong>
+- <strong>Request:</strong> HTML form fields (application/x-www-form-urlencoded)
+  - <code>cmd=_xclick</code> (single payment)
+  - <code>business=[merchant email]</code>
+  - <code>item_name=[order description]</code>
+  - <code>amount=[order total]</code>
+  - <code>currency_code=USD</code>
+  - <code>return=[success URL]</code>
+  - <code>cancel_return=[cancel URL]</code></p>
+<ul>
+<li><strong>Response:</strong> Query parameters on redirect</li>
+<li><code>tx=[transaction ID]</code></li>
+<li><code>st=[status: Completed/Pending/Failed]</code></li>
+<li><code>amt=[amount]</code></li>
+<li><code>cc=[currency code]</code></li>
+</ul>
+<p><strong>Error Handling:</strong>
+- <strong>Retry Strategy:</strong> None (user-initiated retry)
+- <strong>Timeout:</strong> Dependent on customer action (no server-side timeout)
+- <strong>Circuit Breaker:</strong> Not applicable (redirect-based)
+- <strong>Fallback Strategy:</strong> Display error message, customer can retry checkout</p>
+<p><strong>SLA/Uptime:</strong>
+- <strong>Provider SLA:</strong> 99.9% (PayPal published SLA)
+- <strong>Expected Availability:</strong> Very high (critical payment infrastructure)
+- <strong>Support Contact:</strong> PayPal Merchant Technical Support</p>
+<p><strong>Cost Structure:</strong>
+- <strong>Model:</strong> Per-transaction fee
+- <strong>Rate:</strong> Typically 2.9% + $0.30 per transaction (merchant account specific)
+- <strong>Monthly Budget:</strong> Variable based on sales volume</p>
+<p><strong>Monitoring:</strong>
+- ❌ No health check endpoint
+- ❌ No alerting on failures
+- ❌ No payment success rate monitoring
+- <strong>Recommendation:</strong> Implement PayPal IPN (Instant Payment Notification) for reliable payment confirmation</p>
+<p><strong>Limitations:</strong>
+- Customer redirected away from site (UX disruption)
+- No control over payment UI
+- Callback reliability depends on customer completing redirect
+- Basic integration (no signature verification)
+- Sandbox mode configured (not production-ready)</p>
+<p><strong>Documentation:</strong>
+- Location: <code>Agathas.Storefront.Infrastructure/Payments/PaypalPaymentService.cs</code>
+- PayPal Docs: https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/</p>
+<hr/>
+<h3 id="2-janrain-social-authentication">2. Janrain Social Authentication</h3>
+<p><strong>Provider:</strong> Janrain (Akamai Identity Cloud)</p>
+<p><strong>Purpose:</strong> OAuth-based social login (Facebook, Google, Twitter) to reduce registration friction</p>
+<p><strong>Integration Type:</strong> OAuth 2.0 callback</p>
+<p><strong>Protocol:</strong> HTTPS</p>
+<p><strong>Direction:</strong> Bidirectional (redirect to Janrain, callback to app)</p>
+<p><strong>Frequency:</strong> Per user login/registration (on-demand)</p>
+<p><strong>Integration Flow:</strong></p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    participant User
+    participant App as Agathas.Storefront
+    participant Janrain as Janrain Service
+    participant Social as Social Provider<br/>(Facebook/Google/Twitter)
+
+    User-&gt;&gt;App: Click "Sign in with Facebook"
+    App-&gt;&gt;Janrain: Redirect to Janrain authentication page
+    activate Janrain
+    Janrain-&gt;&gt;Social: Redirect to social provider OAuth
+    activate Social
+    Social-&gt;&gt;User: Display consent screen
+    User-&gt;&gt;Social: Authorize access
+    Social-&gt;&gt;Janrain: OAuth callback with authorization code
+    deactivate Social
+    Janrain-&gt;&gt;Janrain: Validate authorization<br/>Retrieve user profile
+    Janrain-&gt;&gt;App: Redirect to /Account/ExternalLogOnCallback?token=XYZ
+    deactivate Janrain
+    App-&gt;&gt;Janrain: Validate token and retrieve user profile
+    Janrain--&gt;&gt;App: User profile (email, name, social ID)
+    App-&gt;&gt;App: Create or link user account
+    App-&gt;&gt;App: Create Forms Auth cookie
+    App-&gt;&gt;User: Redirect to home page (logged in)
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Endpoints:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Endpoint</th>
+<th>Method</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initiate Social Login</td>
+<td>Janrain OAuth URL (configured in Web.config)</td>
+<td>GET</td>
+<td>Redirect to Janrain for authentication</td>
+</tr>
+<tr>
+<td>OAuth Callback</td>
+<td><code>https://[app-domain]/Account/ExternalLogOnCallback</code></td>
+<td>GET</td>
+<td>Receive authentication token</td>
+</tr>
+<tr>
+<td>Token Validation</td>
+<td>Janrain API endpoint</td>
+<td>POST</td>
+<td>Validate token and retrieve user profile</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Authentication:</strong>
+- <strong>Method:</strong> API Key
+- <strong>Credentials Storage:</strong> Web.config <code>&lt;appSettings&gt;</code> <strong>PLAINTEXT</strong> (<code>JanrainApiKey</code>)
+- <strong>Token Type:</strong> Temporary authentication token (short-lived)</p>
+<p><strong>Data Format:</strong>
+- <strong>Request:</strong> Query parameters (<code>token=[auth-token]</code>)
+- <strong>Response:</strong> JSON user profile
+  <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"stat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.facebook.com/profile.php?id=123456"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"providerName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Facebook"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"formatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Smith"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"givenName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"familyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Smith"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"john.smith@example.com"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"verifiedEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"john.smith@example.com"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Error Handling:</strong>
+- <strong>Retry Strategy:</strong> User can retry social login
+- <strong>Timeout:</strong> 30 seconds for API validation call
+- <strong>Fallback Strategy:</strong> Display error message, user can use local registration/login</p>
+<p><strong>SLA/Uptime:</strong>
+- <strong>Provider SLA:</strong> 99.9% (Janrain/Akamai SLA)
+- <strong>Expected Availability:</strong> High</p>
+<p><strong>Cost Structure:</strong>
+- <strong>Model:</strong> Unknown (requires Janrain account details)
+- <strong>Typical Pricing:</strong> Per-user or subscription-based</p>
+<p><strong>Monitoring:</strong>
+- ❌ No health check
+- ❌ No monitoring of authentication success rate
+- <strong>Recommendation:</strong> Log Janrain API failures, monitor authentication conversion rate</p>
+<p><strong>Limitations:</strong>
+- Dependent on external service availability
+- User must have social media account
+- Privacy concerns (users may not want to link social accounts)
+- API key in plaintext (security risk)</p>
+<p><strong>Documentation:</strong>
+- Location: <code>Agathas.Storefront.Infrastructure/Authentication/JanrainAuthenticationService.cs</code>
+- Janrain Docs: (legacy service, now Akamai Identity Cloud)</p>
+<hr/>
+<h3 id="3-smtp-email-server">3. SMTP Email Server</h3>
+<p><strong>Provider:</strong> Configurable SMTP server (not specified in code)</p>
+<p><strong>Purpose:</strong> Send transactional emails (order confirmations, receipts, notifications)</p>
+<p><strong>Integration Type:</strong> Email delivery</p>
+<p><strong>Protocol:</strong> SMTP (Simple Mail Transfer Protocol)</p>
+<p><strong>Direction:</strong> Outbound (application sends emails)</p>
+<p><strong>Frequency:</strong> Per order submission, user registration (on-demand)</p>
+<p><strong>Integration Flow:</strong></p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">flowchart LR
+    A[Order Submitted] --&gt; B[OrderSubmittedEvent Raised]
+    B --&gt; C[OrderSubmittedHandler]
+    C --&gt; D[IEmailService.SendOrderConfirmation]
+    D --&gt; E{Environment?}
+    E --&gt;|Production| F[SmtpEmailService]
+    E --&gt;|Development| G[TextLoggingEmailService<br/>Logs to file]
+    F --&gt; H[SMTP Server]
+    H --&gt; I[Customer Email Inbox]
+    G --&gt; J[Log File]
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Configuration:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Source</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMTP Host</td>
+<td>Web.config <code>&lt;system.net&gt;&lt;mailSettings&gt;</code></td>
+<td>SMTP server address</td>
+</tr>
+<tr>
+<td>Port</td>
+<td>Web.config</td>
+<td>SMTP port (25, 587, 465)</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>Web.config <strong>PLAINTEXT</strong></td>
+<td>SMTP authentication username</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Web.config <strong>PLAINTEXT</strong></td>
+<td>SMTP authentication password</td>
+</tr>
+<tr>
+<td>From Address</td>
+<td>Web.config</td>
+<td>Sender email address</td>
+</tr>
+<tr>
+<td>Enable SSL</td>
+<td>Web.config</td>
+<td>TLS/SSL encryption</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Email Types:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Email Type</th>
+<th>Trigger</th>
+<th>Recipient</th>
+<th>Template</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Order Confirmation</td>
+<td>Order submitted</td>
+<td>Customer</td>
+<td>Order summary, items, total, delivery estimate</td>
+</tr>
+<tr>
+<td>Registration Welcome</td>
+<td>User registration</td>
+<td>New customer</td>
+<td>Welcome message, account details</td>
+</tr>
+<tr>
+<td>Password Reset</td>
+<td>Password reset request</td>
+<td>Customer</td>
+<td>Password reset link (if implemented)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Authentication:</strong>
+- <strong>Method:</strong> SMTP username/password
+- <strong>Credentials Storage:</strong> Web.config <strong>PLAINTEXT</strong> (security issue)
+- <strong>Encryption:</strong> SSL/TLS (configurable)</p>
+<p><strong>Error Handling:</strong>
+- <strong>Retry Strategy:</strong> No automatic retry
+- <strong>Timeout:</strong> SMTP client default (100 seconds)
+- <strong>Fallback Strategy:</strong> 
+  - <strong>Production:</strong> Log error, continue (email failure does not block order)
+  - <strong>Development:</strong> TextLoggingEmailService logs email to file system</p>
+<p><strong>SLA/Uptime:</strong>
+- Depends on SMTP provider (SendGrid, AWS SES, Mailgun, etc.)</p>
+<p><strong>Cost Structure:</strong>
+- Depends on provider (typically per-email or subscription)</p>
+<p><strong>Monitoring:</strong>
+- ❌ No email delivery rate tracking
+- ❌ No bounce/failure monitoring
+- <strong>Recommendation:</strong> Use email service provider with delivery tracking (SendGrid, AWS SES)</p>
+<p><strong>Development Fallback:</strong>
+- <strong>TextLoggingEmailService:</strong> Logs email content to file system instead of sending
+- <strong>Configuration:</strong> Swap implementations in StructureMap IoC container
+- <strong>Location:</strong> <code>Agathas.Storefront.Infrastructure/Email/TextLoggingEmailService.cs</code></p>
+<p><strong>Limitations:</strong>
+- No email templates (plain text emails)
+- No HTML email formatting
+- No email queue (synchronous sending within HTTP request)
+- No retry on failure
+- Passwords in plaintext</p>
+<p><strong>Documentation:</strong>
+- Location: <code>Agathas.Storefront.Infrastructure/Email/SmtpEmailService.cs</code></p>
+<hr/>
+<h3 id="external-integration-summary">External Integration Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Protocol</th>
+<th>Criticality</th>
+<th>Reliability</th>
+<th>Cost Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PayPal</strong></td>
+<td>HTTPS POST</td>
+<td><strong>Critical</strong> - Blocks revenue</td>
+<td>High (99.9% SLA)</td>
+<td>Per-transaction (~2.9% + $0.30)</td>
+</tr>
+<tr>
+<td><strong>Janrain</strong></td>
+<td>HTTPS OAuth</td>
+<td>High - Reduces friction</td>
+<td>High (99.9% SLA)</td>
+<td>Subscription/per-user</td>
+</tr>
+<tr>
+<td><strong>SMTP Email</strong></td>
+<td>SMTP</td>
+<td>Medium - Non-blocking</td>
+<td>Varies by provider</td>
+<td>Per-email or subscription</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Single Points of Failure:</strong>
+- ❌ <strong>PayPal:</strong> If down, customers cannot complete purchases (revenue loss)
+- ⚠️ <strong>Janrain:</strong> If down, social login unavailable (fallback: local registration)
+- ⚠️ <strong>SMTP:</strong> If down, order confirmations not sent (non-blocking, logged)</p>
+<p><strong>Recommendations:</strong>
+1. <strong>PayPal:</strong> Implement PayPal IPN for reliable payment confirmation
+2. <strong>Janrain:</strong> Consider migrating to modern OAuth providers (Auth0, Azure AD B2C)
+3. <strong>SMTP:</strong> Migrate to managed email service (SendGrid, AWS SES) with retry and monitoring
+4. <strong>All:</strong> Move API keys/credentials to Azure Key Vault or AWS Secrets Manager</p>
+<hr/>
+<h2 id="integration-sequence-diagrams">Integration Sequence Diagrams</h2>
+<h3 id="complete-purchase-flow-end-to-end-integration">Complete Purchase Flow (End-to-End Integration)</h3>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    participant Customer
+    participant Browser
+    participant App as Agathas.Storefront
+    participant DB as SQL Server
+    participant PayPal as PayPal Gateway
+    participant Email as SMTP Server
+
+    Customer-&gt;&gt;Browser: Add products to basket
+    Browser-&gt;&gt;App: POST /Basket/Add?productId=123
+    App-&gt;&gt;DB: INSERT BasketItem
+    DB--&gt;&gt;App: Success
+    App--&gt;&gt;Browser: Redirect to /Basket
+
+    Customer-&gt;&gt;Browser: Click Checkout
+    Browser-&gt;&gt;App: POST /Checkout/SubmitOrder
+    activate App
+    App-&gt;&gt;DB: BEGIN TRANSACTION
+    App-&gt;&gt;DB: SELECT Basket, BasketItems
+    DB--&gt;&gt;App: Basket data
+    App-&gt;&gt;App: Create Order from Basket
+    App-&gt;&gt;DB: INSERT Order, OrderItems, Payment
+    DB--&gt;&gt;App: Order created (ID: 456)
+    App-&gt;&gt;App: Raise OrderSubmittedEvent
+    App-&gt;&gt;Email: Send order confirmation email
+    activate Email
+    Email--&gt;&gt;App: Email queued/sent
+    deactivate Email
+    App-&gt;&gt;DB: COMMIT TRANSACTION
+    deactivate App
+
+    App-&gt;&gt;Browser: Redirect to PayPal with order details
+    Browser-&gt;&gt;PayPal: POST https://paypal.com/cgi-bin/webscr<br/>(order total, merchant email)
+    activate PayPal
+    PayPal-&gt;&gt;Customer: Display payment page
+    Customer-&gt;&gt;PayPal: Enter card details, submit
+    PayPal-&gt;&gt;PayPal: Process payment
+    PayPal-&gt;&gt;Browser: Redirect to<br/>/Payment/Complete?orderId=456&amp;tx=XYZ
+    deactivate PayPal
+
+    Browser-&gt;&gt;App: GET /Payment/Complete?orderId=456&amp;tx=XYZ
+    App-&gt;&gt;DB: UPDATE Order.Payment<br/>SET TransactionId='XYZ', Status='Paid'
+    DB--&gt;&gt;App: Success
+    App--&gt;&gt;Browser: HTML order confirmation page
+    Browser-&gt;&gt;Customer: Order complete!
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<hr/>
+<h2 id="api-security-analysis">API Security Analysis</h2>
+<h3 id="authentication-mechanisms">Authentication Mechanisms</h3>
+<table>
+<thead>
+<tr>
+<th>Mechanism</th>
+<th>Usage</th>
+<th>Security Level</th>
+<th>Issues</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Forms Authentication</strong></td>
+<td>Local user login</td>
+<td>⚠️ Medium</td>
+<td>SHA1 password hashing (weak), no MFA</td>
+</tr>
+<tr>
+<td><strong>OAuth (Janrain)</strong></td>
+<td>Social login</td>
+<td>✅ Good</td>
+<td>API key in plaintext, legacy provider</td>
+</tr>
+<tr>
+<td><strong>None</strong></td>
+<td>Public endpoints</td>
+<td>❌ Low</td>
+<td>No rate limiting, CSRF risk</td>
+</tr>
+</tbody>
+</table>
+<h3 id="authorization-model">Authorization Model</h3>
+<ul>
+<li><strong>Model:</strong> Attribute-based (<code>[Authorize]</code> on controllers/actions)</li>
+<li><strong>Granularity:</strong> Controller/action level (coarse-grained)</li>
+<li><strong>Resource-Based Authorization:</strong> Implemented (orders/customer data filtered by user ID)</li>
+</ul>
+<p><strong>Authorization Checks:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Example: Only show user's own orders</span>
+<span class="k">public</span><span class="w"> </span><span class="n">ActionResult</span><span class="w"> </span><span class="nf">Index</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">customerId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetCurrentCustomerId</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_orderService</span><span class="p">.</span><span class="n">GetOrdersForCustomer</span><span class="p">(</span><span class="n">customerId</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nf">View</span><span class="p">(</span><span class="n">orders</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="security-vulnerabilities">Security Vulnerabilities</h3>
+<table>
+<thead>
+<tr>
+<th>Vulnerability</th>
+<th>Severity</th>
+<th>Location</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Plaintext secrets in Web.config</strong></td>
+<td><strong>Critical</strong></td>
+<td>Web.config</td>
+<td>Encrypt config sections or use Key Vault</td>
+</tr>
+<tr>
+<td><strong>No HTTPS enforcement</strong></td>
+<td><strong>High</strong></td>
+<td>All controllers</td>
+<td>Add <code>[RequireHttps]</code> attribute or IIS redirect</td>
+</tr>
+<tr>
+<td><strong>jQuery 1.3.2 XSS vulnerabilities</strong></td>
+<td><strong>Critical</strong></td>
+<td>Client-side</td>
+<td>Upgrade to jQuery 3.x immediately</td>
+</tr>
+<tr>
+<td><strong>No CSRF protection</strong></td>
+<td>High</td>
+<td>POST endpoints</td>
+<td>Add Anti-Forgery tokens (<code>@Html.AntiForgeryToken()</code>)</td>
+</tr>
+<tr>
+<td><strong>No rate limiting</strong></td>
+<td>Medium</td>
+<td>All endpoints</td>
+<td>Implement rate limiting (ASP.NET Web API Throttle or reverse proxy)</td>
+</tr>
+<tr>
+<td><strong>SHA1 password hashing</strong></td>
+<td>High</td>
+<td>ASP.NET Membership</td>
+<td>Migrate to bcrypt/Argon2/PBKDF2</td>
+</tr>
+<tr>
+<td><strong>No input validation on AJAX endpoints</strong></td>
+<td>Medium</td>
+<td>JSON endpoints</td>
+<td>Add model validation attributes</td>
+</tr>
+<tr>
+<td><strong>PayPal callback not verified</strong></td>
+<td>Medium</td>
+<td><code>/Payment/Complete</code></td>
+<td>Implement PayPal IPN with signature verification</td>
+</tr>
+</tbody>
+</table>
+<h3 id="owasp-top-10-assessment">OWASP Top 10 Assessment</h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A01: Broken Access Control</strong></td>
+<td>⚠️ Medium</td>
+<td>Authorization implemented but coarse-grained</td>
+</tr>
+<tr>
+<td><strong>A02: Cryptographic Failures</strong></td>
+<td>❌ High</td>
+<td>SHA1 hashing, plaintext secrets, no encryption at rest</td>
+</tr>
+<tr>
+<td><strong>A03: Injection</strong></td>
+<td>✅ Low</td>
+<td>NHibernate parameterized queries protect against SQL injection</td>
+</tr>
+<tr>
+<td><strong>A04: Insecure Design</strong></td>
+<td>⚠️ Medium</td>
+<td>Redirect-based payment flow, no HTTPS enforcement</td>
+</tr>
+<tr>
+<td><strong>A05: Security Misconfiguration</strong></td>
+<td>❌ Critical</td>
+<td>Plaintext secrets, debug mode enabled, jQuery 1.3.2</td>
+</tr>
+<tr>
+<td><strong>A06: Vulnerable Components</strong></td>
+<td>❌ Critical</td>
+<td>jQuery 1.3.2, ASP.NET MVC 2, .NET 3.5/4.0 all have known CVEs</td>
+</tr>
+<tr>
+<td><strong>A07: Identification/Authentication Failures</strong></td>
+<td>⚠️ High</td>
+<td>Weak password hashing, no MFA, no account lockout visible</td>
+</tr>
+<tr>
+<td><strong>A08: Software and Data Integrity Failures</strong></td>
+<td>⚠️ Medium</td>
+<td>No code signing, no PayPal signature verification</td>
+</tr>
+<tr>
+<td><strong>A09: Security Logging and Monitoring Failures</strong></td>
+<td>❌ High</td>
+<td>Minimal logging, no security event monitoring, no alerting</td>
+</tr>
+<tr>
+<td><strong>A10: Server-Side Request Forgery (SSRF)</strong></td>
+<td>✅ Low</td>
+<td>No server-side requests to user-provided URLs</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="performance-characteristics">Performance Characteristics</h2>
+<h3 id="response-time-analysis">Response Time Analysis</h3>
+<p><strong>Cannot be measured from static analysis</strong> - requires production monitoring</p>
+<p><strong>Estimated Performance (based on architecture):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Endpoint Type</th>
+<th>Estimated Response Time</th>
+<th>Factors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple GET (cached)</td>
+<td>&lt; 100ms</td>
+<td>If caching enabled</td>
+</tr>
+<tr>
+<td>Product listing (no cache)</td>
+<td>200-500ms</td>
+<td>Database query + rendering</td>
+</tr>
+<tr>
+<td>Product detail page</td>
+<td>100-300ms</td>
+<td>Single database lookup + related data</td>
+</tr>
+<tr>
+<td>Add to basket</td>
+<td>100-200ms</td>
+<td>Database write + transaction</td>
+</tr>
+<tr>
+<td>Checkout/Order submission</td>
+<td>500-1000ms</td>
+<td>Multiple database writes, email sending</td>
+</tr>
+<tr>
+<td>AJAX product search</td>
+<td>300-600ms</td>
+<td>Complex query with joins</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Performance Bottlenecks:</strong></p>
+<ol>
+<li><strong>No Caching:</strong></li>
+<li>Every product catalog request hits database</li>
+<li>
+<p>Recommendation: Enable NHibernate second-level cache or output caching</p>
+</li>
+<li>
+<p><strong>N+1 Query Problem:</strong></p>
+</li>
+<li>Lazy loading can trigger multiple queries</li>
+<li>
+<p>Recommendation: Use eager loading (.Fetch()) for known access patterns</p>
+</li>
+<li>
+<p><strong>Synchronous Email Sending:</strong></p>
+</li>
+<li>Order submission blocks until email sent (adds 100-500ms)</li>
+<li>
+<p>Recommendation: Queue emails for background processing</p>
+</li>
+<li>
+<p><strong>Database User Instance:</strong></p>
+</li>
+<li>Poor performance under load</li>
+<li>Recommendation: Migrate to standard SQL Server instance</li>
+</ol>
+<h3 id="throughput">Throughput</h3>
+<p><strong>Unknown</strong> - requires load testing</p>
+<p><strong>Estimated Capacity:</strong>
+- Single server: 10-50 concurrent users (monolithic architecture, no caching)
+- With SQL Server standard instance: 100-200 concurrent users
+- With caching and optimization: 500-1000 concurrent users</p>
+<p><strong>Scalability Limitations:</strong>
+- HttpContext-scoped Unit of Work prevents horizontal scaling
+- No distributed caching
+- User Instance database cannot scale</p>
+<hr/>
+<h2 id="api-limitations-and-constraints">API Limitations and Constraints</h2>
+<h3 id="technical-constraints">Technical Constraints</h3>
+<table>
+<thead>
+<tr>
+<th>Constraint</th>
+<th>Limitation</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>No REST API</strong></td>
+<td>MVC endpoints return HTML, not JSON</td>
+<td>Cannot build mobile app or third-party integrations</td>
+</tr>
+<tr>
+<td><strong>No API Gateway</strong></td>
+<td>Direct controller access only</td>
+<td>No centralized security, rate limiting, or monitoring</td>
+</tr>
+<tr>
+<td><strong>No Versioning</strong></td>
+<td>Single unversioned endpoint set</td>
+<td>Breaking changes impact all consumers</td>
+</tr>
+<tr>
+<td><strong>Session-Based Auth</strong></td>
+<td>Forms Authentication cookies</td>
+<td>Difficult for API clients (mobile apps, SPAs)</td>
+</tr>
+<tr>
+<td><strong>Synchronous Processing</strong></td>
+<td>All operations block HTTP thread</td>
+<td>Poor performance, no async operations</td>
+</tr>
+<tr>
+<td><strong>No Pagination Standard</strong></td>
+<td>Inconsistent pagination</td>
+<td>Some endpoints return all results (performance risk)</td>
+</tr>
+<tr>
+<td><strong>No HATEOAS</strong></td>
+<td>Responses don't include navigation links</td>
+<td>Clients must hard-code URLs</td>
+</tr>
+<tr>
+<td><strong>No Content Negotiation</strong></td>
+<td>Fixed HTML/JSON per endpoint</td>
+<td>Cannot support multiple formats</td>
+</tr>
+</tbody>
+</table>
+<h3 id="integration-constraints">Integration Constraints</h3>
+<p><strong>External Service Dependencies:</strong>
+- <strong>PayPal:</strong> Redirect-based flow disrupts UX, no embedded payment form
+- <strong>Janrain:</strong> Single sign-on provider, difficult to add others
+- <strong>SMTP:</strong> Synchronous email sending blocks requests</p>
+<p><strong>Data Format Constraints:</strong>
+- No OpenAPI/Swagger documentation
+- No JSON schema validation
+- Inconsistent error response formats</p>
+<hr/>
+<h2 id="monitoring-and-observability">Monitoring and Observability</h2>
+<h3 id="current-state">Current State</h3>
+<p><strong>Monitoring Capabilities:</strong>
+- ✅ Log4Net file logging (application events)
+- ❌ No request/response logging
+- ❌ No performance metrics (response times, throughput)
+- ❌ No external API call tracking
+- ❌ No error rate monitoring
+- ❌ No health check endpoints
+- ❌ No distributed tracing</p>
+<p><strong>Observability Gaps:</strong>
+- Cannot measure endpoint performance
+- Cannot track PayPal payment success rate
+- Cannot detect integration failures proactively
+- No alerting on high error rates</p>
+<h3 id="recommended-monitoring">Recommended Monitoring</h3>
+<p><strong>Key Metrics to Track:</strong></p>
+<ol>
+<li><strong>Endpoint Performance:</strong></li>
+<li>Average response time per endpoint</li>
+<li>95th/99th percentile latency</li>
+<li>
+<p>Slow request logging (&gt; 1 second)</p>
+</li>
+<li>
+<p><strong>External Integrations:</strong></p>
+</li>
+<li>PayPal payment success rate</li>
+<li>PayPal callback latency</li>
+<li>Janrain authentication success rate</li>
+<li>
+<p>Email delivery success rate</p>
+</li>
+<li>
+<p><strong>Error Rates:</strong></p>
+</li>
+<li>HTTP 500 errors per endpoint</li>
+<li>Database query failures</li>
+<li>
+<p>External API call failures</p>
+</li>
+<li>
+<p><strong>Business Metrics:</strong></p>
+</li>
+<li>Orders per hour/day</li>
+<li>Checkout abandonment rate (started vs. completed)</li>
+<li>Average order value</li>
+</ol>
+<p><strong>Monitoring Tools:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Application Insights</strong></td>
+<td>Request tracking, errors, dependencies</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>ELK Stack</strong></td>
+<td>Log aggregation and search</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Grafana + Prometheus</strong></td>
+<td>Metrics dashboard</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Pingdom / Uptime Robot</strong></td>
+<td>Uptime monitoring</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="migration-recommendations">Migration Recommendations</h2>
+<h3 id="short-term-0-6-months">Short-Term (0-6 months)</h3>
+<ol>
+<li><strong>Add API Key Authentication for AJAX Endpoints:</strong></li>
+<li>Protect JSON endpoints with API keys or tokens</li>
+<li>Priority: High</li>
+<li>
+<p>Effort: 1-2 weeks</p>
+</li>
+<li>
+<p><strong>Implement Rate Limiting:</strong></p>
+</li>
+<li>Prevent abuse of public endpoints</li>
+<li>Tool: ASP.NET Web API Throttle or reverse proxy (Nginx)</li>
+<li>Priority: High</li>
+<li>
+<p>Effort: 1 week</p>
+</li>
+<li>
+<p><strong>Add Health Check Endpoint:</strong></p>
+</li>
+<li><code>GET /health</code> returning system status</li>
+<li>Check database connectivity, external APIs</li>
+<li>Priority: Medium</li>
+<li>
+<p>Effort: 1 week</p>
+</li>
+<li>
+<p><strong>Enable Request/Response Logging:</strong></p>
+</li>
+<li>Log all HTTP requests with response times</li>
+<li>Priority: Medium</li>
+<li>Effort: 1 week</li>
+</ol>
+<h3 id="medium-term-6-12-months">Medium-Term (6-12 months)</h3>
+<ol>
+<li><strong>Extract REST API Layer:</strong></li>
+<li>Build separate ASP.NET Web API project</li>
+<li>Expose JSON endpoints for mobile/SPA consumption</li>
+<li>Priority: High (required for modernization)</li>
+<li>
+<p>Effort: 2-3 months</p>
+</li>
+<li>
+<p><strong>Implement API Gateway:</strong></p>
+</li>
+<li>Centralized authentication, rate limiting, monitoring</li>
+<li>Tool: Azure API Management, AWS API Gateway, or Ocelot</li>
+<li>Priority: Medium</li>
+<li>
+<p>Effort: 1-2 months</p>
+</li>
+<li>
+<p><strong>Add OpenAPI/Swagger Documentation:</strong></p>
+</li>
+<li>Generate API documentation</li>
+<li>Interactive API explorer</li>
+<li>Priority: Medium</li>
+<li>
+<p>Effort: 1-2 weeks</p>
+</li>
+<li>
+<p><strong>Migrate to Token-Based Authentication:</strong></p>
+</li>
+<li>Replace Forms Authentication cookies with JWT tokens</li>
+<li>Support API clients (mobile apps)</li>
+<li>Priority: High</li>
+<li>Effort: 3-4 weeks</li>
+</ol>
+<h3 id="long-term-12-months">Long-Term (12+ months)</h3>
+<ol>
+<li><strong>Migrate to ASP.NET Core Web API:</strong></li>
+<li>Modern REST API with async/await</li>
+<li>Built-in DI, health checks, OpenAPI</li>
+<li>Priority: Critical (part of .NET modernization)</li>
+<li>
+<p>Effort: 4-6 months</p>
+</li>
+<li>
+<p><strong>Implement GraphQL (Optional):</strong></p>
+</li>
+<li>Flexible querying for complex UIs</li>
+<li>Tool: Hot Chocolate or GraphQL.NET</li>
+<li>Priority: Low</li>
+<li>
+<p>Effort: 2-3 months</p>
+</li>
+<li>
+<p><strong>API Versioning Strategy:</strong></p>
+</li>
+<li>URL-based versioning (e.g., <code>/api/v1/products</code>)</li>
+<li>Deprecation policy</li>
+<li>Priority: High</li>
+<li>
+<p>Effort: 2-4 weeks</p>
+</li>
+<li>
+<p><strong>Event-Driven Architecture:</strong></p>
+</li>
+<li>Decouple services with message queues</li>
+<li>Azure Service Bus, RabbitMQ, Kafka</li>
+<li>Priority: Medium</li>
+<li>Effort: 3-6 months</li>
+</ol>
+<hr/>
+<h2 id="document-metadata">Document Metadata</h2>
+<ul>
+<li><strong>Document Version:</strong> 1.0</li>
+<li><strong>Last Updated:</strong> 2026-06-09</li>
+<li><strong>Author:</strong> Software Architecture Analyzer</li>
+<li><strong>System:</strong> Agathas.Storefront E-commerce Application</li>
+<li><strong>Status:</strong> Draft</li>
+<li><strong>Next Review:</strong> Upon API extraction or modernization initiative</li>
+</ul>
+<hr/>
+<p><strong>Note:</strong> This is not a traditional API catalog since Agathas.Storefront is a server-side MVC application, not a REST API. This document catalogs HTTP endpoints (MVC actions) and external service integrations. A standalone REST API should be developed to support modern client applications (mobile apps, SPAs).</p></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script src="../../../js/bootstrap.bundle.min.js"></script>
+<script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script src="../../../js/base.js"></script>
+<script src="../../../search/main.js"></script>
+<script src="../../../assets/javascripts/panzoom.min.js"></script>
+<script src="../../../assets/javascripts/zoompan.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>
