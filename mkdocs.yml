@@ -1,0 +1,49 @@
+site_name: Project Documentation
+docs_dir: .solutiondocs
+
+theme:
+  name: mkdocs
+  locale: en
+
+plugins:
+  - search
+  - mermaid2
+  - panzoom:
+      full_screen: false
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+
+nav:
+  - Home: README.md
+  - Executive Summary: EXECUTIVE-SUMMARY.md
+  - Quickstart:
+    - Architect: QUICK-START-ARCHITECT.md
+    - Developer: QUICK-START-DEVELOPER.md
+    - Executive: QUICK-START-EXECUTIVE.md
+  - Current State:
+    - Architecture:
+      - System Architecture: CURRENT-STATE/1-architecture/1.1-system-architecture.md
+      - Data Architecture: CURRENT-STATE/1-architecture/1.2-data-architecture.md
+      - API Integration Catalog: CURRENT-STATE/1-architecture/1.3-api-integration-catalog.md
+      - Project Inventory: CURRENT-STATE/1-architecture/1.4-project-inventory.md
+    - Business:
+      - Business Domain Model: CURRENT-STATE/2-business/2.1-business-domain-model.md
+      - Requirements Specification: CURRENT-STATE/2-business/2.2-requirements-specification.md
+      - Compliance & Regulatory: CURRENT-STATE/2-business/2.3-compliance-regulatory.md
+      - User Experience Analysis: CURRENT-STATE/2-business/2.4-user-experience-analysis.md
+      - Localization & I18n: CURRENT-STATE/2-business/2.5-localization-i18n.md
+  - Modernization:
+    - Strategy:
+      - Executive Summary: MODERNIZATION/2-strategy/2.1-executive-summary.md
+      - Stakeholder Matrix: MODERNIZATION/2-strategy/2.2-stakeholder-matrix.md
+  - Generation Summaries:
+    - Architecture Documentation Summary: generation-summaries/architecture-documentation-summary.md
+    - Business Documentation Summary: generation-summaries/business-documentation-summary.md
+    - Compilation Summary: generation-summaries/compilation-summary.md
+    - Pre-Analysis Summary: generation-summaries/pre-analysis-summary.md
+  - Glossary: GLOSSARY.md
