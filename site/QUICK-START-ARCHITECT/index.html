@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Architect - Project Documentation</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../css/fontawesome.min.css" rel="stylesheet"/>
+<link href="../css/brands.min.css" rel="stylesheet"/>
+<link href="../css/solid.min.css" rel="stylesheet"/>
+<link href="../css/v4-font-face.min.css" rel="stylesheet"/>
+<link href="../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
+<link href="../assets/stylesheets/panzoom.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<meta name="panzoom-theme" content="mkdocs">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="..">Project Documentation</a>
+<!-- Expander button -->
+<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="..">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../EXECUTIVE-SUMMARY/">Executive Summary</a>
+</li>
+<li class="nav-item dropdown">
+<a aria-current="page" aria-expanded="false" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button">Quickstart</a>
+<ul class="dropdown-menu">
+<li>
+<a aria-current="page" class="dropdown-item active" href="./">Architect</a>
+</li>
+<li>
+<a class="dropdown-item" href="../QUICK-START-DEVELOPER/">Developer</a>
+</li>
+<li>
+<a class="dropdown-item" href="../QUICK-START-EXECUTIVE/">Executive</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Current State</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Architecture</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../CURRENT-STATE/1-architecture/1.1-system-architecture/">System Architecture</a>
+</li>
+<li>
+<a class="dropdown-item" href="../CURRENT-STATE/1-architecture/1.2-data-architecture/">Data Architecture</a>
+</li>
+<li>
+<a class="dropdown-item" href="../CURRENT-STATE/1-architecture/1.3-api-integration-catalog/">API Integration Catalog</a>
+</li>
+<li>
+<a class="dropdown-item" href="../CURRENT-STATE/1-architecture/1.4-project-inventory/">Project Inventory</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Business</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../CURRENT-STATE/2-business/2.1-business-domain-model/">Business Domain Model</a>
+</li>
+<li>
+<a class="dropdown-item" href="../CURRENT-STATE/2-business/2.2-requirements-specification/">Requirements Specification</a>
+</li>
+<li>
+<a class="dropdown-item" href="../CURRENT-STATE/2-business/2.3-compliance-regulatory/">Compliance &amp; Regulatory</a>
+</li>
+<li>
+<a class="dropdown-item" href="../CURRENT-STATE/2-business/2.4-user-experience-analysis/">User Experience Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../CURRENT-STATE/2-business/2.5-localization-i18n/">Localization &amp; I18n</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Modernization</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Strategy</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../MODERNIZATION/2-strategy/2.1-executive-summary/">Executive Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/">Stakeholder Matrix</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Generation Summaries</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../generation-summaries/architecture-documentation-summary/">Architecture Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../generation-summaries/business-documentation-summary/">Business Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../generation-summaries/compilation-summary/">Compilation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../generation-summaries/pre-analysis-summary/">Pre-Analysis Summary</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../GLOSSARY/">Glossary</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ms-md-auto">
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#mkdocs_search_modal" data-bs-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../EXECUTIVE-SUMMARY/" rel="prev">
+<i class="fa fa-arrow-left"></i> Previous
+                                </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../QUICK-START-DEVELOPER/" rel="next">
+                                    Next <i class="fa fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#architect-quick-start-agathasstorefront-modernization">Architect Quick Start - Agathas.Storefront Modernization</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#table-of-contents">📋 Table of Contents</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#architecture-overview">🏗️ Architecture Overview</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#current-state-architecture">🔍 Current State Architecture</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#target-state-architecture">☁️ Target State Architecture</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#architecture-decision-records-adrs">📝 Architecture Decision Records (ADRs)</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#migration-patterns-strategies">🔄 Migration Patterns &amp; Strategies</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#component-modernization-strategy">🧩 Component Modernization Strategy</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#data-architecture-migration">🗄️ Data Architecture &amp; Migration</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#security-architecture">🔒 Security Architecture</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#operational-excellence">🎯 Operational Excellence</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#technical-risks-mitigations">⚠️ Technical Risks &amp; Mitigations</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#performance-scalability">📈 Performance &amp; Scalability</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#implementation-roadmap">🗺️ Implementation Roadmap</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#references-resources">📚 References &amp; Resources</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="architect-quick-start-agathasstorefront-modernization">Architect Quick Start - Agathas.Storefront Modernization</h1>
+<blockquote>
+<p><strong>Technical deep-dive for architects, lead developers, and technical decision-makers on Agathas.Storefront modernization architecture, patterns, and implementation roadmap</strong></p>
+</blockquote>
+<p><strong>Target Audience</strong>: Solution Architects, Technical Leads, Senior Developers, Platform Engineers<br/>
+<strong>Est. Reading Time</strong>: 30-45 minutes<br/>
+<strong>Prerequisites</strong>: Understanding of cloud architecture patterns, containerization, microservices, DDD<br/>
+<strong>Last Updated</strong>: 2026-06-09</p>
+<hr/>
+<h2 id="table-of-contents">📋 Table of Contents</h2>
+<ul>
+<li><a href="#architecture-overview">Architecture Overview</a></li>
+<li><a href="#current-state-architecture">Current State Architecture</a></li>
+<li><a href="#target-state-architecture">Target State Architecture</a></li>
+<li><a href="#architecture-decision-records-adrs">Architecture Decision Records (ADRs)</a></li>
+<li><a href="#migration-patterns--strategies">Migration Patterns &amp; Strategies</a></li>
+<li><a href="#component-modernization-strategy">Component Modernization Strategy</a></li>
+<li><a href="#data-architecture--migration">Data Architecture &amp; Migration</a></li>
+<li><a href="#security-architecture">Security Architecture</a></li>
+<li><a href="#operational-excellence">Operational Excellence</a></li>
+<li><a href="#technical-risks--mitigations">Technical Risks &amp; Mitigations</a></li>
+<li><a href="#performance--scalability">Performance &amp; Scalability</a></li>
+<li><a href="#implementation-roadmap">Implementation Roadmap</a></li>
+</ul>
+<hr/>
+<h2 id="architecture-overview">🏗️ Architecture Overview</h2>
+<h3 id="current-vs-target-state-summary">Current vs Target State Summary</h3>
+<p><strong>Current Architecture Pattern</strong>: Monolithic 5-tier layered application with Domain-Driven Design<br/>
+<strong>Target Architecture Pattern</strong>: Cloud-native containerized application with microservices-ready foundation</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Current State</th>
+<th>Target State</th>
+<th>Improvement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Deployment</strong></td>
+<td>Manual IIS deployment (Windows-only)</td>
+<td>Automated container deployment (cross-platform)</td>
+<td>CI/CD automation, zero-downtime deployments</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Vertical only (single server limit)</td>
+<td>Horizontal auto-scaling (2-100+ instances)</td>
+<td>Growth unconstrained, traffic spike handling</td>
+</tr>
+<tr>
+<td><strong>Availability</strong></td>
+<td>~95-98% (single point of failure)</td>
+<td>99.9% (multi-instance, multi-zone)</td>
+<td>Resilience, business continuity</td>
+</tr>
+<tr>
+<td><strong>Recovery</strong></td>
+<td>Unknown (no documented DR plan)</td>
+<td>RPO &lt;15 min, RTO &lt;1 hour (automated backups, tested procedures)</td>
+<td>Data protection, rapid recovery</td>
+</tr>
+<tr>
+<td><strong>Observability</strong></td>
+<td>File-based logging only</td>
+<td>APM, distributed tracing, metrics, logs</td>
+<td>Proactive issue detection, performance insights</td>
+</tr>
+<tr>
+<td><strong>Technology</strong></td>
+<td>.NET Framework 3.5/4.0 (2008-2010)</td>
+<td>.NET 6+/.NET 8 LTS (modern, supported)</td>
+<td>Security patches, modern features</td>
+</tr>
+<tr>
+<td><strong>Platform</strong></td>
+<td>Windows Server + IIS</td>
+<td>Linux containers + managed platform</td>
+<td>Cost efficiency, portability</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evidence Sources</strong>:
+- Current state: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/">System Architecture</a>, <a href="analysis/infrastructure-topology.json">infrastructure-topology.json</a>
+- Target state: Industry best practices, cloud provider capabilities, DDD principles preservation
+- Metrics: Current from analysis, targets from cloud provider SLAs and industry benchmarks</p>
+<p><strong>Key Architecture Documents</strong>:
+- <strong>Current State</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/">System Architecture</a> - Complete C4 model
+- <strong>Data</strong>: <a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/">Data Architecture</a> - Database design and ORM patterns
+- <strong>Integrations</strong>: <a href="../CURRENT-STATE/1-architecture/1.3-api-integration-catalog/">API Integration Catalog</a> - External dependencies
+- <strong>Modernization</strong>: <a href="../MODERNIZATION/2-strategy/2.1-executive-summary/">Executive Summary</a> - Modernization vision</p>
+<hr/>
+<h2 id="current-state-architecture">🔍 Current State Architecture</h2>
+<h3 id="system-context-c4-level-1">System Context (C4 Level 1)</h3>
+<p><strong>External Dependencies</strong>:</p>
+<ol>
+<li><strong>PayPal Payment Gateway</strong> (CRITICAL)</li>
+<li>Protocol: HTTPS Form POST redirect</li>
+<li>Purpose: Secure payment processing (PCI DSS delegation)</li>
+<li>Integration: <code>Agathas.Storefront.Infrastructure/Payments/PaypalPaymentService.cs</code></li>
+<li>Criticality: CRITICAL - revenue dependency</li>
+<li>
+<p>Evidence: <a href="../CURRENT-STATE/1-architecture/1.3-api-integration-catalog/#paypal-payment-gateway">Integration Points</a></p>
+</li>
+<li>
+<p><strong>Janrain Authentication Provider</strong> (HIGH)</p>
+</li>
+<li>Protocol: OAuth-style callback</li>
+<li>Purpose: Social login (Facebook, Google, Twitter)</li>
+<li>Integration: <code>Agathas.Storefront.Infrastructure/Authentication/JanrainAuthenticationService.cs</code></li>
+<li>
+<p>Criticality: HIGH - user convenience, reduces registration friction</p>
+</li>
+<li>
+<p><strong>SMTP Email Server</strong> (MEDIUM)</p>
+</li>
+<li>Protocol: SMTP</li>
+<li>Purpose: Transactional emails (order confirmations)</li>
+<li>Integration: <code>Agathas.Storefront.Infrastructure/Email/SmtpEmailService.cs</code></li>
+<li>
+<p>Criticality: MEDIUM - important but not blocking</p>
+</li>
+<li>
+<p><strong>SQL Server Express LocalDB</strong> (CRITICAL)</p>
+</li>
+<li>Technology: SQL Server Express with User Instance mode (DEPRECATED)</li>
+<li>Purpose: Primary data store (products, orders, customers, baskets)</li>
+<li>Databases: <code>Shop.mdf</code> (main), <code>aspnetdb.mdf</code> (membership)</li>
+<li>Criticality: CRITICAL - data persistence</li>
+</ol>
+<p><strong>Evidence</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/#level-1-system-context-diagram">System Architecture - Level 1 Context</a></p>
+<hr/>
+<h3 id="current-architecture-c4-level-2-container-diagram">Current Architecture (C4 Level 2 - Container Diagram)</h3>
+<p><strong>5-Tier Layered Architecture</strong> with unidirectional dependencies:</p>
+<div class="highlight"><pre><span></span><code>[Presentation Layer] → [Services Layer] → [Domain Layer] → [Data Access Layer] → [Infrastructure Layer]
+                                                ↓
+                                            Database
+</code></pre></div>
+<h4 id="layer-details">Layer Details</h4>
+<p><strong>1. Presentation Layer</strong> (<code>Agathas.Storefront.UI.Web.MVC</code>)
+- <strong>Technology</strong>: ASP.NET MVC 2, ASPX views, jQuery 1.3.2
+- <strong>Responsibilities</strong>: HTTP handling, routing, view rendering, static content
+- <strong>Key Components</strong>: <code>Global.asax</code>, <code>Web.config</code>, Views, Content, Scripts
+- <strong>Issues</strong>: Non-responsive design, outdated jQuery (CVEs), ASPX views (obsolete)
+- <strong>Evidence</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/#level-2-container-diagram">System Architecture - Container Diagram</a></p>
+<p><strong>2. Controllers Layer</strong> (<code>Agathas.Storefront.Controllers</code>)
+- <strong>Technology</strong>: ASP.NET MVC 2 controllers, AutoMapper 1.1
+- <strong>Responsibilities</strong>: Request handling, view model mapping, action filters
+- <strong>Controllers</strong>: 9 controllers (~30 endpoints)
+  - <code>HomeController</code>, <code>ProductController</code>, <code>BasketController</code>
+  - <code>CheckoutController</code>, <code>PaymentController</code>, <code>OrderController</code>
+  - <code>CustomerController</code>, <code>AccountLogOnController</code>, <code>AccountRegisterController</code>
+- <strong>Pattern</strong>: Request/Response messaging with services layer
+- <strong>Evidence</strong>: <a href="analysis/api-catalog.json">api-catalog.json</a></p>
+<p><strong>3. Services Layer</strong> (<code>Agathas.Storefront.Services</code>)
+- <strong>Technology</strong>: C# 3.5, AutoMapper 1.1
+- <strong>Responsibilities</strong>: Business logic orchestration, cross-aggregate coordination
+- <strong>Services</strong>: 4 primary services
+  - <code>ProductService</code>, <code>BasketService</code>, <code>OrderService</code>, <code>CustomerService</code>
+- <strong>Pattern</strong>: Request/Response objects, domain event publishing
+- <strong>Evidence</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/#services-layer">Business Services</a></p>
+<p><strong>4. Domain Layer</strong> (<code>Agathas.Storefront.Model</code>)
+- <strong>Technology</strong>: C# 3.5 pure domain logic (no framework dependencies)
+- <strong>Responsibilities</strong>: Business rules, invariants, domain events
+- <strong>Aggregates</strong>: 4 aggregate roots
+  - <code>ProductTitle</code> (product catalog)
+  - <code>Basket</code> (shopping cart)
+  - <code>Order</code> (placed orders)
+  - <code>Customer</code> (customer accounts)
+- <strong>Patterns</strong>: DDD (entities, value objects, aggregates), State Pattern (Order lifecycle)
+- <strong>Business Rules</strong>: 40+ documented rules enforced in domain
+- <strong>Strengths</strong>: ⭐⭐⭐⭐⭐ Excellent DDD implementation
+- <strong>Evidence</strong>: <a href="../CURRENT-STATE/2-business/2.1-business-domain-model/">Business Domain Model</a></p>
+<p><strong>5. Data Access Layer</strong> (<code>Agathas.Storefront.Repository.NHibernate</code>)
+- <strong>Technology</strong>: NHibernate 2.1, HBM.XML mappings
+- <strong>Responsibilities</strong>: Repository implementations, ORM mapping, persistence
+- <strong>Repositories</strong>: <code>ProductRepository</code>, <code>BasketRepository</code>, <code>OrderRepository</code>, <code>CustomerRepository</code>
+- <strong>Pattern</strong>: Repository Pattern, Unit of Work Pattern
+- <strong>Issues</strong>: Lazy loading throughout (N+1 query risk), outdated NHibernate version
+- <strong>Evidence</strong>: <a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/">Data Architecture</a></p>
+<p><strong>6. Infrastructure Layer</strong> (<code>Agathas.Storefront.Infrastructure</code>)
+- <strong>Technology</strong>: C# 3.5, Log4Net 1.2, StructureMap 2.5
+- <strong>Responsibilities</strong>: Cross-cutting concerns (auth, logging, email, payments, configuration)
+- <strong>Components</strong>: 
+  - Authentication (Forms Auth, Janrain)
+  - Logging (Log4Net file appender)
+  - Email (SMTP, TextLogging fallback)
+  - Payments (PayPal integration)
+  - Configuration management
+  - Dependency injection (StructureMap)
+- <strong>Evidence</strong>: <a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/#infrastructure-layer">System Architecture - Infrastructure</a></p>
+<hr/>
+<h3 id="current-state-strengths-preserve-during-modernization">Current State Strengths (Preserve During Modernization)</h3>
+<p>✅ <strong>Excellent Domain-Driven Design</strong>:
+- Clean aggregate boundaries with well-defined roots
+- Rich domain entities with encapsulated business logic
+- Value objects for addresses, payments, product attributes
+- Domain events infrastructure (underutilized but present)
+- <strong>Preservation Strategy</strong>: Keep domain model intact, migrate to .NET 6+ with minimal changes</p>
+<p>✅ <strong>Clean Architectural Patterns</strong>:
+- Repository Pattern with interface abstractions
+- Unit of Work for transaction management
+- Dependency Injection throughout (StructureMap)
+- State Pattern for order lifecycle
+- Factory Pattern for controller creation
+- <strong>Preservation Strategy</strong>: Maintain patterns, update implementation (EF Core, built-in DI)</p>
+<p>✅ <strong>Testable Design</strong>:
+- Interface-based abstractions
+- Pure domain logic (no framework coupling)
+- DI enables test doubles
+- <strong>Opportunity</strong>: Zero tests currently, but architecture makes testing straightforward</p>
+<p>✅ <strong>Business Logic Completeness</strong>:
+- Complete e-commerce workflows implemented
+- 40+ business rules documented and enforced
+- PCI DSS compliant payment integration
+- <strong>Preservation Strategy</strong>: Keep business logic, enhance with missing features (inventory, returns)</p>
+<hr/>
+<h3 id="current-state-constraints-must-address">Current State Constraints (Must Address)</h3>
+<p>❌ <strong>Technology Obsolescence</strong> (CRITICAL):
+- .NET Framework 3.5/4.0: Out of support, no security patches
+- ASP.NET MVC 2: 15+ years old, superseded by ASP.NET Core
+- jQuery 1.3.2: Multiple CVEs (XSS vulnerabilities)
+- NHibernate 2.1: Outdated, lacks modern features
+- <strong>Impact</strong>: Security risk, recruitment difficulty, cannot leverage modern capabilities</p>
+<p>❌ <strong>Scalability Blockers</strong> (HIGH):
+- In-process session state (<code>&lt;sessionState mode="InProc" /&gt;</code>)
+- LocalDB User Instance mode (requires local file system)
+- File-based logging (<code>C:\logs\</code> directory)
+- No distributed caching (first-level cache only)
+- <strong>Impact</strong>: Cannot scale horizontally, single point of failure</p>
+<p>❌ <strong>Security Vulnerabilities</strong> (CRITICAL):
+- Plaintext secrets in Web.config (connection strings, SMTP credentials, PayPal API key)
+- jQuery 1.3.2 XSS vulnerabilities (CVE-2011-4969, CVE-2012-6708, CVE-2015-9251)
+- ASP.NET Membership with weak SHA1 hashing
+- No input validation framework
+- <strong>Impact</strong>: Data breach risk, compliance violations</p>
+<p>❌ <strong>Compliance Gaps</strong> (HIGH for EU customers):
+- No GDPR data subject rights (erasure, access, portability)
+- No consent management (cookie banner)
+- No privacy controls
+- <strong>Impact</strong>: Fines up to 4% revenue or €20M</p>
+<p>❌ <strong>Operational Limitations</strong> (MEDIUM):
+- No automated testing (0% coverage)
+- Manual deployment (hours, error-prone)
+- No CI/CD pipeline
+- File-based logging only (no APM, no metrics)
+- <strong>Impact</strong>: Slow development cycles, high defect risk, limited observability</p>
+<hr/>
+<h2 id="target-state-architecture">☁️ Target State Architecture</h2>
+<h3 id="target-architecture-vision">Target Architecture Vision</h3>
+<p><strong>Modern Cloud-Native Application</strong> preserving excellent domain model while modernizing technology foundation:</p>
+<ul>
+<li><strong>Platform</strong>: Containerized application on managed container platform</li>
+<li><strong>Framework</strong>: .NET 6+ or .NET 8 LTS with ASP.NET Core MVC</li>
+<li><strong>Database</strong>: Managed cloud database service (vendor-agnostic design)</li>
+<li><strong>State</strong>: Distributed session state and caching (Redis or cloud-native)</li>
+<li><strong>Observability</strong>: APM, structured logging, metrics, distributed tracing</li>
+<li><strong>Security</strong>: Modern authentication, encrypted secrets, updated dependencies</li>
+<li><strong>Deployment</strong>: CI/CD with automated testing, zero-downtime deployments</li>
+<li><strong>Scalability</strong>: Horizontal auto-scaling based on metrics</li>
+</ul>
+<hr/>
+<h3 id="target-architecture-diagram-c4-level-2">Target Architecture Diagram (C4 Level 2)</h3>
+<p><strong>Conceptual Target State</strong> (vendor-agnostic):</p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">C4Container
+    title Target Architecture - Agathas.Storefront (Vendor-Agnostic)
+
+    Person(customer, "Customer", "Online shopper")
+    Person(admin, "Administrator", "System manager")
+
+    System_Boundary(cloud, "Cloud Platform") {
+        Container(cdn, "CDN", "Cloud CDN Service", "Static content delivery, image optimization")
+        Container(waf, "WAF", "Web Application Firewall", "DDoS protection, rate limiting")
+        Container(lb, "Load Balancer", "Cloud Load Balancer", "Traffic distribution, health checks, SSL termination")
+
+        Container(webapp, "Web Application", "ASP.NET Core 6+ / Containers", "2-10+ instances, auto-scaling")
+
+        ContainerDb(cache, "Distributed Cache", "Redis / Cloud Cache Service", "Session state, application cache")
+        ContainerDb(database, "Relational Database", "Managed Database Service", "Products, orders, customers (HA, automated backups)")
+
+        Container(secrets, "Secrets Manager", "Cloud Secrets Service", "Connection strings, API keys, certificates")
+        Container(apm, "APM / Observability", "Monitoring Service", "Logs, metrics, traces, alerts")
+    }
+
+    System_Ext(paypal, "PayPal", "Payment processing")
+    System_Ext(idp, "Identity Provider", "Auth0 / Managed IdP", "Authentication (replace Janrain)")
+    System_Ext(email, "Email Service", "Managed Email Service", "Transactional emails")
+
+    Rel(customer, cdn, "Loads static content", "HTTPS")
+    Rel(customer, waf, "Browses site", "HTTPS")
+    Rel(admin, waf, "Manages", "HTTPS")
+
+    Rel(waf, lb, "Forwards requests", "HTTPS")
+    Rel(lb, webapp, "Distributes traffic", "HTTP/2")
+
+    Rel(webapp, cache, "Session/Cache ops", "Redis protocol")
+    Rel(webapp, database, "Data access", "TLS")
+    Rel(webapp, secrets, "Retrieve secrets", "API")
+    Rel(webapp, apm, "Telemetry", "OTLP/SDK")
+
+    Rel(webapp, paypal, "Payment processing", "HTTPS")
+    Rel(webapp, idp, "Authentication", "OAuth/OIDC")
+    Rel(webapp, email, "Send emails", "API/SMTP")
+
+    Rel(cdn, lb, "Origin pull", "HTTPS")
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Key Changes from Current State</strong>:</p>
+<ol>
+<li><strong>Containerization</strong>: Application packaged as Docker containers (cross-platform)</li>
+<li><strong>Load Balancing</strong>: Traffic distributed across multiple instances (horizontal scaling)</li>
+<li><strong>Distributed State</strong>: Session and cache externalized (Redis or cloud-native)</li>
+<li><strong>Managed Database</strong>: Cloud database service with HA, automated backups</li>
+<li><strong>Secrets Management</strong>: Credentials in secure vault (no plaintext in config)</li>
+<li><strong>Comprehensive Observability</strong>: APM, structured logs, metrics, distributed tracing</li>
+<li><strong>Modern Authentication</strong>: OAuth/OIDC with external IdP (replace Janrain + ASP.NET Membership)</li>
+<li><strong>CDN</strong>: Static content delivery optimization</li>
+<li><strong>WAF</strong>: Security layer for DDoS protection and rate limiting</li>
+</ol>
+<hr/>
+<h3 id="target-technology-stack">Target Technology Stack</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Current Technology</th>
+<th>Target Technology</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Runtime</strong></td>
+<td>.NET Framework 3.5/4.0</td>
+<td>.NET 6+ or .NET 8 LTS</td>
+<td>Modern, supported, cross-platform</td>
+</tr>
+<tr>
+<td><strong>Web Framework</strong></td>
+<td>ASP.NET MVC 2</td>
+<td>ASP.NET Core MVC 6+</td>
+<td>Modern, high-performance, cloud-native</td>
+</tr>
+<tr>
+<td><strong>ORM</strong></td>
+<td>NHibernate 2.1</td>
+<td>Entity Framework Core 6+</td>
+<td>Modern, supported, LINQ support, migrations</td>
+</tr>
+<tr>
+<td><strong>Dependency Injection</strong></td>
+<td>StructureMap 2.5</td>
+<td>Built-in ASP.NET Core DI</td>
+<td>Native, lightweight, no external dependency</td>
+</tr>
+<tr>
+<td><strong>Frontend</strong></td>
+<td>ASPX views, jQuery 1.3.2</td>
+<td>Razor views OR modern SPA framework (React/Vue/Angular)</td>
+<td>Responsive, modern, secure</td>
+</tr>
+<tr>
+<td><strong>Authentication</strong></td>
+<td>ASP.NET Membership + Janrain</td>
+<td>ASP.NET Core Identity OR External IdP (Auth0, Azure AD B2C, Okta)</td>
+<td>Modern, MFA support, bcrypt hashing</td>
+</tr>
+<tr>
+<td><strong>Logging</strong></td>
+<td>Log4Net 1.2 (file)</td>
+<td>Serilog + structured logging (JSON)</td>
+<td>Structured, cloud-native sinks, correlation IDs</td>
+</tr>
+<tr>
+<td><strong>Caching</strong></td>
+<td>NHibernate first-level only</td>
+<td>Redis or cloud-native distributed cache</td>
+<td>Shared across instances, high performance</td>
+</tr>
+<tr>
+<td><strong>Session State</strong></td>
+<td>In-process</td>
+<td>Distributed session state provider (Redis or cloud)</td>
+<td>Scalability, persistence across restarts</td>
+</tr>
+<tr>
+<td><strong>Containerization</strong></td>
+<td>None (Windows IIS)</td>
+<td>Docker containers</td>
+<td>Portability, consistency, cloud-native</td>
+</tr>
+<tr>
+<td><strong>Database</strong></td>
+<td>SQL Server LocalDB (User Instance)</td>
+<td>Managed database service (Azure SQL, RDS, Cloud SQL)</td>
+<td>HA, automated backups, scalability</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vendor-Agnostic Approach</strong>: Target architecture avoids vendor lock-in by using standard protocols and patterns that work across Azure, AWS, and GCP.</p>
+<hr/>
+<h2 id="architecture-decision-records-adrs">📝 Architecture Decision Records (ADRs)</h2>
+<h3 id="adr-001-incremental-modernization-vs-big-bang-rewrite">ADR-001: Incremental Modernization vs Big-Bang Rewrite</h3>
+<p><strong>Status</strong>: ✅ ACCEPTED<br/>
+<strong>Date</strong>: 2026-06-09<br/>
+<strong>Deciders</strong>: Architecture team, executive sponsor</p>
+<p><strong>Context</strong>:
+Agathas.Storefront requires technology modernization due to obsolete stack (15+ years old). Two primary approaches considered:
+1. <strong>Big-Bang Rewrite</strong>: Complete system replacement from scratch
+2. <strong>Incremental Modernization</strong>: Phased approach preserving domain model</p>
+<p><strong>Current Problem</strong>:
+- Technology stack obsolete (.NET Framework 3.5/4.0, no security patches)
+- Cannot scale horizontally (in-process state, LocalDB)
+- Security vulnerabilities (jQuery CVEs, plaintext secrets)
+- GDPR non-compliance (if serving EU customers)
+- Non-responsive design (mobile users 70%+ of traffic)</p>
+<p><strong>Decision</strong>: <strong>Incremental Modernization</strong> with phased approach</p>
+<p><strong>Alternatives Considered</strong>:</p>
+<p><strong>Option A: Big-Bang Rewrite</strong>
+- ✅ Pros: Clean slate, no legacy constraints, latest technologies from day one
+- ❌ Cons: 
+  - High risk: Complete replacement with no fallback
+  - Long cycle: 12-18+ months typical for full rewrites
+  - No incremental value: No business benefit until cutover
+  - Knowledge loss: Risk of losing business rules during recreation
+  - Maintenance burden: Must maintain both old and new systems during development
+- ⚠️ <strong>Cost</strong>: Higher total cost (dual maintenance, extended timeline, risk mitigation)
+- ⚠️ <strong>Complexity</strong>: HIGH - entire system recreation from scratch</p>
+<p><strong>Option B: Incremental Modernization</strong> (SELECTED)
+- ✅ Pros:
+  - Lower risk: Smaller changes, easier to test and rollback
+  - Incremental value: Each phase delivers business benefit
+  - Preserve assets: Excellent domain model retained (no recreation)
+  - Business continuity: System remains operational throughout
+  - Learn and adapt: Adjust approach based on early phases
+- ❌ Cons:
+  - Longer overall timeline: Phased approach may extend calendar time
+  - Technical debt: Must live with some legacy during transition
+  - Integration complexity: New and old components coexist temporarily
+- ⚠️ <strong>Cost</strong>: Lower total cost (single system maintenance, reduced risk, faster value delivery)
+- ⚠️ <strong>Complexity</strong>: MEDIUM - requires careful sequencing and integration</p>
+<p><strong>Decision Criteria</strong>:
+- Business risk tolerance: MEDIUM (cannot afford complete outage)
+- Time to first value: HIGH priority (need security fixes soon)
+- Domain model quality: EXCELLENT (4.5/5 - worth preserving)
+- Business continuity requirement: CRITICAL</p>
+<p><strong>Decision Matrix</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Weight</th>
+<th>Big-Bang Rewrite</th>
+<th>Incremental</th>
+<th>Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Business Risk</strong></td>
+<td>HIGH (×3)</td>
+<td>LOW (3) = 9</td>
+<td>HIGH (9) = 27</td>
+<td><strong>Incremental</strong></td>
+</tr>
+<tr>
+<td><strong>Time to Value</strong></td>
+<td>HIGH (×3)</td>
+<td>LOW (3) = 9</td>
+<td>HIGH (9) = 27</td>
+<td><strong>Incremental</strong></td>
+</tr>
+<tr>
+<td><strong>Preserve Domain Model</strong></td>
+<td>MEDIUM (×2)</td>
+<td>LOW (3) = 6</td>
+<td>HIGH (9) = 18</td>
+<td><strong>Incremental</strong></td>
+</tr>
+<tr>
+<td><strong>Technical Cleanliness</strong></td>
+<td>LOW (×1)</td>
+<td>HIGH (9) = 9</td>
+<td>MEDIUM (5) = 5</td>
+<td>Big-Bang</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>33</strong></td>
+<td><strong>77</strong></td>
+<td><strong>Incremental</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rationale</strong>:
+- <strong>Domain Model Excellence</strong>: The current domain model (DDD with 4 aggregates, 40+ business rules) is well-implemented and would be costly to recreate. Preservation saves months of effort and reduces risk of business logic loss.
+- <strong>Business Continuity</strong>: Incremental approach keeps system operational, avoiding revenue loss during extended rewrite period.
+- <strong>Risk Management</strong>: Smaller changes in each phase reduce risk of catastrophic failure. Can rollback individual phases without losing entire investment.
+- <strong>Value Delivery</strong>: Early phases (testing, security fixes, scalability) deliver measurable business value within weeks/months, not waiting 12-18+ months for big-bang cutover.</p>
+<p><strong>Consequences</strong>:
+- ✅ <strong>Positive</strong>: Lower risk, faster time to first value, preserved domain expertise, business continuity
+- ❌ <strong>Negative</strong>: Longer overall calendar time, temporary coexistence of old/new patterns, ongoing refactoring
+- ⚠️ <strong>Risks</strong>: Phase dependencies could delay later phases if earlier phases discover unexpected complexity</p>
+<p><strong>Validation</strong>:
+- <strong>Success Metrics</strong>: 
+  - Phase 1 completion within 2-4 months of start (velocity-dependent)
+  - Zero production incidents caused by modernization changes
+  - Test coverage &gt;60% by Phase 1 end
+  - Critical vulnerabilities eliminated by Phase 1 end
+- <strong>Review Timeline</strong>: After each phase completion, assess approach and adjust if needed</p>
+<p><strong>References</strong>:
+- <a href="https://martinfowler.com/bliki/StranglerFigApplication.html">Strangler Fig Pattern</a> - Martin Fowler
+- <a href="../EXECUTIVE-SUMMARY/#modernization-priorities">EXECUTIVE-SUMMARY.md</a> - Phased approach details</p>
+<hr/>
+<h3 id="adr-002-cloud-platform-approach-vendor-agnostic">ADR-002: Cloud Platform Approach (Vendor-Agnostic)</h3>
+<p><strong>Status</strong>: ✅ ACCEPTED (vendor-agnostic architecture)<br/>
+<strong>Date</strong>: 2026-06-09<br/>
+<strong>Deciders</strong>: Architecture team</p>
+<p><strong>Context</strong>:
+Target architecture requires cloud-native capabilities (managed database, auto-scaling, distributed caching, secrets management, APM). Cloud provider selection will be made by business stakeholders, so architecture must support multiple vendors.</p>
+<p><strong>Decision</strong>: <strong>Design vendor-agnostic architecture</strong> compatible with Azure, AWS, and GCP</p>
+<p><strong>Alternatives Considered</strong>:</p>
+<p><strong>Option A: Azure-Specific Design</strong>
+- ✅ Pros: Native Windows/.NET support, seamless integration with existing Microsoft stack
+- ❌ Cons: Vendor lock-in, migration cost if switching providers, limits negotiation leverage
+- ⚠️ <strong>Cost</strong>: Azure pricing competitive for .NET workloads, but locked into Azure pricing model
+- ⚠️ <strong>Complexity</strong>: LOW - natural fit for .NET applications</p>
+<p><strong>Option B: AWS-Specific Design</strong>
+- ✅ Pros: Market leader, broadest service catalog, mature ecosystem
+- ❌ Cons: .NET support secondary to Java/Node, more AWS-specific services used
+- ⚠️ <strong>Cost</strong>: AWS pricing typically higher for equivalent services, negotiable at scale
+- ⚠️ <strong>Complexity</strong>: MEDIUM - less .NET-native tooling than Azure</p>
+<p><strong>Option C: GCP-Specific Design</strong>
+- ✅ Pros: Competitive pricing, excellent Kubernetes support, strong data/ML services
+- ❌ Cons: Smallest market share, less .NET-specific tooling
+- ⚠️ <strong>Cost</strong>: GCP pricing often most competitive, committed use discounts
+- ⚠️ <strong>Complexity</strong>: MEDIUM - similar to AWS for .NET workloads</p>
+<p><strong>Option D: Vendor-Agnostic Design</strong> (SELECTED)
+- ✅ Pros:
+  - Portability: Can switch providers if needed
+  - Negotiation leverage: Multi-cloud strategy enables better pricing
+  - Technology choices: Use best-of-breed services regardless of vendor
+  - Risk mitigation: Not dependent on single vendor viability
+- ❌ Cons:
+  - Abstraction overhead: Must avoid vendor-specific features
+  - Potential cost premium: May not leverage vendor-specific optimizations
+- ⚠️ <strong>Cost</strong>: Comparable across vendors for standard services (compute, database, cache)
+- ⚠️ <strong>Complexity</strong>: MEDIUM - requires abstraction layer for provider differences</p>
+<p><strong>Decision Criteria</strong>:
+- Portability: HIGH priority (avoid lock-in)
+- Business flexibility: HIGH priority (enable multi-vendor strategy)
+- Technology choice: MEDIUM priority (prefer open standards)
+- Optimization: LOW priority (portability &gt; vendor-specific optimizations)</p>
+<p><strong>Rationale</strong>:
+- <strong>Business Strategy</strong>: Cloud provider not yet selected by stakeholders. Vendor-agnostic design preserves flexibility for business negotiations and decisions.
+- <strong>Technology Standards</strong>: Use open standards (Docker, Kubernetes, Redis, OpenTelemetry, OAuth/OIDC) that work across all major cloud providers.
+- <strong>Risk Mitigation</strong>: Avoid dependencies on vendor-specific services (e.g., avoid Azure Functions, AWS Lambda, GCP Cloud Functions - use standard containers instead).
+- <strong>Portability</strong>: If business requirements change or pricing becomes unfavorable, can migrate to different provider without architectural redesign.</p>
+<p><strong>Implementation Approach</strong>:</p>
+<p><strong>Common Services Across Vendors</strong>:
+| Service Type | Open Standard / Common Implementation | Azure | AWS | GCP |
+|--------------|--------------------------------------|-------|-----|-----|
+| <strong>Containers</strong> | Docker, Kubernetes | Azure Container Apps, AKS | ECS, EKS | Cloud Run, GKE |
+| <strong>Database</strong> | PostgreSQL or SQL Server | Azure Database for PostgreSQL, Azure SQL | RDS PostgreSQL, RDS SQL Server | Cloud SQL PostgreSQL, Cloud SQL SQL Server |
+| <strong>Cache</strong> | Redis | Azure Cache for Redis | ElastiCache for Redis | Memorystore for Redis |
+| <strong>Secrets</strong> | Environment variables + vault | Azure Key Vault | AWS Secrets Manager | Secret Manager |
+| <strong>Logging</strong> | Structured JSON logs | Application Insights | CloudWatch | Cloud Logging |
+| <strong>Monitoring</strong> | OpenTelemetry | Application Insights | CloudWatch + X-Ray | Cloud Monitoring + Trace |
+| <strong>CDN</strong> | Standard HTTP cache | Azure CDN | CloudFront | Cloud CDN |</p>
+<p><strong>Consequences</strong>:
+- ✅ <strong>Positive</strong>: Business flexibility, negotiation leverage, portability, risk mitigation
+- ❌ <strong>Negative</strong>: Cannot use vendor-specific optimizations, abstraction overhead
+- ⚠️ <strong>Risks</strong>: May miss vendor-specific features that could provide competitive advantage</p>
+<p><strong>Validation</strong>:
+- <strong>Success Metrics</strong>: Architecture diagrams and documentation reference generic services, not vendor-specific products
+- <strong>Proof of Concept</strong>: Deploy containerized application to 2+ cloud providers to validate portability</p>
+<p><strong>References</strong>:
+- <a href="https://12factor.net/">12-Factor App</a> - Cloud-native application principles
+- <a href="https://github.com/cncf/trailmap">CNCF Cloud Native Trail Map</a> - Open-source cloud-native technologies</p>
+<hr/>
+<h3 id="adr-003-migration-from-nhibernate-to-entity-framework-core">ADR-003: Migration from NHibernate to Entity Framework Core</h3>
+<p><strong>Status</strong>: ✅ ACCEPTED<br/>
+<strong>Date</strong>: 2026-06-09<br/>
+<strong>Deciders</strong>: Architecture team</p>
+<p><strong>Context</strong>:
+Current application uses NHibernate 2.1 (2009) with XML-based HBM mappings. Modernization to .NET 6+ provides opportunity to migrate to Entity Framework Core, which is Microsoft's recommended ORM for .NET Core/.NET 6+.</p>
+<p><strong>Decision</strong>: <strong>Migrate to Entity Framework Core 6+</strong> with code-first Fluent API</p>
+<p><strong>Alternatives Considered</strong>:</p>
+<p><strong>Option A: Keep NHibernate 2.1</strong>
+- ✅ Pros: No migration effort, existing mappings work
+- ❌ Cons: Severely outdated (13+ years old), lacks modern features, community support declining
+- ⚠️ <strong>Effort</strong>: ZERO - no changes required
+- ⚠️ <strong>Risk</strong>: HIGH - outdated ORM limits modernization, potential bugs, no support</p>
+<p><strong>Option B: Upgrade NHibernate to 5.x</strong>
+- ✅ Pros: Keeps familiar ORM, incremental upgrade path, improved performance
+- ❌ Cons: Still requires HBM.XML migration to Fluent mapping, not Microsoft-supported, smaller community than EF Core
+- ⚠️ <strong>Effort</strong>: MEDIUM - XML→Fluent mapping conversion, testing, NHibernate 2→5 breaking changes
+- ⚠️ <strong>Risk</strong>: MEDIUM - Third-party dependency, community support &lt; EF Core</p>
+<p><strong>Option C: Entity Framework Core 6+</strong> (SELECTED)
+- ✅ Pros:
+  - Microsoft-supported with active development
+  - Native .NET 6+ integration
+  - Code-first with Fluent API (modern approach)
+  - Excellent tooling (migrations, database scaffolding)
+  - Large community and extensive documentation
+  - Performance on par with NHibernate 5.x
+- ❌ Cons:
+  - Migration effort required (HBM.XML → Fluent API)
+  - Learning curve for team (if unfamiliar with EF Core)
+  - Some NHibernate features not in EF Core (criteria API differences)
+- ⚠️ <strong>Effort</strong>: MEDIUM-HIGH - Mapping conversion, repository updates, query refactoring, comprehensive testing
+- ⚠️ <strong>Risk</strong>: MEDIUM - Well-documented migration path, comprehensive testing required</p>
+<p><strong>Decision Criteria</strong>:
+- Microsoft support: HIGH importance (future-proof)
+- Community size: MEDIUM importance (resources, troubleshooting)
+- Modern features: HIGH importance (migrations, tooling)
+- Migration effort: MEDIUM importance (necessary investment for long-term benefit)</p>
+<p><strong>Decision Matrix</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Weight</th>
+<th>Keep NH 2.1</th>
+<th>Upgrade NH 5.x</th>
+<th>EF Core 6+</th>
+<th>Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microsoft Support</strong></td>
+<td>HIGH (×3)</td>
+<td>LOW (1) = 3</td>
+<td>LOW (3) = 9</td>
+<td>HIGH (9) = 27</td>
+<td><strong>EF Core</strong></td>
+</tr>
+<tr>
+<td><strong>Modern Features</strong></td>
+<td>HIGH (×3)</td>
+<td>LOW (1) = 3</td>
+<td>MEDIUM (5) = 15</td>
+<td>HIGH (9) = 27</td>
+<td><strong>EF Core</strong></td>
+</tr>
+<tr>
+<td><strong>Community/Resources</strong></td>
+<td>MEDIUM (×2)</td>
+<td>LOW (3) = 6</td>
+<td>MEDIUM (5) = 10</td>
+<td>HIGH (9) = 18</td>
+<td><strong>EF Core</strong></td>
+</tr>
+<tr>
+<td><strong>Migration Effort</strong></td>
+<td>MEDIUM (×2)</td>
+<td>HIGH (9) = 18</td>
+<td>MEDIUM (5) = 10</td>
+<td>MEDIUM (5) = 10</td>
+<td>NH 2.1</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>30</strong></td>
+<td><strong>44</strong></td>
+<td><strong>82</strong></td>
+<td><strong>EF Core</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rationale</strong>:
+- <strong>Microsoft Support</strong>: EF Core is first-class citizen in .NET 6+ ecosystem with guaranteed long-term support
+- <strong>Modern Features</strong>: Code-first approach with migrations simplifies schema evolution, better tooling integration
+- <strong>Community</strong>: Largest .NET ORM community, extensive documentation, Stack Overflow support
+- <strong>Performance</strong>: EF Core 6+ performance comparable to NHibernate 5.x (Microsoft benchmarks)
+- <strong>Investment</strong>: Migration effort justified by long-term maintainability and modern features</p>
+<p><strong>Migration Strategy</strong>:</p>
+<p><strong>Phase 1</strong>: Repository Layer Isolation (DONE - current architecture)
+- Repository Pattern already abstracts ORM from domain
+- Domain layer has no NHibernate dependencies</p>
+<p><strong>Phase 2</strong>: Entity Mapping Conversion
+- Convert HBM.XML mappings → EF Core Fluent API configurations
+- Maintain identical database schema (no schema changes)
+- Example mapping translation:
+  <div class="highlight"><pre><span></span><code><span class="c1">// Current: HBM.XML</span>
+<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">name</span><span class="o">=</span><span class="s">"Product"</span><span class="w"> </span><span class="n">table</span><span class="o">=</span><span class="s">"Products"</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">id</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">"Id"</span><span class="w"> </span><span class="n">column</span><span class="o">=</span><span class="s">"ProductId"</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">generator</span><span class="w"> </span><span class="n">class</span><span class="o">=</span><span class="s">"identity"</span><span class="w"> </span><span class="o">/&gt;</span>
+<span class="w">  </span><span class="o">&lt;/</span><span class="n">id</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">property</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">"Name"</span><span class="w"> </span><span class="n">column</span><span class="o">=</span><span class="s">"ProductName"</span><span class="w"> </span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">class</span><span class="o">&gt;</span>
+
+<span class="c1">// Target: EF Core Fluent API</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ProductConfiguration</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IEntityTypeConfiguration</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Configure</span><span class="p">(</span><span class="n">EntityTypeBuilder</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">ToTable</span><span class="p">(</span><span class="s">"Products"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">HasKey</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">Property</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">Id</span><span class="p">).</span><span class="n">HasColumnName</span><span class="p">(</span><span class="s">"ProductId"</span><span class="p">).</span><span class="n">ValueGeneratedOnAdd</span><span class="p">();</span>
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">Property</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">Name</span><span class="p">).</span><span class="n">HasColumnName</span><span class="p">(</span><span class="s">"ProductName"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Phase 3</strong>: Repository Implementation Update
+- Replace NHibernate <code>ISession</code> with EF Core <code>DbContext</code>
+- Update repository implementations to use EF Core APIs
+- Convert NHibernate criteria queries to LINQ (EF Core query provider)</p>
+<p><strong>Phase 4</strong>: Testing
+- Unit tests for repository layer
+- Integration tests against test database
+- Data integrity validation (query results match NH vs EF Core)</p>
+<p><strong>Consequences</strong>:
+- ✅ <strong>Positive</strong>: Modern ORM, Microsoft support, tooling integration, future-proof
+- ❌ <strong>Negative</strong>: Migration effort (estimated 2-4 weeks for mapping conversion + testing)
+- ⚠️ <strong>Risks</strong>: Query behavior differences between NH and EF Core require thorough testing</p>
+<p><strong>Validation</strong>:
+- <strong>Success Metrics</strong>:
+  - All 15 entities successfully mapped in EF Core
+  - All repository integration tests passing
+  - Query performance within 10% of NHibernate baseline
+  - Zero data integrity issues in QA environment
+- <strong>Testing Approach</strong>: Side-by-side testing (NH vs EF Core) to validate query results match</p>
+<p><strong>References</strong>:
+- <a href="https://docs.microsoft.com/en-us/ef/core/">Entity Framework Core Documentation</a>
+- <a href="https://stackify.com/nhibernate-vs-entity-framework/">EF Core vs NHibernate Comparison</a></p>
+<hr/>
+<h2 id="migration-patterns-strategies">🔄 Migration Patterns &amp; Strategies</h2>
+<h3 id="primary-pattern-strangler-fig-pattern">Primary Pattern: <strong>Strangler Fig Pattern</strong></h3>
+<p><strong>Pattern Description</strong>:
+Incrementally replace parts of the legacy system by placing a façade in front, routing requests to either legacy or new implementation, gradually "strangling" the old system until it can be retired.</p>
+<p><strong>Named After</strong>: Strangler fig tree that grows around host tree, eventually replacing it entirely.</p>
+<p><strong>How It Works</strong>:
+1. Create façade/routing layer that intercepts all requests
+2. Implement new functionality alongside old (parallel)
+3. Route specific requests to new implementation
+4. Test thoroughly with production traffic (canary/blue-green)
+5. Gradually expand new implementation scope
+6. Remove old implementation when fully replaced
+7. Repeat for next component</p>
+<p><strong>Why Chosen for Agathas.Storefront</strong>:
+- ✅ Low risk: Old system remains operational as fallback
+- ✅ Incremental value: Each migrated component delivers benefit
+- ✅ Testable: Can validate new implementation with real traffic before full cutover
+- ✅ Reversible: Can route back to old implementation if issues arise
+- ✅ Business continuity: Zero downtime during migration</p>
+<p><strong>Implementation for Agathas</strong>:
+Strangler Fig applied at <strong>technology layer level</strong> (not microservices decomposition - that's out of scope for initial modernization):</p>
+<ol>
+<li><strong>Phase 1</strong>: Strangle infrastructure dependencies</li>
+<li>Session state: In-process → distributed cache</li>
+<li>Logging: File-based → structured cloud logging</li>
+<li>Secrets: Plaintext config → secure vault</li>
+<li>
+<p>Testing: Zero tests → comprehensive coverage</p>
+</li>
+<li>
+<p><strong>Phase 2</strong>: Strangle platform dependencies</p>
+</li>
+<li>Hosting: IIS on Windows → containers on managed platform</li>
+<li>Database: LocalDB → managed cloud database</li>
+<li>Frontend: ASPX + jQuery 1.3.2 → Razor + modern frontend (or SPA)</li>
+<li>
+<p>Observability: None → APM + metrics + tracing</p>
+</li>
+<li>
+<p><strong>Phase 3</strong>: Strangle framework dependencies</p>
+</li>
+<li>Runtime: .NET Framework 3.5/4.0 → .NET 6+/8</li>
+<li>Web framework: ASP.NET MVC 2 → ASP.NET Core MVC</li>
+<li>ORM: NHibernate 2.1 → Entity Framework Core 6+</li>
+<li>Authentication: ASP.NET Membership → ASP.NET Core Identity</li>
+</ol>
+<p><strong>NOT Microservices Decomposition</strong> (common misconception):
+- ❌ Strangler Fig does NOT require breaking monolith into microservices
+- ✅ Strangler Fig works for modernizing monoliths while keeping monolithic architecture
+- 🎯 Focus: Technology modernization, NOT architectural decomposition</p>
+<hr/>
+<h2 id="component-modernization-strategy">🧩 Component Modernization Strategy</h2>
+<h3 id="component-session-state-management">Component: Session State Management</h3>
+<p><strong>Current Implementation</strong>:
+- <strong>Technology</strong>: In-process session state (<code>&lt;sessionState mode="InProc" /&gt;</code>)
+- <strong>Location</strong>: <code>Web.config</code> configuration
+- <strong>Usage</strong>: Shopping basket, user preferences, authentication state
+- <strong>Issue</strong>: Lost on application restart, prevents horizontal scaling</p>
+<p><strong>Target Implementation</strong>:
+- <strong>Technology</strong>: Distributed session state with Redis or cloud-native session store
+- <strong>Provider</strong>: Redis cache (vendor-agnostic) OR Azure Cache for Redis / ElastiCache / Memorystore
+- <strong>Configuration</strong>: <code>&lt;sessionState mode="Custom" customProvider="RedisSessionStateProvider" /&gt;</code>
+- <strong>Benefits</strong>: Persists across restarts, shared across instances, enables horizontal scaling</p>
+<p><strong>Migration Approach</strong>:
+- <strong>Pattern</strong>: REPLACE (drop-in replacement with configuration change)
+- <strong>Effort</strong>: LOW - configuration change + Redis deployment + testing
+- <strong>Risk</strong>: LOW - established pattern, well-tested providers
+- <strong>Testing</strong>: Session persistence across app restarts, load-balanced session sharing</p>
+<p><strong>Estimated Effort</strong>: 2-3 days (configuration, deployment, testing)<br/>
+<strong>Basis</strong>: Simple configuration change, Redis is turnkey service, established pattern</p>
+<hr/>
+<h3 id="component-database-sql-server-localdb-managed-database">Component: Database (SQL Server LocalDB → Managed Database)</h3>
+<p><strong>Current Implementation</strong>:
+- <strong>Technology</strong>: SQL Server Express LocalDB with User Instance mode
+- <strong>Database Files</strong>: <code>App_Data\Shop.mdf</code>, <code>App_Data\aspnetdb.mdf</code>
+- <strong>Connection String</strong>: <code>AttachDbFilename=|DataDirectory|\Shop.mdf;User Instance=true</code>
+- <strong>Issue</strong>: User Instance deprecated, requires local file system, no HA, no scaling</p>
+<p><strong>Target Implementation</strong>:
+- <strong>Technology</strong>: Managed database service (vendor-agnostic SQL Server or PostgreSQL)
+- <strong>Options</strong>: 
+  - SQL Server: Azure SQL Database, RDS SQL Server, Cloud SQL SQL Server
+  - PostgreSQL: Azure Database for PostgreSQL, RDS PostgreSQL, Cloud SQL PostgreSQL
+- <strong>Benefits</strong>: High availability, automated backups, point-in-time restore, scalability, managed patching</p>
+<p><strong>Migration Approach</strong>:
+- <strong>Pattern</strong>: REHOST (lift-and-shift database to managed service)
+- <strong>Steps</strong>:
+  1. <strong>Export Schema</strong>: Generate CREATE scripts from LocalDB (SQL Server Management Studio)
+  2. <strong>Export Data</strong>: Generate INSERT scripts or use data export tools (BCP, SSMS)
+  3. <strong>Provision Managed Database</strong>: Create cloud database instance with appropriate SKU
+  4. <strong>Import Schema</strong>: Execute CREATE scripts on cloud database
+  5. <strong>Import Data</strong>: Execute INSERT scripts or use import tools
+  6. <strong>Update Connection Strings</strong>: Replace User Instance connection with standard connection string
+  7. <strong>Test</strong>: Comprehensive data validation, query performance testing
+- <strong>Effort</strong>: MEDIUM - straightforward migration, testing intensive
+- <strong>Risk</strong>: LOW - established pattern, no schema changes required</p>
+<p><strong>Connection String Changes</strong>:
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- BEFORE: User Instance (deprecated) --&gt;</span>
+<span class="nt">&lt;add</span><span class="w"> </span><span class="na">name=</span><span class="s">"Shop"</span><span class="w"> </span>
+<span class="w">     </span><span class="na">connectionString=</span><span class="s">"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Shop.mdf;User Instance=true;Integrated Security=SSPI"</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="cm">&lt;!-- AFTER: Managed Database (cloud) --&gt;</span>
+<span class="nt">&lt;add</span><span class="w"> </span><span class="na">name=</span><span class="s">"Shop"</span><span class="w"> </span>
+<span class="w">     </span><span class="na">connectionString=</span><span class="s">"Server=shopdb.database.windows.net;Database=Shop;User Id=shopuser;Password=&lt;from Key Vault&gt;;Encrypt=true;"</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div></p>
+<p><strong>Database Size</strong>: Unknown (requires measurement)<br/>
+<strong>Estimated Effort</strong>: 3-5 days (export, provision, import, test)<br/>
+<strong>Basis</strong>: Small database (15 tables from analysis), straightforward lift-and-shift</p>
+<hr/>
+<h3 id="component-frontend-aspx-jquery-modern-frontend">Component: Frontend (ASPX + jQuery → Modern Frontend)</h3>
+<p><strong>Current Implementation</strong>:
+- <strong>Technology</strong>: ASPX views (ASP.NET Web Forms view engine), jQuery 1.3.2
+- <strong>Location</strong>: <code>Views/</code> folder, <code>Scripts/jquery-1.3.2.js</code>
+- <strong>CSS</strong>: Fixed-width layout, no responsive design
+- <strong>Issue</strong>: Obsolete view engine, vulnerable jQuery, non-responsive, poor mobile UX</p>
+<p><strong>Target Implementation Options</strong>:</p>
+<p><strong>Option A: Razor Views + Modern CSS Framework</strong> (RECOMMENDED for Phase 1)
+- <strong>Technology</strong>: ASP.NET Core Razor views + Bootstrap 5 or Tailwind CSS
+- <strong>Benefits</strong>: Server-side rendering (SEO-friendly), responsive design, incremental migration
+- <strong>Effort</strong>: MEDIUM - View conversion ASPX→Razor, CSS framework integration
+- <strong>Rationale</strong>: Preserves server-side rendering pattern, low risk, fast delivery</p>
+<p><strong>Option B: Modern SPA Framework</strong> (FUTURE - Phase 4)
+- <strong>Technology</strong>: React, Vue, or Angular + ASP.NET Core Web API backend
+- <strong>Benefits</strong>: Rich interactivity, modern developer experience, componentization
+- <strong>Effort</strong>: HIGH - Rewrite frontend as SPA, API layer implementation
+- <strong>Rationale</strong>: Future enhancement after core modernization complete</p>
+<p><strong>Migration Approach (Option A - Razor)</strong>:
+- <strong>Pattern</strong>: REFACTOR (rewrite views, preserve server-side model)
+- <strong>Steps</strong>:
+  1. Convert ASPX views → Razor views (<code>.cshtml</code>)
+  2. Integrate Bootstrap 5 responsive grid system
+  3. Update jQuery 1.3.2 → jQuery 3.6+ OR migrate to vanilla JavaScript
+  4. Implement responsive layouts (mobile-first)
+  5. Test across devices (desktop, tablet, mobile)
+- <strong>Effort</strong>: MEDIUM - 15 views to convert, responsive CSS design
+- <strong>Risk</strong>: MEDIUM - Visual design changes require UX review</p>
+<p><strong>Estimated Effort</strong>: 3-4 weeks (view conversion, responsive design, cross-device testing)<br/>
+<strong>Basis</strong>: 15 views identified from UI inventory, Bootstrap integration is well-documented pattern</p>
+<hr/>
+<h2 id="data-architecture-migration">🗄️ Data Architecture &amp; Migration</h2>
+<h3 id="current-database-schema">Current Database Schema</h3>
+<p><strong>Database</strong>: SQL Server Express LocalDB (2 database files)</p>
+<p><strong>Shop.mdf</strong> (Main Database):
+- <strong>Tables</strong>: 15 tables across 4 domain areas
+- <strong>Size</strong>: Unknown (requires runtime measurement)
+- <strong>Key Tables</strong>:
+  - Product Catalog: <code>ProductTitles</code>, <code>Products</code>, <code>ProductSizes</code>, <code>ProductColors</code>, <code>Brands</code>, <code>Categories</code>
+  - Shopping: <code>Baskets</code>, <code>BasketItems</code>, <code>DeliveryOptions</code>
+  - Orders: <code>Orders</code>, <code>OrderItems</code>, <code>Payments</code>, <code>ShippingServices</code>
+  - Customers: <code>Customers</code>, <code>DeliveryAddresses</code>
+- <strong>Relationships</strong>: Foreign keys enforcing referential integrity
+- <strong>Indexes</strong>: Unknown (requires schema analysis)</p>
+<p><strong>aspnetdb.mdf</strong> (ASP.NET Membership):
+- <strong>Tables</strong>: Standard ASP.NET Membership schema (aspnet_Users, aspnet_Membership, aspnet_Roles, etc.)
+- <strong>Size</strong>: Unknown
+- <strong>Purpose</strong>: User authentication and authorization
+- <strong>Note</strong>: Will be migrated to ASP.NET Core Identity schema in Phase 3</p>
+<p><strong>Evidence</strong>: <a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/">Data Architecture</a>, <a href="analysis/data-architecture.json">data-architecture.json</a></p>
+<hr/>
+<h3 id="data-migration-strategy">Data Migration Strategy</h3>
+<p><strong>Approach</strong>: <strong>REHOST then REFACTOR</strong></p>
+<p><strong>Phase 1: Rehost (Lift-and-Shift)</strong> - Zero schema changes
+1. <strong>Export Schema</strong>: Generate CREATE TABLE scripts from LocalDB
+2. <strong>Export Data</strong>: Generate INSERT scripts or use BCP/SSIS
+3. <strong>Provision Managed Database</strong>: Create cloud database instance
+4. <strong>Import Schema + Data</strong>: Deploy to cloud database
+5. <strong>Update Connection Strings</strong>: Point application to cloud database
+6. <strong>Validate</strong>: Data integrity checks, query performance testing</p>
+<p><strong>Benefits</strong>: Fast migration, low risk, immediate cloud benefits (HA, backups)</p>
+<p><strong>Phase 2: Refactor (Schema Modernization)</strong> - Post-migration optimization
+1. <strong>Add Missing Indexes</strong>: Based on query performance analysis from APM
+2. <strong>Add Audit Columns</strong>: CreatedAt, UpdatedAt, CreatedBy, UpdatedBy (for GDPR audit trail)
+3. <strong>Add Soft Delete</strong>: IsDeleted flag (for GDPR right to erasure without data loss)
+4. <strong>Schema Normalization</strong>: Fix any denormalization issues (analysis shows good normalization already)</p>
+<p><strong>Benefits</strong>: Performance optimization, GDPR readiness, maintainability</p>
+<hr/>
+<h3 id="orm-migration-nhibernate-entity-framework-core">ORM Migration: NHibernate → Entity Framework Core</h3>
+<p><strong>Mapping Conversion Strategy</strong>:</p>
+<p><strong>Current</strong>: XML-based HBM mappings (15 entities)<br/>
+<strong>Target</strong>: Code-first with Fluent API configurations</p>
+<p><strong>Migration Process</strong>:
+1. <strong>Create Entity Configurations</strong>: One <code>IEntityTypeConfiguration&lt;T&gt;</code> class per entity
+2. <strong>Convert Mappings</strong>: Translate HBM.XML → Fluent API
+3. <strong>Register Configurations</strong>: <code>OnModelCreating</code> in <code>DbContext</code>
+4. <strong>Generate Migration</strong>: EF Core migration for schema validation (should be no-op if schema correct)
+5. <strong>Test</strong>: Integration tests validating query results match</p>
+<p><strong>Example Conversion</strong>:</p>
+<p><strong>Before (NHibernate HBM.XML)</strong>:
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Agathas.Storefront.Repository.NHibernate/Mapping/Order.hbm.xml --&gt;</span>
+<span class="nt">&lt;hibernate-mapping&gt;</span>
+<span class="w">  </span><span class="nt">&lt;class</span><span class="w"> </span><span class="na">name=</span><span class="s">"Agathas.Storefront.Model.Orders.Order, Agathas.Storefront.Model"</span><span class="w"> </span><span class="na">table=</span><span class="s">"Orders"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;id</span><span class="w"> </span><span class="na">name=</span><span class="s">"Id"</span><span class="w"> </span><span class="na">column=</span><span class="s">"OrderId"</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;generator</span><span class="w"> </span><span class="na">class=</span><span class="s">"identity"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/id&gt;</span>
+<span class="w">    </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">"OrderDate"</span><span class="w"> </span><span class="na">column=</span><span class="s">"OrderDate"</span><span class="w"> </span><span class="na">type=</span><span class="s">"DateTime"</span><span class="w"> </span><span class="na">not-null=</span><span class="s">"true"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">"OrderState"</span><span class="w"> </span><span class="na">column=</span><span class="s">"OrderState"</span><span class="w"> </span><span class="na">type=</span><span class="s">"Int32"</span><span class="w"> </span><span class="na">not-null=</span><span class="s">"true"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">"TotalAmount"</span><span class="w"> </span><span class="na">column=</span><span class="s">"TotalAmount"</span><span class="w"> </span><span class="na">type=</span><span class="s">"Decimal"</span><span class="w"> </span><span class="na">precision=</span><span class="s">"18"</span><span class="w"> </span><span class="na">scale=</span><span class="s">"2"</span><span class="w"> </span><span class="na">not-null=</span><span class="s">"true"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;many-to-one</span><span class="w"> </span><span class="na">name=</span><span class="s">"Customer"</span><span class="w"> </span><span class="na">class=</span><span class="s">"Agathas.Storefront.Model.Customers.Customer"</span><span class="w"> </span><span class="na">column=</span><span class="s">"CustomerId"</span><span class="w"> </span><span class="na">not-null=</span><span class="s">"true"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;bag</span><span class="w"> </span><span class="na">name=</span><span class="s">"OrderItems"</span><span class="w"> </span><span class="na">cascade=</span><span class="s">"all"</span><span class="w"> </span><span class="na">lazy=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;key</span><span class="w"> </span><span class="na">column=</span><span class="s">"OrderId"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;one-to-many</span><span class="w"> </span><span class="na">class=</span><span class="s">"Agathas.Storefront.Model.Orders.OrderItem"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/bag&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/class&gt;</span>
+<span class="nt">&lt;/hibernate-mapping&gt;</span>
+</code></pre></div></p>
+<p><strong>After (Entity Framework Core Fluent API)</strong>:
+<div class="highlight"><pre><span></span><code><span class="c1">// Data/Configurations/OrderConfiguration.cs</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">OrderConfiguration</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IEntityTypeConfiguration</span><span class="o">&lt;</span><span class="n">Order</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Configure</span><span class="p">(</span><span class="n">EntityTypeBuilder</span><span class="o">&lt;</span><span class="n">Order</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">ToTable</span><span class="p">(</span><span class="s">"Orders"</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">HasKey</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">Property</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">Id</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">HasColumnName</span><span class="p">(</span><span class="s">"OrderId"</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">ValueGeneratedOnAdd</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">Property</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">OrderDate</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">HasColumnName</span><span class="p">(</span><span class="s">"OrderDate"</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">IsRequired</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">Property</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">OrderState</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">HasColumnName</span><span class="p">(</span><span class="s">"OrderState"</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">HasConversion</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="c1">// Enum → int</span>
+<span class="w">            </span><span class="p">.</span><span class="n">IsRequired</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">Property</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">TotalAmount</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">HasColumnName</span><span class="p">(</span><span class="s">"TotalAmount"</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">HasPrecision</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">IsRequired</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">HasOne</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">Customer</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">WithMany</span><span class="p">()</span>
+<span class="w">            </span><span class="p">.</span><span class="n">HasForeignKey</span><span class="p">(</span><span class="s">"CustomerId"</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">IsRequired</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">HasMany</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">OrderItems</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">WithOne</span><span class="p">()</span>
+<span class="w">            </span><span class="p">.</span><span class="n">HasForeignKey</span><span class="p">(</span><span class="s">"OrderId"</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">OnDelete</span><span class="p">(</span><span class="n">DeleteBehavior</span><span class="p">.</span><span class="n">Cascade</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Estimated Effort</strong>: 1-2 weeks for all 15 entities + comprehensive testing<br/>
+<strong>Basis</strong>: 15 entities from analysis, mapping conversion is mechanical, testing is primary effort</p>
+<hr/>
+<h2 id="security-architecture">🔒 Security Architecture</h2>
+<h3 id="current-security-posture">Current Security Posture</h3>
+<p><strong>Authentication</strong>:
+- <strong>Forms Authentication</strong> (<code>&lt;authentication mode="Forms" /&gt;</code>)
+- <strong>ASP.NET Membership</strong> with SQL Server provider (SHA1 password hashing - WEAK)
+- <strong>Janrain Social Login</strong> (OAuth-style callback for Facebook, Google, Twitter)
+- <strong>Issue</strong>: Weak password hashing (SHA1 vulnerable to rainbow tables), no MFA</p>
+<p><strong>Authorization</strong>:
+- <strong>Role-Based Access Control</strong> (basic implementation)
+- <strong>Authorization Attributes</strong> on controller actions <code>[Authorize(Roles="Admin")]</code>
+- <strong>Issue</strong>: Limited granularity, no claims-based authorization</p>
+<p><strong>Data Protection</strong>:
+- <strong>Plaintext Secrets</strong> in Web.config (CRITICAL VULNERABILITY)
+- <strong>No Encryption at Rest</strong> for sensitive data (database not encrypted)
+- <strong>No Column-Level Encryption</strong> for sensitive fields (credit cards not stored, but addresses unencrypted)
+- <strong>Issue</strong>: Configuration file exposure risk, no defense-in-depth</p>
+<p><strong>Network Security</strong>:
+- <strong>HTTPS</strong> for external communication (PayPal, Janrain)
+- <strong>HTTP</strong> for internal communication (assumed - no Load Balancer currently)
+- <strong>Issue</strong>: No WAF, no DDoS protection, no rate limiting</p>
+<p><strong>Input Validation</strong>:
+- <strong>Data Annotations</strong> on view models (basic validation)
+- <strong>jQuery Validation</strong> client-side (vulnerable jQuery 1.3.2)
+- <strong>No Centralized Validation</strong> framework
+- <strong>Issue</strong>: Inconsistent validation, no anti-forgery tokens globally</p>
+<p><strong>Evidence</strong>: <a href="analysis/security-controls.json">security-controls.json</a>, <a href="analysis/vulnerability-assessment.json">vulnerability-assessment.json</a></p>
+<hr/>
+<h3 id="target-security-architecture">Target Security Architecture</h3>
+<p><strong>Authentication</strong> (Modern &amp; Secure):
+- <strong>ASP.NET Core Identity</strong> with bcrypt/Argon2 password hashing
+- <strong>External Identity Provider</strong> (Auth0, Azure AD B2C, Okta) for OAuth/OIDC
+- <strong>Multi-Factor Authentication</strong> support (TOTP, SMS, email)
+- <strong>Passwordless Options</strong> (Magic links, WebAuthn)
+- <strong>Benefits</strong>: Strong hashing, MFA, delegated auth management, industry best practices</p>
+<p><strong>Authorization</strong> (Claims-Based):
+- <strong>Claims-Based Authorization</strong> in ASP.NET Core
+- <strong>Policy-Based Authorization</strong> for complex rules
+- <strong>JWT Tokens</strong> for API authentication (if SPA frontend)
+- <strong>Benefits</strong>: Fine-grained control, extensible, standard protocol</p>
+<p><strong>Data Protection</strong> (Defense-in-Depth):
+- <strong>Secrets Management</strong>: Azure Key Vault / AWS Secrets Manager / GCP Secret Manager
+- <strong>Encryption at Rest</strong>: Database encryption (TDE or vendor-managed)
+- <strong>Encryption in Transit</strong>: TLS 1.2+ for all communication
+- <strong>Column-Level Encryption</strong>: For highly sensitive data (if applicable)
+- <strong>Benefits</strong>: No plaintext secrets, layered security, compliance-ready</p>
+<p><strong>Network Security</strong> (Perimeter Protection):
+- <strong>Web Application Firewall</strong> (WAF) at edge
+- <strong>DDoS Protection</strong> (Cloud provider native)
+- <strong>Rate Limiting</strong> at API gateway / load balancer
+- <strong>HTTPS Everywhere</strong> with TLS 1.2+ only
+- <strong>Benefits</strong>: Attack surface reduction, traffic filtering, availability protection</p>
+<p><strong>Input Validation</strong> (Comprehensive):
+- <strong>Centralized Validation</strong> with Data Annotations + Fluent Validation
+- <strong>Anti-Forgery Tokens</strong> on all state-changing operations
+- <strong>Content Security Policy</strong> headers to prevent XSS
+- <strong>Parameterized Queries</strong> throughout (EF Core default)
+- <strong>Benefits</strong>: Injection prevention, XSS mitigation, consistent validation</p>
+<hr/>
+<h2 id="operational-excellence">🎯 Operational Excellence</h2>
+<h3 id="target-operational-capabilities">Target Operational Capabilities</h3>
+<p><strong>Observability</strong> (See What's Happening):
+- <strong>APM</strong>: Application Performance Monitoring with distributed tracing
+- <strong>Structured Logging</strong>: JSON logs with correlation IDs, log levels, contextual information
+- <strong>Metrics</strong>: Request rates, response times, error rates, business metrics
+- <strong>Distributed Tracing</strong>: End-to-end request flow visualization
+- <strong>Dashboards</strong>: Real-time operational dashboards with key metrics
+- <strong>Benefits</strong>: Proactive issue detection, performance insights, faster troubleshooting</p>
+<p><strong>Reliability</strong> (Keep It Running):
+- <strong>Health Checks</strong>: Liveness and readiness endpoints for orchestrator
+- <strong>Circuit Breakers</strong>: Fault tolerance for external dependencies (Polly library)
+- <strong>Retry Policies</strong>: Automatic retry with exponential backoff
+- <strong>Graceful Degradation</strong>: Continue operation when non-critical services fail
+- <strong>Benefits</strong>: Improved uptime, fault tolerance, better user experience</p>
+<p><strong>Deployment</strong> (Ship Fast, Ship Safe):
+- <strong>CI/CD Pipeline</strong>: Automated build, test, deploy
+- <strong>Blue-Green Deployment</strong>: Zero-downtime deployment with instant rollback
+- <strong>Canary Releases</strong>: Gradual rollout with traffic shifting
+- <strong>Automated Rollback</strong>: Automatic rollback on health check failure
+- <strong>Benefits</strong>: Fast delivery, low risk, rapid rollback if needed</p>
+<p><strong>Monitoring &amp; Alerting</strong> (Know When Things Break):
+- <strong>Proactive Alerts</strong>: Notify before users impacted (e.g., high error rate, slow response)
+- <strong>Escalation Policies</strong>: On-call rotation, escalation after timeouts
+- <strong>Incident Management</strong>: Runbooks for common issues, post-mortem process
+- <strong>SLO Tracking</strong>: Service Level Objective monitoring and reporting
+- <strong>Benefits</strong>: Faster incident response, reduced MTTR, continuous improvement</p>
+<hr/>
+<h3 id="slo-service-level-objectives-target">SLO (Service Level Objectives) - Target</h3>
+<p><strong>Availability SLO</strong>: 99.9% uptime (8.76 hours downtime per year)<br/>
+<strong>Basis</strong>: Multi-instance deployment with load balancer enables "three nines"</p>
+<p><strong>Latency SLO</strong>: 
+- P50: &lt;200ms (50th percentile)
+- P95: &lt;500ms (95th percentile)
+- P99: &lt;1000ms (99th percentile)<br/>
+<strong>Basis</strong>: Industry standard for e-commerce applications, achievable with CDN and caching</p>
+<p><strong>Error Rate SLO</strong>: &lt;0.1% of requests result in 5xx errors<br/>
+<strong>Basis</strong>: High-quality codebase with comprehensive testing</p>
+<p><strong>Measurement</strong>: APM tool tracking in real-time, alerts when SLO breached</p>
+<hr/>
+<h2 id="technical-risks-mitigations">⚠️ Technical Risks &amp; Mitigations</h2>
+<h3 id="risk-1-data-migration-failure">Risk 1: Data Migration Failure</h3>
+<p><strong>Risk</strong>: Data corruption or loss during database migration from LocalDB to cloud database</p>
+<p><strong>Probability</strong>: MEDIUM (complex migrations have 10-20% issue rate)<br/>
+<strong>Impact</strong>: HIGH (potential data loss, business disruption)<br/>
+<strong>Severity</strong>: HIGH</p>
+<p><strong>Mitigation Strategies</strong>:
+1. <strong>Pre-Migration Backup</strong>: Full backup of LocalDB before migration start
+2. <strong>Data Validation</strong>: Checksum validation (row counts, critical field sums)
+3. <strong>Test Migration</strong>: Perform migration on test environment first
+4. <strong>Parallel Running</strong>: Keep LocalDB as backup during initial cloud DB operation
+5. <strong>Rollback Plan</strong>: Documented rollback procedure with timing estimates
+6. <strong>Incremental Cutover</strong>: Migrate aspnetdb first (lower risk), then Shop.mdf</p>
+<p><strong>Validation</strong>: Row count matching, foreign key integrity checks, sample data verification</p>
+<hr/>
+<h3 id="risk-2-framework-migration-breaking-changes">Risk 2: Framework Migration Breaking Changes</h3>
+<p><strong>Risk</strong>: .NET Framework → .NET 6+ migration introduces breaking changes causing functionality loss</p>
+<p><strong>Probability</strong>: HIGH (significant API changes between Framework and .NET 6+)<br/>
+<strong>Impact</strong>: MEDIUM (features broken, may require rework)<br/>
+<strong>Severity</strong>: MEDIUM-HIGH</p>
+<p><strong>Mitigation Strategies</strong>:
+1. <strong>Comprehensive Testing</strong>: 60%+ test coverage before migration (Phase 1)
+2. <strong>Incremental Migration</strong>: Migrate project by project, test after each
+3. <strong>API Compatibility Analysis</strong>: Use .NET Upgrade Assistant to identify breaking changes
+4. <strong>Compatibility Shims</strong>: Use compatibility packages where possible
+5. <strong>Team Training</strong>: Ensure team familiar with .NET 6+ differences before migration</p>
+<p><strong>Validation</strong>: All automated tests passing, manual regression testing of critical paths</p>
+<hr/>
+<h3 id="risk-3-performance-degradation">Risk 3: Performance Degradation</h3>
+<p><strong>Risk</strong>: Cloud deployment or framework changes result in performance degradation</p>
+<p><strong>Probability</strong>: MEDIUM (common in cloud migrations)<br/>
+<strong>Impact</strong>: HIGH (user experience, potential revenue loss)<br/>
+<strong>Severity</strong>: MEDIUM-HIGH</p>
+<p><strong>Mitigation Strategies</strong>:
+1. <strong>Baseline Metrics</strong>: Establish current performance baseline before changes (Phase 2 - APM)
+2. <strong>Load Testing</strong>: Performance testing in test environment before production
+3. <strong>Gradual Rollout</strong>: Canary deployment starting with 5-10% traffic
+4. <strong>Performance Budget</strong>: Define acceptable performance thresholds (P95 latency, etc.)
+5. <strong>Rollback Plan</strong>: Automatic rollback if performance SLO breached</p>
+<p><strong>Validation</strong>: APM monitoring showing performance within baseline ±10%</p>
+<hr/>
+<h3 id="risk-4-scope-creep-during-modernization">Risk 4: Scope Creep During Modernization</h3>
+<p><strong>Risk</strong>: Stakeholders request new features during modernization, delaying delivery</p>
+<p><strong>Probability</strong>: HIGH (very common in long-running projects)<br/>
+<strong>Impact</strong>: MEDIUM (timeline extension, cost increase)<br/>
+<strong>Severity</strong>: MEDIUM</p>
+<p><strong>Mitigation Strategies</strong>:
+1. <strong>Phased Approach</strong>: Clear phase boundaries with go/no-go decisions
+2. <strong>Change Control</strong>: Formal change request process for scope additions
+3. <strong>Backlog Management</strong>: New features go to backlog for post-modernization
+4. <strong>Stakeholder Communication</strong>: Regular updates on modernization progress and priorities
+5. <strong>Definition of Done</strong>: Clear acceptance criteria for each phase</p>
+<p><strong>Validation</strong>: Phase completion without added scope, timeline adherence</p>
+<hr/>
+<h2 id="performance-scalability">📈 Performance &amp; Scalability</h2>
+<h3 id="current-performance-characteristics">Current Performance Characteristics</h3>
+<p><strong>Performance Profile</strong> (from static analysis, NOT runtime measurements):
+- <strong>N+1 Query Risk</strong>: HIGH - Lazy loading throughout NHibernate configuration
+- <strong>Caching</strong>: NONE active (NHibernate second-level cache not configured)
+- <strong>Synchronous Only</strong>: No async/await patterns (not supported in .NET 3.5/4.0)
+- <strong>Session State</strong>: In-memory (fast but limits scalability)</p>
+<p><strong>Cannot Measure Without Runtime Data</strong>:
+- Request throughput (req/sec)
+- Response time (p50/p95/p99 latency)
+- Concurrent user capacity
+- Database query performance
+- Memory consumption</p>
+<p><strong>Required for Baseline</strong>: APM implementation in Phase 2</p>
+<p><strong>Evidence</strong>: <a href="analysis/performance-profile.json">performance-profile.json</a>, <a href="analysis/query-performance.json">query-performance.json</a></p>
+<hr/>
+<h3 id="target-performance-architecture">Target Performance Architecture</h3>
+<p><strong>Async/Await Throughout</strong>:
+- <strong>Pattern</strong>: Convert synchronous I/O to async (database, HTTP calls, file I/O)
+- <strong>Benefits</strong>: Better resource utilization, higher throughput, improved scalability
+- <strong>Implementation</strong>: ASP.NET Core controllers with async actions, EF Core async queries</p>
+<p><strong>Comprehensive Caching Strategy</strong>:
+- <strong>L1: Client-Side Cache</strong>: Browser caching for static content (CDN)
+- <strong>L2: Distributed Cache</strong>: Redis for application cache (product catalog, categories)
+- <strong>L3: Database Query Cache</strong>: EF Core query cache (readonly queries)
+- <strong>L4: Database Result Cache</strong>: Database-level result cache if supported
+- <strong>Benefits</strong>: Reduced database load, faster response times, lower latency</p>
+<p><strong>Query Optimization</strong>:
+- <strong>Eager Loading</strong>: Use <code>.Include()</code> for related entities when needed (prevent N+1)
+- <strong>Projection</strong>: Select only required columns with <code>.Select()</code>
+- <strong>Pagination</strong>: Implement paging for list queries (prevent large result sets)
+- <strong>Indexing</strong>: Add database indexes based on APM query analysis</p>
+<p><strong>Horizontal Scaling</strong>:
+- <strong>Auto-Scaling</strong>: Scale out based on CPU/memory/request metrics
+- <strong>Stateless Application</strong>: All state in distributed cache or database
+- <strong>Load Balancing</strong>: Traffic distribution across instances
+- <strong>Benefits</strong>: Handle traffic spikes, high availability, cost optimization</p>
+<hr/>
+<h2 id="implementation-roadmap">🗺️ Implementation Roadmap</h2>
+<h3 id="phase-based-approach-with-dependencies">Phase-Based Approach with Dependencies</h3>
+<p><strong>Phase 1: Foundation</strong> (Duration: TBD - Sprint 0 planning)
+- Dependencies: NONE (can start immediately)
+- Objective: Safety net + critical vulnerabilities eliminated
+- Key Deliverables:
+  - ✅ Automated testing framework (xUnit/NUnit)
+  - ✅ 60%+ test coverage of critical paths
+  - ✅ CI/CD pipeline operational
+  - ✅ jQuery updated to 3.6+
+  - ✅ Secrets encrypted (Key Vault or environment variables)
+  - ✅ Session state externalized (Redis or cloud-native)
+  - ✅ Structured logging (Serilog + JSON)
+  - ✅ SQL Server User Instance removed</p>
+<p><strong>Phase 2: Cloud Migration</strong> (Duration: TBD - depends on Phase 1 velocity)
+- Dependencies: Phase 1 complete (tests, CI/CD, distributed session required)
+- Objective: Cloud-native deployment with scalability
+- Key Deliverables:
+  - ✅ Application containerized (Docker)
+  - ✅ Health check endpoints implemented
+  - ✅ APM instrumentation (Application Insights, New Relic, or Datadog)
+  - ✅ Distributed caching (Redis)
+  - ✅ Database migrated to managed service
+  - ✅ Responsive design implemented (mobile-first)
+  - ✅ Cloud deployment with auto-scaling</p>
+<p><strong>Phase 3: Framework Modernization</strong> (Duration: TBD - depends on Phase 2 velocity)
+- Dependencies: Phase 2 complete (containerization, cloud deployment required)
+- Objective: Modern technology stack, full compliance
+- Key Deliverables:
+  - ✅ .NET 6+/.NET 8 LTS migration
+  - ✅ ASP.NET Core MVC implementation
+  - ✅ Entity Framework Core 6+ (replace NHibernate)
+  - ✅ Built-in ASP.NET Core DI (replace StructureMap)
+  - ✅ Modern authentication (ASP.NET Core Identity or external IdP)
+  - ✅ GDPR compliance (data subject rights, consent management)</p>
+<p><strong>Phase 4: Optimization</strong> (Duration: TBD - depends on Phase 3 velocity)
+- Dependencies: Phase 3 complete (modern stack required)
+- Objective: Performance optimization, feature enhancement
+- Key Deliverables:
+  - ✅ Advanced caching strategies
+  - ✅ Internationalization (i18n) support
+  - ✅ Comprehensive monitoring dashboards
+  - ✅ Performance optimization based on APM data
+  - ✅ Advanced security features (CSP, HSTS, rate limiting)
+  - ✅ Missing business features (inventory, returns)</p>
+<p><strong>Critical Path</strong>: Phase 1 → Phase 2 → Phase 3 → Phase 4 (sequential dependencies)</p>
+<hr/>
+<h2 id="references-resources">📚 References &amp; Resources</h2>
+<h3 id="architecture-documentation">Architecture Documentation</h3>
+<ul>
+<li><a href="../CURRENT-STATE/1-architecture/1.1-system-architecture/">System Architecture (Full C4 Model)</a></li>
+<li><a href="../CURRENT-STATE/1-architecture/1.2-data-architecture/">Data Architecture</a></li>
+<li><a href="../CURRENT-STATE/1-architecture/1.3-api-integration-catalog/">API Integration Catalog</a></li>
+<li><a href="../CURRENT-STATE/1-architecture/1.4-project-inventory/">Project Inventory</a></li>
+</ul>
+<h3 id="business-documentation">Business Documentation</h3>
+<ul>
+<li><a href="../CURRENT-STATE/2-business/2.1-business-domain-model/">Business Domain Model</a></li>
+<li><a href="../CURRENT-STATE/2-business/2.2-requirements-specification/">Requirements Specification</a></li>
+<li><a href="../CURRENT-STATE/2-business/2.3-compliance-regulatory/">Compliance and Regulatory</a></li>
+<li><a href="../CURRENT-STATE/2-business/2.4-user-experience-analysis/">User Experience Analysis</a></li>
+</ul>
+<h3 id="modernization-strategy">Modernization Strategy</h3>
+<ul>
+<li><a href="../MODERNIZATION/2-strategy/2.1-executive-summary/">Executive Summary</a></li>
+<li><a href="../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/">Stakeholder Matrix</a></li>
+</ul>
+<h3 id="quick-start-guides">Quick Start Guides</h3>
+<ul>
+<li><a href="../QUICK-START-EXECUTIVE/">QUICK-START-EXECUTIVE.md</a> - Strategic overview</li>
+<li><a href="../QUICK-START-DEVELOPER/">QUICK-START-DEVELOPER.md</a> - Developer onboarding</li>
+</ul>
+<h3 id="external-references">External References</h3>
+<ul>
+<li><a href="https://c4model.com">C4 Model</a> - Architecture diagramming standard</li>
+<li><a href="https://12factor.net">12-Factor App</a> - Cloud-native application principles</li>
+<li><a href="https://martinfowler.com/bliki/StranglerFigApplication.html">Strangler Fig Pattern</a> - Martin Fowler</li>
+<li><a href="https://dotnet.microsoft.com/platform/upgrade-assistant">.NET Upgrade Assistant</a> - Microsoft</li>
+<li><a href="https://docs.microsoft.com/en-us/ef/core/">Entity Framework Core Documentation</a></li>
+</ul>
+<hr/>
+<p><strong>Document Version</strong>: 1.0<br/>
+<strong>Last Updated</strong>: 2026-06-09<br/>
+<strong>Target Audience</strong>: Solution Architects, Technical Leads, Senior Developers, Platform Engineers<br/>
+<strong>Next Steps</strong>: Review detailed architecture documents, conduct Sprint 0 planning</p></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script src="../js/base.js"></script>
+<script src="../search/main.js"></script>
+<script src="../assets/javascripts/panzoom.min.js"></script>
+<script src="../assets/javascripts/zoompan.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>

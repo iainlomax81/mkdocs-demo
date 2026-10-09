@@ -1,0 +1,2716 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../../img/favicon.ico" rel="shortcut icon"/>
+<title>System Architecture - Project Documentation</title>
+<link href="../../../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../../css/fontawesome.min.css" rel="stylesheet"/>
+<link href="../../../css/brands.min.css" rel="stylesheet"/>
+<link href="../../../css/solid.min.css" rel="stylesheet"/>
+<link href="../../../css/v4-font-face.min.css" rel="stylesheet"/>
+<link href="../../../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/panzoom.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<meta name="panzoom-theme" content="mkdocs">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="../../..">Project Documentation</a>
+<!-- Expander button -->
+<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="../../..">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../EXECUTIVE-SUMMARY/">Executive Summary</a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Quickstart</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-ARCHITECT/">Architect</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-DEVELOPER/">Developer</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-EXECUTIVE/">Executive</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-current="page" aria-expanded="false" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button">Current State</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Architecture</a>
+<ul class="dropdown-menu">
+<li>
+<a aria-current="page" class="dropdown-item active" href="./">System Architecture</a>
+</li>
+<li>
+<a class="dropdown-item" href="../1.2-data-architecture/">Data Architecture</a>
+</li>
+<li>
+<a class="dropdown-item" href="../1.3-api-integration-catalog/">API Integration Catalog</a>
+</li>
+<li>
+<a class="dropdown-item" href="../1.4-project-inventory/">Project Inventory</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Business</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../2-business/2.1-business-domain-model/">Business Domain Model</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../2-business/2.2-requirements-specification/">Requirements Specification</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../2-business/2.3-compliance-regulatory/">Compliance &amp; Regulatory</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../2-business/2.4-user-experience-analysis/">User Experience Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../2-business/2.5-localization-i18n/">Localization &amp; I18n</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Modernization</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Strategy</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../MODERNIZATION/2-strategy/2.1-executive-summary/">Executive Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/">Stakeholder Matrix</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Generation Summaries</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/architecture-documentation-summary/">Architecture Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/business-documentation-summary/">Business Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/compilation-summary/">Compilation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/pre-analysis-summary/">Pre-Analysis Summary</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../GLOSSARY/">Glossary</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ms-md-auto">
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#mkdocs_search_modal" data-bs-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../QUICK-START-EXECUTIVE/" rel="prev">
+<i class="fa fa-arrow-left"></i> Previous
+                                </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../1.2-data-architecture/" rel="next">
+                                    Next <i class="fa fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#system-architecture-agathasstorefront">System Architecture - Agathas.Storefront</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#table-of-contents">Table of Contents</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#executive-summary">Executive Summary</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#c4-architecture-diagrams">C4 Architecture Diagrams</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#architectural-patterns">Architectural Patterns</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#architectural-characteristics">Architectural Characteristics</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#technology-stack">Technology Stack</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#architectural-decision-records-adrs">Architectural Decision Records (ADRs)</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#technical-debt-analysis">Technical Debt Analysis</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#appendix">Appendix</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#document-metadata">Document Metadata</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#document-maintenance">Document Maintenance</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="system-architecture-agathasstorefront">System Architecture - Agathas.Storefront</h1>
+<blockquote>
+<p>This document provides a comprehensive architectural overview using the C4 model (Context, Container, Component, Code), detailing the system's structure, design patterns, quality attributes, and architectural decisions.</p>
+</blockquote>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#executive-summary">Executive Summary</a></li>
+<li><a href="#c4-architecture-diagrams">C4 Architecture Diagrams</a></li>
+<li><a href="#level-1-system-context-diagram">Level 1: System Context Diagram</a></li>
+<li><a href="#level-2-container-diagram">Level 2: Container Diagram</a></li>
+<li><a href="#level-3-component-diagram">Level 3: Component Diagram</a></li>
+<li><a href="#level-4-code-structure">Level 4: Code Structure</a></li>
+<li><a href="#architectural-patterns">Architectural Patterns</a></li>
+<li><a href="#architectural-characteristics">Architectural Characteristics</a></li>
+<li><a href="#technology-stack">Technology Stack</a></li>
+<li><a href="#architectural-decision-records-adrs">Architectural Decision Records (ADRs)</a></li>
+<li><a href="#technical-debt-analysis">Technical Debt Analysis</a></li>
+<li><a href="#appendix">Appendix</a></li>
+</ul>
+<hr/>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>Agathas.Storefront is a classic ASP.NET MVC 2 e-commerce web application built on .NET Framework 3.5/4.0, representing a well-architected monolithic system following Domain-Driven Design principles and layered architecture patterns. The system was designed and implemented circa 2010, demonstrating mature software engineering practices for that era.</p>
+<p>The application implements a complete online storefront with product catalog browsing, shopping basket functionality, customer account management, order processing, and payment integration with PayPal. The architecture exhibits excellent separation of concerns through a 5-layer structure: Presentation (ASP.NET MVC), Business Logic (Services), Domain Model, Data Access (NHibernate), and Infrastructure (cross-cutting concerns).</p>
+<p>Despite being built with now-legacy technologies, the codebase demonstrates high-quality architectural patterns including Repository pattern, Unit of Work, Dependency Injection (StructureMap), Domain Events, Factory pattern, and State pattern. The strong architectural foundation provides a solid base for modernization efforts, though significant technology upgrades are required to address obsolescence and security concerns.</p>
+<p><strong>Technology Stack Summary:</strong>
+- <strong>Platform:</strong> .NET Framework 3.5 / 4.0
+- <strong>Language:</strong> C# 3.5 / 4.0
+- <strong>Architecture Style:</strong> Layered Architecture with Domain-Driven Design (N-Tier Monolith)
+- <strong>Database:</strong> SQL Server Express LocalDB (User Instance mode)
+- <strong>ORM:</strong> NHibernate 2.1 with HBM.XML mappings
+- <strong>Client Technology:</strong> ASP.NET MVC 2, ASPX Views, jQuery 1.3.2
+- <strong>Integration:</strong> HTTP POST (PayPal), OAuth-style callback (Janrain), SMTP (Email)
+- <strong>Dependency Injection:</strong> StructureMap 2.5</p>
+<hr/>
+<h2 id="c4-architecture-diagrams">C4 Architecture Diagrams</h2>
+<h3 id="level-1-system-context-diagram">Level 1: System Context Diagram</h3>
+<blockquote>
+<p>Shows the system's relationship with users and external systems</p>
+</blockquote>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">C4Context
+    title System Context Diagram for Agathas.Storefront
+
+    Person(customer, "Customer", "Online shopper browsing and purchasing products")
+    Person(admin, "Administrator", "System administrator managing products and orders")
+
+    System(storefront, "Agathas.Storefront", "E-commerce web application for online retail sales with product catalog, shopping cart, order processing, and customer account management")
+
+    System_Ext(paypal, "PayPal Payment Gateway", "Processes credit card payments securely")
+    System_Ext(janrain, "Janrain Authentication", "Provides social login integration (Facebook, Google, Twitter)")
+    System_Ext(smtp, "SMTP Email Server", "Sends transactional emails (order confirmations, receipts)")
+    SystemDb(sqlserver, "SQL Server Express LocalDB", "Relational database storing products, orders, customers")
+
+    Rel(customer, storefront, "Browses products, manages cart, places orders", "HTTPS")
+    Rel(admin, storefront, "Manages catalog and orders", "HTTPS")
+
+    Rel(storefront, paypal, "Processes payments via redirect", "HTTPS/Form POST")
+    Rel(storefront, janrain, "Authenticates users via OAuth", "HTTPS")
+    Rel(storefront, smtp, "Sends email notifications", "SMTP")
+    Rel(storefront, sqlserver, "Reads/writes data", "ADO.NET via NHibernate")
+
+    Rel(paypal, storefront, "Payment completion callback", "HTTPS")
+    Rel(janrain, storefront, "Authentication callback", "HTTPS")
+
+    UpdateRelStyle(customer, storefront, $offsetY="-40")
+    UpdateRelStyle(storefront, sqlserver, $offsetY="-30")
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<h4 id="external-dependencies-description">External Dependencies Description</h4>
+<h5 id="paypal-payment-gateway">PayPal Payment Gateway</h5>
+<ul>
+<li><strong>Purpose:</strong> Secure credit card payment processing for customer orders</li>
+<li><strong>Integration Protocol:</strong> HTTPS Form POST redirect</li>
+<li><strong>Data Format:</strong> HTML form fields (item details, prices, return URLs)</li>
+<li><strong>Frequency:</strong> On-demand (per order checkout)</li>
+<li><strong>Authentication:</strong> Business email configuration in Web.config</li>
+<li><strong>Criticality:</strong> Critical - required for order completion and revenue collection</li>
+<li><strong>Implementation:</strong> Located in <code>Agathas.Storefront.Infrastructure/Payments/PaypalPaymentService.cs</code></li>
+<li><strong>Endpoint:</strong> <code>https://www.sandbox.paypal.com/cgi-bin/webscr</code> (sandbox mode)</li>
+</ul>
+<h5 id="janrain-authentication-provider">Janrain Authentication Provider</h5>
+<ul>
+<li><strong>Purpose:</strong> External authentication via social login providers (Facebook, Google, Twitter)</li>
+<li><strong>Integration Protocol:</strong> OAuth-style authentication callback</li>
+<li><strong>Data Format:</strong> Query parameters with authentication token</li>
+<li><strong>Frequency:</strong> On-demand (user login/registration)</li>
+<li><strong>Authentication:</strong> API key configured in Web.config</li>
+<li><strong>Criticality:</strong> High - provides alternative authentication method to reduce registration friction</li>
+<li><strong>Implementation:</strong> Located in <code>Agathas.Storefront.Infrastructure/Authentication/JanrainAuthenticationService.cs</code></li>
+</ul>
+<h5 id="smtp-email-server">SMTP Email Server</h5>
+<ul>
+<li><strong>Purpose:</strong> Transactional email delivery (order confirmations, receipts, notifications)</li>
+<li><strong>Integration Protocol:</strong> SMTP</li>
+<li><strong>Data Format:</strong> MIME email messages</li>
+<li><strong>Frequency:</strong> On-demand (triggered by business events)</li>
+<li><strong>Authentication:</strong> Username/password configured in Web.config mailSettings</li>
+<li><strong>Criticality:</strong> Medium - important for customer communication but not blocking</li>
+<li><strong>Implementation:</strong> Located in <code>Agathas.Storefront.Infrastructure/Email/SmtpEmailService.cs</code> with <code>TextLoggingEmailService.cs</code> fallback for development</li>
+</ul>
+<h5 id="sql-server-express-localdb">SQL Server Express LocalDB</h5>
+<ul>
+<li><strong>Type:</strong> Relational Database Management System</li>
+<li><strong>Purpose:</strong> Primary data store for all application data (products, orders, customers, baskets)</li>
+<li><strong>Access Pattern:</strong> Via NHibernate ORM with HBM.XML mappings</li>
+<li><strong>Backup Strategy:</strong> User Instance attach/detach model with MDF files in App_Data folder</li>
+<li><strong>Connection:</strong> AttachDbFilename with User Instance=true</li>
+<li><strong>Database Files:</strong> </li>
+<li><code>App_Data\Shop.mdf</code> - Main application database</li>
+<li><code>App_Data\aspnetdb.mdf</code> - ASP.NET Membership database</li>
+</ul>
+<hr/>
+<h3 id="level-2-container-diagram">Level 2: Container Diagram</h3>
+<blockquote>
+<p>Shows the high-level technology choices and how containers communicate</p>
+</blockquote>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">C4Container
+    title Container Diagram - Agathas.Storefront
+
+    Person(customer, "Customer", "Online shopper")
+    Person(admin, "Administrator", "System manager")
+
+    System_Boundary(storefrontBoundary, "Agathas.Storefront") {
+        Container(webMvc, "ASP.NET MVC Web Application", "ASP.NET MVC 2 / .NET 4.0", "Serves HTML pages, handles HTTP requests, hosts controllers and views")
+        Container(controllers, "Controllers Layer", "ASP.NET MVC 2 / C# 3.5", "MVC controllers, view models, action filters, routing logic")
+        Container(services, "Business Services Layer", "C# 3.5 / AutoMapper", "Business logic services implementing use cases with request/response messaging")
+        Container(domain, "Domain Model Layer", "C# 3.5 / DDD", "Domain entities, aggregates, business rules, domain events, repository interfaces")
+        Container(dataAccess, "Data Access Layer", "NHibernate 2.1 / C# 3.5", "Repository implementations, ORM mappings, session management")
+        Container(infrastructure, "Infrastructure Layer", "C# 3.5 / Log4Net", "Cross-cutting concerns: authentication, logging, configuration, email, payments")
+
+        ContainerDb(mainDb, "Shop Database", "SQL Server Express LocalDB", "Products, orders, customers, baskets")
+        ContainerDb(membershipDb, "Membership Database", "SQL Server Express LocalDB", "User accounts, passwords, profiles")
+    }
+
+    System_Ext(paypal, "PayPal", "Payment gateway")
+    System_Ext(janrain, "Janrain", "Social authentication")
+    System_Ext(smtp, "SMTP Server", "Email delivery")
+
+    Rel(customer, webMvc, "Interacts with", "HTTPS")
+    Rel(admin, webMvc, "Manages", "HTTPS")
+
+    Rel(webMvc, controllers, "Routes requests to", "Method calls")
+    Rel(controllers, services, "Invokes", "Request/Response messages")
+    Rel(controllers, infrastructure, "Uses", "Authentication, Logging")
+
+    Rel(services, domain, "Orchestrates", "Domain entities, events")
+    Rel(services, infrastructure, "Uses", "Email, Logging")
+
+    Rel(domain, dataAccess, "Persists via", "Repository interfaces")
+    Rel(domain, infrastructure, "Uses", "Base classes, abstractions")
+
+    Rel(dataAccess, mainDb, "Queries/Commands", "NHibernate/SQL")
+    Rel(infrastructure, membershipDb, "Authenticates", "ASP.NET Membership")
+    Rel(infrastructure, paypal, "Processes payments", "HTTPS POST")
+    Rel(infrastructure, janrain, "Authenticates", "OAuth callback")
+    Rel(infrastructure, smtp, "Sends emails", "SMTP")
+
+    UpdateRelStyle(customer, webMvc, $offsetY="-50")
+    UpdateRelStyle(dataAccess, mainDb, $offsetY="-30")
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<h4 id="container-details">Container Details</h4>
+<h5 id="aspnet-mvc-web-application">ASP.NET MVC Web Application</h5>
+<ul>
+<li><strong>Technology:</strong> ASP.NET MVC 2.0 on .NET Framework 4.0</li>
+<li><strong>Purpose:</strong> Web hosting container serving HTML pages to customers and administrators</li>
+<li><strong>Hosting:</strong> IIS 7.0+ or IIS Express</li>
+<li><strong>Responsibilities:</strong></li>
+<li>HTTP request/response handling</li>
+<li>Routing configuration (<code>Global.asax.cs</code>)</li>
+<li>Static content delivery (CSS, JavaScript, images)</li>
+<li>Dependency injection bootstrapping via StructureMap</li>
+<li>Global application configuration</li>
+<li>Session state management</li>
+<li><strong>Key Files:</strong></li>
+<li><code>Global.asax.cs</code> - Application startup and routing</li>
+<li><code>Web.config</code> - Configuration settings</li>
+<li><code>Views/</code> - ASPX view templates</li>
+<li><code>Content/</code> - CSS and images</li>
+<li><code>Scripts/</code> - jQuery JavaScript files</li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.UI.Web.MVC</code> project</li>
+</ul>
+<h5 id="controllers-layer">Controllers Layer</h5>
+<ul>
+<li><strong>Technology:</strong> ASP.NET MVC 2.0 / C# 3.5</li>
+<li><strong>Purpose:</strong> Handles HTTP requests, prepares view models, coordinates with services</li>
+<li><strong>Hosting:</strong> Loaded by MVC Web Application container</li>
+<li><strong>Responsibilities:</strong></li>
+<li>MVC controller implementations (9 controllers, ~30 endpoints)</li>
+<li>View model definitions for presentation layer</li>
+<li>Action argument handling and model binding</li>
+<li>JSON DTOs for AJAX endpoints</li>
+<li>AutoMapper configuration for controller mappings</li>
+<li>Custom IoC controller factory</li>
+<li><strong>Controllers:</strong></li>
+<li><code>HomeController</code> - Landing page and featured products</li>
+<li><code>ProductController</code> - Product catalog and search</li>
+<li><code>BasketController</code> - Shopping basket operations</li>
+<li><code>CheckoutController</code> - Order checkout flow</li>
+<li><code>PaymentController</code> - Payment processing callbacks</li>
+<li><code>OrderController</code> - Order history and details</li>
+<li><code>CustomerController</code> - Account management</li>
+<li><code>AccountLogOnController</code> - User authentication</li>
+<li><code>AccountRegisterController</code> - User registration</li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Controllers</code> project</li>
+</ul>
+<h5 id="business-services-layer">Business Services Layer</h5>
+<ul>
+<li><strong>Technology:</strong> C# 3.5 / AutoMapper 1.0</li>
+<li><strong>Purpose:</strong> Implements business use cases and workflows with request/response messaging</li>
+<li><strong>Hosting:</strong> Instantiated by controllers via dependency injection</li>
+<li><strong>Responsibilities:</strong></li>
+<li>Business logic orchestration</li>
+<li>Request/response message processing (CQRS-style)</li>
+<li>Domain entity to view model mapping</li>
+<li>Domain event handler registration</li>
+<li>Transaction coordination via Unit of Work</li>
+<li>Service-level validation</li>
+<li><strong>Services:</strong></li>
+<li><code>IProductCatalogService</code> - Product browsing, search, filtering</li>
+<li><code>IBasketService</code> - Shopping basket management</li>
+<li><code>IOrderService</code> - Order submission and retrieval</li>
+<li><code>ICustomerService</code> - Customer account operations</li>
+<li><strong>Messaging Pattern:</strong> Request objects (e.g., <code>GetProductsByCategoryRequest</code>) → Service → Response objects (e.g., <code>GetProductsByCategoryResponse</code>)</li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Services</code> and <code>Agathas.Storefront.Services.Cache</code> projects</li>
+</ul>
+<h5 id="domain-model-layer">Domain Model Layer</h5>
+<ul>
+<li><strong>Technology:</strong> C# 3.5 / Domain-Driven Design patterns</li>
+<li><strong>Purpose:</strong> Core business logic encapsulated in rich domain entities and aggregates</li>
+<li><strong>Hosting:</strong> Referenced by Services and Data Access layers</li>
+<li><strong>Responsibilities:</strong></li>
+<li>Domain entities and aggregate roots (<code>Basket</code>, <code>Order</code>, <code>Customer</code>, <code>Product</code>)</li>
+<li>Business rules and invariant enforcement</li>
+<li>Domain events (e.g., <code>OrderSubmittedEvent</code>)</li>
+<li>Repository interfaces (<code>IBasketRepository</code>, <code>IOrderRepository</code>, etc.)</li>
+<li>Value objects (<code>Address</code>, <code>Payment</code>)</li>
+<li>Domain services (<code>ShippingService</code>)</li>
+<li>State pattern implementations (<code>IOrderState</code>, <code>OpenOrderState</code>, <code>SubmittedOrderState</code>)</li>
+<li><strong>Key Aggregates:</strong></li>
+<li><strong>Basket Aggregate</strong> - Shopping basket with basket items</li>
+<li><strong>Order Aggregate</strong> - Order with order items, payment, delivery address</li>
+<li><strong>Customer Aggregate</strong> - Customer with delivery addresses</li>
+<li><strong>Product Aggregate</strong> - Product title with product variants (sizes, colors)</li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Model</code> project</li>
+</ul>
+<h5 id="data-access-layer">Data Access Layer</h5>
+<ul>
+<li><strong>Technology:</strong> NHibernate 2.1 / C# 3.5 / HBM.XML mappings</li>
+<li><strong>Purpose:</strong> Abstracts database access through Repository pattern implementations</li>
+<li><strong>Hosting:</strong> Instantiated by services via dependency injection</li>
+<li><strong>Responsibilities:</strong></li>
+<li>Repository pattern implementations</li>
+<li>NHibernate session factory configuration</li>
+<li>HBM.XML mapping files for OR/M</li>
+<li>Unit of Work implementation (<code>NHUnitOfWork</code>)</li>
+<li>Query translation to NHibernate criteria</li>
+<li>Session storage (HTTP and thread-based)</li>
+<li>Connection management</li>
+<li><strong>Technologies:</strong></li>
+<li>NHibernate 2.1.0.2002</li>
+<li>LinFu 1.0.3 (lazy loading proxies)</li>
+<li>Iesi.Collections 1.0.1 (NHibernate collections)</li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Repository.NHibernate</code> project</li>
+</ul>
+<h5 id="infrastructure-layer">Infrastructure Layer</h5>
+<ul>
+<li><strong>Technology:</strong> C# 3.5 / Log4Net 1.2.10 / StructureMap 2.5</li>
+<li><strong>Purpose:</strong> Provides cross-cutting concerns and technical services</li>
+<li><strong>Hosting:</strong> Referenced by all other layers</li>
+<li><strong>Responsibilities:</strong></li>
+<li><strong>Authentication:</strong> Forms Authentication, ASP.NET Membership, Janrain integration</li>
+<li><strong>Logging:</strong> Log4Net adapter with file appender</li>
+<li><strong>Configuration:</strong> Application settings management</li>
+<li><strong>Email:</strong> SMTP service and text logging fallback</li>
+<li><strong>Payments:</strong> PayPal integration service</li>
+<li><strong>Cookie Storage:</strong> Cookie-based data storage</li>
+<li><strong>Domain Base Classes:</strong> EntityBase, ValueObjectBase, AggregateRoot</li>
+<li><strong>Domain Events Infrastructure:</strong> Static <code>DomainEvents</code> class</li>
+<li><strong>Repository Abstractions:</strong> IRepository<t>, IUnitOfWork</t></li>
+<li><strong>Querying:</strong> Query object abstractions</li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Infrastructure</code> project</li>
+</ul>
+<h5 id="shop-database">Shop Database</h5>
+<ul>
+<li><strong>Technology:</strong> SQL Server Express LocalDB (User Instance mode)</li>
+<li><strong>Purpose:</strong> Primary application data storage</li>
+<li><strong>Size:</strong> Unknown (static analysis cannot determine actual database size)</li>
+<li><strong>Key Tables:</strong> Product, ProductTitle, Basket, BasketItem, Order, OrderItem, Customer, DeliveryAddress, Payment, Category, Brand</li>
+<li><strong>Access Pattern:</strong> Via NHibernate ORM with Unit of Work per HTTP request</li>
+<li><strong>Backup:</strong> User Instance attach/detach via MDF file</li>
+<li><strong>Connection String:</strong> AttachDbFilename=|DataDirectory|Shop.mdf;Integrated Security=True;User Instance=True</li>
+</ul>
+<h5 id="membership-database">Membership Database</h5>
+<ul>
+<li><strong>Technology:</strong> SQL Server Express LocalDB (User Instance mode)</li>
+<li><strong>Purpose:</strong> ASP.NET Membership authentication and user profile storage</li>
+<li><strong>Tables:</strong> aspnet_Users, aspnet_Membership, aspnet_Profile</li>
+<li><strong>Access Pattern:</strong> Via ASP.NET Membership Provider</li>
+<li><strong>Connection String:</strong> Separate connection for membership provider</li>
+</ul>
+<h4 id="inter-container-communication">Inter-Container Communication</h4>
+<p><strong>Communication Patterns:</strong>
+- <strong>Synchronous:</strong> All communication is synchronous method calls within the monolithic process
+- <strong>Asynchronous:</strong> None - no message queues or async processing
+- <strong>Event-Driven:</strong> Domain Events within same process (not distributed events)</p>
+<p><strong>Protocols Used:</strong>
+- <strong>Internal:</strong> Direct method calls via dependency injection
+- <strong>External HTTP/HTTPS:</strong> PayPal (Form POST), Janrain (OAuth callback), SMTP
+- <strong>Database:</strong> ADO.NET via NHibernate ORM (SQL protocol)</p>
+<p><strong>Dependency Flow:</strong>
+- Presentation → Business Services → Domain → Data Access → Infrastructure
+- Unidirectional dependencies (no circular references)
+- Infrastructure layer has no dependencies on application layers</p>
+<p><strong>Hosting and Deployment:</strong>
+- <strong>Environment:</strong> On-premises IIS or development IIS Express
+- <strong>Deployment Model:</strong> Single monolithic deployment (XCOPY or Web Deploy)
+- <strong>Orchestration:</strong> None - traditional web application hosting
+- <strong>Load Balancing:</strong> Requires external load balancer (not implemented in application)
+- <strong>Session Affinity:</strong> Required if session state used (current implementation uses cookies)</p>
+<hr/>
+<h3 id="level-3-component-diagram">Level 3: Component Diagram</h3>
+<blockquote>
+<p>Shows the internal components of key containers and their interactions</p>
+</blockquote>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">C4Component
+    title Component Diagram - Agathas.Storefront Application Architecture
+
+    Container(browser, "Web Browser", "HTTP Client", "Customer/Admin browser")
+    ContainerDb(database, "Shop Database", "SQL Server", "Application data")
+
+    Container_Boundary(appBoundary, "Agathas.Storefront Application") {
+        Component(homeCtrl, "HomeController", "MVC Controller", "Landing page with featured products")
+        Component(productCtrl, "ProductController", "MVC Controller", "Product catalog browsing and search")
+        Component(basketCtrl, "BasketController", "MVC Controller", "Shopping basket management")
+        Component(checkoutCtrl, "CheckoutController", "MVC Controller", "Order checkout workflow")
+        Component(orderCtrl, "OrderController", "MVC Controller", "Order history and details")
+        Component(customerCtrl, "CustomerController", "MVC Controller", "Account management")
+        Component(accountCtrl, "AccountLogOnController", "MVC Controller", "User authentication")
+
+        Component(productSvc, "ProductCatalogService", "Business Service", "Product search, filtering, catalog operations")
+        Component(basketSvc, "BasketService", "Business Service", "Basket create, add items, update quantities")
+        Component(orderSvc, "OrderService", "Business Service", "Order submission, retrieval, state management")
+        Component(customerSvc, "CustomerService", "Business Service", "Customer CRUD, address management")
+
+        Component(productRepo, "ProductRepository", "Repository", "Product entity persistence")
+        Component(basketRepo, "BasketRepository", "Repository", "Basket aggregate persistence")
+        Component(orderRepo, "OrderRepository", "Repository", "Order aggregate persistence")
+        Component(customerRepo, "CustomerRepository", "Repository", "Customer aggregate persistence")
+
+        Component(autoMapper, "AutoMapper", "Object Mapper", "Entity ↔ ViewModel mapping")
+        Component(authService, "Authentication Service", "Security", "Forms + Membership + Janrain")
+        Component(logger, "Log4Net Adapter", "Logging", "Application logging")
+        Component(paymentSvc, "PayPal Payment Service", "Integration", "Payment processing")
+        Component(emailSvc, "Email Service", "Notification", "SMTP email delivery")
+        Component(unitOfWork, "Unit of Work", "Transaction", "NHibernate session + transaction management")
+    }
+
+    System_Ext(paypal, "PayPal", "Payment gateway")
+    System_Ext(janrain, "Janrain", "Social login")
+
+    Rel(browser, homeCtrl, "GET /", "HTTPS")
+    Rel(browser, productCtrl, "GET /Product/*", "HTTPS")
+    Rel(browser, basketCtrl, "POST /Basket/Add", "HTTPS")
+    Rel(browser, checkoutCtrl, "POST /Checkout/SubmitOrder", "HTTPS")
+    Rel(browser, orderCtrl, "GET /Order", "HTTPS")
+    Rel(browser, customerCtrl, "GET /Customer", "HTTPS")
+    Rel(browser, accountCtrl, "POST /Account/LogOn", "HTTPS")
+
+    Rel(homeCtrl, productSvc, "GetFeaturedProducts()", "")
+    Rel(productCtrl, productSvc, "GetByCategory(), Search()", "")
+    Rel(basketCtrl, basketSvc, "AddItem(), UpdateQty()", "")
+    Rel(checkoutCtrl, orderSvc, "SubmitOrder()", "")
+    Rel(orderCtrl, orderSvc, "GetOrders(), GetOrderDetails()", "")
+    Rel(customerCtrl, customerSvc, "GetCustomer(), UpdateCustomer()", "")
+
+    Rel(homeCtrl, authService, "Authenticate", "")
+    Rel(homeCtrl, autoMapper, "Map(entity, viewModel)", "")
+    Rel(productCtrl, logger, "Log(message)", "")
+
+    Rel(productSvc, productRepo, "FindBy(criteria)", "")
+    Rel(basketSvc, basketRepo, "FindBy(id), Save()", "")
+    Rel(orderSvc, orderRepo, "Save(order)", "")
+    Rel(orderSvc, emailSvc, "SendOrderConfirmation()", "")
+    Rel(customerSvc, customerRepo, "FindBy(id), Save()", "")
+
+    Rel(checkoutCtrl, paymentSvc, "ProcessPayment()", "")
+    Rel(paymentSvc, paypal, "POST payment", "HTTPS")
+
+    Rel(authService, janrain, "Authenticate", "OAuth")
+
+    Rel(productRepo, unitOfWork, "GetSession()", "")
+    Rel(basketRepo, unitOfWork, "GetSession()", "")
+    Rel(orderRepo, unitOfWork, "GetSession(), Commit()", "")
+    Rel(customerRepo, unitOfWork, "GetSession()", "")
+
+    Rel(productRepo, database, "SELECT", "NHibernate/SQL")
+    Rel(basketRepo, database, "SELECT, INSERT, UPDATE", "NHibernate/SQL")
+    Rel(orderRepo, database, "INSERT, UPDATE", "NHibernate/SQL")
+    Rel(customerRepo, database, "SELECT, INSERT, UPDATE", "NHibernate/SQL")
+
+    UpdateRelStyle(browser, homeCtrl, $offsetY="-60")
+    UpdateRelStyle(productSvc, productRepo, $offsetX="-80")
+    UpdateRelStyle(productRepo, database, $offsetY="-40")
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<h4 id="component-breakdown">Component Breakdown</h4>
+<h5 id="presentationapi-layer-components">Presentation/API Layer Components</h5>
+<h6 id="controllers-aspnet-mvc-controllers">Controllers (ASP.NET MVC Controllers)</h6>
+<ul>
+<li><strong>Type:</strong> MVC Controllers</li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Controllers/Controllers/</code></li>
+<li><strong>Base Classes:</strong> <code>BaseController</code>, <code>ProductCatalogBaseController</code></li>
+<li><strong>Responsibilities:</strong></li>
+<li>HTTP request handling and routing</li>
+<li>User input validation via model binding</li>
+<li>Authentication/authorization enforcement via <code>[Authorize]</code> attributes</li>
+<li>View model preparation</li>
+<li>Service orchestration</li>
+<li>Response rendering (Views or JSON)</li>
+<li><strong>Key Controllers:</strong></li>
+<li><strong>HomeController</strong> - <code>Index()</code> → Featured products landing page</li>
+<li><strong>ProductController</strong> - <code>GetProductsByCategory(id)</code>, <code>GetProductsByAjax(request)</code>, <code>Detail(id)</code></li>
+<li><strong>BasketController</strong> - <code>Add(productId)</code>, <code>UpdateQuantity(request)</code>, <code>Remove(productId)</code></li>
+<li><strong>CheckoutController</strong> - <code>Index()</code>, <code>SubmitOrder()</code> → PayPal redirect</li>
+<li><strong>PaymentController</strong> - <code>Complete(orderId)</code> → PayPal callback handler</li>
+<li><strong>OrderController</strong> - <code>Index()</code>, <code>Detail(id)</code> → Order history</li>
+<li><strong>CustomerController</strong> - <code>Index()</code>, <code>Edit()</code>, <code>ManageAddresses()</code>, <code>AddAddress()</code></li>
+<li><strong>AccountLogOnController</strong> - <code>LogOn(credentials)</code>, <code>LogOut()</code>, <code>ExternalLogOn(provider)</code></li>
+<li><strong>AccountRegisterController</strong> - <code>Register(customerData)</code></li>
+</ul>
+<h5 id="business-logic-layer-components">Business Logic Layer Components</h5>
+<h6 id="productcatalogservice">ProductCatalogService</h6>
+<ul>
+<li><strong>Type:</strong> Business Service</li>
+<li><strong>Interface:</strong> <code>IProductCatalogService</code></li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Services/Implementations/ProductCatalogService.cs</code></li>
+<li><strong>Purpose:</strong> Product catalog operations (search, browse, filter)</li>
+<li><strong>Key Methods:</strong></li>
+<li><code>GetFeaturedProducts()</code> → <code>GetFeaturedProductsResponse</code></li>
+<li><code>GetProductsByCategory(GetProductsByCategoryRequest)</code> → <code>GetProductsByCategoryResponse</code></li>
+<li><code>SearchProducts(ProductSearchRequest)</code> → <code>ProductSearchResponse</code></li>
+<li><code>GetProductDetail(int productId)</code> → <code>ProductDetailResponse</code></li>
+<li><strong>Dependencies:</strong> <code>IProductRepository</code>, <code>ICategoryRepository</code>, <code>AutoMapper</code></li>
+<li><strong>Business Rules:</strong></li>
+<li>Product filtering by category, brand, size, color</li>
+<li>Search result pagination</li>
+<li>Featured product selection criteria</li>
+</ul>
+<h6 id="basketservice">BasketService</h6>
+<ul>
+<li><strong>Type:</strong> Business Service</li>
+<li><strong>Interface:</strong> <code>IBasketService</code></li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Services/Implementations/BasketService.cs</code></li>
+<li><strong>Purpose:</strong> Shopping basket lifecycle management</li>
+<li><strong>Key Methods:</strong></li>
+<li><code>CreateBasket()</code> → <code>CreateBasketResponse</code></li>
+<li><code>AddItemToBasket(AddItemToBasketRequest)</code> → <code>AddItemToBasketResponse</code></li>
+<li><code>UpdateBasketItemQuantity(UpdateQuantityRequest)</code> → <code>UpdateQuantityResponse</code></li>
+<li><code>RemoveItemFromBasket(RemoveItemRequest)</code> → <code>RemoveItemResponse</code></li>
+<li><code>GetBasket(GetBasketRequest)</code> → <code>GetBasketResponse</code></li>
+<li><strong>Business Rules:</strong></li>
+<li>Basket item quantity validation (must be &gt; 0)</li>
+<li>Product availability checking before add</li>
+<li>Price calculation with item totals and basket total</li>
+</ul>
+<h6 id="orderservice">OrderService</h6>
+<ul>
+<li><strong>Type:</strong> Business Service</li>
+<li><strong>Interface:</strong> <code>IOrderService</code></li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Services/Implementations/OrderService.cs</code></li>
+<li><strong>Purpose:</strong> Order submission and management</li>
+<li><strong>Key Methods:</strong></li>
+<li><code>SubmitOrder(SubmitOrderRequest)</code> → <code>SubmitOrderResponse</code></li>
+<li><code>GetOrdersForCustomer(GetOrdersForCustomerRequest)</code> → <code>GetOrdersForCustomerResponse</code></li>
+<li><code>GetOrderDetails(GetOrderDetailsRequest)</code> → <code>GetOrderDetailsResponse</code></li>
+<li><strong>Dependencies:</strong> <code>IOrderRepository</code>, <code>IBasketRepository</code>, <code>IEmailService</code>, <code>UnitOfWork</code></li>
+<li><strong>Business Rules:</strong></li>
+<li>Order creation from basket</li>
+<li>Order state transitions (Open → Submitted)</li>
+<li>Payment information validation</li>
+<li>Order total calculation with shipping</li>
+<li><strong>Domain Events:</strong> Raises <code>OrderSubmittedEvent</code> → triggers email confirmation</li>
+</ul>
+<h6 id="customerservice">CustomerService</h6>
+<ul>
+<li><strong>Type:</strong> Business Service</li>
+<li><strong>Interface:</strong> <code>ICustomerService</code></li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Services/Implementations/CustomerService.cs</code></li>
+<li><strong>Purpose:</strong> Customer account and profile management</li>
+<li><strong>Key Methods:</strong></li>
+<li><code>GetCustomer(GetCustomerRequest)</code> → <code>GetCustomerResponse</code></li>
+<li><code>UpdateCustomer(UpdateCustomerRequest)</code> → <code>UpdateCustomerResponse</code></li>
+<li><code>AddDeliveryAddress(AddDeliveryAddressRequest)</code> → <code>AddDeliveryAddressResponse</code></li>
+<li><strong>Business Rules:</strong></li>
+<li>Email uniqueness validation</li>
+<li>Address validation via <code>AddressBusinessRules</code></li>
+<li>Customer data privacy</li>
+</ul>
+<h5 id="data-access-layer-components">Data Access Layer Components</h5>
+<h6 id="repository-implementations">Repository Implementations</h6>
+<ul>
+<li><strong>Type:</strong> Repository Pattern (NHibernate-based)</li>
+<li><strong>Base:</strong> <code>Repository&lt;T&gt;</code> generic repository</li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Repository.NHibernate/Repositories/</code></li>
+<li><strong>Repositories:</strong></li>
+<li><strong>ProductRepository</strong> (<code>IProductRepository</code>) - Product, ProductTitle entities</li>
+<li><strong>BasketRepository</strong> (<code>IBasketRepository</code>) - Basket aggregate with cascade to BasketItem</li>
+<li><strong>OrderRepository</strong> (<code>IOrderRepository</code>) - Order aggregate with OrderItem, Payment</li>
+<li><strong>CustomerRepository</strong> (<code>ICustomerRepository</code>) - Customer with DeliveryAddress collection</li>
+<li><strong>CategoryRepository</strong> (<code>ICategoryRepository</code>) - Product categories</li>
+<li><strong>DeliveryOptionRepository</strong> (<code>IDeliveryOptionRepository</code>) - Shipping options</li>
+<li><strong>Pattern:</strong> Repository + Unit of Work</li>
+<li><strong>Key Methods (Generic):</strong></li>
+<li><code>T FindBy(IQuery query)</code></li>
+<li><code>IEnumerable&lt;T&gt; FindAll(IQuery query)</code></li>
+<li><code>void Save(T entity)</code></li>
+<li><code>void Delete(T entity)</code></li>
+<li><strong>Query Translation:</strong> Query objects translated to NHibernate Criteria API</li>
+<li><strong>Session Management:</strong> NHibernate ISession obtained from Unit of Work</li>
+</ul>
+<h5 id="cross-cutting-components">Cross-Cutting Components</h5>
+<h6 id="automapper">AutoMapper</h6>
+<ul>
+<li><strong>Type:</strong> Object-to-Object Mapper</li>
+<li><strong>Version:</strong> AutoMapper 1.0.0.155</li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Controllers/AutoMapperBootStrapper.cs</code> and <code>Agathas.Storefront.Services/AutoMapperBootStrapper.cs</code></li>
+<li><strong>Purpose:</strong> Automated mapping between domain entities and DTOs/ViewModels</li>
+<li><strong>Mappings:</strong></li>
+<li>Domain Entities → View Models (for presentation)</li>
+<li>Request DTOs → Domain Entities (for commands)</li>
+<li>Domain Entities → Response DTOs (for queries)</li>
+<li><strong>Configuration:</strong> Convention-based with custom resolvers for complex mappings</li>
+</ul>
+<h6 id="authentication-service">Authentication Service</h6>
+<ul>
+<li><strong>Type:</strong> Security Service</li>
+<li><strong>Implementations:</strong></li>
+<li><code>AspFormsAuthentication</code> (IFormsAuthentication) - ASP.NET Forms Auth wrapper</li>
+<li><code>AspMembershipAuthentication</code> (ILocalAuthenticationService) - SQL Membership provider</li>
+<li><code>JanrainAuthenticationService</code> (IExternalAuthenticationService) - OAuth social login</li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Infrastructure/Authentication/</code></li>
+<li><strong>Mechanisms:</strong> </li>
+<li><strong>Local:</strong> Forms Authentication with ASP.NET Membership (hashed passwords in SQL)</li>
+<li><strong>External:</strong> Janrain OAuth callback for Facebook/Google/Twitter</li>
+<li><strong>Responsibilities:</strong></li>
+<li>User credential validation</li>
+<li>Authentication ticket generation</li>
+<li>Session cookie management</li>
+<li>Social login token verification</li>
+</ul>
+<h6 id="log4net-adapter">Log4Net Adapter</h6>
+<ul>
+<li><strong>Type:</strong> Logging Abstraction</li>
+<li><strong>Interface:</strong> <code>ILogger</code></li>
+<li><strong>Implementation:</strong> <code>Log4NetAdapter</code></li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Infrastructure/Logging/</code></li>
+<li><strong>Configuration:</strong> Web.config with RollingFileAppender</li>
+<li><strong>Log Levels:</strong> Debug, Info, Warning, Error, Fatal</li>
+<li><strong>Destinations:</strong> File system (<code>C:\logs\</code>)</li>
+<li><strong>Usage:</strong> Constructor injection throughout application</li>
+</ul>
+<h6 id="paypal-payment-service">PayPal Payment Service</h6>
+<ul>
+<li><strong>Type:</strong> Payment Gateway Integration</li>
+<li><strong>Interface:</strong> <code>IPaymentService</code></li>
+<li><strong>Implementation:</strong> <code>PaypalPaymentService</code></li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Infrastructure/Payments/</code></li>
+<li><strong>Integration:</strong> HTML Form POST redirect to PayPal</li>
+<li><strong>Flow:</strong> App → PayPal (payment) → PayPal Callback → <code>PaymentController.Complete()</code></li>
+<li><strong>Configuration:</strong> Business email, return URL, cancel URL in Web.config</li>
+</ul>
+<h6 id="email-service">Email Service</h6>
+<ul>
+<li><strong>Type:</strong> Email Notification Service</li>
+<li><strong>Interface:</strong> <code>IEmailService</code></li>
+<li><strong>Implementations:</strong></li>
+<li><code>SmtpEmailService</code> - Production SMTP delivery</li>
+<li><code>TextLoggingEmailService</code> - Development logging fallback</li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Infrastructure/Email/</code></li>
+<li><strong>Usage:</strong> Order confirmations, account notifications</li>
+<li><strong>Configuration:</strong> SMTP settings in Web.config mailSettings section</li>
+</ul>
+<h6 id="unit-of-work">Unit of Work</h6>
+<ul>
+<li><strong>Type:</strong> Transaction Management</li>
+<li><strong>Interface:</strong> <code>IUnitOfWork</code></li>
+<li><strong>Implementation:</strong> <code>NHUnitOfWork</code></li>
+<li><strong>Location:</strong> <code>Agathas.Storefront.Repository.NHibernate/</code></li>
+<li><strong>Purpose:</strong> NHibernate session and transaction lifecycle management</li>
+<li><strong>Scope:</strong> Per HTTP request (managed via HTTP session storage)</li>
+<li><strong>Key Methods:</strong></li>
+<li><code>ISession GetSession()</code> - Returns current NHibernate session</li>
+<li><code>void Commit()</code> - Commits transaction and flushes changes</li>
+<li><code>void Rollback()</code> - Rolls back transaction</li>
+<li><strong>Pattern:</strong> Ensures single session per request, explicit commit model</li>
+</ul>
+<hr/>
+<h3 id="level-4-code-structure">Level 4: Code Structure</h3>
+<blockquote>
+<p>Shows typical code flow and interaction patterns</p>
+</blockquote>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    participant Browser as Customer Browser
+    participant Controller as BasketController
+    participant AuthFilter as [Authorize] Filter
+    participant ModelBinder as Model Binder
+    participant Service as BasketService
+    participant Domain as Basket Aggregate
+    participant Repository as BasketRepository
+    participant UoW as Unit of Work
+    participant Database as SQL Server
+
+    Browser-&gt;&gt;Controller: POST /Basket/Add?productId=123
+    activate Controller
+    Note over Controller: MVC Request Pipeline
+
+    Controller-&gt;&gt;AuthFilter: Check Authentication
+    activate AuthFilter
+    AuthFilter--&gt;&gt;Controller: User Authenticated
+    deactivate AuthFilter
+
+    Controller-&gt;&gt;ModelBinder: Bind Request Parameters
+    activate ModelBinder
+    ModelBinder--&gt;&gt;Controller: AddItemToBasketRequest
+    deactivate ModelBinder
+
+    alt Model Validation Failed
+        Controller--&gt;&gt;Browser: 400 Bad Request
+    else Model Valid
+        Controller-&gt;&gt;Service: AddItemToBasket(request)
+        activate Service
+        Note over Service: Business Logic Layer
+
+        Service-&gt;&gt;Repository: FindBy(basketId)
+        activate Repository
+        Repository-&gt;&gt;UoW: GetSession()
+        activate UoW
+        UoW--&gt;&gt;Repository: NHibernate ISession
+        deactivate UoW
+        Repository-&gt;&gt;Database: SELECT * FROM Basket WHERE Id=?
+        activate Database
+        Database--&gt;&gt;Repository: Basket row + BasketItems
+        deactivate Database
+        Repository--&gt;&gt;Service: Basket Entity
+        deactivate Repository
+
+        Service-&gt;&gt;Repository: FindBy(productId)
+        activate Repository
+        Repository-&gt;&gt;Database: SELECT * FROM Product WHERE Id=?
+        activate Database
+        Database--&gt;&gt;Repository: Product row
+        deactivate Database
+        Repository--&gt;&gt;Service: Product Entity
+        deactivate Repository
+
+        Service-&gt;&gt;Domain: basket.AddItem(product, quantity)
+        activate Domain
+        Note over Domain: Domain Business Rules:<br/>- Check quantity &gt; 0<br/>- Calculate item total<br/>- Update basket total
+        Domain--&gt;&gt;Service: BasketItem created
+        deactivate Domain
+
+        Service-&gt;&gt;Repository: Save(basket)
+        activate Repository
+        Repository-&gt;&gt;Database: INSERT INTO BasketItem VALUES(...)
+        activate Database
+        Database--&gt;&gt;Repository: Success
+        deactivate Database
+        Repository-&gt;&gt;Database: UPDATE Basket SET Total=?
+        activate Database
+        Database--&gt;&gt;Repository: Success
+        deactivate Database
+        Repository--&gt;&gt;Service: Saved
+        deactivate Repository
+
+        Service-&gt;&gt;UoW: Commit()
+        activate UoW
+        UoW-&gt;&gt;Database: COMMIT TRANSACTION
+        activate Database
+        Database--&gt;&gt;UoW: Success
+        deactivate Database
+        UoW--&gt;&gt;Service: Committed
+        deactivate UoW
+
+        Service--&gt;&gt;Controller: AddItemToBasketResponse
+        deactivate Service
+
+        Controller--&gt;&gt;Browser: 302 Redirect to /Basket
+    end
+    deactivate Controller
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<h4 id="code-flow-description">Code Flow Description</h4>
+<p><strong>Typical Request Flow (Add Item to Basket Example):</strong></p>
+<ol>
+<li><strong>Request Entry</strong> - HTTP POST request arrives at <code>BasketController.Add(productId)</code></li>
+<li><strong>Authentication</strong> - <code>[Authorize]</code> attribute verifies Forms Authentication cookie</li>
+<li><strong>Model Binding</strong> - MVC model binder creates <code>AddItemToBasketRequest</code> from form/query parameters</li>
+<li><strong>Validation</strong> - Model validation attributes checked (e.g., <code>[Required]</code>, <code>[Range]</code>)</li>
+<li><strong>Service Invocation</strong> - Controller calls <code>IBasketService.AddItemToBasket(request)</code></li>
+<li><strong>Data Retrieval</strong> - Service fetches Basket and Product entities via repositories</li>
+<li><strong>Business Logic</strong> - Domain entity <code>Basket.AddItem()</code> method enforces business rules</li>
+<li><strong>Persistence</strong> - Repository saves changes through NHibernate session</li>
+<li><strong>Transaction Commit</strong> - Unit of Work commits transaction to database</li>
+<li><strong>Response</strong> - Controller returns redirect to basket view</li>
+</ol>
+<p><strong>Error Handling Strategy:</strong></p>
+<ul>
+<li><strong>Validation Errors</strong> - Caught by MVC model validation, returns 400 Bad Request or re-displays form with errors</li>
+<li><strong>Business Rule Violations</strong> - Domain entities throw <code>DomainException</code>, caught by controller, displayed as user-friendly message</li>
+<li><strong>Data Access Errors</strong> - NHibernate exceptions caught by service layer, logged via Log4Net, returns 500 Internal Server Error</li>
+<li><strong>External Service Failures</strong> - PayPal/Janrain failures caught, logged, display error page to user</li>
+<li><strong>Unhandled Exceptions</strong> - Global exception filter in <code>Global.asax</code> logs and displays generic error page</li>
+</ul>
+<p><strong>Error Response Format:</strong>
+- <strong>Web Requests</strong> - HTML error pages or model validation errors displayed in form
+- <strong>AJAX Requests</strong> - JSON responses with <code>{ success: false, message: "Error description" }</code></p>
+<p><strong>Logging Strategy:</strong>
+- <strong>Info</strong> - Successful operations (order submitted, user registered)
+- <strong>Warning</strong> - Recoverable errors (validation failures, external service timeouts)
+- <strong>Error</strong> - Exceptions requiring attention (database errors, integration failures)
+- <strong>Debug</strong> - Detailed execution flow (enabled in development only)
+- <strong>Log Location</strong> - File system at <code>C:\logs\</code> via Log4Net RollingFileAppender</p>
+<p><strong>Transaction Management:</strong></p>
+<ul>
+<li><strong>Scope</strong> - One NHibernate session per HTTP request</li>
+<li><strong>Isolation Level</strong> - Read Committed (SQL Server default)</li>
+<li><strong>Commit Strategy</strong> - Explicit <code>UnitOfWork.Commit()</code> called by service layer after successful business logic execution</li>
+<li><strong>Rollback Strategy</strong> - Automatic rollback on exception (session disposed without commit)</li>
+<li><strong>Long-Running Transactions</strong> - Not used; transactions are short-lived within single HTTP request</li>
+<li><strong>Distributed Transactions</strong> - Not implemented (single database)</li>
+</ul>
+<p><strong>Request/Response Messaging Pattern:</strong></p>
+<p>All service layer operations follow consistent request/response pattern:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Request object with parameters</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AddItemToBasketRequest</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">Guid</span><span class="w"> </span><span class="n">BasketId</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ProductId</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Quantity</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Response object with result data and success indicator</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AddItemToBasketResponse</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">Success</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Message</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">BasketView</span><span class="w"> </span><span class="n">Basket</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Service interface</span>
+<span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IBasketService</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">AddItemToBasketResponse</span><span class="w"> </span><span class="nf">AddItemToBasket</span><span class="p">(</span><span class="n">AddItemToBasketRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This pattern provides:
+- Clear service contracts
+- Testability (easy to mock request/response)
+- Consistency across all business operations
+- Future-proofing for API extraction</p>
+<hr/>
+<h2 id="architectural-patterns">Architectural Patterns</h2>
+<h3 id="primary-architectural-patterns">Primary Architectural Patterns</h3>
+<h4 id="1-layered-architecture-n-tier">1. Layered Architecture (N-Tier)</h4>
+<p><strong>Description:</strong>
+The application follows a classic 5-layer architecture with strict unidirectional dependencies flowing downward: Presentation → Business Services → Domain → Data Access → Infrastructure. Each layer has clearly defined responsibilities and communicates only with adjacent layers (except Infrastructure, which is referenced by all).</p>
+<p><strong>Structure:</strong>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────────────────────────┐
+│  Presentation Layer (MVC Web + Controllers)                 │
+│  - ASP.NET MVC 2 Web Application                            │
+│  - Controllers (HTTP request handling)                      │
+│  - View Models                                              │
+│  - Views (ASPX templates)                                   │
+└─────────────────────────────────────────────────────────────┘
+                        ↓ depends on
+┌─────────────────────────────────────────────────────────────┐
+│  Business Services Layer                                     │
+│  - Business workflow orchestration                          │
+│  - Request/Response messaging                               │
+│  - Domain event handlers                                    │
+│  - Entity to ViewModel mapping                              │
+└─────────────────────────────────────────────────────────────┘
+                        ↓ depends on
+┌─────────────────────────────────────────────────────────────┐
+│  Domain Model Layer (DDD)                                    │
+│  - Entities and Aggregates                                  │
+│  - Business rules and invariants                            │
+│  - Domain events                                            │
+│  - Repository interfaces                                    │
+│  - Value objects                                            │
+└─────────────────────────────────────────────────────────────┘
+                        ↓ depends on
+┌─────────────────────────────────────────────────────────────┐
+│  Data Access Layer (NHibernate)                             │
+│  - Repository implementations                               │
+│  - ORM mappings (HBM.XML)                                   │
+│  - Unit of Work implementation                              │
+│  - Query translation                                        │
+└─────────────────────────────────────────────────────────────┘
+                        ↓ uses
+┌─────────────────────────────────────────────────────────────┐
+│  Infrastructure Layer (Cross-Cutting Concerns)              │
+│  - Authentication &amp; Authorization                           │
+│  - Logging (Log4Net)                                        │
+│  - Configuration                                            │
+│  - Email, Payments                                          │
+│  - Domain base classes                                      │
+│  - Repository &amp; Unit of Work abstractions                   │
+└─────────────────────────────────────────────────────────────┘
+</code></pre></div></p>
+<p><strong>Characteristics:</strong>
+- Each layer is implemented as separate Visual Studio project
+- Dependencies are explicit via project references
+- No circular dependencies detected
+- Infrastructure layer provides foundation abstractions (no upward dependencies)</p>
+<p><strong>Benefits:</strong>
+- ✅ Excellent separation of concerns
+- ✅ Easy to understand for new developers
+- ✅ Testable (can mock dependencies between layers)
+- ✅ Maintainable (changes localized to specific layers)
+- ✅ Independent layer evolution possible</p>
+<p><strong>Trade-offs:</strong>
+- ⚠️ All requests pass through all layers (potential performance overhead)
+- ⚠️ Can lead to anemic domain model if business logic leaks to services
+- ⚠️ Tight coupling within monolith (difficult to extract microservices)</p>
+<h4 id="2-domain-driven-design-ddd">2. Domain-Driven Design (DDD)</h4>
+<p><strong>Description:</strong>
+The application demonstrates strong DDD tactical patterns implementation with well-defined aggregates, entities, value objects, domain events, repositories, and domain services. Business logic is encapsulated within the domain model rather than scattered across services.</p>
+<p><strong>DDD Building Blocks Implemented:</strong></p>
+<p><strong>Aggregate Roots:</strong>
+- <code>Basket</code> - Shopping basket aggregate root
+- <code>Order</code> - Order aggregate root
+- <code>Customer</code> - Customer aggregate root
+- <code>ProductTitle</code> - Product catalog aggregate root</p>
+<p><strong>Entities:</strong>
+- <code>BasketItem</code>, <code>OrderItem</code>, <code>Product</code>, <code>DeliveryAddress</code>, <code>Payment</code></p>
+<p><strong>Value Objects:</strong>
+- <code>Address</code> - Immutable address value object
+- Money-related values (embedded in entities)</p>
+<p><strong>Domain Events:</strong>
+- <code>OrderSubmittedEvent</code> - Raised when order is submitted, triggers email notification</p>
+<p><strong>Repositories (Interfaces in Domain):</strong>
+- <code>IBasketRepository</code>, <code>IOrderRepository</code>, <code>ICustomerRepository</code>, <code>IProductRepository</code></p>
+<p><strong>Domain Services:</strong>
+- <code>ShippingService</code> - Calculates shipping costs based on delivery options</p>
+<p><strong>Factories:</strong>
+- <code>BasketItemFactory</code> - Creates basket items with proper initialization
+- <code>OrderItemFactory</code> - Creates order items from basket items
+- <code>PaymentFactory</code> - Creates payment objects</p>
+<p><strong>Specifications:</strong>
+- <code>EmailValidationSpecification</code> - Validates email format</p>
+<p><strong>Example Domain Logic:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Domain entity encapsulates business rules</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Basket</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AggregateRoot</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">AddItem</span><span class="p">(</span><span class="n">Product</span><span class="w"> </span><span class="n">product</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">quantity</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Business rule: quantity must be positive</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">quantity</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">DomainException</span><span class="p">(</span><span class="s">"Quantity must be greater than zero"</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Business rule: check if item already exists</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">existingItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Items</span><span class="p">.</span><span class="n">FirstOrDefault</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">ProductId</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">product</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">existingItem</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">existingItem</span><span class="p">.</span><span class="n">IncreaseQuantity</span><span class="p">(</span><span class="n">quantity</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Items</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">BasketItemFactory</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">product</span><span class="p">,</span><span class="w"> </span><span class="n">quantity</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Aggregate maintains own consistency</span>
+<span class="w">        </span><span class="n">RecalculateTotal</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Benefits:</strong>
+- ✅ Business logic clearly encapsulated in domain entities
+- ✅ Ubiquitous language evident in code (Basket, Order, Customer)
+- ✅ Aggregate boundaries enforce consistency
+- ✅ Domain events enable loose coupling
+- ✅ Testable business rules without database</p>
+<p><strong>Trade-offs:</strong>
+- ⚠️ Requires deeper OOP understanding
+- ⚠️ Can be over-engineered for simple CRUD scenarios
+- ⚠️ Learning curve for team members unfamiliar with DDD</p>
+<h4 id="3-repository-pattern">3. Repository Pattern</h4>
+<p><strong>Description:</strong>
+Clean abstraction between domain model and data access implemented through repository interfaces defined in domain layer, with NHibernate implementations in separate data access layer.</p>
+<p><strong>Pattern Structure:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Domain layer defines contract</span>
+<span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IBasketRepository</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Basket</span><span class="w"> </span><span class="nf">FindBy</span><span class="p">(</span><span class="n">Guid</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
+<span class="w">    </span><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">Basket</span><span class="o">&gt;</span><span class="w"> </span><span class="n">FindAll</span><span class="p">();</span>
+<span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Save</span><span class="p">(</span><span class="n">Basket</span><span class="w"> </span><span class="n">basket</span><span class="p">);</span>
+<span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Delete</span><span class="p">(</span><span class="n">Basket</span><span class="w"> </span><span class="n">basket</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Data access layer implements with NHibernate</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">BasketRepository</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Repository</span><span class="o">&lt;</span><span class="n">Basket</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">IBasketRepository</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">Basket</span><span class="w"> </span><span class="nf">FindBy</span><span class="p">(</span><span class="n">Guid</span><span class="w"> </span><span class="n">id</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Session</span><span class="p">.</span><span class="n">Get</span><span class="o">&lt;</span><span class="n">Basket</span><span class="o">&gt;</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ... other implementations</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Repositories:</strong>
+- <code>BasketRepository</code> - Basket aggregate persistence
+- <code>OrderRepository</code> - Order aggregate persistence<br/>
+- <code>CustomerRepository</code> - Customer aggregate persistence
+- <code>ProductRepository</code> - Product entity persistence
+- <code>CategoryRepository</code> - Category entity persistence
+- <code>DeliveryOptionRepository</code> - Shipping options persistence</p>
+<p><strong>Generic Base:</strong> <code>Repository&lt;T&gt;</code> provides common CRUD operations</p>
+<p><strong>Benefits:</strong>
+- ✅ Domain model independent of ORM choice
+- ✅ Easy to unit test (mock repositories)
+- ✅ Single place to optimize queries
+- ✅ Can switch ORM without changing domain</p>
+<p><strong>Trade-offs:</strong>
+- ⚠️ Additional abstraction layer
+- ⚠️ Query capabilities limited by abstraction</p>
+<h4 id="4-unit-of-work-pattern">4. Unit of Work Pattern</h4>
+<p><strong>Description:</strong>
+Transaction management centralized in <code>IUnitOfWork</code> implementation wrapping NHibernate session lifecycle. Ensures all repository operations within single request participate in same transaction.</p>
+<p><strong>Implementation:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IUnitOfWork</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ISession</span><span class="w"> </span><span class="nf">GetSession</span><span class="p">();</span>
+<span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Commit</span><span class="p">();</span>
+<span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Rollback</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">NHUnitOfWork</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IUnitOfWork</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">ISession</span><span class="w"> </span><span class="n">_session</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Commit</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">transaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_session</span><span class="p">.</span><span class="n">BeginTransaction</span><span class="p">())</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">transaction</span><span class="p">.</span><span class="n">Commit</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Scope:</strong> Per HTTP request (session stored in HttpContext)</p>
+<p><strong>Benefits:</strong>
+- ✅ Consistent transaction management
+- ✅ Automatic rollback on errors
+- ✅ Single database round-trip for multiple operations
+- ✅ Clear transaction boundaries</p>
+<p><strong>Trade-offs:</strong>
+- ⚠️ Must remember to call Commit()
+- ⚠️ Long-running requests hold transactions</p>
+<h4 id="5-service-layer-pattern">5. Service Layer Pattern</h4>
+<p><strong>Description:</strong>
+Business logic orchestration through service layer with request/response messaging contracts. Services coordinate between controllers, domain, and repositories.</p>
+<p><strong>Services:</strong>
+- <code>IProductCatalogService</code> - Product catalog operations
+- <code>IBasketService</code> - Shopping basket management
+- <code>IOrderService</code> - Order processing
+- <code>ICustomerService</code> - Customer management</p>
+<p><strong>Request/Response Pattern:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Every service method follows this pattern</span>
+<span class="k">public</span><span class="w"> </span><span class="n">SubmitOrderResponse</span><span class="w"> </span><span class="nf">SubmitOrder</span><span class="p">(</span><span class="n">SubmitOrderRequest</span><span class="w"> </span><span class="n">request</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// 1. Retrieve data from repositories</span>
+<span class="w">    </span><span class="c1">// 2. Execute domain logic</span>
+<span class="w">    </span><span class="c1">// 3. Persist changes</span>
+<span class="w">    </span><span class="c1">// 4. Commit transaction</span>
+<span class="w">    </span><span class="c1">// 5. Return response</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Benefits:</strong>
+- ✅ Clear API contracts
+- ✅ Transaction boundaries at service level
+- ✅ Testable without HTTP context
+- ✅ Future-ready for API extraction</p>
+<p><strong>Trade-offs:</strong>
+- ⚠️ Can become anemic if too much logic moves to services
+- ⚠️ Request/response objects add boilerplate</p>
+<h4 id="6-dependency-injection-inversion-of-control">6. Dependency Injection (Inversion of Control)</h4>
+<p><strong>Description:</strong>
+Application-wide dependency injection using StructureMap 2.5 container configured in <code>BootStrapper</code> class. All dependencies resolved through constructor injection.</p>
+<p><strong>IoC Registration:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// StructureMap configuration in BootStrapper.cs</span>
+<span class="n">ForRequestedType</span><span class="o">&lt;</span><span class="n">IProductCatalogService</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="n">TheDefaultIsConcreteType</span><span class="o">&lt;</span><span class="n">ProductCatalogService</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="n">ForRequestedType</span><span class="o">&lt;</span><span class="n">IBasketRepository</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="n">TheDefaultIsConcreteType</span><span class="o">&lt;</span><span class="n">BasketRepository</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="n">ForRequestedType</span><span class="o">&lt;</span><span class="n">IUnitOfWork</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="n">TheDefaultIsConcreteType</span><span class="o">&lt;</span><span class="n">NHUnitOfWork</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="n">CacheBy</span><span class="p">(</span><span class="n">InstanceScope</span><span class="p">.</span><span class="n">HttpContext</span><span class="p">);</span>
+</code></pre></div></p>
+<p><strong>Lifecycle Management:</strong>
+- <strong>Transient</strong> - New instance per resolution (default for services)
+- <strong>HttpContext</strong> - Singleton per HTTP request (Unit of Work, Repositories)
+- <strong>Singleton</strong> - Application lifetime (Configuration, Logger factory)</p>
+<p><strong>Benefits:</strong>
+- ✅ Loose coupling between layers
+- ✅ Easy to swap implementations
+- ✅ Unit testing with mocks
+- ✅ Constructor injection makes dependencies explicit</p>
+<p><strong>Trade-offs:</strong>
+- ⚠️ StructureMap 2.5 is outdated (now sunsetted)
+- ⚠️ Container configuration can become complex</p>
+<h4 id="7-state-pattern">7. State Pattern</h4>
+<p><strong>Description:</strong>
+Order state management implemented using State pattern to handle order lifecycle transitions (Open → Submitted).</p>
+<p><strong>Implementation:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IOrderState</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Submit</span><span class="p">(</span><span class="n">Order</span><span class="w"> </span><span class="n">order</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">CanEdit</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">OpenOrderState</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IOrderState</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Submit</span><span class="p">(</span><span class="n">Order</span><span class="w"> </span><span class="n">order</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Transition to submitted state</span>
+<span class="w">        </span><span class="n">order</span><span class="p">.</span><span class="n">State</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SubmittedOrderState</span><span class="p">();</span>
+<span class="w">        </span><span class="n">DomainEvents</span><span class="p">.</span><span class="n">Raise</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">OrderSubmittedEvent</span><span class="p">(</span><span class="n">order</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">CanEdit</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SubmittedOrderState</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IOrderState</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Submit</span><span class="p">(</span><span class="n">Order</span><span class="w"> </span><span class="n">order</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">DomainException</span><span class="p">(</span><span class="s">"Order already submitted"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">CanEdit</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Benefits:</strong>
+- ✅ State-specific behavior encapsulated
+- ✅ Clear state transitions
+- ✅ Extensible (easy to add new states)</p>
+<p><strong>Trade-offs:</strong>
+- ⚠️ Only two states (could use simple flag)
+- ⚠️ State classes add complexity</p>
+<h4 id="8-factory-pattern">8. Factory Pattern</h4>
+<p><strong>Description:</strong>
+Multiple factory implementations for complex object creation and proper initialization.</p>
+<p><strong>Factories:</strong>
+- <code>BasketItemFactory.Create(product, quantity)</code> - Creates basket items
+- <code>OrderItemFactory.CreateFromBasketItem(basketItem)</code> - Converts basket items to order items
+- <code>PaymentFactory.Create(paymentData)</code> - Creates payment objects
+- <code>ApplicationSettingsFactory</code> - Loads configuration
+- <code>LoggingFactory</code> - Creates logger instances</p>
+<p><strong>Benefits:</strong>
+- ✅ Centralized object creation logic
+- ✅ Consistent initialization
+- ✅ Testability (can mock factories)</p>
+<h4 id="9-domain-events-pattern">9. Domain Events Pattern</h4>
+<p><strong>Description:</strong>
+Event-driven communication within domain using static <code>DomainEvents</code> class for publish-subscribe pattern.</p>
+<p><strong>Implementation:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Domain entity raises event</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Order</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Submit</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">State</span><span class="p">.</span><span class="n">Submit</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">        </span><span class="n">DomainEvents</span><span class="p">.</span><span class="n">Raise</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">OrderSubmittedEvent</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Handler registered in service layer</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">OrderSubmittedHandler</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IDomainEventHandler</span><span class="o">&lt;</span><span class="n">OrderSubmittedEvent</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Handle</span><span class="p">(</span><span class="n">OrderSubmittedEvent</span><span class="w"> </span><span class="n">@event</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">_emailService</span><span class="p">.</span><span class="n">SendOrderConfirmation</span><span class="p">(</span><span class="n">@event</span><span class="p">.</span><span class="n">Order</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Benefits:</strong>
+- ✅ Loose coupling between domain and infrastructure
+- ✅ Easy to add new event handlers
+- ✅ Domain stays pure (no infrastructure dependencies)</p>
+<p><strong>Trade-offs:</strong>
+- ⚠️ Static class (can complicate testing)
+- ⚠️ Only in-process events (not distributed)</p>
+<hr/>
+<h2 id="architectural-characteristics">Architectural Characteristics</h2>
+<h3 id="quality-attributes-analysis">Quality Attributes Analysis</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Rating</th>
+<th>Analysis</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Performance</strong></td>
+<td>⚠️ Medium</td>
+<td>Adequate for small-scale e-commerce; no caching implemented (caching layer exists but disabled); N+1 query potential with lazy loading; synchronous processing only</td>
+<td>NHibernate lazy loading enabled; No caching configuration active; Single-threaded request processing</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>❌ Low</td>
+<td>Monolithic architecture with session affinity required; SQL Server User Instance not production-ready; In-memory session state limits horizontal scaling; No load balancing implementation</td>
+<td>User Instance database mode; HttpContext-scoped Unit of Work; No distributed caching</td>
+</tr>
+<tr>
+<td><strong>Availability</strong></td>
+<td>❌ Low</td>
+<td>Single point of failure (monolith); No redundancy or failover; LocalDB not suitable for production; No health checks</td>
+<td>Single instance deployment; LocalDB architecture; No monitoring</td>
+</tr>
+<tr>
+<td><strong>Reliability</strong></td>
+<td>✅ Medium</td>
+<td>Good error handling in business logic; Transaction management via Unit of Work; Domain events for decoupling; Explicit transaction commits reduce risk of partial updates</td>
+<td>Explicit <code>UnitOfWork.Commit()</code> pattern; Try-catch blocks in controllers; Domain exceptions</td>
+</tr>
+<tr>
+<td><strong>Maintainability</strong></td>
+<td>✅ High</td>
+<td>Excellent layered architecture; Clear separation of concerns; DDD patterns well implemented; SOLID principles followed; Good naming conventions</td>
+<td>5-layer architecture; Interface-based abstractions; Dependency injection throughout</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>❌ Critical</td>
+<td>Outdated frameworks with known vulnerabilities (jQuery 1.3.2, ASP.NET MVC 2, .NET 3.5/4.0); Plaintext secrets in Web.config; No HTTPS enforcement; No Content Security Policy; Vulnerable to modern attacks</td>
+<td>Web.config stores API keys plaintext; No RequireHttpsAttribute; Ancient jQuery version</td>
+</tr>
+<tr>
+<td><strong>Testability</strong></td>
+<td>✅ High</td>
+<td>Interface-based design; Dependency injection; Request/response pattern; Domain logic in entities testable without infrastructure</td>
+<td>All dependencies injected; Repository abstractions; No static dependencies (except DomainEvents)</td>
+</tr>
+<tr>
+<td><strong>Portability</strong></td>
+<td>❌ Low</td>
+<td>Tightly coupled to Windows/.NET Framework; IIS dependency; SQL Server specific; User Instance feature deprecated; No containerization</td>
+<td>.NET Framework 3.5/4.0 (Windows only); IIS hosting; SQL Server User Instance</td>
+</tr>
+<tr>
+<td><strong>Observability</strong></td>
+<td>⚠️ Low</td>
+<td>Basic logging via Log4Net; No application monitoring; No performance metrics; No distributed tracing; Logs only to file system</td>
+<td>Log4Net file appender; No APM integration; No structured logging</td>
+</tr>
+<tr>
+<td><strong>Deployability</strong></td>
+<td>⚠️ Medium</td>
+<td>Traditional XCOPY or Web Deploy; No CI/CD; Manual database updates; No blue-green deployment; Configuration in Web.config requires redeployment</td>
+<td>Manual deployment process; Web.config transformations; No automation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="detailed-quality-attribute-assessment">Detailed Quality Attribute Assessment</h3>
+<h4 id="performance">Performance</h4>
+<p><strong>Current State:</strong>
+- <strong>Response Time:</strong> Unknown (no benchmarking data available from static analysis)
+- <strong>Throughput:</strong> Single-threaded request processing; limited by synchronous operations
+- <strong>Resource Utilization:</strong> NHibernate session per request; connection pooling via ADO.NET
+- <strong>Caching:</strong> Designed but not implemented - <code>CachedProductCatalogService</code> decorator exists but not registered in IoC</p>
+<p><strong>Strengths:</strong>
+- Repository pattern allows query optimization
+- Lazy loading reduces initial data transfer
+- Transaction scope limited to single HTTP request</p>
+<p><strong>Concerns:</strong>
+- No output caching for product catalog pages
+- No distributed caching (all data fetched from database per request)
+- Lazy loading can cause N+1 query problem
+- Synchronous PayPal redirect blocks request thread
+- No asynchronous processing for long-running operations</p>
+<p><strong>Optimization Opportunities:</strong>
+- Enable <code>CachedProductCatalogService</code> decorator for read-heavy catalog operations
+- Implement output caching for static product pages
+- Add distributed cache (Redis/Memcached) for basket and session data
+- Optimize NHibernate queries with eager loading where appropriate
+- Add database query result caching</p>
+<h4 id="scalability">Scalability</h4>
+<p><strong>Horizontal Scaling:</strong>
+- <strong>Capability:</strong> Limited - requires session affinity due to HttpContext storage
+- <strong>Limitations:</strong>
+  - Unit of Work scoped to HttpContext
+  - SQL Server User Instance cannot be shared across servers
+  - No distributed session management
+  - File-based logging not suitable for multi-server</p>
+<p><strong>Vertical Scaling:</strong>
+- <strong>Capability:</strong> Moderate - can add CPU/RAM to single server
+- <strong>Limitations:</strong>
+  - Single-threaded request processing
+  - LocalDB performance ceiling</p>
+<p><strong>Bottlenecks:</strong>
+- SQL Server User Instance (not designed for production load)
+- Synchronous processing (no async/await)
+- NHibernate session per request (connection pool exhaustion risk)
+- File system logging (I/O bottleneck)</p>
+<h4 id="security">Security</h4>
+<p><strong>Authentication:</strong>
+- <strong>Mechanism:</strong> ASP.NET Forms Authentication + ASP.NET Membership Provider
+- <strong>Strengths:</strong> Passwords hashed by Membership Provider; supports multiple auth providers
+- <strong>Weaknesses:</strong> 
+  - Ancient frameworks with known vulnerabilities
+  - Password hash algorithm (SHA1) considered weak by modern standards
+  - No multi-factor authentication
+  - No account lockout after failed attempts visible in code
+  - Janrain API key stored in plaintext in Web.config</p>
+<p><strong>Authorization:</strong>
+- <strong>Model:</strong> Attribute-based (<code>[Authorize]</code> on controllers)
+- <strong>Strengths:</strong> Simple and declarative
+- <strong>Weaknesses:</strong>
+  - No role-based access control (RBAC) implemented
+  - No claims-based authorization
+  - Coarse-grained (controller level only)
+  - No resource-based authorization</p>
+<p><strong>Data Protection:</strong>
+- <strong>Encryption at Rest:</strong> None - database files unencrypted
+- <strong>Encryption in Transit:</strong> Depends on IIS HTTPS configuration (not enforced in code)
+- <strong>PII Handling:</strong> Customer data stored unencrypted
+- <strong>Secrets Management:</strong> Plaintext in Web.config (PayPal credentials, Janrain API key, SMTP password, connection strings)</p>
+<p><strong>Security Controls:</strong>
+- <strong>Input Validation:</strong> MVC model validation attributes used
+- <strong>Output Encoding:</strong> ASPX views with automatic encoding (but can be bypassed)
+- <strong>SQL Injection Prevention:</strong> NHibernate parameterized queries provide protection
+- <strong>XSS Prevention:</strong> Partial - ASPX encoding helps but jQuery 1.3.2 has XSS vulnerabilities
+- <strong>CSRF Protection:</strong> No Anti-Forgery tokens detected</p>
+<p><strong>Critical Vulnerabilities:</strong>
+- jQuery 1.3.2 has multiple known CVEs (XSS, CSRF, prototype pollution)
+- ASP.NET MVC 2 no longer supported, known vulnerabilities
+- .NET Framework 3.5/4.0 only receive critical security updates
+- No Content Security Policy (CSP)
+- No HTTP Strict Transport Security (HSTS)
+- Secrets in plaintext configuration files</p>
+<hr/>
+<h2 id="technology-stack">Technology Stack</h2>
+<h3 id="development-technologies">Development Technologies</h3>
+<h4 id="backendserver-side">Backend/Server-Side</h4>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Version</th>
+<th>Purpose</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.NET Framework</td>
+<td>3.5 / 4.0</td>
+<td>Runtime platform</td>
+<td>Mixed versions: Core libraries 3.5, Web project 4.0; Out of mainstream support</td>
+</tr>
+<tr>
+<td>C#</td>
+<td>3.5 / 4.0</td>
+<td>Programming language</td>
+<td>Pre-async/await, pre-LINQ enhancements</td>
+</tr>
+<tr>
+<td>ASP.NET MVC</td>
+<td>2.0</td>
+<td>Web framework</td>
+<td>Released 2010, obsolete, superseded by MVC 3/4/5 and .NET Core</td>
+</tr>
+<tr>
+<td>NHibernate</td>
+<td>2.1.0.2002</td>
+<td>ORM (Object-Relational Mapper)</td>
+<td>Current version is 5.x; significant improvements in later versions</td>
+</tr>
+<tr>
+<td>StructureMap</td>
+<td>2.5.3.0</td>
+<td>IoC Container / DI</td>
+<td>Current version is 4.x, now sunsetted; consider migration to modern DI</td>
+</tr>
+<tr>
+<td>AutoMapper</td>
+<td>1.0.0.155</td>
+<td>Object-to-object mapping</td>
+<td>Current version is 12.x; API changed significantly</td>
+</tr>
+<tr>
+<td>Log4Net</td>
+<td>1.2.10.0</td>
+<td>Logging framework</td>
+<td>Stable but outdated; consider Serilog or NLog</td>
+</tr>
+<tr>
+<td>LinFu.DynamicProxy</td>
+<td>1.0.3.14911</td>
+<td>Lazy loading proxies</td>
+<td>Used by NHibernate for lazy loading</td>
+</tr>
+<tr>
+<td>Iesi.Collections</td>
+<td>1.0.1.0</td>
+<td>Collection types</td>
+<td>NHibernate dependency for Set<t> support</t></td>
+</tr>
+</tbody>
+</table>
+<h4 id="frontendclient-side">Frontend/Client-Side</h4>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Version</th>
+<th>Purpose</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jQuery</td>
+<td>1.3.2</td>
+<td>JavaScript library</td>
+<td>Released 2009; multiple known security vulnerabilities (CVEs); <strong>CRITICAL UPDATE REQUIRED</strong></td>
+</tr>
+<tr>
+<td>jQuery Validation</td>
+<td>Unknown</td>
+<td>Form validation</td>
+<td>Dependent on ancient jQuery version</td>
+</tr>
+<tr>
+<td>Microsoft AJAX</td>
+<td>Bundled with MVC 2</td>
+<td>AJAX support</td>
+<td>Deprecated technology</td>
+</tr>
+<tr>
+<td>Microsoft MVC AJAX</td>
+<td>Bundled with MVC 2</td>
+<td>MVC-specific AJAX helpers</td>
+<td>Obsolete with modern SPA frameworks</td>
+</tr>
+<tr>
+<td>ASPX Views</td>
+<td>MVC 2 View Engine</td>
+<td>Server-side rendering</td>
+<td>Web Forms view engine; replaced by Razor in MVC 3+</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td>Custom Site.css</td>
+<td>Styling</td>
+<td>No framework (no Bootstrap/Tailwind)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="database-storage">Database &amp; Storage</h4>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Version</th>
+<th>Purpose</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SQL Server Express</td>
+<td>LocalDB / User Instance</td>
+<td>Relational database</td>
+<td>User Instance feature deprecated in SQL Server 2012+; <strong>NOT production-ready</strong></td>
+</tr>
+<tr>
+<td>SQL Server Membership</td>
+<td>ASP.NET 2.0</td>
+<td>User authentication</td>
+<td>Membership provider database schema</td>
+</tr>
+<tr>
+<td>File System</td>
+<td>Windows NTFS</td>
+<td>Log storage</td>
+<td><code>C:\logs\</code> for Log4Net appender</td>
+</tr>
+<tr>
+<td>File System</td>
+<td>App_Data</td>
+<td>Database files</td>
+<td>MDF/LDF files in <code>App_Data\</code> folder</td>
+</tr>
+</tbody>
+</table>
+<h4 id="external-services-apis">External Services &amp; APIs</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Provider</th>
+<th>Purpose</th>
+<th>Integration Method</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Payment Processing</td>
+<td>PayPal Standard Payments</td>
+<td>Credit card payment processing</td>
+<td>HTTP Form POST redirect</td>
+<td>Sandbox mode configured; Business email authentication</td>
+</tr>
+<tr>
+<td>Social Authentication</td>
+<td>Janrain</td>
+<td>OAuth social login (Facebook/Google/Twitter)</td>
+<td>OAuth callback</td>
+<td>API key in Web.config; provides SSO capabilities</td>
+</tr>
+<tr>
+<td>Email Delivery</td>
+<td>SMTP Server</td>
+<td>Transactional emails</td>
+<td>SMTP protocol</td>
+<td>Configurable in Web.config; Fallback to text logging for dev</td>
+</tr>
+</tbody>
+</table>
+<h4 id="infrastructure-devops">Infrastructure &amp; DevOps</h4>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Version</th>
+<th>Purpose</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSBuild</td>
+<td>3.5 / 4.0</td>
+<td>Build system</td>
+<td>Visual Studio build engine</td>
+</tr>
+<tr>
+<td>IIS</td>
+<td>7.0+</td>
+<td>Web server</td>
+<td>Internet Information Services for hosting</td>
+</tr>
+<tr>
+<td>Visual Studio</td>
+<td>2010</td>
+<td>IDE</td>
+<td>Inferred from .NET 4.0 and MVC 2</td>
+</tr>
+<tr>
+<td>None</td>
+<td>N/A</td>
+<td>CI/CD</td>
+<td>No continuous integration or deployment pipelines detected</td>
+</tr>
+<tr>
+<td>None</td>
+<td>N/A</td>
+<td>Containerization</td>
+<td>No Docker, Kubernetes, or container support</td>
+</tr>
+<tr>
+<td>None</td>
+<td>N/A</td>
+<td>Monitoring/APM</td>
+<td>No Application Performance Monitoring tools</td>
+</tr>
+<tr>
+<td>None</td>
+<td>N/A</td>
+<td>Infrastructure as Code</td>
+<td>No Terraform, ARM templates, or IaC detected</td>
+</tr>
+</tbody>
+</table>
+<h3 id="technology-decisions-and-rationale">Technology Decisions and Rationale</h3>
+<h4 id="adr-001-selection-of-net-framework-and-aspnet-mvc">ADR-001: Selection of .NET Framework and ASP.NET MVC</h4>
+<p><strong>Decision:</strong> Build application on .NET Framework 3.5/4.0 with ASP.NET MVC 2</p>
+<p><strong>Context (circa 2010):</strong>
+- .NET Framework 3.5/4.0 and ASP.NET MVC 2 were modern, production-ready technologies
+- MVC pattern provided better separation of concerns than WebForms
+- Strong tooling support in Visual Studio 2010
+- Rich ecosystem of libraries and community support
+- Enterprise-ready platform with Microsoft support</p>
+<p><strong>Rationale:</strong>
+- ASP.NET MVC 2 offered testable, maintainable web development model
+- Mature .NET platform with extensive libraries
+- Good performance characteristics for web applications
+- Strong integration with IIS web server
+- Clear separation of concerns (MVC pattern)</p>
+<p><strong>Alternatives Considered:</strong>
+- <strong>ASP.NET WebForms</strong> - Rejected due to tight coupling, difficult testing, ViewState overhead
+- <strong>Java/Spring MVC</strong> - Rejected to leverage team's .NET expertise
+- <strong>Ruby on Rails</strong> - Rejected due to enterprise support concerns</p>
+<p><strong>Consequences:</strong>
+- ✅ Clean MVC architecture achieved
+- ✅ Good developer productivity with Visual Studio tooling
+- ✅ Strong type safety with C#
+- ❌ Now severely outdated (16 years old as of 2026)
+- ❌ Security vulnerabilities in aged framework
+- ❌ No longer receiving non-security updates
+- ❌ Talent pool shifting to .NET Core/.NET 6+</p>
+<p><strong>Current Status:</strong> <strong>REQUIRES MODERNIZATION</strong> - Framework obsolescence is critical technical debt</p>
+<hr/>
+<h4 id="adr-002-nhibernate-as-orm">ADR-002: NHibernate as ORM</h4>
+<p><strong>Decision:</strong> Use NHibernate 2.1 with HBM.XML mappings for data access</p>
+<p><strong>Context:</strong>
+- Need for OR/M to abstract database access
+- Domain-Driven Design patterns require persistence ignorance
+- Repository pattern implementation needs ORM support</p>
+<p><strong>Rationale:</strong>
+- NHibernate was mature, proven ORM in .NET ecosystem (circa 2010)
+- HBM.XML mappings provide external configuration (no attributes on domain entities)
+- Excellent lazy loading and caching capabilities
+- Supports complex queries via Criteria API
+- Unit of Work pattern aligns well with NHibernate ISession
+- Keeps domain model clean (no data access attributes)</p>
+<p><strong>Alternatives Considered:</strong>
+- <strong>Entity Framework 1.0</strong> - Rejected due to immaturity (EF 1.0 had significant limitations)
+- <strong>LINQ to SQL</strong> - Rejected due to limited capabilities and Microsoft's unclear commitment
+- <strong>ADO.NET directly</strong> - Rejected due to too much boilerplate and no lazy loading</p>
+<p><strong>Consequences:</strong>
+- ✅ Clean domain model without ORM pollution
+- ✅ Repository pattern abstraction achieved
+- ✅ Lazy loading reduces database round-trips
+- ✅ HBM.XML mappings separates structure from code
+- ❌ HBM.XML verbose and error-prone (no compile-time checking)
+- ❌ NHibernate learning curve
+- ❌ Now at version 5.x (multiple versions behind)</p>
+<p><strong>Current Status:</strong> <strong>CONSIDER MODERNIZATION</strong> - NHibernate still viable but upgrade to v5+ or migrate to Entity Framework Core recommended</p>
+<hr/>
+<h4 id="adr-003-layered-architecture-with-ddd">ADR-003: Layered Architecture with DDD</h4>
+<p><strong>Decision:</strong> Implement 5-layer architecture (Presentation, Services, Domain, Data Access, Infrastructure) with Domain-Driven Design patterns</p>
+<p><strong>Context:</strong>
+- E-commerce domain has rich business logic and complex rules
+- Need for maintainable, testable architecture
+- Team familiar with object-oriented design patterns</p>
+<p><strong>Rationale:</strong>
+- Layered architecture provides clear separation of concerns
+- DDD tactical patterns (Aggregates, Entities, Value Objects, Repositories) model complex domain effectively
+- Domain layer can evolve independently of infrastructure
+- Testability improved through dependency inversion
+- Each layer has single responsibility</p>
+<p><strong>Alternatives Considered:</strong>
+- <strong>Transaction Script</strong> - Rejected due to business logic complexity
+- <strong>3-Tier Architecture</strong> - Rejected as insufficient separation (business logic mixed with data access)
+- <strong>Microservices</strong> - Rejected as overengineering for initial implementation</p>
+<p><strong>Consequences:</strong>
+- ✅ Excellent code organization and maintainability
+- ✅ Business logic clearly encapsulated in domain entities
+- ✅ Easy to unit test domain logic
+- ✅ Scalable architecture for future features
+- ✅ Clear boundaries between layers
+- ⚠️ More complex than simple CRUD architecture
+- ⚠️ Monolithic deployment (all layers in one process)</p>
+<p><strong>Current Status:</strong> <strong>ACTIVE AND SOUND</strong> - Architecture is well-designed; provides good foundation for modernization</p>
+<hr/>
+<h4 id="adr-004-structuremap-for-dependency-injection">ADR-004: StructureMap for Dependency Injection</h4>
+<p><strong>Decision:</strong> Use StructureMap 2.5 as IoC container for dependency injection</p>
+<p><strong>Context (circa 2010):</strong>
+- Need for loose coupling between layers
+- Repository pattern requires interface-based abstractions
+- Constructor injection preferred over service locator</p>
+<p><strong>Rationale:</strong>
+- StructureMap was leading IoC container in .NET ecosystem at the time
+- Convention-based registration reduces configuration code
+- Supports lifecycle management (singleton, per-request, transient)
+- Good performance characteristics
+- Integration with ASP.NET MVC via custom controller factory</p>
+<p><strong>Alternatives Considered:</strong>
+- <strong>Unity</strong> - Rejected due to heavier configuration
+- <strong>Ninject</strong> - Rejected due to performance concerns
+- <strong>Autofac</strong> - Less mature at the time</p>
+<p><strong>Consequences:</strong>
+- ✅ Loose coupling achieved throughout application
+- ✅ Easy to swap implementations (useful for testing)
+- ✅ Constructor injection makes dependencies explicit
+- ❌ StructureMap project now sunset (last release 2018)
+- ❌ Limited support for modern .NET features</p>
+<p><strong>Current Status:</strong> <strong>REQUIRES REPLACEMENT</strong> - Migrate to Microsoft.Extensions.DependencyInjection (built-in .NET Core DI) or modern alternatives like Autofac</p>
+<hr/>
+<h4 id="adr-005-requestresponse-messaging-pattern-for-service-layer">ADR-005: Request/Response Messaging Pattern for Service Layer</h4>
+<p><strong>Decision:</strong> Implement service layer with explicit Request/Response objects for all operations</p>
+<p><strong>Context:</strong>
+- Need clear service contracts
+- Future potential for API extraction
+- Testability requirements</p>
+<p><strong>Rationale:</strong>
+- Request objects encapsulate all input parameters in single object
+- Response objects provide consistent structure for results
+- Easier to version and extend without breaking changes
+- Clear service boundaries
+- Facilitates future service-oriented architecture or API development
+- Improves testability (easy to construct request objects in tests)</p>
+<p><strong>Alternatives Considered:</strong>
+- <strong>Primitive Parameters</strong> - Rejected due to parameter proliferation
+- <strong>Domain Entities Directly</strong> - Rejected due to tight coupling</p>
+<p><strong>Consequences:</strong>
+- ✅ Clear, testable service contracts
+- ✅ Easy to add new parameters without breaking changes
+- ✅ Self-documenting API
+- ✅ Future-ready for API extraction
+- ⚠️ More boilerplate code (request/response classes)
+- ⚠️ Mapping overhead between requests and domain entities</p>
+<p><strong>Current Status:</strong> <strong>ACTIVE AND SOUND</strong> - Good pattern that simplifies future API development</p>
+<hr/>
+<h4 id="adr-006-paypal-standard-payments-integration">ADR-006: PayPal Standard Payments Integration</h4>
+<p><strong>Decision:</strong> Use PayPal Standard Payments (redirect-based) for payment processing</p>
+<p><strong>Context (circa 2010):</strong>
+- Need secure payment processing without PCI-DSS compliance burden
+- Credit card data must not be stored in application
+- Small e-commerce site without complex payment requirements</p>
+<p><strong>Rationale:</strong>
+- PayPal Standard Payments offloads PCI-DSS compliance to PayPal
+- Simple integration via HTML form POST
+- No credit card data touches application servers
+- Widely trusted by customers
+- Lower transaction fees than merchant account + gateway
+- No monthly fees (pay-per-transaction)</p>
+<p><strong>Alternatives Considered:</strong>
+- <strong>PayPal Pro</strong> - Rejected due to monthly fees and PCI requirements
+- <strong>Authorize.Net</strong> - Rejected due to cost and complexity
+- <strong>Stripe</strong> - Not available/popular in 2010</p>
+<p><strong>Consequences:</strong>
+- ✅ PCI-DSS compliance simplified (PayPal handles card data)
+- ✅ Easy integration (no complex API)
+- ✅ Customer trust in PayPal brand
+- ❌ Customer redirected away from site (breaks user experience)
+- ❌ No control over payment UI
+- ❌ Callback-based flow complex to test</p>
+<p><strong>Current Status:</strong> <strong>CONSIDER MODERNIZATION</strong> - Modern embedded payment solutions (Stripe Elements, PayPal SDK) provide better UX while maintaining security</p>
+<hr/>
+<h2 id="architectural-decision-records-adrs">Architectural Decision Records (ADRs)</h2>
+<h3 id="adr-007-sql-server-localdb-with-user-instance">ADR-007: SQL Server LocalDB with User Instance</h3>
+<p><strong>Status:</strong> <strong>Deprecated</strong> (Requires Immediate Remediation)</p>
+<p><strong>Context:</strong>
+The application uses SQL Server Express LocalDB with User Instance mode for both main application database (<code>Shop.mdf</code>) and ASP.NET Membership database (<code>aspnetdb.mdf</code>). Files are stored in <code>App_Data\</code> folder with <code>AttachDbFilename</code> and <code>User Instance=true</code> connection string parameters.</p>
+<p><strong>Decision:</strong>
+Use SQL Server Express LocalDB User Instance mode for development and deployment simplicity.</p>
+<p><strong>Original Rationale (circa 2010):</strong>
+- Zero-configuration database deployment
+- XCOPY deployment with database files
+- No separate SQL Server installation required
+- Suitable for small-scale deployments
+- Good for development and testing</p>
+<p><strong>Consequences:</strong>
+- ✅ <strong>Positive (Original):</strong>
+  - Simple deployment (just copy MDF files)
+  - No DBA required for initial setup
+  - Works out of the box for development</p>
+<ul>
+<li>⚠️ <strong>Neutral/Trade-offs:</strong></li>
+<li>File-based database limits concurrent access</li>
+<li>
+<p>No central management or monitoring</p>
+</li>
+<li>
+<p>❌ <strong>Negative (Current Critical Issues):</strong></p>
+</li>
+<li><strong>User Instance feature deprecated in SQL Server 2012 and removed in 2014</strong></li>
+<li>Not suitable for production workloads (performance, reliability, scalability)</li>
+<li>No backup/restore capabilities for production</li>
+<li>Single point of failure (no redundancy)</li>
+<li>Connection string exposes full file path</li>
+<li>Difficult to scale horizontally</li>
+<li>No connection pooling optimization possible</li>
+<li>Cannot support multiple application instances</li>
+</ul>
+<p><strong>Alternatives (Must Consider):</strong>
+1. <strong>SQL Server Express (Standard Instance):</strong> Shared SQL Server instance for multi-app support
+2. <strong>SQL Server Standard/Enterprise:</strong> Production-grade SQL Server for high availability
+3. <strong>Azure SQL Database:</strong> Managed cloud database with auto-scaling, backup, geo-replication
+4. <strong>Cloud Database Alternatives:</strong> AWS RDS, Google Cloud SQL for managed SQL Server</p>
+<p><strong>Implementation Notes:</strong>
+- Current connection strings: <code>AttachDbFilename=|DataDirectory|Shop.mdf;Integrated Security=True;User Instance=True</code>
+- Database files in <code>Agathas.Storefront.UI.Web.MVC\App_Data\</code>
+- No migration scripts (schema embedded in HBM.XML mappings)</p>
+<p><strong>Migration Path:</strong>
+1. <strong>Immediate:</strong> Switch to SQL Server Express standard instance (eliminate User Instance)
+2. <strong>Short-term:</strong> Implement proper database versioning and migration scripts
+3. <strong>Long-term:</strong> Migrate to managed cloud database service (Azure SQL, AWS RDS)</p>
+<p><strong>Related ADRs:</strong>
+- ADR-002 (NHibernate as ORM) - Connection string changes needed
+- ADR-015 (Cloud Migration Strategy) - Cloud database selection</p>
+<hr/>
+<h3 id="adr-008-domain-events-with-static-class">ADR-008: Domain Events with Static Class</h3>
+<p><strong>Status:</strong> Accepted (with caveats)</p>
+<p><strong>Context:</strong>
+Need for decoupling between domain layer and infrastructure services (e.g., sending email when order is submitted) without creating dependencies from domain to infrastructure.</p>
+<p><strong>Decision:</strong>
+Implement domain events pattern using static <code>DomainEvents</code> class with publish/subscribe mechanism.</p>
+<p><strong>Rationale:</strong>
+- Domain entities can raise events without knowing who handles them
+- Infrastructure registers event handlers at application startup
+- Keeps domain layer clean (no infrastructure dependencies)
+- Simple implementation without external event bus
+- Events processed synchronously in same transaction</p>
+<p><strong>Implementation:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Static domain events class</span>
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">DomainEvents</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Delegate</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_handlers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Delegate</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="n">Register</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Action</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">handler</span><span class="p">)</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IDomainEvent</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">_handlers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">handler</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="n">Raise</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">domainEvent</span><span class="p">)</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IDomainEvent</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">_handlers</span><span class="p">.</span><span class="n">OfType</span><span class="o">&lt;</span><span class="n">Action</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">())</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">handler</span><span class="p">(</span><span class="n">domainEvent</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Usage in domain entity</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Order</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Submit</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ... business logic ...</span>
+<span class="w">        </span><span class="n">DomainEvents</span><span class="p">.</span><span class="n">Raise</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">OrderSubmittedEvent</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Handler registered in service layer</span>
+<span class="n">DomainEvents</span><span class="p">.</span><span class="n">Register</span><span class="o">&lt;</span><span class="n">OrderSubmittedEvent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">_emailService</span><span class="p">.</span><span class="n">SendOrderConfirmation</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Order</span><span class="p">));</span>
+</code></pre></div></p>
+<p><strong>Consequences:</strong>
+- ✅ <strong>Positive:</strong>
+  - Domain layer remains infrastructure-agnostic
+  - Easy to add new event handlers without changing domain
+  - Events processed in same transaction as domain changes
+  - Simple implementation without external dependencies</p>
+<ul>
+<li>⚠️ <strong>Neutral/Trade-offs:</strong></li>
+<li>Static class can complicate unit testing (requires setup/teardown)</li>
+<li>No ordering guarantees for multiple handlers</li>
+<li>
+<p>Synchronous processing (blocks request thread)</p>
+</li>
+<li>
+<p>❌ <strong>Negative:</strong></p>
+</li>
+<li>Not suitable for distributed events or microservices</li>
+<li>No retry or error handling for failed handlers</li>
+<li>Tight coupling to single process (cannot scale event processing)</li>
+</ul>
+<p><strong>Alternatives Considered:</strong>
+1. <strong>MediatR Library:</strong> Not available/popular in 2010; now excellent alternative
+2. <strong>Service Bus (e.g., NServiceBus):</strong> Over-engineering for in-process events
+3. <strong>Observer Pattern with Interfaces:</strong> More boilerplate, similar limitations</p>
+<p><strong>Current Status:</strong> <strong>ACCEPTABLE FOR MONOLITH</strong> - Works well for current architecture; consider MediatR during modernization</p>
+<p><strong>Modernization Recommendation:</strong>
+- Migrate to MediatR for better testability and flexibility
+- Consider distributed event bus (Azure Service Bus, RabbitMQ) if extracting microservices</p>
+<hr/>
+<h3 id="adr-009-aspx-view-engine-webforms-views">ADR-009: ASPX View Engine (WebForms Views)</h3>
+<p><strong>Status:</strong> <strong>Superseded</strong> (by Razor in modern .NET)</p>
+<p><strong>Context:</strong>
+ASP.NET MVC 2 supported both ASPX (WebForms) view engine and Spark view engine. Razor was introduced in MVC 3.</p>
+<p><strong>Decision:</strong>
+Use ASPX view engine for rendering HTML views.</p>
+<p><strong>Rationale (circa 2010):</strong>
+- Default view engine in ASP.NET MVC 2
+- Familiar syntax for developers transitioning from WebForms
+- Mature and well-documented
+- Strong tooling support in Visual Studio</p>
+<p><strong>Consequences:</strong>
+- ✅ <strong>Positive (Original):</strong>
+  - Immediate productivity (no learning curve)
+  - IntelliSense support in Visual Studio
+  - Familiar <code>&lt;% %&gt;</code> syntax</p>
+<ul>
+<li>❌ <strong>Negative (Current):</strong></li>
+<li>Verbose syntax compared to Razor (<code>&lt;% %&gt;</code> vs <code>@</code>)</li>
+<li>Difficult to test (views are compiled at runtime)</li>
+<li>No compile-time checking of view code</li>
+<li>Obsolete technology (Razor is standard since MVC 3, released 2011)</li>
+</ul>
+<p><strong>Alternatives (Modern):</strong>
+1. <strong>Razor View Engine:</strong> Clean syntax, compile-time checking, strong typing
+2. <strong>Blazor:</strong> Component-based UI with C# (for modern rewrite)
+3. <strong>SPA Framework (React/Angular/Vue):</strong> Decoupled frontend</p>
+<p><strong>Migration Path:</strong>
+- <strong>Short-term:</strong> Migrate to Razor views during ASP.NET MVC upgrade
+- <strong>Long-term:</strong> Consider SPA architecture with API backend</p>
+<hr/>
+<h3 id="adr-010-no-caching-implementation">ADR-010: No Caching Implementation</h3>
+<p><strong>Status:</strong> <strong>Deferred</strong> (Caching designed but not enabled)</p>
+<p><strong>Context:</strong>
+Product catalog is read-heavy with relatively static data. Performance optimization through caching was considered.</p>
+<p><strong>Decision:</strong>
+Caching decorator <code>CachedProductCatalogService</code> was implemented but <strong>not activated</strong> in IoC configuration.</p>
+<p><strong>Evidence:</strong>
+- File exists: <code>Agathas.Storefront.Services.Cache/CachedProductCatalogService.cs</code>
+- Decorator pattern implemented around <code>IProductCatalogService</code>
+- <strong>NOT registered in StructureMap BootStrapper</strong> (regular <code>ProductCatalogService</code> used instead)</p>
+<p><strong>Why Deferred:</strong>
+- Insufficient production load data to determine caching strategy
+- Concerns about cache invalidation complexity
+- Product data changes infrequently (could use long cache TTL)
+- Premature optimization without performance problems</p>
+<p><strong>Consequences:</strong>
+- ✅ <strong>Positive:</strong>
+  - Simpler implementation (no cache invalidation logic needed)
+  - No stale data issues
+  - Easy to debug (no cache-related bugs)</p>
+<ul>
+<li>❌ <strong>Negative:</strong></li>
+<li>Database hit for every product catalog request</li>
+<li>Higher database load</li>
+<li>Slower response times for product browsing</li>
+<li>Increased infrastructure costs</li>
+</ul>
+<p><strong>Recommendation:</strong>
+- <strong>Enable caching</strong> during modernization with proper strategy:
+  - Distributed cache (Redis/Memcached) for horizontal scaling
+  - Cache product catalog data (categories, products, brands)
+  - Time-based expiration (e.g., 15-30 minutes)
+  - Event-based invalidation when products updated
+  - Output caching for static HTML pages</p>
+<hr/>
+<h2 id="technical-debt-analysis">Technical Debt Analysis</h2>
+<h3 id="technical-debt-inventory">Technical Debt Inventory</h3>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Category</th>
+<th>Severity</th>
+<th>Impact</th>
+<th>Effort</th>
+<th>Priority</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.NET Framework 3.5/4.0 Obsolescence</td>
+<td>Platform/Framework</td>
+<td><strong>Critical</strong></td>
+<td>Security vulnerabilities; no modern features; talent pool shrinking; poor cloud support</td>
+<td>High (3-6 months)</td>
+<td>P0 - Immediate</td>
+<td>Entire solution</td>
+</tr>
+<tr>
+<td>jQuery 1.3.2 Security Vulnerabilities</td>
+<td>Dependency</td>
+<td><strong>Critical</strong></td>
+<td>Known CVEs (XSS, CSRF); exploitable by attackers</td>
+<td>Low (1-2 weeks)</td>
+<td>P0 - Immediate</td>
+<td><code>Scripts/jquery-1.3.2.js</code></td>
+</tr>
+<tr>
+<td>ASP.NET MVC 2 Obsolescence</td>
+<td>Framework</td>
+<td><strong>Critical</strong></td>
+<td>No support; security vulnerabilities; incompatible with modern .NET</td>
+<td>High (2-4 months)</td>
+<td>P0 - Immediate</td>
+<td>UI.Web.MVC, Controllers projects</td>
+</tr>
+<tr>
+<td>SQL Server User Instance Deprecated</td>
+<td>Database</td>
+<td><strong>Critical</strong></td>
+<td>Feature removed in SQL Server 2014+; not production-ready; no redundancy</td>
+<td>Medium (2-4 weeks)</td>
+<td>P0 - Immediate</td>
+<td>Connection strings, deployment model</td>
+</tr>
+<tr>
+<td>Plaintext Secrets in Web.config</td>
+<td>Security</td>
+<td><strong>Critical</strong></td>
+<td>API keys, passwords exposed; compliance violations (PCI-DSS, GDPR)</td>
+<td>Low (1 week)</td>
+<td>P0 - Immediate</td>
+<td><code>Web.config</code></td>
+</tr>
+<tr>
+<td>NHibernate 2.1 Outdated</td>
+<td>ORM</td>
+<td>High</td>
+<td>Missing features; performance improvements in v5.x; potential bugs</td>
+<td>Medium (3-6 weeks)</td>
+<td>P1 - High</td>
+<td>Repository.NHibernate project</td>
+</tr>
+<tr>
+<td>StructureMap 2.5 Sunset</td>
+<td>Dependency Injection</td>
+<td>High</td>
+<td>Project discontinued; no updates since 2018</td>
+<td>Medium (2-3 weeks)</td>
+<td>P1 - High</td>
+<td>IoC configuration, BootStrapper</td>
+</tr>
+<tr>
+<td>No HTTPS Enforcement</td>
+<td>Security</td>
+<td>High</td>
+<td>Man-in-the-middle attacks possible; PCI-DSS non-compliance</td>
+<td>Low (1 day)</td>
+<td>P1 - High</td>
+<td>All controllers, configuration</td>
+</tr>
+<tr>
+<td>No Caching Implementation</td>
+<td>Performance</td>
+<td>High</td>
+<td>Poor scalability; high database load; slow response times</td>
+<td>Medium (2-4 weeks)</td>
+<td>P2 - Medium</td>
+<td>Service layer</td>
+</tr>
+<tr>
+<td>No Monitoring/Observability</td>
+<td>Operations</td>
+<td>High</td>
+<td>Cannot detect issues; no performance insights; difficult troubleshooting</td>
+<td>Medium (1-2 weeks)</td>
+<td>P2 - Medium</td>
+<td>Infrastructure</td>
+</tr>
+<tr>
+<td>No CI/CD Pipeline</td>
+<td>DevOps</td>
+<td>Medium</td>
+<td>Manual deployments; human error risk; slow releases</td>
+<td>Medium (2-3 weeks)</td>
+<td>P2 - Medium</td>
+<td>Build/deployment process</td>
+</tr>
+<tr>
+<td>No Unit Tests Detected</td>
+<td>Quality</td>
+<td>Medium</td>
+<td>Regression risk; difficult refactoring; unknown code coverage</td>
+<td>High (ongoing)</td>
+<td>P2 - Medium</td>
+<td>Test projects missing</td>
+</tr>
+<tr>
+<td>Synchronous-Only Processing</td>
+<td>Architecture</td>
+<td>Medium</td>
+<td>Poor scalability; blocking operations; no async/await</td>
+<td>High (requires .NET 4.5+)</td>
+<td>P3 - Low</td>
+<td>Entire solution</td>
+</tr>
+<tr>
+<td>No API (UI-Only)</td>
+<td>Architecture</td>
+<td>Medium</td>
+<td>Cannot support mobile apps; difficult to integrate; monolithic coupling</td>
+<td>High (2-3 months)</td>
+<td>P3 - Low</td>
+<td>Application design</td>
+</tr>
+<tr>
+<td>ASPX View Engine</td>
+<td>Legacy Technology</td>
+<td>Low</td>
+<td>Verbose syntax; difficult to test; obsolete</td>
+<td>Medium (2-4 weeks)</td>
+<td>P3 - Low</td>
+<td>Views folder</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="critical-technical-debt-p0-immediate-action-required">Critical Technical Debt (P0 - Immediate Action Required)</h3>
+<h4 id="issue-1-net-framework-obsolescence">Issue 1: .NET Framework Obsolescence</h4>
+<p><strong>Description:</strong>
+Application runs on .NET Framework 3.5/4.0, released 2007-2010. As of 2026, these frameworks are 16-19 years old, only receive critical security patches, lack modern language features (async/await, LINQ enhancements, records, pattern matching), and have poor cloud-native support.</p>
+<p><strong>Impact:</strong>
+- <strong>Technical:</strong> Cannot use modern C# features; poor performance compared to .NET 6+; limited library ecosystem
+- <strong>Security:</strong> Known vulnerabilities; delayed security patches; no active development
+- <strong>Business:</strong> Difficult to hire developers with legacy skillset; higher maintenance costs; cloud migration blocked
+- <strong>Risk:</strong> Security breaches; compliance violations; inability to innovate; vendor lock-in to Windows</p>
+<p><strong>Severity:</strong> <strong>Critical</strong> - This is existential risk to application longevity</p>
+<p><strong>Estimated Effort:</strong>
+<strong>CANNOT be estimated without runtime data</strong>. Requires:
+- Detailed task breakdown per project/layer
+- Team composition analysis (skill levels with modern .NET)
+- Assessment of third-party dependency migration paths
+- Load testing data to validate performance post-migration</p>
+<p><strong>Recommended Approach:</strong>
+1. Assess application for .NET 6+ compatibility
+2. Create migration backlog with detailed task estimates
+3. Set up parallel .NET 6+ proof-of-concept
+4. Incremental migration strategy (gradual vs. rewrite)</p>
+<p><strong>Mitigation Strategy:</strong>
+1. <strong>Assessment Phase:</strong>
+   - Run .NET Portability Analyzer to identify breaking changes
+   - Inventory all dependencies and check .NET 6+ compatibility
+   - Identify Windows-specific APIs usage (if any)</p>
+<ol>
+<li><strong>Migration Strategy Options:</strong></li>
+<li><strong>Option A - Incremental Upgrade:</strong> .NET Framework 4.0 → 4.8 → .NET 6+ (lower risk, longer timeline)</li>
+<li><strong>Option B - Direct Migration:</strong> .NET Framework 4.0 → .NET 6+ (faster but higher risk)</li>
+<li>
+<p><strong>Option C - Parallel Rewrite:</strong> Build .NET 6+ version while maintaining legacy (highest effort)</p>
+</li>
+<li>
+<p><strong>Execution Phases:</strong></p>
+</li>
+<li>Phase 1: Upgrade to .NET Framework 4.8 (maintains Windows/.NET Framework, gets latest patches)</li>
+<li>Phase 2: Migrate to ASP.NET Core MVC on .NET 6+</li>
+<li>Phase 3: Migrate infrastructure components</li>
+<li>Phase 4: Update data access layer (NHibernate or migrate to EF Core)</li>
+<li>Phase 5: Comprehensive testing and validation</li>
+</ol>
+<p><strong>Dependencies:</strong>
+- Must upgrade ASP.NET MVC 2 → ASP.NET Core simultaneously
+- Database migration (User Instance → proper SQL Server)
+- ASPX views → Razor views
+- StructureMap → Microsoft.Extensions.DependencyInjection
+- jQuery upgrade for frontend compatibility</p>
+<p><strong>Priority Justification:</strong>
+This blocks ALL other modernization efforts (cloud migration, containerization, microservices, modern DevOps).</p>
+<hr/>
+<h4 id="issue-2-jquery-132-critical-security-vulnerabilities">Issue 2: jQuery 1.3.2 Critical Security Vulnerabilities</h4>
+<p><strong>Description:</strong>
+Frontend uses jQuery 1.3.2 released in 2009, containing multiple known CVEs including XSS vulnerabilities, prototype pollution, and insecure regex patterns.</p>
+<p><strong>Impact:</strong>
+- <strong>Security:</strong> Exploitable XSS vulnerabilities; CSRF attacks possible; potential data theft
+- <strong>Compliance:</strong> Fails security audits; PCI-DSS violations; OWASP Top 10 vulnerabilities
+- <strong>Business:</strong> Reputational damage from security incidents; legal liability; customer trust erosion
+- <strong>Risk:</strong> Active exploitation by attackers; potential breach of customer payment data</p>
+<p><strong>Severity:</strong> <strong>Critical</strong> - Known exploitable vulnerabilities</p>
+<p><strong>Estimated Effort:</strong> Low (1-2 weeks)
+- Replace jQuery 1.3.2 with jQuery 3.x (latest stable)
+- Update jQuery plugins to compatible versions
+- Test all AJAX functionality
+- Verify validation still works
+- Browser compatibility testing</p>
+<p><strong>Recommended Timeline:</strong> <strong>IMMEDIATE</strong> - This is urgent security fix</p>
+<p><strong>Mitigation Strategy:</strong>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Current (VULNERABLE) --&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">"/Scripts/jquery-1.3.2.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="cm">&lt;!-- Upgrade to (SECURE) --&gt;</span>
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.7.1.min.js"</span><span class="w"> </span>
+<span class="w">        </span><span class="na">integrity=</span><span class="s">"sha256-..."</span><span class="w"> </span>
+<span class="w">        </span><span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></p>
+<p><strong>Testing Required:</strong>
+- All AJAX operations (basket add/update, product search)
+- Form validation
+- DOM manipulation
+- Event handlers
+- Cross-browser compatibility (Chrome, Firefox, Edge, Safari)</p>
+<p><strong>Dependencies:</strong>
+- jQuery Validation plugin must be upgraded to compatible version
+- Microsoft AJAX helpers may need replacement with modern alternatives</p>
+<hr/>
+<h4 id="issue-3-sql-server-user-instance-not-production-ready">Issue 3: SQL Server User Instance Not Production-Ready</h4>
+<p><strong>Description:</strong>
+Application uses SQL Server Express LocalDB with deprecated User Instance feature. Database files stored in <code>App_Data\</code> folder with <code>AttachDbFilename</code> connection string. This architecture was designed for development/small deployments but is unsuitable for production.</p>
+<p><strong>Impact:</strong>
+- <strong>Reliability:</strong> Single point of failure; no redundancy; data loss risk
+- <strong>Performance:</strong> Limited concurrent connections; no query optimization tools; poor under load
+- <strong>Scalability:</strong> Cannot scale horizontally; single database file limits growth
+- <strong>Operations:</strong> No backup/restore automation; difficult disaster recovery; no monitoring
+- <strong>Security:</strong> Database file accessible via file system; no encryption at rest; audit logging limited</p>
+<p><strong>Severity:</strong> <strong>Critical</strong> - Production deployment with this configuration is high risk</p>
+<p><strong>Estimated Effort:</strong> Medium (2-4 weeks)</p>
+<p><strong>Cannot estimate without:</strong>
+- Current database size (MB/GB)
+- Transaction volume (queries per second)
+- Backup/retention requirements
+- Availability SLA targets (e.g., 99.9% uptime)</p>
+<p><strong>Mitigation Strategy:</strong></p>
+<p><strong>Immediate (Week 1-2): Migrate to SQL Server Express Standard Instance</strong>
+1. Install SQL Server Express on server (or use existing instance)
+2. Restore database from MDF file to named instance
+3. Update connection string: <code>Server=localhost\SQLEXPRESS;Database=AgathesShop;Integrated Security=True</code>
+4. Configure SQL Server Agent for automated backups
+5. Test application connectivity and performance</p>
+<p><strong>Short-Term (Month 1-2): Production-Ready SQL Server</strong>
+1. Upgrade to SQL Server Standard/Enterprise edition (if budget allows)
+2. Implement proper backup strategy:
+   - Full backup daily
+   - Transaction log backup every 15-30 minutes
+   - Offsite backup storage
+3. Configure monitoring and alerting
+4. Optimize database (indexes, statistics, query plans)
+5. Implement connection pooling best practices</p>
+<p><strong>Long-Term (Month 3-6): Cloud Migration</strong>
+1. <strong>Azure SQL Database:</strong>
+   - Managed service (no server management)
+   - Automatic backups with point-in-time restore
+   - Built-in high availability
+   - Geo-replication for disaster recovery
+   - Auto-scaling capabilities</p>
+<ol>
+<li><strong>AWS RDS for SQL Server:</strong></li>
+<li>Similar managed service benefits</li>
+<li>Multi-AZ deployment for HA</li>
+<li>Automated backups and patching</li>
+</ol>
+<p><strong>Dependencies:</strong>
+- NHibernate connection string configuration
+- Membership provider connection string update
+- Deployment process changes (no more XCOPY with MDF files)</p>
+<hr/>
+<h4 id="issue-4-secrets-in-plaintext-webconfig">Issue 4: Secrets in Plaintext Web.config</h4>
+<p><strong>Description:</strong>
+Web.config file contains sensitive credentials in plaintext:
+- PayPal business email and API credentials
+- Janrain API key
+- SMTP server username/password
+- Database connection strings</p>
+<p>This violates security best practices and compliance requirements (PCI-DSS, GDPR, SOC 2).</p>
+<p><strong>Impact:</strong>
+- <strong>Security:</strong> Credentials exposed in source control; accessible to anyone with file system access; version control history contains secrets
+- <strong>Compliance:</strong> PCI-DSS violation (payment credentials); GDPR data protection requirements; audit failures
+- <strong>Business:</strong> Regulatory fines; failed security audits; customer data breach risk
+- <strong>Risk:</strong> Unauthorized access to payment gateway; email account hijacking; database breach</p>
+<p><strong>Severity:</strong> <strong>Critical</strong> - Immediate compliance and security risk</p>
+<p><strong>Estimated Effort:</strong> Low (1 week)</p>
+<p><strong>Mitigation Strategy:</strong></p>
+<p><strong>Immediate (Day 1-2): Use ASP.NET Configuration Encryption</strong>
+<div class="highlight"><pre><span></span><code><span class="c"># Encrypt connectionStrings section in Web.config</span>
+<span class="n">aspnet_regiis</span> <span class="n">-pe</span> <span class="s2">"connectionStrings"</span> <span class="n">-app</span> <span class="s2">"/AgathsStorefront"</span> <span class="n">-prov</span> <span class="s2">"DataProtectionConfigurationProvider"</span>
+
+<span class="c"># Encrypt appSettings section</span>
+<span class="n">aspnet_regiis</span> <span class="n">-pe</span> <span class="s2">"appSettings"</span> <span class="n">-app</span> <span class="s2">"/AgathsStorefront"</span> <span class="n">-prov</span> <span class="s2">"DataProtectionConfigurationProvider"</span>
+</code></pre></div></p>
+<p><strong>Short-Term (Week 1): Environment Variables</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Read from environment variables instead of Web.config</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">paypalApiKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Environment</span><span class="p">.</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s">"PAYPAL_API_KEY"</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">smtpPassword</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Environment</span><span class="p">.</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s">"SMTP_PASSWORD"</span><span class="p">);</span>
+</code></pre></div></p>
+<p><strong>Long-Term (Modern .NET): Azure Key Vault Integration</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// After migration to .NET 6+</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">keyVaultUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"https://agathas-vault.vault.azure.net/"</span><span class="p">;</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SecretClient</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Uri</span><span class="p">(</span><span class="n">keyVaultUrl</span><span class="p">),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DefaultAzureCredential</span><span class="p">());</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">paypalKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">GetSecretAsync</span><span class="p">(</span><span class="s">"PayPalApiKey"</span><span class="p">);</span>
+</code></pre></div></p>
+<p><strong>Implementation Steps:</strong>
+1. Identify all secrets in Web.config
+2. Choose secrets management solution (Azure Key Vault, AWS Secrets Manager, HashiCorp Vault)
+3. Migrate secrets to secure storage
+4. Update application to read from secure storage
+5. Remove plaintext secrets from Web.config
+6. Scrub secrets from source control history (BFG Repo-Cleaner)</p>
+<p><strong>Dependencies:</strong>
+- None - can be done immediately as standalone fix</p>
+<hr/>
+<h3 id="high-priority-technical-debt-p1">High Priority Technical Debt (P1)</h3>
+<h4 id="issue-5-no-monitoring-or-observability">Issue 5: No Monitoring or Observability</h4>
+<p><strong>Description:</strong>
+Application has basic file-based logging (Log4Net) but lacks modern observability:
+- No Application Performance Monitoring (APM)
+- No request tracing or correlation IDs
+- No real-time metrics dashboard
+- No alerting on errors or performance degradation
+- No health checks
+- Logs only to file system (not searchable/queryable)</p>
+<p><strong>Impact:</strong>
+- <strong>Operations:</strong> Cannot detect issues proactively; slow incident response; difficult troubleshooting; blind to performance problems
+- <strong>Business:</strong> Extended downtime; poor user experience; revenue loss during outages; customer churn
+- <strong>Development:</strong> Cannot identify bottlenecks; difficult to optimize; no production insights for feature development</p>
+<p><strong>Severity:</strong> High - Operational risk and poor incident response</p>
+<p><strong>Estimated Effort:</strong> Medium (1-2 weeks for basic implementation)</p>
+<p><strong>Mitigation Strategy:</strong></p>
+<p><strong>Phase 1 - Immediate (1-2 weeks): Structured Logging</strong>
+- Replace Log4Net with Serilog (supports structured logging)
+- Add correlation IDs to track requests across layers
+- Log to ELK Stack (Elasticsearch, Logstash, Kibana) or cloud logging (Azure Monitor, AWS CloudWatch)
+- Create dashboards for error rates, response times</p>
+<p><strong>Phase 2 - Short-term (2-4 weeks): Application Performance Monitoring</strong>
+- Integrate APM solution:
+  - <strong>Azure Application Insights</strong> (for Azure deployments)
+  - <strong>AWS X-Ray</strong> (for AWS deployments)
+  - <strong>Datadog / New Relic</strong> (cloud-agnostic)
+- Track request duration, database query performance, external API calls
+- Set up alerting for errors, slow requests, high CPU/memory</p>
+<p><strong>Phase 3 - Medium-term (1-2 months): Full Observability Stack</strong>
+- Distributed tracing (OpenTelemetry)
+- Custom business metrics (orders per minute, checkout funnel metrics)
+- Real-time dashboards for business and technical metrics
+- Synthetic monitoring for uptime checks
+- Log aggregation and search</p>
+<p><strong>Dependencies:</strong>
+- Works with current architecture (no major refactoring required)
+- Easier to implement after .NET upgrade (async tracing support)</p>
+<hr/>
+<h3 id="medium-priority-technical-debt-p2">Medium Priority Technical Debt (P2)</h3>
+<h4 id="issue-6-no-automated-testing">Issue 6: No Automated Testing</h4>
+<p><strong>Description:</strong>
+No unit test projects detected in solution. Untested codebase makes refactoring risky and slows down development velocity.</p>
+<p><strong>Impact:</strong>
+- <strong>Quality:</strong> High regression risk; bugs introduced during maintenance; difficult to verify fixes
+- <strong>Velocity:</strong> Slow development (manual testing); fear of changing code; technical debt accumulation
+- <strong>Modernization:</strong> Cannot safely refactor without tests; migration risk increases</p>
+<p><strong>Severity:</strong> Medium - Increases risk of all other changes</p>
+<p><strong>Estimated Effort:</strong> High (ongoing - 3-6 months to achieve good coverage)</p>
+<p><strong>Mitigation Strategy:</strong></p>
+<p><strong>Phase 1 - Foundation (2-4 weeks):</strong>
+1. Add test projects to solution
+2. Configure testing framework (xUnit / NUnit)
+3. Set up mocking library (Moq / NSubstitute)
+4. Write tests for critical business logic (Order submission, Basket calculations, Payment processing)</p>
+<p><strong>Phase 2 - Service Layer Coverage (1-2 months):</strong>
+1. Test all service layer methods
+2. Mock repositories and external dependencies
+3. Aim for 70-80% code coverage of Services layer</p>
+<p><strong>Phase 3 - Integration Tests (1-2 months):</strong>
+1. Test repository implementations (with in-memory database)
+2. Test controller actions
+3. Test domain event handlers</p>
+<p><strong>Phase 4 - Automated Testing in CI/CD (Ongoing):</strong>
+1. Run tests in build pipeline
+2. Fail build on test failures
+3. Track code coverage metrics
+4. Enforce minimum coverage thresholds</p>
+<p><strong>Recommendations:</strong>
+- Start with business-critical paths (order submission, payment processing)
+- Test-driven development for new features going forward
+- Characterization tests for legacy code before refactoring</p>
+<hr/>
+<h2 id="appendix">Appendix</h2>
+<h3 id="a-project-dependency-graph">A. Project Dependency Graph</h3>
+<div class="highlight"><pre><span></span><code>Agathas.Storefront.UI.Web.MVC
+├── Agathas.Storefront.Controllers
+│   ├── Agathas.Storefront.Services
+│   │   ├── Agathas.Storefront.Model
+│   │   │   └── Agathas.Storefront.Infrastructure
+│   │   └── Agathas.Storefront.Infrastructure
+│   └── Agathas.Storefront.Infrastructure
+├── Agathas.Storefront.Repository.NHibernate
+│   ├── Agathas.Storefront.Model
+│   └── Agathas.Storefront.Infrastructure
+├── Agathas.Storefront.Services.Cache
+│   └── Agathas.Storefront.Services
+└── Agathas.Storefront.Infrastructure (no dependencies)
+</code></pre></div>
+<h3 id="b-database-schema-summary">B. Database Schema Summary</h3>
+<p><strong>Key Tables (inferred from NHibernate mappings):</strong>
+- Product, ProductTitle, ProductSize, ProductColor
+- Brand, Category
+- Basket, BasketItem
+- Order, OrderItem, Payment
+- Customer, DeliveryAddress
+- DeliveryOption, ShippingService, Courier</p>
+<h3 id="c-glossary">C. Glossary</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aggregate Root</td>
+<td>DDD pattern: Entity that serves as entry point to an aggregate</td>
+</tr>
+<tr>
+<td>Domain Event</td>
+<td>Event raised by domain entity to signal significant business occurrence</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>Data access abstraction providing collection-like interface for entities</td>
+</tr>
+<tr>
+<td>Unit of Work</td>
+<td>Pattern managing transaction scope and coordinating persistence</td>
+</tr>
+<tr>
+<td>View Model</td>
+<td>Data transfer object shaped for specific view requirements</td>
+</tr>
+<tr>
+<td>Request/Response</td>
+<td>Messaging pattern with explicit input and output objects for service methods</td>
+</tr>
+</tbody>
+</table>
+<h3 id="d-references">D. References</h3>
+<ol>
+<li><a href="https://c4model.com/">C4 Model</a> - Architecture visualization framework</li>
+<li><a href="https://www.domainlanguage.com/ddd/">Domain-Driven Design by Eric Evans</a> - DDD principles</li>
+<li><a href="https://martinfowler.com/books/eaa.html">Patterns of Enterprise Application Architecture by Martin Fowler</a> - Repository, Unit of Work, Service Layer patterns</li>
+<li><a href="https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/">ASP.NET MVC 2 Documentation</a> - Framework reference</li>
+<li><a href="https://nhibernate.info/">NHibernate Documentation</a> - ORM reference</li>
+</ol>
+<hr/>
+<h2 id="document-metadata">Document Metadata</h2>
+<ul>
+<li><strong>Document Version:</strong> 1.0</li>
+<li><strong>Last Updated:</strong> 2026-06-09</li>
+<li><strong>Author:</strong> Software Architecture Analyzer</li>
+<li><strong>System:</strong> Agathas.Storefront E-commerce Application</li>
+<li><strong>Status:</strong> Draft</li>
+<li><strong>Next Review:</strong> Upon completion of modernization assessment</li>
+<li><strong>Document History:</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-06-09</td>
+<td>Software Architecture Analyzer</td>
+<td>Initial creation based on comprehensive codebase analysis</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="document-maintenance">Document Maintenance</h2>
+<p><strong>Update Frequency:</strong> Quarterly or upon significant architectural changes</p>
+<p><strong>Review Triggers:</strong>
+- Major architectural changes (layer restructuring, pattern adoption)
+- Technology stack updates (framework upgrades, new libraries)
+- Performance issues identified (bottlenecks, scalability problems)
+- Security vulnerabilities discovered (CVEs, audit findings)
+- Migration to cloud or modernization initiatives</p>
+<p><strong>Stakeholder Review:</strong>
+- <strong>Technical Leadership:</strong> Approve architectural decisions and technology choices
+- <strong>Development Team:</strong> Validate implementation details and pattern usage
+- <strong>Security Team:</strong> Review security controls and vulnerability assessments
+- <strong>Operations Team:</strong> Validate deployment, monitoring, and operational procedures</p>
+<hr/>
+<p><strong>Note:</strong> This document reflects the current state of the Agathas.Storefront application as of June 2026. The architecture demonstrates strong foundational design principles from 2010 era but requires significant modernization to address technology obsolescence, security vulnerabilities, and cloud-readiness. All diagrams have been created based on static code analysis and should be validated against runtime behavior during modernization planning.</p></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script src="../../../js/bootstrap.bundle.min.js"></script>
+<script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script src="../../../js/base.js"></script>
+<script src="../../../search/main.js"></script>
+<script src="../../../assets/javascripts/panzoom.min.js"></script>
+<script src="../../../assets/javascripts/zoompan.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>

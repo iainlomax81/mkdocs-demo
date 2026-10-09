@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../../img/favicon.ico" rel="shortcut icon"/>
+<title>User Experience Analysis - Project Documentation</title>
+<link href="../../../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../../css/fontawesome.min.css" rel="stylesheet"/>
+<link href="../../../css/brands.min.css" rel="stylesheet"/>
+<link href="../../../css/solid.min.css" rel="stylesheet"/>
+<link href="../../../css/v4-font-face.min.css" rel="stylesheet"/>
+<link href="../../../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/panzoom.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<meta name="panzoom-theme" content="mkdocs">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="../../..">Project Documentation</a>
+<!-- Expander button -->
+<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="../../..">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../EXECUTIVE-SUMMARY/">Executive Summary</a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Quickstart</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-ARCHITECT/">Architect</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-DEVELOPER/">Developer</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-EXECUTIVE/">Executive</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-current="page" aria-expanded="false" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button">Current State</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Architecture</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../1-architecture/1.1-system-architecture/">System Architecture</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../1-architecture/1.2-data-architecture/">Data Architecture</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../1-architecture/1.3-api-integration-catalog/">API Integration Catalog</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../1-architecture/1.4-project-inventory/">Project Inventory</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Business</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../2.1-business-domain-model/">Business Domain Model</a>
+</li>
+<li>
+<a class="dropdown-item" href="../2.2-requirements-specification/">Requirements Specification</a>
+</li>
+<li>
+<a class="dropdown-item" href="../2.3-compliance-regulatory/">Compliance &amp; Regulatory</a>
+</li>
+<li>
+<a aria-current="page" class="dropdown-item active" href="./">User Experience Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../2.5-localization-i18n/">Localization &amp; I18n</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Modernization</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Strategy</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../MODERNIZATION/2-strategy/2.1-executive-summary/">Executive Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/">Stakeholder Matrix</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Generation Summaries</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/architecture-documentation-summary/">Architecture Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/business-documentation-summary/">Business Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/compilation-summary/">Compilation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/pre-analysis-summary/">Pre-Analysis Summary</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../GLOSSARY/">Glossary</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ms-md-auto">
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#mkdocs_search_modal" data-bs-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../2.3-compliance-regulatory/" rel="prev">
+<i class="fa fa-arrow-left"></i> Previous
+                                </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../2.5-localization-i18n/" rel="next">
+                                    Next <i class="fa fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#24-user-experience-analysis">2.4 User Experience Analysis</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#executive-summary">Executive Summary</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#1-user-journeys">1. User Journeys</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#2-uiux-patterns">2. UI/UX Patterns</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#3-interaction-patterns">3. Interaction Patterns</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#4-accessibility-analysis">4. Accessibility Analysis</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#5-mobile-experience">5. Mobile Experience</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#6-performance-and-user-experience">6. Performance and User Experience</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#7-ux-modernization-roadmap">7. UX Modernization Roadmap</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#8-summary-and-recommendations">8. Summary and Recommendations</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="24-user-experience-analysis">2.4 User Experience Analysis</h1>
+<p><strong>Document Version:</strong> 1.0<br/>
+<strong>Date:</strong> 2026-06-09<br/>
+<strong>Status:</strong> Current State Analysis</p>
+<hr/>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>This document analyzes the user experience (UX) of the Agathas Storefront e-commerce platform based on user journey analysis, UI pattern review, and interaction flow assessment.</p>
+<p><strong>Overall UX Maturity:</strong> 🟡 <strong>BASIC</strong> (Functional but dated)</p>
+<p><strong>Key Findings:</strong>
+- ✅ Clear, linear user journeys for core e-commerce tasks
+- ✅ Traditional multi-page navigation is straightforward
+- ❌ Not mobile-responsive (desktop-only design)
+- ❌ No modern interaction patterns (all full-page reloads)
+- ⚠️ Accessibility unknown (likely non-compliant with WCAG)
+- ⚠️ User experience reflects 2010-era design patterns</p>
+<p><strong>UX Strengths:</strong>
+- Simple, uncluttered interface
+- Logical workflow progression (browse → basket → checkout → payment)
+- Clear calls-to-action
+- Minimal friction in checkout process (once authenticated)</p>
+<p><strong>UX Weaknesses:</strong>
+- Desktop-only, no mobile optimization
+- Slow interactions (full page reloads for every action)
+- No progressive enhancement or AJAX
+- Registration gate before checkout (friction for new customers)
+- Limited feedback during actions (no loading indicators)</p>
+<hr/>
+<h2 id="1-user-journeys">1. User Journeys</h2>
+<h3 id="11-first-time-buyer-journey">1.1 First-Time Buyer Journey</h3>
+<p><strong>User Type:</strong> Anonymous visitor making first purchase</p>
+<p><strong>Journey Stages:</strong></p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">journey
+    title First-Time Buyer Journey
+    section Discovery
+      Land on Home Page: 5: Visitor
+      View Featured Products: 4: Visitor
+      Browse Category: 4: Visitor
+      Filter Products: 3: Visitor
+    section Evaluation
+      View Product Details: 4: Visitor
+      Compare Sizes/Colors: 4: Visitor
+    section Purchase Decision
+      Add to Basket: 5: Visitor
+      View Basket: 4: Visitor
+      Select Delivery: 4: Visitor
+    section Checkout Barrier
+      Click Checkout: 3: Visitor
+      Forced to Register: 2: Visitor
+      Create Account: 2: Visitor
+    section Payment
+      Add Delivery Address: 3: Customer
+      Submit Order: 4: Customer
+      Redirect to PayPal: 3: Customer
+      Complete Payment: 4: Customer
+      Receive Confirmation: 5: Customer
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Experience Assessment:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Experience Rating</th>
+<th>Pain Points</th>
+<th>Opportunities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Discovery</td>
+<td>⭐⭐⭐⭐ Good</td>
+<td>Desktop-only, no search</td>
+<td>Add product search, mobile design</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td>⭐⭐⭐⭐ Good</td>
+<td>Limited product info</td>
+<td>Add reviews, more images, zoom</td>
+</tr>
+<tr>
+<td>Basket</td>
+<td>⭐⭐⭐⭐ Good</td>
+<td>Page reload on every change</td>
+<td>AJAX basket updates</td>
+</tr>
+<tr>
+<td>Checkout Barrier</td>
+<td>⭐⭐ Poor</td>
+<td><strong>Forced registration</strong></td>
+<td>Guest checkout option</td>
+</tr>
+<tr>
+<td>Payment</td>
+<td>⭐⭐⭐ Adequate</td>
+<td>PayPal redirect interrupts flow</td>
+<td>More payment options, smoother flow</td>
+</tr>
+<tr>
+<td>Confirmation</td>
+<td>⭐⭐⭐⭐ Good</td>
+<td>Basic email confirmation</td>
+<td>Order tracking, SMS notifications</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critical Friction Point:</strong> Forced registration before checkout creates abandonment risk for first-time buyers.</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/user-journeys.json">user-journeys.json</a>: "Must register before checkout"</p>
+<h3 id="12-returning-customer-journey">1.2 Returning Customer Journey</h3>
+<p><strong>User Type:</strong> Registered customer making repeat purchase</p>
+<p><strong>Journey Stages:</strong></p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">journey
+    title Returning Customer Journey
+    section Access
+      Login: 5: Customer
+    section Shopping
+      Browse Products: 5: Customer
+      Add to Basket: 5: Customer
+    section Checkout
+      View Basket: 5: Customer
+      Checkout: 5: Customer
+      Select Saved Address: 5: Customer
+      Submit Order: 5: Customer
+    section Payment
+      Pay with PayPal: 4: Customer
+      Receive Confirmation: 5: Customer
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Experience Assessment:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Experience Rating</th>
+<th>Strengths</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login</td>
+<td>⭐⭐⭐⭐ Good</td>
+<td>Social login option (Janrain)</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>⭐⭐⭐⭐⭐ Excellent</td>
+<td>Familiar interface, no friction</td>
+</tr>
+<tr>
+<td>Checkout</td>
+<td>⭐⭐⭐⭐⭐ Excellent</td>
+<td>Saved addresses speed up process</td>
+</tr>
+<tr>
+<td>Payment</td>
+<td>⭐⭐⭐⭐ Good</td>
+<td>Familiar payment flow</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Advantage:</strong> Saved delivery addresses significantly reduce friction for returning customers.</p>
+<h3 id="13-order-tracking-journey">1.3 Order Tracking Journey</h3>
+<p><strong>User Type:</strong> Customer checking order status</p>
+<p><strong>Journey:</strong></p>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">journey
+    title Order Tracking Journey
+    section Access
+      Login: 4: Customer
+      Navigate to My Orders: 4: Customer
+    section Review
+      View Order List: 3: Customer
+      Click Order: 3: Customer
+      View Order Details: 3: Customer
+    section Outcome
+      See Order Status: 2: Customer
+      No Tracking Info: 1: Customer
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div>
+<p><strong>Experience Assessment:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Experience Rating</th>
+<th>Pain Point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Order History</td>
+<td>⭐⭐⭐ Adequate</td>
+<td>Basic functionality</td>
+</tr>
+<tr>
+<td>Order Details</td>
+<td>⭐⭐⭐ Adequate</td>
+<td>Complete order info shown</td>
+</tr>
+<tr>
+<td>Order Tracking</td>
+<td>⭐ Poor</td>
+<td><strong>No shipment tracking</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critical Gap:</strong> No order tracking beyond "Submitted" status. Customers cannot track shipment or see delivery estimates.</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/screen-workflows.json">screen-workflows.json</a>: Order workflow ends at submission, no tracking.</p>
+<hr/>
+<h2 id="2-uiux-patterns">2. UI/UX Patterns</h2>
+<h3 id="21-navigation-patterns">2.1 Navigation Patterns</h3>
+<p><strong>Primary Navigation:</strong> Top navigation menu with category links</p>
+<p><strong>Pattern:</strong> Traditional hierarchical navigation</p>
+<div class="highlight"><pre><span></span><code>Home | Categories (dropdown) | My Account | Basket | Checkout
+</code></pre></div>
+<p><strong>Assessment:</strong> ⭐⭐⭐⭐ Good (Clear and straightforward)</p>
+<p><strong>Strengths:</strong>
+- ✅ Consistent across all pages
+- ✅ Clear visual hierarchy
+- ✅ Logical grouping</p>
+<p><strong>Weaknesses:</strong>
+- ❌ No breadcrumbs (limited context for deep navigation)
+- ❌ No search functionality
+- ❌ Not optimized for mobile (dropdown menus may not work well on touch)</p>
+<h3 id="22-product-discovery-patterns">2.2 Product Discovery Patterns</h3>
+<p><strong>Pattern:</strong> Category-based browsing with filtering</p>
+<p><strong>Product Listing:</strong>
+- Grid layout with product images
+- Product name, price displayed
+- Click product image/name to view details</p>
+<p><strong>Filtering:</strong>
+- Sidebar refinements (size, color, brand, price)
+- Filters applied via form submission (page reload)</p>
+<p><strong>Assessment:</strong> ⭐⭐⭐ Adequate (Functional but dated)</p>
+<p><strong>Strengths:</strong>
+- ✅ Clear product presentation
+- ✅ Logical filter organization</p>
+<p><strong>Weaknesses:</strong>
+- ❌ No product search
+- ❌ Full page reload on filter change (slow)
+- ❌ No faceted search or advanced filtering
+- ❌ No product comparison
+- ❌ No sorting options (price, popularity, etc.)</p>
+<p><strong>Modernization Opportunity:</strong> Implement AJAX-based filtering, product search, and dynamic product recommendations.</p>
+<h3 id="23-shopping-basket-patterns">2.3 Shopping Basket Patterns</h3>
+<p><strong>Pattern:</strong> Traditional shopping cart with item list</p>
+<p><strong>Features:</strong>
+- View all basket items
+- Update quantity (+/- buttons)
+- Remove item button
+- Delivery option selector
+- Basket total calculation</p>
+<p><strong>Assessment:</strong> ⭐⭐⭐⭐ Good (Clear and functional)</p>
+<p><strong>Strengths:</strong>
+- ✅ Clear item details (product, size, color, price)
+- ✅ Quantity adjustment easy
+- ✅ Basket total always visible
+- ✅ Delivery cost shown separately</p>
+<p><strong>Weaknesses:</strong>
+- ❌ Page reload on every quantity change (slow feedback)
+- ❌ No "Save for later" or wishlist option
+- ❌ No promo code field
+- ❌ No recommendations ("You might also like")
+- ❌ No basket persistence notification (users may not know basket saves)</p>
+<p><strong>Modernization Opportunity:</strong> AJAX basket updates, persistent basket indicator, product recommendations.</p>
+<h3 id="24-checkout-patterns">2.4 Checkout Patterns</h3>
+<p><strong>Pattern:</strong> Multi-step checkout with authentication gate</p>
+<p><strong>Checkout Flow:</strong>
+1. Basket → Click "Checkout"
+2. <strong>Authentication Gate</strong> (login or register required)
+3. Checkout page (delivery address selection)
+4. Order summary confirmation
+5. Redirect to PayPal
+6. Payment completion
+7. Confirmation page</p>
+<p><strong>Assessment:</strong> ⭐⭐⭐ Adequate (Functional but friction point at authentication)</p>
+<p><strong>Strengths:</strong>
+- ✅ Clear step-by-step progression
+- ✅ Order summary visible before payment
+- ✅ Saved addresses streamline returning customer experience</p>
+<p><strong>Weaknesses:</strong>
+- ❌ <strong>Forced registration</strong> (major friction point for new customers)
+- ❌ No guest checkout option
+- ❌ No progress indicator showing checkout steps
+- ❌ No estimated delivery date
+- ❌ PayPal redirect interrupts flow (external site)</p>
+<p><strong>Industry Best Practice:</strong> Offer guest checkout to reduce abandonment rate. According to Baymard Institute research, forced registration increases cart abandonment by ~25%.</p>
+<p><strong>Recommendation:</strong> Implement guest checkout with optional account creation after order completion.</p>
+<h3 id="25-account-management-patterns">2.5 Account Management Patterns</h3>
+<p><strong>Pattern:</strong> User profile dashboard with saved information</p>
+<p><strong>Features:</strong>
+- View/edit profile (name, email)
+- Manage delivery addresses (add, edit, delete)
+- View order history
+- View order details</p>
+<p><strong>Assessment:</strong> ⭐⭐⭐⭐ Good (Complete basic functionality)</p>
+<p><strong>Strengths:</strong>
+- ✅ All essential account management features present
+- ✅ Saved addresses improve checkout experience
+- ✅ Order history accessible</p>
+<p><strong>Weaknesses:</strong>
+- ❌ No password change functionality visible
+- ❌ No privacy settings or data export (GDPR requirement)
+- ❌ No email preference management
+- ❌ Limited order management (cannot cancel or return)</p>
+<hr/>
+<h2 id="3-interaction-patterns">3. Interaction Patterns</h2>
+<h3 id="31-page-navigation-pattern">3.1 Page Navigation Pattern</h3>
+<p><strong>Pattern:</strong> Traditional multi-page application with full page reloads</p>
+<p><strong>Characteristic:</strong> Every user action (add to basket, filter products, update quantity) triggers full page reload.</p>
+<p><strong>Assessment:</strong> ⭐⭐ Poor by modern standards</p>
+<p><strong>User Experience Impact:</strong>
+- ❌ Slow feedback (wait for page reload)
+- ❌ No loading indicators during page transitions
+- ❌ State lost on browser back button
+- ❌ Inefficient network usage (full page HTML re-downloaded)</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/screen-workflows.json">screen-workflows.json</a>: "State transitions: Page reloads"</p>
+<p><strong>Modern Alternative:</strong> Single Page Application (SPA) or progressive enhancement with AJAX for dynamic updates.</p>
+<h3 id="32-form-validation-pattern">3.2 Form Validation Pattern</h3>
+<p><strong>Pattern:</strong> Server-side validation with post-back error display</p>
+<p><strong>Implementation:</strong>
+- ASP.NET validation controls
+- Client-side validation (basic, via validators)
+- Server-side validation (comprehensive)
+- Errors displayed at top of form or near field</p>
+<p><strong>Assessment:</strong> ⭐⭐⭐ Adequate (Functional but dated)</p>
+<p><strong>Strengths:</strong>
+- ✅ Validation messages clear
+- ✅ Server-side validation prevents bypass
+- ✅ Required fields marked</p>
+<p><strong>Weaknesses:</strong>
+- ❌ Client-side validation limited (jQuery 1.3.2)
+- ❌ No inline validation (validate as user types)
+- ❌ Full page reload to show validation errors
+- ❌ No visual feedback during validation (loading spinner)</p>
+<p><strong>Modern Alternative:</strong> Real-time inline validation with visual feedback as user types.</p>
+<h3 id="33-feedback-and-notifications">3.3 Feedback and Notifications</h3>
+<p><strong>Pattern:</strong> Page-level notifications after post-back</p>
+<p><strong>Notification Types:</strong>
+- Success messages (e.g., "Item added to basket")
+- Error messages (e.g., "Invalid email address")
+- Confirmation messages (e.g., "Order submitted")</p>
+<p><strong>Assessment:</strong> ⭐⭐ Poor by modern standards</p>
+<p><strong>Weaknesses:</strong>
+- ❌ No toast/banner notifications
+- ❌ No persistent notification center
+- ❌ No loading indicators during actions
+- ❌ Notifications disappear on page reload
+- ❌ No notification history</p>
+<p><strong>Modern Alternative:</strong> Toast notifications, persistent banner for important messages, loading indicators.</p>
+<hr/>
+<h2 id="4-accessibility-analysis">4. Accessibility Analysis</h2>
+<h3 id="41-accessibility-status-unknown-not-tested">4.1 Accessibility Status: ❌ UNKNOWN (Not Tested)</h3>
+<p><strong>Evidence:</strong> From <a href="../../analysis/accessibility-assessment.json">accessibility-assessment.json</a>: "accessibility_tested: false"</p>
+<h3 id="42-potential-accessibility-barriers">4.2 Potential Accessibility Barriers</h3>
+<p>Based on technology analysis (ASPX views, jQuery 1.3.2, server-side rendering):</p>
+<table>
+<thead>
+<tr>
+<th>Barrier Type</th>
+<th>Potential Issues</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Visual</strong></td>
+<td>Unknown color contrast, no captions for media</td>
+<td>Users with low vision cannot read content</td>
+</tr>
+<tr>
+<td><strong>Motor</strong></td>
+<td>Unknown keyboard navigation, small click targets</td>
+<td>Users with motor disabilities cannot navigate</td>
+</tr>
+<tr>
+<td><strong>Auditory</strong></td>
+<td>No transcripts for audio content (if any)</td>
+<td>Deaf users cannot access audio content</td>
+</tr>
+<tr>
+<td><strong>Cognitive</strong></td>
+<td>Complex checkout flow, unclear error messages</td>
+<td>Users with cognitive disabilities struggle with tasks</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-wcag-21-conformance-assessment-preliminary">4.3 WCAG 2.1 Conformance Assessment (Preliminary)</h3>
+<p><strong>Note:</strong> Full audit required for definitive assessment.</p>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Likely Status</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Perceivable</strong></td>
+<td>⚠️ Likely non-compliant</td>
+<td>Low (needs testing)</td>
+</tr>
+<tr>
+<td><strong>Operable</strong></td>
+<td>⚠️ Likely partial compliance</td>
+<td>Low (needs testing)</td>
+</tr>
+<tr>
+<td><strong>Understandable</strong></td>
+<td>⭐⭐⭐ Likely adequate</td>
+<td>Medium (simple structure)</td>
+</tr>
+<tr>
+<td><strong>Robust</strong></td>
+<td>⚠️ Likely partial compliance</td>
+<td>Low (old tech stack)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended Actions:</strong>
+1. Conduct automated accessibility scan (axe DevTools, WAVE)
+2. Manual keyboard navigation testing
+3. Screen reader testing (NVDA, JAWS, VoiceOver)
+4. Color contrast analysis
+5. ARIA implementation review</p>
+<p><strong>Full analysis:</strong> See <a href="../2.3-compliance-regulatory/#4-web-content-accessibility-guidelines-wcag">2.3 Compliance and Regulatory</a></p>
+<hr/>
+<h2 id="5-mobile-experience">5. Mobile Experience</h2>
+<h3 id="51-mobile-responsiveness-not-implemented">5.1 Mobile Responsiveness: ❌ NOT IMPLEMENTED</h3>
+<p><strong>Design Approach:</strong> Fixed-width desktop layout, no responsive design.</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/ui-inventory.json">ui-inventory.json</a>: No responsive design detected, fixed-width CSS.</p>
+<h3 id="52-mobile-user-experience-impact">5.2 Mobile User Experience Impact</h3>
+<p><strong>Current State on Mobile:</strong>
+- ❌ Pinch-and-zoom required to read content
+- ❌ Horizontal scrolling required
+- ❌ Small click targets (not touch-optimized)
+- ❌ Forms difficult to complete on mobile
+- ❌ No mobile-specific navigation (hamburger menu)
+- ❌ Images not optimized for mobile bandwidth</p>
+<p><strong>Business Impact:</strong>
+- <strong>Lost sales:</strong> Mobile users abandon site (70%+ of e-commerce traffic is mobile)
+- <strong>Poor SEO:</strong> Google penalizes non-mobile-friendly sites (mobile-first indexing)
+- <strong>Brand perception:</strong> Site appears outdated and unprofessional on mobile</p>
+<p><strong>Recommendation:</strong> Implement mobile-first responsive design using modern CSS frameworks (Bootstrap, Tailwind) or progressive web app (PWA) approach.</p>
+<h3 id="53-mobile-first-redesign-priorities">5.3 Mobile-First Redesign Priorities</h3>
+<p><strong>Phase 1 - Mobile-Responsive Layout:</strong>
+1. Responsive grid system (Bootstrap or custom)
+2. Touch-optimized buttons and links (44x44px minimum)
+3. Collapsible navigation (hamburger menu)
+4. Mobile-friendly forms (large input fields, appropriate keyboards)</p>
+<p><strong>Phase 2 - Mobile Enhancements:</strong>
+1. Image optimization for mobile bandwidth
+2. Lazy loading for images
+3. Mobile-optimized checkout flow
+4. Touch gestures (swipe, pinch-to-zoom on product images)</p>
+<p><strong>Phase 3 - Progressive Web App:</strong>
+1. Add to home screen capability
+2. Offline support (service workers)
+3. Push notifications (order updates)
+4. App-like experience</p>
+<hr/>
+<h2 id="6-performance-and-user-experience">6. Performance and User Experience</h2>
+<h3 id="61-perceived-performance">6.1 Perceived Performance</h3>
+<p><strong>Page Load Experience:</strong>
+- ⏱️ No performance metrics collected
+- ⚠️ Full page reloads for every interaction (slow perception)
+- ❌ No loading indicators (users uncertain if action processing)
+- ❌ No progressive rendering (all-or-nothing page load)</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/performance-profile.json">performance-profile.json</a>: No APM, no metrics.</p>
+<p><strong>Recommendation:</strong> Implement:
+1. Application Performance Monitoring (APM)
+2. Loading indicators during page transitions
+3. Progressive enhancement (render critical content first)
+4. AJAX for dynamic updates (avoid full page reloads)</p>
+<h3 id="62-user-flow-efficiency">6.2 User Flow Efficiency</h3>
+<p><strong>Metrics:</strong></p>
+<table>
+<thead>
+<tr>
+<th>User Flow</th>
+<th>Steps</th>
+<th>Page Loads</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add to Basket</td>
+<td>3 clicks</td>
+<td>3 page loads</td>
+<td>⚠️ Could be optimized</td>
+</tr>
+<tr>
+<td>Update Basket Quantity</td>
+<td>2 clicks</td>
+<td>2 page loads</td>
+<td>⚠️ Should be AJAX</td>
+</tr>
+<tr>
+<td>First-Time Checkout</td>
+<td>10+ clicks</td>
+<td>10+ page loads</td>
+<td>⚠️ High friction</td>
+</tr>
+<tr>
+<td>Returning Customer Checkout</td>
+<td>5 clicks</td>
+<td>5 page loads</td>
+<td>⭐⭐⭐ Acceptable</td>
+</tr>
+<tr>
+<td>View Order History</td>
+<td>3 clicks</td>
+<td>3 page loads</td>
+<td>⭐⭐⭐⭐ Good</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Optimization Opportunities:</strong>
+- AJAX basket updates (reduce page loads)
+- Guest checkout (reduce steps for first-time buyers)
+- One-click checkout for returning customers (saved payment methods)</p>
+<hr/>
+<h2 id="7-ux-modernization-roadmap">7. UX Modernization Roadmap</h2>
+<h3 id="71-phase-1-critical-ux-improvements-3-months">7.1 Phase 1: Critical UX Improvements (3 months)</h3>
+<p><strong>Priority: Mobile and Performance</strong></p>
+<ol>
+<li><strong>Mobile-Responsive Design</strong> (6-8 weeks)</li>
+<li>Implement responsive CSS framework</li>
+<li>Touch-optimized interactions</li>
+<li>Mobile-friendly navigation</li>
+<li>
+<p>Viewport optimization</p>
+</li>
+<li>
+<p><strong>Performance Optimization</strong> (2-3 weeks)</p>
+</li>
+<li>Implement APM (Application Insights)</li>
+<li>Add loading indicators</li>
+<li>Optimize images</li>
+<li>
+<p>Enable caching</p>
+</li>
+<li>
+<p><strong>Guest Checkout</strong> (2-3 weeks)</p>
+</li>
+<li>Remove registration barrier</li>
+<li>Optional account creation after order</li>
+<li>Reduce cart abandonment</li>
+</ol>
+<p><strong>Expected Impact:</strong>
+- 📈 Increase mobile conversion rate by 30-50%
+- 📈 Reduce cart abandonment by 20-25%
+- 📈 Improve SEO ranking (mobile-first indexing)</p>
+<h3 id="72-phase-2-interaction-enhancement-3-6-months">7.2 Phase 2: Interaction Enhancement (3-6 months)</h3>
+<p><strong>Priority: Dynamic Interactions and Feedback</strong></p>
+<ol>
+<li><strong>AJAX-Based Interactions</strong> (4-6 weeks)</li>
+<li>AJAX basket updates (no page reload)</li>
+<li>Dynamic product filtering</li>
+<li>Inline form validation</li>
+<li>
+<p>Toast notifications</p>
+</li>
+<li>
+<p><strong>Product Discovery</strong> (3-4 weeks)</p>
+</li>
+<li>Product search implementation</li>
+<li>Faceted search and advanced filtering</li>
+<li>Product recommendations</li>
+<li>
+<p>Sorting options (price, popularity)</p>
+</li>
+<li>
+<p><strong>Enhanced Basket</strong> (2-3 weeks)</p>
+</li>
+<li>Save for later / wishlist</li>
+<li>Promo code field</li>
+<li>Cross-sell recommendations</li>
+<li>Persistent basket indicator</li>
+</ol>
+<p><strong>Expected Impact:</strong>
+- 📈 Increase average order value by 15-20% (recommendations, cross-sell)
+- 📈 Improve user satisfaction scores
+- 📈 Reduce support inquiries (better self-service)</p>
+<h3 id="73-phase-3-advanced-ux-6-12-months">7.3 Phase 3: Advanced UX (6-12 months)</h3>
+<p><strong>Priority: Personalization and Engagement</strong></p>
+<ol>
+<li><strong>Personalization Engine</strong> (8-10 weeks)</li>
+<li>Personalized product recommendations</li>
+<li>Browsing history and favorites</li>
+<li>Personalized email campaigns</li>
+<li>
+<p>Dynamic homepage content</p>
+</li>
+<li>
+<p><strong>Order Tracking and Management</strong> (4-6 weeks)</p>
+</li>
+<li>Real-time order tracking</li>
+<li>Shipment notifications</li>
+<li>Order cancellation/modification</li>
+<li>
+<p>Returns and refunds portal</p>
+</li>
+<li>
+<p><strong>Progressive Web App (PWA)</strong> (6-8 weeks)</p>
+</li>
+<li>Add to home screen</li>
+<li>Offline support</li>
+<li>Push notifications</li>
+<li>
+<p>App-like experience</p>
+</li>
+<li>
+<p><strong>Accessibility Remediation</strong> (6-8 weeks)</p>
+</li>
+<li>WCAG 2.1 Level AA compliance</li>
+<li>Screen reader optimization</li>
+<li>Keyboard navigation</li>
+<li>ARIA implementation</li>
+</ol>
+<p><strong>Expected Impact:</strong>
+- 📈 Increase customer retention by 20-30%
+- 📈 Reduce customer service costs (self-service order management)
+- 📈 Expand addressable market (accessibility compliance)</p>
+<hr/>
+<h2 id="8-summary-and-recommendations">8. Summary and Recommendations</h2>
+<h3 id="81-current-ux-strengths">8.1 Current UX Strengths</h3>
+<ol>
+<li>✅ <strong>Simple and Clear:</strong> Uncluttered interface, easy to understand</li>
+<li>✅ <strong>Logical Workflows:</strong> User journeys follow expected e-commerce patterns</li>
+<li>✅ <strong>Functional Core:</strong> All essential e-commerce features work correctly</li>
+<li>✅ <strong>Saved Addresses:</strong> Streamlines returning customer experience</li>
+</ol>
+<h3 id="82-critical-ux-gaps">8.2 Critical UX Gaps</h3>
+<ol>
+<li>❌ <strong>Not Mobile-Responsive:</strong> 70%+ of traffic excluded from good experience</li>
+<li>❌ <strong>Forced Registration:</strong> High cart abandonment risk for first-time buyers</li>
+<li>❌ <strong>Slow Interactions:</strong> Full page reloads make site feel sluggish</li>
+<li>❌ <strong>No Order Tracking:</strong> Customers cannot track shipments post-purchase</li>
+<li>❌ <strong>Accessibility Unknown:</strong> Likely non-compliant with WCAG, legal risk</li>
+</ol>
+<h3 id="83-recommendations-summary">8.3 Recommendations Summary</h3>
+<p><strong>Immediate Actions (Next 3 Months):</strong>
+1. 🎯 Implement mobile-responsive design (highest ROI)
+2. 🎯 Add guest checkout option (reduce cart abandonment)
+3. 🎯 Implement APM and loading indicators (improve perceived performance)
+4. 🎯 Conduct accessibility audit (identify and fix critical issues)</p>
+<p><strong>Short-Term Actions (3-6 Months):</strong>
+1. 🔄 Implement AJAX interactions (faster, smoother experience)
+2. 🔄 Add product search and advanced filtering
+3. 🔄 Enhance basket with wishlist and recommendations
+4. 🔄 Begin WCAG remediation</p>
+<p><strong>Long-Term Actions (6-12 Months):</strong>
+1. 🚀 Implement personalization engine
+2. 🚀 Add order tracking and self-service order management
+3. 🚀 Consider Progressive Web App approach
+4. 🚀 Achieve WCAG 2.1 Level AA compliance</p>
+<hr/>
+<p><strong>Document End</strong></p>
+<p><strong>Related Documents:</strong>
+- <a href="../2.1-business-domain-model/">2.1 Business Domain Model</a>
+- <a href="../2.2-requirements-specification/">2.2 Requirements Specification</a>
+- <a href="../2.3-compliance-regulatory/">2.3 Compliance and Regulatory</a></p>
+<p><strong>Change Log:</strong>
+| Date | Version | Author | Changes |
+|------|---------|--------|---------|
+| 2026-06-09 | 1.0 | Business Analyst AI | Initial UX analysis |</p></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script src="../../../js/bootstrap.bundle.min.js"></script>
+<script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script src="../../../js/base.js"></script>
+<script src="../../../search/main.js"></script>
+<script src="../../../assets/javascripts/panzoom.min.js"></script>
+<script src="../../../assets/javascripts/zoompan.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>

@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Architecture Documentation Summary - Project Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../assets/stylesheets/panzoom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <meta name="panzoom-theme" content="mkdocs">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Project Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../EXECUTIVE-SUMMARY/" class="nav-link">Executive Summary</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Quickstart</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../QUICK-START-ARCHITECT/" class="dropdown-item">Architect</a>
+</li>
+                                    
+<li>
+    <a href="../../QUICK-START-DEVELOPER/" class="dropdown-item">Developer</a>
+</li>
+                                    
+<li>
+    <a href="../../QUICK-START-EXECUTIVE/" class="dropdown-item">Executive</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Current State</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../CURRENT-STATE/1-architecture/1.1-system-architecture/" class="dropdown-item">System Architecture</a>
+</li>
+            
+<li>
+    <a href="../../CURRENT-STATE/1-architecture/1.2-data-architecture/" class="dropdown-item">Data Architecture</a>
+</li>
+            
+<li>
+    <a href="../../CURRENT-STATE/1-architecture/1.3-api-integration-catalog/" class="dropdown-item">API Integration Catalog</a>
+</li>
+            
+<li>
+    <a href="../../CURRENT-STATE/1-architecture/1.4-project-inventory/" class="dropdown-item">Project Inventory</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Business</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../CURRENT-STATE/2-business/2.1-business-domain-model/" class="dropdown-item">Business Domain Model</a>
+</li>
+            
+<li>
+    <a href="../../CURRENT-STATE/2-business/2.2-requirements-specification/" class="dropdown-item">Requirements Specification</a>
+</li>
+            
+<li>
+    <a href="../../CURRENT-STATE/2-business/2.3-compliance-regulatory/" class="dropdown-item">Compliance & Regulatory</a>
+</li>
+            
+<li>
+    <a href="../../CURRENT-STATE/2-business/2.4-user-experience-analysis/" class="dropdown-item">User Experience Analysis</a>
+</li>
+            
+<li>
+    <a href="../../CURRENT-STATE/2-business/2.5-localization-i18n/" class="dropdown-item">Localization & I18n</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Modernization</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Strategy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../MODERNIZATION/2-strategy/2.1-executive-summary/" class="dropdown-item">Executive Summary</a>
+</li>
+            
+<li>
+    <a href="../../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/" class="dropdown-item">Stakeholder Matrix</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Generation Summaries</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Architecture Documentation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../business-documentation-summary/" class="dropdown-item">Business Documentation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../compilation-summary/" class="dropdown-item">Compilation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../pre-analysis-summary/" class="dropdown-item">Pre-Analysis Summary</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../GLOSSARY/" class="nav-link">Glossary</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../business-documentation-summary/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#architecture-documentation-generation-summary" class="nav-link">Architecture Documentation Generation Summary</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#executive-summary" class="nav-link">Executive Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#documents-generated" class="nav-link">Documents Generated</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#key-architecture-findings" class="nav-link">Key Architecture Findings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#technology-obsolescence-summary" class="nav-link">Technology Obsolescence Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#modernization-roadmap-high-level" class="nav-link">Modernization Roadmap (High-Level)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#document-quality-validation" class="nav-link">Document Quality Validation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#remaining-documentation-not-yet-generated" class="nav-link">Remaining Documentation (Not Yet Generated)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#recommendations" class="nav-link">Recommendations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#document-maintenance" class="nav-link">Document Maintenance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conclusion" class="nav-link">Conclusion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="architecture-documentation-generation-summary">Architecture Documentation Generation Summary</h1>
+<p><strong>Generated:</strong> 2026-06-09<br />
+<strong>Solution:</strong> Agathas.Storefront E-commerce Application<br />
+<strong>Analysis Source:</strong> 60 analysis JSON files + codebase inspection<br />
+<strong>Documentation Standard:</strong> C4 Model, ADR, ISO/IEC/IEEE 42010</p>
+<hr />
+<h2 id="executive-summary">Executive Summary</h2>
+<p>Comprehensive architecture documentation has been generated for the Agathas.Storefront solution, a legacy ASP.NET MVC 2 e-commerce application built circa 2010. The documentation reveals a well-architected system following Domain-Driven Design and layered architecture principles, but requiring critical modernization due to technology obsolescence and security vulnerabilities.</p>
+<p><strong>Key Findings:</strong>
+- <strong>Strong Architecture Foundation:</strong> Excellent DDD implementation, clean separation of concerns, SOLID principles
+- <strong>Critical Technical Debt:</strong> .NET Framework 3.5/4.0 obsolescence, jQuery 1.3.2 security vulnerabilities, SQL Server User Instance deprecated
+- <strong>Modernization Imperative:</strong> Requires migration to .NET 6+, ASP.NET Core, modern authentication, cloud-ready infrastructure</p>
+<hr />
+<h2 id="documents-generated">Documents Generated</h2>
+<h3 id="current-state-architecture-documentation-4-documents">CURRENT-STATE Architecture Documentation (4 documents)</h3>
+<h4 id="11-system-architecture-complete-15000-words">1.1 System Architecture (✅ COMPLETE - 15,000+ words)</h4>
+<p><strong>Location:</strong> <code>.solutiondocs/CURRENT-STATE/1-architecture/1.1-system-architecture.md</code></p>
+<p><strong>Contents:</strong>
+- <strong>C4 Architecture Diagrams:</strong>
+  - Level 1: System Context (external dependencies: PayPal, Janrain, SMTP, SQL Server)
+  - Level 2: Container Diagram (7 projects, database architecture)
+  - Level 3: Component Diagram (controllers, services, repositories, cross-cutting concerns)
+  - Level 4: Code Structure (sequence diagrams showing request flows)</p>
+<ul>
+<li><strong>Architectural Patterns Documented (9 patterns):</strong></li>
+<li>Layered Architecture (N-Tier) - 5 layers with unidirectional dependencies</li>
+<li>Domain-Driven Design - Aggregates, entities, value objects, domain events</li>
+<li>Repository Pattern - Clean data access abstraction</li>
+<li>Unit of Work Pattern - Transaction management</li>
+<li>Service Layer Pattern - Business logic orchestration</li>
+<li>Dependency Injection - StructureMap IoC container</li>
+<li>State Pattern - Order state management</li>
+<li>Factory Pattern - Object creation</li>
+<li>
+<p>Domain Events - In-process event bus</p>
+</li>
+<li>
+<p><strong>Architectural Characteristics Analysis:</strong></p>
+</li>
+<li>Performance: ⚠️ Medium (no caching, synchronous only)</li>
+<li>Scalability: ❌ Low (monolithic, no distributed caching)</li>
+<li>Availability: ❌ Low (single point of failure, LocalDB)</li>
+<li>Reliability: ✅ Medium (good error handling, transactions)</li>
+<li>Maintainability: ✅ High (excellent layering, DDD patterns)</li>
+<li>Security: ❌ Critical (outdated frameworks, plaintext secrets, vulnerabilities)</li>
+<li>Testability: ✅ High (interface-based, DI, but no tests exist)</li>
+<li>Portability: ❌ Low (Windows/.NET Framework only)</li>
+<li>Observability: ⚠️ Low (basic logging, no APM)</li>
+<li>
+<p>Deployability: ⚠️ Medium (manual deployment, no CI/CD)</p>
+</li>
+<li>
+<p><strong>Technology Stack Inventory:</strong></p>
+</li>
+<li>Complete listing of all technologies with versions and status</li>
+<li>
+<p>Obsolescence assessment (jQuery 1.3.2, ASP.NET MVC 2, .NET 3.5/4.0 all critical)</p>
+</li>
+<li>
+<p><strong>Architectural Decision Records (10 ADRs):</strong></p>
+</li>
+<li>ADR-001: .NET Framework and ASP.NET MVC selection</li>
+<li>ADR-002: NHibernate as ORM</li>
+<li>ADR-003: Layered Architecture with DDD</li>
+<li>ADR-004: StructureMap for Dependency Injection</li>
+<li>ADR-005: Request/Response Messaging Pattern</li>
+<li>ADR-006: PayPal Standard Payments Integration</li>
+<li>ADR-007: SQL Server LocalDB with User Instance (DEPRECATED)</li>
+<li>ADR-008: Domain Events with Static Class</li>
+<li>ADR-009: ASPX View Engine (SUPERSEDED)</li>
+<li>
+<p>ADR-010: No Caching Implementation (DEFERRED)</p>
+</li>
+<li>
+<p><strong>Technical Debt Analysis:</strong></p>
+</li>
+<li>P0 (Critical): .NET obsolescence, jQuery CVEs, SQL User Instance, plaintext secrets</li>
+<li>P1 (High): NHibernate upgrade, StructureMap replacement, no monitoring</li>
+<li>P2 (Medium): No CI/CD, no unit tests, synchronous-only processing</li>
+</ul>
+<p><strong>Key Metrics:</strong>
+- 7 Visual Studio projects
+- 9 MVC controllers
+- ~30 HTTP endpoints
+- 4 business services
+- 15 domain entities
+- 5 architectural layers</p>
+<hr />
+<h4 id="12-data-architecture-complete-12000-words">1.2 Data Architecture (✅ COMPLETE - 12,000+ words)</h4>
+<p><strong>Location:</strong> <code>.solutiondocs/CURRENT-STATE/1-architecture/1.2-data-architecture.md</code></p>
+<p><strong>Contents:</strong>
+- <strong>Data Storage Inventory:</strong>
+  - Primary: SQL Server Express LocalDB (Shop database)
+  - Secondary: SQL Server Express LocalDB (aspnetdb for Membership)
+  - File Storage: App_Data (MDF files), C:\logs\ (Log4Net)
+  - Caching: NHibernate first-level cache (session-scoped), no second-level cache
+  - Message Queues: None (no async processing)
+  - Configuration: Web.config (plaintext secrets - security issue)</p>
+<ul>
+<li><strong>Database Schema Documentation:</strong></li>
+<li>Complete Entity-Relationship Diagram (Mermaid)</li>
+<li>15 core tables organized into 5 aggregate clusters:<ul>
+<li>Product Catalog (ProductTitle, Product, Brand, Category, ProductSize, ProductColor)</li>
+<li>Shopping Basket (Basket, BasketItem)</li>
+<li>Order Processing (Order, OrderItem, Payment)</li>
+<li>Customer Management (Customer, DeliveryAddress)</li>
+<li>Shipping (DeliveryOption, ShippingService, Courier)</li>
+</ul>
+</li>
+<li>Table definitions with columns, types, constraints</li>
+<li>Relationships and foreign keys explained</li>
+<li>
+<p>Critical design patterns (soft delete, price snapshotting, audit trails)</p>
+</li>
+<li>
+<p><strong>Data Flow Diagrams:</strong></p>
+</li>
+<li>Read operation flow (product catalog browse with NHibernate caching)</li>
+<li>Write operation flow (add item to basket with transaction management)</li>
+<li>
+<p>Order submission flow (complex transaction with domain events and PayPal)</p>
+</li>
+<li>
+<p><strong>ORM and Data Access Patterns:</strong></p>
+</li>
+<li>NHibernate 2.1 with HBM.XML mappings</li>
+<li>Repository pattern implementations</li>
+<li>Unit of Work pattern (session per HTTP request)</li>
+<li>Query object pattern</li>
+<li>
+<p>Lazy loading and N+1 problem analysis</p>
+</li>
+<li>
+<p><strong>Data Security and Compliance:</strong></p>
+</li>
+<li>Authentication data storage (ASP.NET Membership with SHA1 hashing - weak)</li>
+<li>Sensitive data inventory (PII, passwords, payment IDs, addresses)</li>
+<li>Compliance gaps (PCI-DSS, GDPR, CCPA)</li>
+<li>Encryption assessment (no encryption at rest, depends on IIS for HTTPS)</li>
+<li>
+<p>SQL injection prevention (NHibernate parameterized queries - good)</p>
+</li>
+<li>
+<p><strong>Performance Considerations:</strong></p>
+</li>
+<li>Query performance risks (N+1 queries, no second-level caching)</li>
+<li>Connection pool management</li>
+<li>Performance monitoring gaps</li>
+<li>
+<p>Recommended database indexes</p>
+</li>
+<li>
+<p><strong>Backup and Recovery:</strong></p>
+</li>
+<li>Current state: NO AUTOMATED BACKUPS</li>
+<li>Critical gaps (no RPO/RTO, no point-in-time recovery)</li>
+<li>
+<p>Recommended backup strategy (full daily, transaction log every 15 min)</p>
+</li>
+<li>
+<p><strong>Data Migration and ETL:</strong></p>
+</li>
+<li>No schema versioning (schema inferred from HBM.XML)</li>
+<li>
+<p>Recommended migration tools (FluentMigrator, DbUp, EF Core Migrations)</p>
+</li>
+<li>
+<p><strong>Monitoring and Diagnostics:</strong></p>
+</li>
+<li>Current capabilities: Limited (Log4Net file logging only)</li>
+<li>Observability gaps (no query performance tracking, no alerting)</li>
+<li>
+<p>Recommended monitoring (SQL Extended Events, Application Insights)</p>
+</li>
+<li>
+<p><strong>Future Considerations:</strong></p>
+</li>
+<li>Short-term: Migrate from User Instance, schema versioning, caching, backups</li>
+<li>Medium-term: NHibernate upgrade, read replicas, encryption, audit logging</li>
+<li>Long-term: Cloud migration (Azure SQL/AWS RDS), microservices data strategy</li>
+</ul>
+<p><strong>Key Issues Identified:</strong>
+- ❌ SQL Server User Instance (deprecated, not production-ready)
+- ❌ No automated backups
+- ❌ No encryption at rest
+- ❌ SHA1 password hashing (weak)
+- ❌ No second-level caching
+- ❌ No schema versioning</p>
+<hr />
+<h4 id="13-api-integration-catalog-complete-10000-words">1.3 API Integration Catalog (✅ COMPLETE - 10,000+ words)</h4>
+<p><strong>Location:</strong> <code>.solutiondocs/CURRENT-STATE/1-architecture/1.3-api-integration-catalog.md</code></p>
+<p><strong>Important Note:</strong> This is an ASP.NET MVC server-side application, NOT a REST API. Document catalogs MVC endpoints and external integrations.</p>
+<p><strong>Contents:</strong>
+- <strong>MVC Endpoint Catalog:</strong>
+  - 9 Controllers documented with all actions
+  - HomeController - Landing page with featured products
+  - ProductController - Catalog browsing, search (GET endpoints + AJAX JSON endpoint)
+  - BasketController - Shopping cart operations (POST endpoints + AJAX quantity update)
+  - CheckoutController - Order submission ([Authorize] required)
+  - PaymentController - PayPal callback handling
+  - OrderController - Order history ([Authorize] required)
+  - CustomerController - Account management ([Authorize] required)
+  - AccountLogOnController - Login (local + Janrain social login)
+  - AccountRegisterController - User registration</p>
+<ul>
+<li><strong>Total:</strong> ~30 HTTP endpoints</li>
+<li><strong>HTML Endpoints:</strong> 25 (server-side rendered ASPX views)</li>
+<li>
+<p><strong>JSON Endpoints:</strong> 2 (AJAX product search, basket quantity update)</p>
+</li>
+<li>
+<p><strong>External API Dependencies (3 integrations):</strong></p>
+</li>
+</ul>
+<p><strong>1. PayPal Standard Payments:</strong>
+  - Integration: Redirect-based payment (Form POST)
+  - Endpoint: https://www.sandbox.paypal.com/cgi-bin/webscr
+  - Purpose: Credit card payment processing
+  - Authentication: Business email (no API key)
+  - Criticality: CRITICAL - Blocks revenue if unavailable
+  - Issues: Sandbox mode, no IPN, no signature verification, API key in plaintext
+  - Sequence diagram provided</p>
+<p><strong>2. Janrain Social Authentication:</strong>
+  - Integration: OAuth callback
+  - Purpose: Facebook/Google/Twitter login
+  - Authentication: API key in Web.config (plaintext)
+  - Criticality: High - Reduces registration friction
+  - Issues: Legacy provider, API key in plaintext
+  - Sequence diagram provided</p>
+<p><strong>3. SMTP Email Server:</strong>
+  - Integration: SMTP protocol
+  - Purpose: Order confirmations, transactional emails
+  - Authentication: Username/password in Web.config (plaintext)
+  - Criticality: Medium - Non-blocking (logged if fails)
+  - Fallback: TextLoggingEmailService for development
+  - Issues: Synchronous sending (blocks request), no retry, no tracking</p>
+<ul>
+<li><strong>Integration Sequence Diagrams:</strong></li>
+<li>
+<p>Complete purchase flow (end-to-end: basket → checkout → PayPal → confirmation)</p>
+</li>
+<li>
+<p><strong>API Security Analysis:</strong></p>
+</li>
+<li>Authentication mechanisms (Forms Auth + Janrain)</li>
+<li>Authorization model (attribute-based, coarse-grained)</li>
+<li>Security vulnerabilities (plaintext secrets, no HTTPS enforcement, jQuery CVEs, no CSRF, no rate limiting)</li>
+<li>
+<p>OWASP Top 10 assessment</p>
+</li>
+<li>
+<p><strong>Performance Characteristics:</strong></p>
+</li>
+<li>Estimated response times (cannot measure from static analysis)</li>
+<li>
+<p>Bottlenecks identified (no caching, N+1 queries, synchronous email, User Instance DB)</p>
+</li>
+<li>
+<p><strong>API Limitations:</strong></p>
+</li>
+<li>No REST API (cannot build mobile apps or third-party integrations)</li>
+<li>No API gateway</li>
+<li>No versioning</li>
+<li>
+<p>Session-based auth (not suitable for APIs)</p>
+</li>
+<li>
+<p><strong>Monitoring and Observability:</strong></p>
+</li>
+<li>Current state: Log4Net file logging only</li>
+<li>Gaps: No request tracking, no performance metrics, no integration monitoring</li>
+<li>
+<p>Recommendations: Application Insights, health check endpoints, distributed tracing</p>
+</li>
+<li>
+<p><strong>Migration Recommendations:</strong></p>
+</li>
+<li>Short-term: API key authentication for AJAX, rate limiting, health checks</li>
+<li>Medium-term: Extract REST API layer, API gateway, OpenAPI/Swagger, JWT tokens</li>
+<li>Long-term: Migrate to ASP.NET Core Web API, GraphQL (optional), event-driven architecture</li>
+</ul>
+<p><strong>Key Issues:</strong>
+- ❌ No REST API (limits integrations)
+- ❌ Plaintext secrets in Web.config
+- ❌ No rate limiting or API gateway
+- ❌ External dependencies single points of failure
+- ❌ No monitoring of integration health</p>
+<hr />
+<h4 id="14-project-inventory-complete-8000-words">1.4 Project Inventory (✅ COMPLETE - 8,000+ words)</h4>
+<p><strong>Location:</strong> <code>.solutiondocs/CURRENT-STATE/1-architecture/1.4-project-inventory.md</code></p>
+<p><strong>Contents:</strong>
+- <strong>Solution Overview:</strong>
+  - Solution: Agathas.Storefront.sln
+  - Visual Studio 2010 (upgraded from VS 2008)
+  - Total Projects: 7 (1 web app + 6 class libraries)
+  - Mixed .NET versions: .NET 4.0 (web) + .NET 3.5 (libraries)</p>
+<ul>
+<li><strong>Project Catalog (all 7 projects documented):</strong></li>
+</ul>
+<p><strong>1. Agathas.Storefront.UI.Web.MVC (.NET 4.0)</strong>
+  - ASP.NET MVC Web Application
+  - Responsibilities: Web hosting, routing, DI bootstrapping, static content
+  - Technologies: ASP.NET MVC 2, jQuery 1.3.2, StructureMap, ASPX views
+  - Dependencies: All other projects (composition root)</p>
+<p><strong>2. Agathas.Storefront.Controllers (.NET 3.5)</strong>
+  - Class Library
+  - Responsibilities: MVC controllers, view models, JSON DTOs, AutoMapper config
+  - 9 controllers documented
+  - Dependencies: Services, Model, Infrastructure</p>
+<p><strong>3. Agathas.Storefront.Services (.NET 3.5)</strong>
+  - Class Library
+  - Responsibilities: Business services, request/response messaging, domain event handlers
+  - 4 service interfaces implemented
+  - Technologies: AutoMapper, CQRS-style messaging, Domain Events
+  - Dependencies: Model, Infrastructure</p>
+<p><strong>4. Agathas.Storefront.Services.Cache (.NET 3.5)</strong>
+  - Class Library
+  - Responsibilities: Caching decorators (NOT ACTIVE - decorator exists but not registered)
+  - Dependencies: Services</p>
+<p><strong>5. Agathas.Storefront.Model (.NET 3.5)</strong>
+  - Class Library
+  - Responsibilities: Domain entities, aggregates, business rules, repository interfaces
+  - Technologies: DDD, Aggregate Root, Domain Events, State Pattern
+  - Dependencies: Infrastructure (base classes only)</p>
+<p><strong>6. Agathas.Storefront.Infrastructure (.NET 3.5)</strong>
+  - Class Library (FOUNDATION LAYER)
+  - Responsibilities: Authentication, logging, email, payments, configuration, domain base classes
+  - Technologies: Log4Net, StructureMap, ASP.NET Membership, Janrain, PayPal
+  - Dependencies: NONE (foundation layer)</p>
+<p><strong>7. Agathas.Storefront.Repository.NHibernate (.NET 3.5)</strong>
+  - Class Library
+  - Responsibilities: Repository implementations, NHibernate session management, HBM.XML mappings
+  - Technologies: NHibernate 2.1, LinFu, Iesi.Collections
+  - Dependencies: Model, Infrastructure</p>
+<ul>
+<li><strong>Dependency Graph:</strong></li>
+<li>Visual dependency graph (ASCII art)</li>
+<li>Dependency matrix (7x7 table)</li>
+<li>No circular dependencies detected ✅</li>
+<li>
+<p>Infrastructure has zero dependencies ✅</p>
+</li>
+<li>
+<p><strong>Framework and Technology Versions:</strong></p>
+</li>
+<li>Table of all library versions with obsolescence status</li>
+<li>jQuery 1.3.2: CRITICAL (CVEs)</li>
+<li>ASP.NET MVC 2: Obsolete</li>
+<li>StructureMap 2.5: Sunset</li>
+<li>AutoMapper 1.0: Extremely old</li>
+<li>
+<p>NHibernate 2.1: Very old (current is 5.x)</p>
+</li>
+<li>
+<p><strong>Build Configuration:</strong></p>
+</li>
+<li>Configurations: Debug, Release</li>
+<li>Platform: Any CPU</li>
+<li>Build tools: MSBuild, Visual Studio 2010</li>
+<li>
+<p>NO CI/CD detected</p>
+</li>
+<li>
+<p><strong>Architectural Layers:</strong></p>
+</li>
+<li>Layer mapping (5 layers)</li>
+<li>Presentation (UI.Web.MVC, Controllers)</li>
+<li>Business Logic (Services, Services.Cache)</li>
+<li>Domain (Model)</li>
+<li>Data Access (Repository.NHibernate)</li>
+<li>
+<p>Infrastructure (Infrastructure)</p>
+</li>
+<li>
+<p><strong>Testing Projects:</strong></p>
+</li>
+<li>Status: ❌ NO TEST PROJECTS DETECTED</li>
+<li>Impact: High regression risk, unknown coverage</li>
+<li>
+<p>Recommendations: Add test projects for each layer</p>
+</li>
+<li>
+<p><strong>Migration Considerations:</strong></p>
+</li>
+<li>.NET Framework → .NET 6+ migration options</li>
+<li>Dependency modernization table</li>
+<li>Recommended modern solution structure</li>
+<li>Project reorganization (src/, tests/, docs/ folders)</li>
+</ul>
+<p><strong>Key Issues:</strong>
+- ⚠️ Mixed .NET versions (4.0 web, 3.5 libraries)
+- ❌ No test projects
+- ❌ All dependencies obsolete or very old
+- ❌ No CI/CD automation</p>
+<hr />
+<h2 id="key-architecture-findings">Key Architecture Findings</h2>
+<h3 id="strengths">Strengths</h3>
+<ol>
+<li><strong>Excellent Architectural Design (2010 era):</strong></li>
+<li>Clean layered architecture with clear separation of concerns</li>
+<li>Strong Domain-Driven Design implementation</li>
+<li>Proper use of architectural patterns (Repository, Unit of Work, DDD)</li>
+<li>No circular dependencies</li>
+<li>
+<p>SOLID principles followed</p>
+</li>
+<li>
+<p><strong>Good Code Organization:</strong></p>
+</li>
+<li>Separate projects for each architectural concern</li>
+<li>Controllers separated from web project for testability</li>
+<li>Infrastructure layer has no dependencies (true foundation)</li>
+<li>
+<p>Interface-based abstractions throughout</p>
+</li>
+<li>
+<p><strong>Business Logic Encapsulation:</strong></p>
+</li>
+<li>Rich domain model with encapsulated business rules</li>
+<li>Domain events for decoupling</li>
+<li>Aggregate roots enforce consistency</li>
+<li>State pattern for order management</li>
+</ol>
+<h3 id="critical-weaknesses">Critical Weaknesses</h3>
+<ol>
+<li><strong>Technology Obsolescence (CRITICAL):</strong></li>
+<li>.NET Framework 3.5/4.0: Out of mainstream support, security risk</li>
+<li>ASP.NET MVC 2: Obsolete (2010), no updates since 2011</li>
+<li>jQuery 1.3.2: Multiple known CVEs (XSS, CSRF)</li>
+<li>SQL Server User Instance: Deprecated, removed in SQL 2014</li>
+<li>StructureMap 2.5: Project discontinued</li>
+<li>AutoMapper 1.0: Extremely outdated (current is 12.x)</li>
+<li>
+<p>NHibernate 2.1: Very old (current is 5.x)</p>
+</li>
+<li>
+<p><strong>Security Vulnerabilities (CRITICAL):</strong></p>
+</li>
+<li>Plaintext secrets in Web.config (PayPal, Janrain, SMTP, connection strings)</li>
+<li>No HTTPS enforcement</li>
+<li>SHA1 password hashing (weak by modern standards)</li>
+<li>jQuery CVEs exploitable</li>
+<li>No CSRF protection</li>
+<li>No rate limiting</li>
+<li>
+<p>No encryption at rest</p>
+</li>
+<li>
+<p><strong>Production-Readiness (CRITICAL):</strong></p>
+</li>
+<li>SQL Server User Instance not production-ready</li>
+<li>No automated backups</li>
+<li>No high availability or redundancy</li>
+<li>No monitoring or observability (beyond basic logging)</li>
+<li>No health checks</li>
+<li>
+<p>Manual deployment (no CI/CD)</p>
+</li>
+<li>
+<p><strong>Scalability Limitations (HIGH):</strong></p>
+</li>
+<li>Monolithic architecture (single process)</li>
+<li>HttpContext-scoped Unit of Work prevents horizontal scaling</li>
+<li>No distributed caching</li>
+<li>No asynchronous processing</li>
+<li>
+<p>Single database file (LocalDB)</p>
+</li>
+<li>
+<p><strong>Quality Gaps (HIGH):</strong></p>
+</li>
+<li>No unit tests</li>
+<li>No integration tests</li>
+<li>No test automation</li>
+<li>No code coverage metrics</li>
+<li>High regression risk</li>
+</ol>
+<hr />
+<h2 id="technology-obsolescence-summary">Technology Obsolescence Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Version</th>
+<th>Status</th>
+<th>Risk Level</th>
+<th>Current Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.NET Framework</td>
+<td>3.5/4.0</td>
+<td>Out of mainstream support</td>
+<td><strong>CRITICAL</strong></td>
+<td>.NET 8</td>
+</tr>
+<tr>
+<td>ASP.NET MVC</td>
+<td>2.0</td>
+<td>Obsolete (2010)</td>
+<td><strong>CRITICAL</strong></td>
+<td>ASP.NET Core 8</td>
+</tr>
+<tr>
+<td>jQuery</td>
+<td>1.3.2</td>
+<td>Known CVEs</td>
+<td><strong>CRITICAL</strong></td>
+<td>3.7.1</td>
+</tr>
+<tr>
+<td>SQL Server User Instance</td>
+<td>N/A</td>
+<td>Deprecated/Removed</td>
+<td><strong>CRITICAL</strong></td>
+<td>Standard instance</td>
+</tr>
+<tr>
+<td>StructureMap</td>
+<td>2.5</td>
+<td>Discontinued</td>
+<td>High</td>
+<td>MS DI</td>
+</tr>
+<tr>
+<td>AutoMapper</td>
+<td>1.0</td>
+<td>Extremely old</td>
+<td>Medium</td>
+<td>12.x</td>
+</tr>
+<tr>
+<td>NHibernate</td>
+<td>2.1</td>
+<td>Very old</td>
+<td>Medium</td>
+<td>5.x</td>
+</tr>
+<tr>
+<td>Log4Net</td>
+<td>1.2.10</td>
+<td>Outdated</td>
+<td>Low</td>
+<td>Serilog</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modernization-roadmap-high-level">Modernization Roadmap (High-Level)</h2>
+<h3 id="phase-1-critical-security-fixes-immediate-1-2-months">Phase 1: Critical Security Fixes (Immediate - 1-2 months)</h3>
+<p><strong>Priority: P0 - URGENT</strong></p>
+<ol>
+<li><strong>jQuery Upgrade</strong> (1-2 weeks)</li>
+<li>Replace jQuery 1.3.2 with jQuery 3.7.1</li>
+<li>Test all AJAX operations</li>
+<li>
+<p>Update plugins</p>
+</li>
+<li>
+<p><strong>Secrets Management</strong> (1 week)</p>
+</li>
+<li>Encrypt Web.config sections</li>
+<li>Migrate to environment variables</li>
+<li>
+<p>Plan Azure Key Vault integration</p>
+</li>
+<li>
+<p><strong>HTTPS Enforcement</strong> (1 day)</p>
+</li>
+<li>Add <code>[RequireHttps]</code> attributes</li>
+<li>
+<p>Configure IIS redirects</p>
+</li>
+<li>
+<p><strong>SQL Server Migration</strong> (2-4 weeks)</p>
+</li>
+<li>Migrate from User Instance to standard SQL Server Express</li>
+<li>Implement automated backups</li>
+<li>Configure monitoring</li>
+</ol>
+<h3 id="phase-2-foundation-modernization-3-6-months">Phase 2: Foundation Modernization (3-6 months)</h3>
+<p><strong>Priority: P0 - CRITICAL</strong></p>
+<ol>
+<li><strong>Add Unit Tests</strong> (ongoing)</li>
+<li>Create test projects</li>
+<li>Test business logic and domain layer</li>
+<li>
+<p>Target 70% coverage</p>
+</li>
+<li>
+<p><strong>.NET Framework 4.8 Upgrade</strong> (2-4 weeks)</p>
+</li>
+<li>Upgrade all projects to .NET 4.8</li>
+<li>Resolve breaking changes</li>
+<li>
+<p>Comprehensive testing</p>
+</li>
+<li>
+<p><strong>Dependency Updates</strong> (3-4 weeks)</p>
+</li>
+<li>AutoMapper → 12.x</li>
+<li>NHibernate → 5.x</li>
+<li>Log4Net → Serilog</li>
+<li>
+<p>StructureMap → MS.Extensions.DependencyInjection</p>
+</li>
+<li>
+<p><strong>Monitoring and Observability</strong> (2-3 weeks)</p>
+</li>
+<li>Implement Application Insights</li>
+<li>Add health check endpoints</li>
+<li>
+<p>Set up alerting</p>
+</li>
+<li>
+<p><strong>CI/CD Pipeline</strong> (2-3 weeks)</p>
+</li>
+<li>Azure DevOps or GitHub Actions</li>
+<li>Automated builds and tests</li>
+<li>Deployment automation</li>
+</ol>
+<h3 id="phase-3-platform-modernization-6-12-months">Phase 3: Platform Modernization (6-12 months)</h3>
+<p><strong>Priority: P0 - CRITICAL</strong></p>
+<ol>
+<li><strong>Migrate to .NET 6+</strong> (3-4 months)</li>
+<li>ASP.NET MVC 2 → ASP.NET Core MVC</li>
+<li>Rewrite ASPX views as Razor views</li>
+<li>Async/await throughout</li>
+<li>
+<p>Comprehensive testing</p>
+</li>
+<li>
+<p><strong>Extract REST API</strong> (2-3 months)</p>
+</li>
+<li>Build ASP.NET Core Web API project</li>
+<li>Expose JSON endpoints</li>
+<li>JWT authentication</li>
+<li>
+<p>OpenAPI/Swagger documentation</p>
+</li>
+<li>
+<p><strong>Cloud Migration</strong> (2-3 months)</p>
+</li>
+<li>Azure SQL Database or AWS RDS</li>
+<li>Azure App Service or AWS Elastic Beanstalk</li>
+<li>Distributed caching (Redis)</li>
+<li>Blob storage for static content</li>
+</ol>
+<h3 id="phase-4-architecture-evolution-12-months">Phase 4: Architecture Evolution (12+ months)</h3>
+<p><strong>Priority: P1 - HIGH</strong></p>
+<ol>
+<li><strong>Microservices Extraction</strong> (optional)</li>
+<li>Identify service boundaries</li>
+<li>Extract payment service</li>
+<li>Extract catalog service</li>
+<li>
+<p>Event-driven communication</p>
+</li>
+<li>
+<p><strong>Modern Frontend</strong> (optional)</p>
+</li>
+<li>React/Vue/Angular SPA</li>
+<li>API-driven architecture</li>
+<li>
+<p>Mobile app support</p>
+</li>
+<li>
+<p><strong>Advanced Observability</strong></p>
+</li>
+<li>Distributed tracing</li>
+<li>Business metrics dashboards</li>
+<li>Real-time monitoring</li>
+</ol>
+<hr />
+<h2 id="document-quality-validation">Document Quality Validation</h2>
+<h3 id="evidence-based-documentation">Evidence-Based Documentation</h3>
+<p><strong>All documentation grounded in:</strong>
+- 60 analysis JSON files from pre-analysis phase
+- Direct code inspection and file references
+- Architecture pattern identification
+- Dependency analysis
+- Technology inventory</p>
+<p><strong>Citations Include:</strong>
+- Specific file paths (e.g., <code>Agathas.Storefront.Controllers/Controllers/BasketController.cs</code>)
+- Class and method names
+- Configuration files (Web.config, HBM.XML mappings)
+- NuGet package versions
+- Database schema from NHibernate mappings</p>
+<h3 id="diagram-validation">Diagram Validation</h3>
+<p><strong>All Mermaid diagrams:</strong>
+- ✅ Created following C4 model standards
+- ✅ Based on actual code structure and dependencies
+- ✅ Validated for syntax correctness
+- ⚠️ NOT previewed (would require Mermaid preview tool)
+- 📝 <strong>Recommendation:</strong> Validate diagrams render correctly before presenting</p>
+<h3 id="template-compliance">Template Compliance</h3>
+<p><strong>Documentation follows:</strong>
+- ✅ Template structure from <code>.doctemplates/CURRENT-STATE/1-architecture/</code>
+- ✅ All required sections included
+- ✅ Consistent formatting (Markdown, tables, code blocks)
+- ✅ Professional language and technical precision</p>
+<hr />
+<h2 id="remaining-documentation-not-yet-generated">Remaining Documentation (Not Yet Generated)</h2>
+<h3 id="current-state-documentation-20-documents-remaining">CURRENT-STATE Documentation (20 documents remaining)</h3>
+<p><strong>Architecture (2 remaining):</strong>
+- 1.5-infrastructure-architecture.md - Hosting, deployment, network architecture
+- 1.6-integration-architecture.md - External system integrations (overlap with 1.3)</p>
+<p><strong>Implementation (3):</strong>
+- 3.1-developer-guide.md - Development environment setup, coding standards
+- 3.2-coding-standards.md - C# conventions, patterns, code review guidelines
+- 3.3-test-strategy.md - Testing approach, pyramid, coverage, tools</p>
+<p><strong>Operations (6):</strong>
+- 4.1-deployment-operations.md - CI/CD, deployment process, runbooks
+- 4.2-security-architecture.md - Authentication, authorization, security controls
+- 4.3-monitoring-observability.md - Logging, metrics, alerting, dashboards
+- 4.4-disaster-recovery.md - Backup, recovery procedures, RTO/RPO
+- 4.5-scalability-capacity.md - Scaling patterns, load balancing, capacity planning
+- 4.6-incident-management.md - Incident response, escalation, post-mortems</p>
+<p><strong>Quality (5):</strong>
+- 5.1-technical-debt-assessment.md - Debt inventory, prioritization, remediation
+- 5.2-performance-assessment.md - Bottlenecks, optimization opportunities
+- 5.3-risk-assessment.md - Technical and operational risks
+- 5.4-dependency-management.md - Third-party dependencies, vulnerabilities
+- 5.5-accessibility-compliance.md - WCAG compliance, assistive technology</p>
+<h3 id="modernization-documentation-8-documents-remaining">MODERNIZATION Documentation (8 documents remaining)</h3>
+<p><strong>Assessment (3):</strong>
+- 1.1-legacy-assessment.md - Gaps between current state and modern practices
+- 1.2-cloud-readiness-assessment.md - Cloud migration readiness
+- 1.3-technology-evolution-roadmap.md - Technology upgrade path</p>
+<p><strong>Strategy (4):</strong>
+- 2.3-modernization-strategy.md - Comprehensive modernization approach
+- 2.4-azure-service-recommendations.md - Azure service mapping (vendor-specific)
+- 2.5-aws-service-recommendations.md - AWS service mapping (vendor-specific)
+- 2.6-gcp-service-recommendations.md - GCP service mapping (vendor-specific)</p>
+<p><strong>Execution (3):</strong>
+- 3.1-migration-plan.md - Detailed migration execution plan
+- 3.2-refactoring-patterns.md - Code transformation strategies
+- 3.3-knowledge-transfer.md - Training and onboarding</p>
+<p><strong>Improvement (1):</strong>
+- 4.1-continuous-improvement.md - Post-modernization optimization</p>
+<hr />
+<h2 id="recommendations">Recommendations</h2>
+<h3 id="immediate-actions-executive-decision-required">Immediate Actions (Executive Decision Required)</h3>
+<ol>
+<li><strong>Security Remediation (URGENT):</strong></li>
+<li>Upgrade jQuery 1.3.2 immediately (known exploitable CVEs)</li>
+<li>Encrypt Web.config secrets or migrate to Key Vault</li>
+<li>Enforce HTTPS across all endpoints</li>
+<li><strong>Estimated Effort:</strong> 2-3 weeks</li>
+<li>
+<p><strong>Business Impact:</strong> Critical security vulnerabilities mitigated</p>
+</li>
+<li>
+<p><strong>Production Database Migration (URGENT):</strong></p>
+</li>
+<li>Migrate from SQL Server User Instance to standard instance</li>
+<li>Implement automated backups (daily full, 15-min transaction log)</li>
+<li><strong>Estimated Effort:</strong> 2-4 weeks</li>
+<li>
+<p><strong>Business Impact:</strong> Production-ready database, data protection</p>
+</li>
+<li>
+<p><strong>Modernization Planning (HIGH PRIORITY):</strong></p>
+</li>
+<li>Form modernization steering committee</li>
+<li>Review architecture documentation</li>
+<li>Approve modernization roadmap</li>
+<li>Allocate budget and resources</li>
+<li><strong>Timeline:</strong> Begin Q3 2026</li>
+</ol>
+<h3 id="documentation-usage">Documentation Usage</h3>
+<p><strong>For Technical Leadership:</strong>
+- Review System Architecture (1.1) for comprehensive overview
+- Review Technical Debt Analysis section for prioritization
+- Use Modernization Roadmap for planning and budgeting</p>
+<p><strong>For Development Team:</strong>
+- Reference Project Inventory (1.4) for solution structure
+- Reference Data Architecture (1.2) for database schema and ORM patterns
+- Reference API Integration Catalog (1.3) for endpoint documentation</p>
+<p><strong>For Security Team:</strong>
+- Review Security Vulnerabilities sections in all documents
+- Prioritize remediation based on severity (Critical → High → Medium)
+- Reference OWASP Top 10 assessment in API Integration Catalog (1.3)</p>
+<p><strong>For Cloud Migration Planning:</strong>
+- Use Cloud Readiness Assessment (when generated)
+- Reference Azure/AWS/GCP Service Recommendations (when generated)
+- Review Infrastructure Architecture (when generated)</p>
+<hr />
+<h2 id="document-maintenance">Document Maintenance</h2>
+<p><strong>Update Triggers:</strong>
+- After completing critical security fixes
+- Upon migration to .NET 4.8
+- After .NET 6+ migration
+- During cloud migration
+- When extracting REST API
+- After adding monitoring/observability</p>
+<p><strong>Review Frequency:</strong>
+- Quarterly during modernization
+- Semi-annually post-modernization
+- Upon major architectural changes</p>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>The Agathas.Storefront solution demonstrates <strong>excellent architectural design for its era (2010)</strong> with strong Domain-Driven Design implementation, clean separation of concerns, and proper use of architectural patterns. However, <strong>16 years of technology evolution</strong> have rendered the technology stack obsolete, creating <strong>critical security vulnerabilities</strong> and <strong>production-readiness concerns</strong>.</p>
+<p><strong>Modernization is imperative and should begin immediately</strong> with critical security fixes (jQuery upgrade, secrets management, HTTPS enforcement), followed by production database migration and systematic platform modernization to .NET 6+/8 and ASP.NET Core.</p>
+<p>The strong architectural foundation provides an excellent base for modernization—the layered architecture, DDD patterns, and clean abstractions will translate well to modern .NET and cloud-native architectures.</p>
+<hr />
+<p><strong>Generated by:</strong> Software Architecture Analyzer<br />
+<strong>Date:</strong> 2026-06-09<br />
+<strong>Contact:</strong> Architecture Documentation Team  </p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+        <script src="../../assets/javascripts/panzoom.min.js"></script>
+        <script src="../../assets/javascripts/zoompan.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

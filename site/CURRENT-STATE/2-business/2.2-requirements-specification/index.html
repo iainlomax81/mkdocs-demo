@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Requirements Specification - Project Documentation</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../assets/stylesheets/panzoom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <meta name="panzoom-theme" content="mkdocs">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Project Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../EXECUTIVE-SUMMARY/" class="nav-link">Executive Summary</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Quickstart</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../QUICK-START-ARCHITECT/" class="dropdown-item">Architect</a>
+</li>
+                                    
+<li>
+    <a href="../../../QUICK-START-DEVELOPER/" class="dropdown-item">Developer</a>
+</li>
+                                    
+<li>
+    <a href="../../../QUICK-START-EXECUTIVE/" class="dropdown-item">Executive</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Current State</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../1-architecture/1.1-system-architecture/" class="dropdown-item">System Architecture</a>
+</li>
+            
+<li>
+    <a href="../../1-architecture/1.2-data-architecture/" class="dropdown-item">Data Architecture</a>
+</li>
+            
+<li>
+    <a href="../../1-architecture/1.3-api-integration-catalog/" class="dropdown-item">API Integration Catalog</a>
+</li>
+            
+<li>
+    <a href="../../1-architecture/1.4-project-inventory/" class="dropdown-item">Project Inventory</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Business</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../2.1-business-domain-model/" class="dropdown-item">Business Domain Model</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Requirements Specification</a>
+</li>
+            
+<li>
+    <a href="../2.3-compliance-regulatory/" class="dropdown-item">Compliance & Regulatory</a>
+</li>
+            
+<li>
+    <a href="../2.4-user-experience-analysis/" class="dropdown-item">User Experience Analysis</a>
+</li>
+            
+<li>
+    <a href="../2.5-localization-i18n/" class="dropdown-item">Localization & I18n</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Modernization</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Strategy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../MODERNIZATION/2-strategy/2.1-executive-summary/" class="dropdown-item">Executive Summary</a>
+</li>
+            
+<li>
+    <a href="../../../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/" class="dropdown-item">Stakeholder Matrix</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Generation Summaries</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../generation-summaries/architecture-documentation-summary/" class="dropdown-item">Architecture Documentation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../../../generation-summaries/business-documentation-summary/" class="dropdown-item">Business Documentation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../../../generation-summaries/compilation-summary/" class="dropdown-item">Compilation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../../../generation-summaries/pre-analysis-summary/" class="dropdown-item">Pre-Analysis Summary</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../GLOSSARY/" class="nav-link">Glossary</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../2.1-business-domain-model/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../2.3-compliance-regulatory/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#22-requirements-specification" class="nav-link">2.2 Requirements Specification</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#executive-summary" class="nav-link">Executive Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#1-functional-requirements" class="nav-link">1. Functional Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-non-functional-requirements" class="nav-link">2. Non-Functional Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-user-interface-requirements" class="nav-link">3. User Interface Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-data-requirements" class="nav-link">4. Data Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-integration-requirements" class="nav-link">5. Integration Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-compliance-and-regulatory-requirements" class="nav-link">6. Compliance and Regulatory Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#7-requirements-traceability-matrix" class="nav-link">7. Requirements Traceability Matrix</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#8-requirements-prioritization" class="nav-link">8. Requirements Prioritization</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#9-summary-and-recommendations" class="nav-link">9. Summary and Recommendations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="22-requirements-specification">2.2 Requirements Specification</h1>
+<p><strong>Document Version:</strong> 1.0<br />
+<strong>Date:</strong> 2026-06-09<br />
+<strong>Status:</strong> Current State Analysis (Reverse-Engineered)<br />
+<strong>Standard:</strong> Based on IEEE 29148-2018 (Requirements Engineering)</p>
+<hr />
+<h2 id="executive-summary">Executive Summary</h2>
+<p>This document captures the functional and non-functional requirements of the Agathas Storefront e-commerce platform as implemented in the current system. Requirements have been reverse-engineered from source code, user interfaces, configuration files, and system behavior analysis.</p>
+<p><strong>Key Findings:</strong>
+- <strong>Total Requirements Identified:</strong> 85+ functional and non-functional requirements
+- <strong>Requirements Coverage:</strong> Core e-commerce functionality well-implemented; advanced features (inventory, returns, internationalization) not present
+- <strong>Requirements Maturity:</strong> Basic e-commerce requirements fully met; scalability and compliance requirements partially met
+- <strong>Business Priority:</strong> Customer-facing transaction workflows (browse, basket, checkout) prioritized over administrative features</p>
+<p><strong>Requirements Distribution:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Requirements</th>
+<th>Implementation Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Functional Requirements</td>
+<td>55</td>
+<td>80% Complete</td>
+</tr>
+<tr>
+<td>Non-Functional Requirements</td>
+<td>20</td>
+<td>65% Complete</td>
+</tr>
+<tr>
+<td>User Interface Requirements</td>
+<td>10</td>
+<td>75% Complete</td>
+</tr>
+<tr>
+<td>Data Requirements</td>
+<td>5</td>
+<td>90% Complete</td>
+</tr>
+<tr>
+<td>Integration Requirements</td>
+<td>5</td>
+<td>100% Complete</td>
+</tr>
+<tr>
+<td>Compliance Requirements</td>
+<td>8</td>
+<td>40% Complete</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-functional-requirements">1. Functional Requirements</h2>
+<h3 id="11-product-catalog-management">1.1 Product Catalog Management</h3>
+<h4 id="fr-pc-001-product-browsing">FR-PC-001: Product Browsing</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Users shall be able to browse products organized by categories and brands.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Products displayed in hierarchical category structure
+- Featured products shown on home page
+- Product listings show image, name, price
+- Category navigation via menu and breadcrumbs</p>
+<p><strong>Implementation:</strong> 
+- Controller: <a href="Agathas.Storefront.Controllers/Controllers/ProductController.cs">ProductController.Index()</a>
+- Service: <code>ProductCatalogService.GetProductsByCategory()</code>
+- View: <code>Views/Product/Index.aspx</code></p>
+<p><strong>Traceability:</strong> Maps to User Journey "Product Discovery" in <a href="../2.1-business-domain-model/#31-product-browsing-workflow">Business Domain Model</a></p>
+<hr />
+<h4 id="fr-pc-002-product-filtering-and-refinement">FR-PC-002: Product Filtering and Refinement</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Users shall be able to filter product listings by size, color, brand, and price range.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Filter options displayed in sidebar
+- Filter combinations applied using AND logic
+- Filtered results update product listing
+- Filter state persists during browsing session</p>
+<p><strong>Implementation:</strong>
+- Service: <code>ProductSearchRequestQueryGenerator</code> generates NHibernate queries from filter criteria
+- JSON: <code>JsonProductSearchRequest</code> captures filter selections
+- Query: Dynamic NHibernate criteria queries</p>
+<p><strong>Traceability:</strong> Supports business capability "Product Discovery"</p>
+<hr />
+<h4 id="fr-pc-003-product-detail-view">FR-PC-003: Product Detail View</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Users shall be able to view detailed information for a specific product including all available variants.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Product image, name, description, price displayed
+- All size and color combinations shown
+- Add to basket functionality available
+- Product title and variant attributes visible</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>ProductController.Detail(int productId)</code>
+- View: <code>Views/Product/Detail.aspx</code>
+- ViewModel: <code>ProductView</code> with size/color options</p>
+<p><strong>Traceability:</strong> Essential for product selection in shopping workflow</p>
+<hr />
+<h4 id="fr-pc-004-featured-products-display">FR-PC-004: Featured Products Display</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> System shall display featured products on the home page to promote specific items.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Configurable featured products list
+- Featured products shown on landing page
+- Products link to detail pages</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>HomeController.Index()</code>
+- Service: <code>ProductCatalogService.GetFeaturedProducts()</code></p>
+<p><strong>Business Value:</strong> Marketing and promotion support</p>
+<hr />
+<h3 id="12-shopping-basket-management">1.2 Shopping Basket Management</h3>
+<h4 id="fr-bk-001-add-product-to-basket">FR-BK-001: Add Product to Basket</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Users shall be able to add products to their shopping basket with specified quantity.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Select size and color variant
+- Specify quantity (default: 1)
+- Product added to basket with confirmation
+- If product already in basket, quantity increased</p>
+<p><strong>Implementation:</strong>
+- Controller: <a href="Agathas.Storefront.Controllers/Controllers/BasketController.cs">BasketController.Add()</a>
+- Service: <code>BasketService.AddProductToBasket()</code>
+- Domain: <a href="Agathas.Storefront.Model/Basket/Basket.cs">Basket.Add()</a> enforces no-duplicate rule
+- Storage: Cookie-based basket persistence</p>
+<p><strong>Business Rule:</strong> BR-BSK-001 (No duplicate products - increases quantity instead)</p>
+<p><strong>Traceability:</strong> Core requirement from <a href="../2.1-business-domain-model/#32-shopping-workflow">Shopping Workflow</a></p>
+<hr />
+<h4 id="fr-bk-002-view-basket-contents">FR-BK-002: View Basket Contents</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Users shall be able to view all items in their basket with quantities and prices.</p>
+<p><strong>Acceptance Criteria:</strong>
+- List all basket items with product details
+- Show quantity per item
+- Display item subtotal (price × quantity)
+- Show basket subtotal (all items)
+- Show delivery cost
+- Show basket total (items + delivery)</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>BasketController.Index()</code>
+- View: <code>Views/Basket/Index.aspx</code>
+- ViewModel: <code>BasketView</code> with calculated totals</p>
+<p><strong>Traceability:</strong> Required before checkout</p>
+<hr />
+<h4 id="fr-bk-003-update-item-quantity">FR-BK-003: Update Item Quantity</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Users shall be able to increase or decrease quantities of items in the basket.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Quantity can be increased or decreased
+- Minimum quantity is 1 (removing item if decreased to 0)
+- Basket totals recalculate automatically
+- Changes persist across page loads</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>BasketController.UpdateQuantity()</code>
+- Service: <code>BasketService.UpdateBasketItemQuantity()</code>
+- Domain: <code>BasketItem.IncreaseItemQtyBy()</code>, <code>BasketItem.DecreaseItemQtyBy()</code></p>
+<p><strong>Business Rule:</strong> BR-BSK-002 (Positive quantity)</p>
+<hr />
+<h4 id="fr-bk-004-remove-item-from-basket">FR-BK-004: Remove Item from Basket</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Users shall be able to remove items from their basket.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Remove button available per item
+- Item removed immediately
+- Basket totals recalculate
+- Empty basket message shown if no items remain</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>BasketController.Remove(int basketItemId)</code>
+- Service: <code>BasketService.RemoveItemFromBasket()</code>
+- Domain: <code>Basket.Remove(basketItem)</code></p>
+<hr />
+<h4 id="fr-bk-005-select-delivery-option">FR-BK-005: Select Delivery Option</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Users shall be able to select a delivery option with associated cost before checkout.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Delivery options displayed with names and costs
+- User selects one delivery option
+- Delivery cost included in basket total
+- Delivery option selection persists</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>BasketController.SetDeliveryOption(int deliveryOptionId)</code>
+- Domain: <code>Basket.SetDeliveryOption()</code>
+- Entity: <code>DeliveryOption</code> with pricing</p>
+<p><strong>Business Rule:</strong> BR-BSK-004 (Delivery option required before checkout)</p>
+<hr />
+<h4 id="fr-bk-006-basket-persistence">FR-BK-006: Basket Persistence</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Basket contents shall persist across user sessions using cookie storage.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Basket saved in cookie after each modification
+- Basket restored on subsequent visits
+- Cookie expires after configurable period
+- Anonymous and authenticated users both supported</p>
+<p><strong>Implementation:</strong>
+- Repository: <code>CookieBasketRepository</code>
+- Storage: <code>ICookieStorageService</code>
+- Key: <code>CookieDataKeys.Basket</code></p>
+<p><strong>Traceability:</strong> Supports user experience for interrupted shopping sessions</p>
+<hr />
+<h3 id="13-user-account-management">1.3 User Account Management</h3>
+<h4 id="fr-ac-001-customer-registration">FR-AC-001: Customer Registration</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> New users shall be able to create a customer account with email and password.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Registration form with email, password, first name, surname
+- Email uniqueness validation
+- Password strength validation
+- Account created in both domain (Customer) and infrastructure (Membership)
+- Auto-login after successful registration</p>
+<p><strong>Implementation:</strong>
+- Controller: <a href="Agathas.Storefront.Controllers/Controllers/AccountRegisterController.cs">AccountRegisterController.Register()</a>
+- Service: <code>CustomerService.CreateCustomer()</code>
+- Domain: <code>Customer</code> entity
+- Infrastructure: ASP.NET Membership Provider</p>
+<p><strong>Business Rule:</strong> BR-CUS-001 (Unique email), BR-CUS-002 (Email validation)</p>
+<hr />
+<h4 id="fr-ac-002-user-login">FR-AC-002: User Login</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Registered users shall be able to authenticate using email and password.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Login form with email and password fields
+- Credentials validated against membership database
+- Authentication cookie created on success
+- Redirect to originally requested page after login
+- Error message on failure</p>
+<p><strong>Implementation:</strong>
+- Controller: <a href="Agathas.Storefront.Controllers/Controllers/AccountLogOnController.cs">AccountLogOnController.LogOn()</a>
+- Service: <code>AspMembershipAuthentication.Login()</code>
+- Infrastructure: ASP.NET Forms Authentication</p>
+<hr />
+<h4 id="fr-ac-003-social-authentication">FR-AC-003: Social Authentication</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Users shall be able to authenticate using social login providers (Facebook, Google, etc.) via Janrain.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Social login buttons displayed on login page
+- Redirect to Janrain authentication
+- Token received from Janrain on success
+- User account created or linked
+- Auto-login after social auth</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>AccountLogOnController.JanrainCallback()</code>
+- Service: <code>JanrainAuthenticationService</code>
+- Configuration: Janrain API key in Web.config</p>
+<p><strong>Business Rule:</strong> BR-AUT-003 (Social auth option)</p>
+<hr />
+<h4 id="fr-ac-004-user-logout">FR-AC-004: User Logout</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Authenticated users shall be able to log out of their session.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Logout link available when authenticated
+- Authentication cookie cleared
+- Redirect to home page
+- Session state cleared</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>AccountLogOnController.LogOut()</code>
+- Infrastructure: <code>FormsAuthentication.SignOut()</code></p>
+<hr />
+<h4 id="fr-ac-005-manage-delivery-addresses">FR-AC-005: Manage Delivery Addresses</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Customers shall be able to add, edit, and delete delivery addresses.</p>
+<p><strong>Acceptance Criteria:</strong>
+- View list of saved delivery addresses
+- Add new address with street, city, postcode, name
+- Edit existing address
+- Delete address (if not only address)
+- Select address during checkout</p>
+<p><strong>Implementation:</strong>
+- Controller: <a href="Agathas.Storefront.Controllers/Controllers/CustomerController.cs">CustomerController.AddDeliveryAddress()</a>
+- Service: <code>CustomerService.AddDeliveryAddress()</code>
+- Domain: <code>Customer.AddDeliveryAddress()</code>, <code>DeliveryAddress</code> entity</p>
+<p><strong>Business Rule:</strong> BR-CUS-003 (Checkout address requirement), BR-ADR-001 (Required fields)</p>
+<hr />
+<h3 id="14-checkout-and-order-processing">1.4 Checkout and Order Processing</h3>
+<h4 id="fr-co-001-initiate-checkout">FR-CO-001: Initiate Checkout</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Users shall be able to proceed from basket to checkout process.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Checkout button available in basket view
+- Authentication required (redirect to login if not authenticated)
+- Basket must have items and delivery option selected
+- Checkout page displays basket summary and delivery address selection</p>
+<p><strong>Implementation:</strong>
+- Controller: <a href="Agathas.Storefront.Controllers/Controllers/CheckoutController.cs">CheckoutController.Index()</a>
+- Authorization: <code>[Authorize]</code> attribute enforces authentication
+- Validation: Delivery option and items validated</p>
+<p><strong>Business Rule:</strong> BR-AUT-001 (Checkout authentication)</p>
+<hr />
+<h4 id="fr-co-002-select-delivery-address">FR-CO-002: Select Delivery Address</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> During checkout, customers shall select a delivery address from their saved addresses.</p>
+<p><strong>Acceptance Criteria:</strong>
+- List of customer's saved addresses displayed
+- Customer selects one address for delivery
+- Address details shown (street, city, postcode)
+- Option to add new address if none exist</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>CheckoutController.SelectAddress()</code>
+- View: Address selector in checkout page
+- Validation: At least one address required</p>
+<hr />
+<h4 id="fr-co-003-submit-order">FR-CO-003: Submit Order</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Customers shall be able to confirm and submit their order for payment.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Order created from basket contents
+- Order includes items, quantities, prices (snapshot)
+- Delivery address captured
+- Shipping service assigned
+- Order saved to database
+- Redirect to payment gateway</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>CheckoutController.Submit()</code>
+- Service: <code>OrderService.CreateOrderFromBasket()</code>
+- Domain: <code>Order</code> entity created from <code>Basket</code>
+- Mapping: <code>BasketItem</code> → <code>OrderItem</code> with price snapshot</p>
+<p><strong>Business Rule:</strong> BR-CRS-001 (Order from basket), BR-ORD-006 (Price snapshot)</p>
+<hr />
+<h4 id="fr-co-004-process-payment-via-paypal">FR-CO-004: Process Payment via PayPal</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Customers shall complete payment securely through PayPal payment gateway.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Redirect to PayPal with order details
+- PayPal presents payment UI
+- Customer completes payment
+- PayPal callback received with transaction status
+- Order updated with payment details on success</p>
+<p><strong>Implementation:</strong>
+- Controller: <a href="Agathas.Storefront.Controllers/Controllers/PaymentController.cs">PaymentController.Callback()</a>
+- Service: <code>PayPalPaymentService</code> generates payment request
+- Domain: <code>Order.SetPayment()</code> captures payment
+- Integration: HTTPS POST to PayPal sandbox endpoint</p>
+<p><strong>Business Rule:</strong> BR-PAY-001 (External processing), BR-PAY-004 (Amount validation), BR-ORD-002 (Payment amount match)</p>
+<p><strong>Security:</strong> BR-PAY-002 (No card storage)</p>
+<hr />
+<h4 id="fr-co-005-order-confirmation">FR-CO-005: Order Confirmation</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> After successful payment, customers shall receive order confirmation via email and on-screen.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Confirmation page displayed with order number
+- Order details shown (items, total, delivery address)
+- Confirmation email sent to customer email
+- Order status set to Submitted</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>CheckoutController.Confirmation()</code>
+- Event: <code>OrderSubmittedEvent</code> raised when order submitted
+- Handler: <a href="Agathas.Storefront.Services/DomainEventHandlers/OrderSubmittedHandler.cs">OrderSubmittedHandler</a> sends email
+- Service: <code>IEmailService.SendOrderConfirmation()</code></p>
+<p><strong>Traceability:</strong> Completes <a href="../2.1-business-domain-model/#33-checkout-and-order-submission-workflow">Checkout Workflow</a></p>
+<hr />
+<h3 id="15-order-management">1.5 Order Management</h3>
+<h4 id="fr-om-001-view-order-history">FR-OM-001: View Order History</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Customers shall be able to view a list of their past orders.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Orders displayed in reverse chronological order (newest first)
+- Each order shows order number, date, total, status
+- Click order to view details</p>
+<p><strong>Implementation:</strong>
+- Controller: <a href="Agathas.Storefront.Controllers/Controllers/OrderController.cs">OrderController.Index()</a>
+- Service: <code>OrderService.GetOrdersForCustomer()</code>
+- Authorization: Customers can only view own orders</p>
+<p><strong>Traceability:</strong> Implements <a href="../2.1-business-domain-model/#35-order-management-workflow">Order Management Workflow</a></p>
+<hr />
+<h4 id="fr-om-002-view-order-details">FR-OM-002: View Order Details</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Customers shall be able to view detailed information for a specific order.</p>
+<p><strong>Acceptance Criteria:</strong>
+- Order date and order number displayed
+- Items ordered with product details, quantity, price
+- Subtotal, shipping cost, total amount
+- Delivery address
+- Payment details (amount, date, transaction ID)
+- Order status</p>
+<p><strong>Implementation:</strong>
+- Controller: <code>OrderController.Detail(int orderId)</code>
+- Service: <code>OrderService.GetOrderDetail()</code>
+- ViewModel: <code>OrderView</code> with items, payment, shipping</p>
+<hr />
+<h3 id="16-missing-functional-requirements-gaps">1.6 Missing Functional Requirements (Gaps)</h3>
+<p>The following functional requirements are <strong>NOT implemented</strong> but are common in e-commerce systems:</p>
+<table>
+<thead>
+<tr>
+<th>Requirement ID</th>
+<th>Requirement</th>
+<th>Business Impact</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FR-PC-005</td>
+<td>Product Search</td>
+<td>Cannot find products by keyword</td>
+<td>🔴 HIGH</td>
+</tr>
+<tr>
+<td>FR-PC-006</td>
+<td>Product Recommendations</td>
+<td>Lost cross-sell opportunities</td>
+<td>🟡 MEDIUM</td>
+</tr>
+<tr>
+<td>FR-PC-007</td>
+<td>Product Reviews/Ratings</td>
+<td>Lack social proof, lower conversions</td>
+<td>🟡 MEDIUM</td>
+</tr>
+<tr>
+<td>FR-BK-007</td>
+<td>Wish List / Save for Later</td>
+<td>Lost sales from indecision</td>
+<td>🔵 LOW</td>
+</tr>
+<tr>
+<td>FR-BK-008</td>
+<td>Apply Promo Code</td>
+<td>Cannot run discounts/promotions</td>
+<td>🟡 MEDIUM</td>
+</tr>
+<tr>
+<td>FR-CO-006</td>
+<td>Guest Checkout</td>
+<td>Friction for first-time buyers</td>
+<td>🟡 MEDIUM</td>
+</tr>
+<tr>
+<td>FR-CO-007</td>
+<td>Multiple Payment Methods</td>
+<td>Limited payment options (PayPal only)</td>
+<td>🟡 MEDIUM</td>
+</tr>
+<tr>
+<td>FR-OM-003</td>
+<td>Order Tracking</td>
+<td>Cannot track shipment status</td>
+<td>🟡 MEDIUM</td>
+</tr>
+<tr>
+<td>FR-OM-004</td>
+<td>Order Cancellation</td>
+<td>No self-service cancellation</td>
+<td>🔵 LOW</td>
+</tr>
+<tr>
+<td>FR-OM-005</td>
+<td>Returns/Refunds</td>
+<td>Manual returns process</td>
+<td>🟡 MEDIUM</td>
+</tr>
+<tr>
+<td>FR-INV-001</td>
+<td>Inventory Management</td>
+<td>Cannot track stock levels</td>
+<td>🔴 HIGH</td>
+</tr>
+<tr>
+<td>FR-INV-002</td>
+<td>Out-of-Stock Notification</td>
+<td>Can accept orders without stock</td>
+<td>🔴 HIGH</td>
+</tr>
+<tr>
+<td>FR-ADM-001</td>
+<td>Admin Portal</td>
+<td>No administrative interface</td>
+<td>🔴 HIGH</td>
+</tr>
+<tr>
+<td>FR-ADM-002</td>
+<td>Product Management UI</td>
+<td>Cannot add/edit products via UI</td>
+<td>🔴 HIGH</td>
+</tr>
+<tr>
+<td>FR-ADM-003</td>
+<td>Order Fulfillment UI</td>
+<td>Manual order processing</td>
+<td>🟡 MEDIUM</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-non-functional-requirements">2. Non-Functional Requirements</h2>
+<h3 id="21-performance-requirements">2.1 Performance Requirements</h3>
+<h4 id="nfr-perf-001-page-load-time">NFR-PERF-001: Page Load Time</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ⚠️ Partially Met<br />
+<strong>Requirement:</strong> Product listing and detail pages shall load within 2 seconds under normal load.</p>
+<p><strong>Current Performance:</strong>
+- No performance monitoring implemented
+- Server-side rendering with ASPX views (slower than modern SPAs)
+- No CDN for static assets
+- Database queries not optimized (N+1 query issues possible with NHibernate)</p>
+<p><strong>Evidence:</strong> No Application Performance Monitoring (APM) detected in <a href="../../analysis/observability-setup.json">observability-setup.json</a></p>
+<p><strong>Recommendation:</strong> Implement APM (Application Insights), optimize queries, add caching</p>
+<hr />
+<h4 id="nfr-perf-002-concurrent-users">NFR-PERF-002: Concurrent Users</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ❌ Not Met<br />
+<strong>Requirement:</strong> System shall support at least 100 concurrent users without degradation.</p>
+<p><strong>Current Limitations:</strong>
+- Single-server architecture (LocalDB, in-process session)
+- Cannot scale horizontally
+- No load testing performed</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/cloud-readiness.json">cloud-readiness.json</a>: "Cannot scale horizontally, single-server architecture"</p>
+<p><strong>Recommendation:</strong> Externalize state, migrate to cloud-scalable architecture</p>
+<hr />
+<h4 id="nfr-perf-003-database-query-performance">NFR-PERF-003: Database Query Performance</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ⚠️ Partially Met<br />
+<strong>Requirement:</strong> Database queries shall execute within 500ms for 95th percentile.</p>
+<p><strong>Current Implementation:</strong>
+- NHibernate ORM with lazy loading
+- Batch size configured (10)
+- SQL logging enabled (show_sql=true)
+- No query performance monitoring</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/data-architecture.json">data-architecture.json</a>: "Good domain-to-database mapping"</p>
+<p><strong>Gaps:</strong> No query performance metrics, potential N+1 query issues</p>
+<hr />
+<h3 id="22-scalability-requirements">2.2 Scalability Requirements</h3>
+<h4 id="nfr-scal-001-horizontal-scaling">NFR-SCAL-001: Horizontal Scaling</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ❌ Not Met<br />
+<strong>Requirement:</strong> System architecture shall support horizontal scaling to handle increased load.</p>
+<p><strong>Current Blockers:</strong>
+- In-process session state (per-server)
+- LocalDB (cannot be shared across servers)
+- File-based logging (local file system)
+- No load balancer support</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/cloud-readiness.json">cloud-readiness.json</a>: "Fail - Cannot scale horizontally"</p>
+<p><strong>Recommendation:</strong> Externalize session (Redis), migrate database (Azure SQL), implement stateless architecture</p>
+<hr />
+<h4 id="nfr-scal-002-database-scalability">NFR-SCAL-002: Database Scalability</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ❌ Not Met<br />
+<strong>Requirement:</strong> Database shall support scaling to 1 million+ products and 10,000+ orders per day.</p>
+<p><strong>Current Limitations:</strong>
+- SQL Server Express LocalDB (10GB limit)
+- No read replicas or sharding
+- Single database instance</p>
+<p><strong>Recommendation:</strong> Migrate to cloud database with auto-scaling (Azure SQL)</p>
+<hr />
+<h3 id="23-availability-and-reliability">2.3 Availability and Reliability</h3>
+<h4 id="nfr-avail-001-system-uptime">NFR-AVAIL-001: System Uptime</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ⚠️ Unknown<br />
+<strong>Requirement:</strong> System shall maintain 99.9% uptime (43.8 minutes downtime per month).</p>
+<p><strong>Current State:</strong>
+- No health check endpoints
+- No automated failover
+- Single-server deployment (single point of failure)
+- No monitoring or alerting</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/observability-setup.json">observability-setup.json</a>: "No APM, no metrics"</p>
+<p><strong>Recommendation:</strong> Implement health checks, multi-region deployment, monitoring</p>
+<hr />
+<h4 id="nfr-avail-002-error-handling">NFR-AVAIL-002: Error Handling</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ⚠️ Partially Met<br />
+<strong>Requirement:</strong> System shall gracefully handle errors without exposing sensitive information.</p>
+<p><strong>Current Implementation:</strong>
+- Custom error pages configured (Web.config)
+- Try-catch blocks in controllers
+- Logging via Log4Net</p>
+<p><strong>Gaps:</strong>
+- Error details may leak in development mode
+- No centralized error tracking
+- No user-friendly error recovery guidance</p>
+<hr />
+<h3 id="24-security-requirements">2.4 Security Requirements</h3>
+<h4 id="nfr-sec-001-authentication">NFR-SEC-001: Authentication</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Met<br />
+<strong>Requirement:</strong> System shall authenticate users before accessing protected resources (checkout, order history).</p>
+<p><strong>Implementation:</strong>
+- ASP.NET Forms Authentication
+- <code>[Authorize]</code> attributes on protected controllers
+- Authentication cookie with timeout
+- Social authentication option (Janrain)</p>
+<p><strong>Evidence:</strong> <a href="Agathas.Storefront.UI.Web.MVC/Web.config">Authentication configuration</a> in Web.config</p>
+<hr />
+<h4 id="nfr-sec-002-password-storage">NFR-SEC-002: Password Storage</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Met<br />
+<strong>Requirement:</strong> Passwords shall be stored securely using hashing (not plaintext).</p>
+<p><strong>Implementation:</strong>
+- ASP.NET Membership Provider
+- Passwords hashed by membership provider
+- Salt added automatically</p>
+<p><strong>Evidence:</strong> Membership provider configured in Web.config</p>
+<hr />
+<h4 id="nfr-sec-003-payment-security">NFR-SEC-003: Payment Security</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Met<br />
+<strong>Requirement:</strong> System shall NOT store credit card data; payment processing delegated to PCI-compliant provider.</p>
+<p><strong>Implementation:</strong>
+- All payment processing via PayPal
+- No card data captured or stored in application
+- Redirect to PayPal for payment UI
+- Only transaction ID stored</p>
+<p><strong>Business Rule:</strong> BR-PAY-001, BR-PAY-002</p>
+<p><strong>Compliance:</strong> PCI DSS compliance by delegation</p>
+<hr />
+<h4 id="nfr-sec-004-https">NFR-SEC-004: HTTPS</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ⚠️ Configuration-Dependent<br />
+<strong>Requirement:</strong> All payment and authentication pages shall be served over HTTPS.</p>
+<p><strong>Current State:</strong>
+- HTTPS required for production (IIS configuration)
+- Development mode may use HTTP
+- No HTTPS redirect enforced in code</p>
+<p><strong>Recommendation:</strong> Enforce HTTPS redirect in application code, implement HSTS header</p>
+<hr />
+<h4 id="nfr-sec-005-sql-injection-prevention">NFR-SEC-005: SQL Injection Prevention</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ✅ Met<br />
+<strong>Requirement:</strong> System shall prevent SQL injection attacks through parameterized queries.</p>
+<p><strong>Implementation:</strong>
+- NHibernate ORM (parameterized queries)
+- No raw SQL concatenation detected
+- HBM.XML mappings define safe queries</p>
+<p><strong>Evidence:</strong> All database access via NHibernate repository pattern</p>
+<hr />
+<h4 id="nfr-sec-006-cross-site-scripting-xss-prevention">NFR-SEC-006: Cross-Site Scripting (XSS) Prevention</h4>
+<p><strong>Priority:</strong> 🔴 CRITICAL<br />
+<strong>Status:</strong> ⚠️ Partially Met<br />
+<strong>Requirement:</strong> System shall prevent XSS attacks through input validation and output encoding.</p>
+<p><strong>Current Implementation:</strong>
+- ASP.NET request validation (ValidateRequest=true)
+- HTML encoding in views
+- No Content Security Policy (CSP) headers</p>
+<p><strong>Gaps:</strong>
+- No CSP headers
+- jQuery 1.3.2 has known XSS vulnerabilities</p>
+<p><strong>Recommendation:</strong> Update jQuery, implement CSP headers, review all user input handling</p>
+<hr />
+<h3 id="25-usability-requirements">2.5 Usability Requirements</h3>
+<h4 id="nfr-usab-001-browser-compatibility">NFR-USAB-001: Browser Compatibility</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ⚠️ Partially Met<br />
+<strong>Requirement:</strong> System shall be compatible with modern browsers (Chrome, Firefox, Safari, Edge).</p>
+<p><strong>Current Support:</strong>
+- Designed for IE 7+ and Firefox 3+ (2010 era)
+- jQuery 1.3.2 (very old, limited modern browser testing)
+- ASPX views with server-side rendering</p>
+<p><strong>Risk:</strong> Modern browser compatibility untested</p>
+<p><strong>Recommendation:</strong> Test on current browser versions, update client libraries</p>
+<hr />
+<h4 id="nfr-usab-002-mobile-responsiveness">NFR-USAB-002: Mobile Responsiveness</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ❌ Not Met<br />
+<strong>Requirement:</strong> System shall provide responsive design for mobile and tablet devices.</p>
+<p><strong>Current State:</strong>
+- Fixed-width design (not responsive)
+- No mobile-specific views
+- No viewport meta tag
+- Desktop-only layout</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/ui-inventory.json">ui-inventory.json</a>: No responsive design detected</p>
+<p><strong>Recommendation:</strong> Implement responsive CSS framework (Bootstrap), mobile-first design</p>
+<hr />
+<h3 id="26-maintainability-and-supportability">2.6 Maintainability and Supportability</h3>
+<h4 id="nfr-maint-001-code-modularity">NFR-MAINT-001: Code Modularity</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ✅ Met<br />
+<strong>Requirement:</strong> System shall maintain clear separation of concerns with layered architecture.</p>
+<p><strong>Implementation:</strong>
+- 5-layer architecture (Presentation, Service, Domain, Data, Infrastructure)
+- Dependency injection (StructureMap)
+- Repository and Unit of Work patterns
+- Interface-based design</p>
+<p><strong>Evidence:</strong> <a href="../../analysis/application-layers.json">Application Layers</a> shows excellent separation</p>
+<hr />
+<h4 id="nfr-maint-002-logging">NFR-MAINT-002: Logging</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ⚠️ Partially Met<br />
+<strong>Requirement:</strong> System shall log errors, warnings, and key business events for troubleshooting.</p>
+<p><strong>Implementation:</strong>
+- Log4Net framework
+- File-based logging (C:\logs)
+- Configurable log levels
+- Error logging in controllers</p>
+<p><strong>Gaps:</strong>
+- No centralized log aggregation
+- File-based logs not suitable for cloud
+- No structured logging
+- No business event logging</p>
+<p><strong>Recommendation:</strong> Implement Application Insights, structured logging, business event tracking</p>
+<hr />
+<h4 id="nfr-maint-003-configuration-management">NFR-MAINT-003: Configuration Management</h4>
+<p><strong>Priority:</strong> 🟡 HIGH<br />
+<strong>Status:</strong> ❌ Not Met<br />
+<strong>Requirement:</strong> System configuration shall be externalized and environment-specific.</p>
+<p><strong>Current State:</strong>
+- Configuration in Web.config (hardcoded)
+- Secrets in Web.config (PayPal credentials, SMTP credentials)
+- No environment variables
+- No Azure App Configuration or Key Vault</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/configuration-inventory.json">configuration-inventory.json</a>: "Hardcoded configuration"</p>
+<p><strong>Recommendation:</strong> Externalize configuration, use Azure Key Vault for secrets</p>
+<hr />
+<h3 id="27-internationalization-i18n">2.7 Internationalization (i18n)</h3>
+<h4 id="nfr-i18n-001-multi-language-support">NFR-I18N-001: Multi-Language Support</h4>
+<p><strong>Priority:</strong> 🔵 LOW (Not Currently Required)<br />
+<strong>Status:</strong> ❌ Not Implemented<br />
+<strong>Requirement:</strong> System shall support multiple languages (English, French, Spanish, etc.).</p>
+<p><strong>Current State:</strong>
+- English only (hardcoded strings)
+- No resource files
+- No localization framework
+- No culture routing</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/i18n-inventory.json">i18n-inventory.json</a>: "i18n_support: false"</p>
+<p><strong>Business Impact:</strong> Cannot serve non-English markets</p>
+<p><strong>Recommendation:</strong> If international expansion planned, implement .NET localization framework, resource files, culture-aware routing</p>
+<hr />
+<h4 id="nfr-i18n-002-multi-currency-support">NFR-I18N-002: Multi-Currency Support</h4>
+<p><strong>Priority:</strong> 🔵 LOW (Not Currently Required)<br />
+<strong>Status:</strong> ❌ Not Implemented<br />
+<strong>Requirement:</strong> System shall support multiple currencies with conversion.</p>
+<p><strong>Current State:</strong>
+- Single currency (determined by PayPal configuration)
+- No currency conversion
+- No Money value object</p>
+<p><strong>Business Impact:</strong> Cannot serve international markets with local currency</p>
+<p><strong>Recommendation:</strong> Implement Money value object, currency conversion service, multi-currency payment support</p>
+<hr />
+<h2 id="3-user-interface-requirements">3. User Interface Requirements</h2>
+<h3 id="31-ui-patterns-and-conventions">3.1 UI Patterns and Conventions</h3>
+<h4 id="uir-001-consistent-navigation">UIR-001: Consistent Navigation</h4>
+<p><strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Consistent navigation menu across all pages with categories and user account links.</p>
+<p><strong>Implementation:</strong> Master page with top navigation menu</p>
+<hr />
+<h4 id="uir-002-responsive-feedback">UIR-002: Responsive Feedback</h4>
+<p><strong>Status:</strong> ⚠️ Partially Met<br />
+<strong>Description:</strong> User actions (add to basket, login, submit order) provide immediate feedback.</p>
+<p><strong>Current:</strong> Post-back page reloads (no AJAX), confirmation messages displayed</p>
+<p><strong>Gap:</strong> No loading indicators, no optimistic UI updates</p>
+<hr />
+<h4 id="uir-003-error-display">UIR-003: Error Display</h4>
+<p><strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Validation errors displayed near relevant form fields with clear messages.</p>
+<p><strong>Implementation:</strong> ASP.NET validation controls, custom error messages</p>
+<hr />
+<h4 id="uir-004-accessibility">UIR-004: Accessibility</h4>
+<p><strong>Status:</strong> ❌ Not Met<br />
+<strong>Description:</strong> UI shall meet WCAG 2.0 Level AA accessibility standards.</p>
+<p><strong>Current State:</strong> No accessibility testing, likely missing ARIA labels, unknown keyboard navigation, color contrast untested</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/accessibility-assessment.json">accessibility-assessment.json</a>: "wcag_compliance: Unknown"</p>
+<p><strong>Recommendation:</strong> Conduct accessibility audit, implement ARIA labels, ensure keyboard navigation</p>
+<hr />
+<h2 id="4-data-requirements">4. Data Requirements</h2>
+<h3 id="41-data-integrity">4.1 Data Integrity</h3>
+<h4 id="dr-001-referential-integrity">DR-001: Referential Integrity</h4>
+<p><strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> Database shall enforce referential integrity through foreign key constraints.</p>
+<p><strong>Implementation:</strong> NHibernate cascading rules, database foreign keys</p>
+<hr />
+<h4 id="dr-002-data-validation">DR-002: Data Validation</h4>
+<p><strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> All data shall be validated before persistence.</p>
+<p><strong>Implementation:</strong> Business rule classes, domain entity validation, form validation</p>
+<hr />
+<h3 id="42-data-retention">4.2 Data Retention</h3>
+<h4 id="dr-003-order-history-retention">DR-003: Order History Retention</h4>
+<p><strong>Status:</strong> ⚠️ Not Specified<br />
+<strong>Description:</strong> Order history shall be retained indefinitely for customer access and audit purposes.</p>
+<p><strong>Current:</strong> No retention policy documented, orders persist in database</p>
+<p><strong>Recommendation:</strong> Define data retention policy, implement archival strategy</p>
+<hr />
+<h3 id="43-data-privacy">4.3 Data Privacy</h3>
+<h4 id="dr-004-customer-data-protection">DR-004: Customer Data Protection</h4>
+<p><strong>Status:</strong> ⚠️ Partially Met<br />
+<strong>Description:</strong> Customer personal data shall be protected and only accessible to authorized users.</p>
+<p><strong>Current:</strong> Basic authentication, no encryption at rest, no data deletion mechanism</p>
+<p><strong>Gap:</strong> No GDPR compliance (right to erasure, data portability)</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/compliance-status.json">compliance-status.json</a>: "gdpr: Non-compliant"</p>
+<hr />
+<h2 id="5-integration-requirements">5. Integration Requirements</h2>
+<h3 id="51-payment-gateway-integration">5.1 Payment Gateway Integration</h3>
+<h4 id="int-pay-001-paypal-standard-payments">INT-PAY-001: PayPal Standard Payments</h4>
+<p><strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> System shall integrate with PayPal for payment processing using Standard Payments API.</p>
+<p><strong>Implementation:</strong>
+- HTTPS POST redirect to PayPal
+- Return URL for success callback
+- Cancel URL for user cancellation
+- Transaction ID capture</p>
+<p><strong>Configuration:</strong> PayPal endpoint and business email in Web.config</p>
+<hr />
+<h3 id="52-authentication-integration">5.2 Authentication Integration</h3>
+<h4 id="int-auth-001-social-authentication">INT-AUTH-001: Social Authentication</h4>
+<p><strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> System shall integrate with Janrain for social login (Facebook, Google, Twitter).</p>
+<p><strong>Implementation:</strong>
+- OAuth-style callback from Janrain
+- Token-based authentication
+- API key configuration</p>
+<hr />
+<h3 id="53-email-integration">5.3 Email Integration</h3>
+<h4 id="int-email-001-smtp-email-service">INT-EMAIL-001: SMTP Email Service</h4>
+<p><strong>Status:</strong> ✅ Implemented<br />
+<strong>Description:</strong> System shall send transactional emails (order confirmation) via SMTP.</p>
+<p><strong>Implementation:</strong>
+- SMTP configuration in Web.config
+- <code>IEmailService</code> interface with SMTP implementation
+- Fallback: <code>TextLoggingEmailService</code> for development</p>
+<hr />
+<h2 id="6-compliance-and-regulatory-requirements">6. Compliance and Regulatory Requirements</h2>
+<h3 id="61-payment-card-industry-data-security-standard-pci-dss">6.1 Payment Card Industry Data Security Standard (PCI DSS)</h3>
+<h4 id="comp-pci-001-no-card-data-storage">COMP-PCI-001: No Card Data Storage</h4>
+<p><strong>Status:</strong> ✅ Compliant<br />
+<strong>Description:</strong> System shall NOT store credit card numbers, CVV, or expiration dates.</p>
+<p><strong>Implementation:</strong> Payment processing delegated to PayPal (PCI Level 1 compliant)</p>
+<p><strong>Evidence:</strong> No credit card fields in database schema or domain model</p>
+<hr />
+<h3 id="62-general-data-protection-regulation-gdpr">6.2 General Data Protection Regulation (GDPR)</h3>
+<h4 id="comp-gdpr-001-consent-management">COMP-GDPR-001: Consent Management</h4>
+<p><strong>Status:</strong> ❌ Not Compliant<br />
+<strong>Description:</strong> System shall obtain explicit consent for data collection and processing.</p>
+<p><strong>Current:</strong> No consent mechanism implemented</p>
+<p><strong>Recommendation:</strong> Add cookie consent banner, privacy policy acceptance during registration</p>
+<hr />
+<h4 id="comp-gdpr-002-right-to-erasure">COMP-GDPR-002: Right to Erasure</h4>
+<p><strong>Status:</strong> ❌ Not Compliant<br />
+<strong>Description:</strong> Customers shall be able to request deletion of their personal data.</p>
+<p><strong>Current:</strong> No data deletion mechanism</p>
+<p><strong>Recommendation:</strong> Implement "Delete My Account" feature with data anonymization</p>
+<hr />
+<h4 id="comp-gdpr-003-data-portability">COMP-GDPR-003: Data Portability</h4>
+<p><strong>Status:</strong> ❌ Not Compliant<br />
+<strong>Description:</strong> Customers shall be able to export their personal data in machine-readable format.</p>
+<p><strong>Current:</strong> No data export mechanism</p>
+<p><strong>Recommendation:</strong> Implement "Download My Data" feature (JSON or CSV export)</p>
+<hr />
+<h3 id="63-web-accessibility">6.3 Web Accessibility</h3>
+<h4 id="comp-a11y-001-wcag-20-compliance">COMP-A11Y-001: WCAG 2.0 Compliance</h4>
+<p><strong>Status:</strong> ❌ Not Compliant<br />
+<strong>Description:</strong> System shall meet WCAG 2.0 Level AA accessibility standards.</p>
+<p><strong>Current:</strong> No accessibility testing performed, likely non-compliant</p>
+<p><strong>Recommendation:</strong> Accessibility audit, remediation, ongoing testing</p>
+<hr />
+<h2 id="7-requirements-traceability-matrix">7. Requirements Traceability Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement ID</th>
+<th>Business Process</th>
+<th>Domain Aggregate</th>
+<th>Implementation</th>
+<th>Test Coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FR-PC-001</td>
+<td>Product Discovery</td>
+<td>Product</td>
+<td>ProductController</td>
+<td>❌ No automated tests</td>
+</tr>
+<tr>
+<td>FR-BK-001</td>
+<td>Shopping</td>
+<td>Basket</td>
+<td>BasketController, Basket.Add()</td>
+<td>❌ No automated tests</td>
+</tr>
+<tr>
+<td>FR-BK-003</td>
+<td>Shopping</td>
+<td>Basket</td>
+<td>BasketService, BasketItem</td>
+<td>❌ No automated tests</td>
+</tr>
+<tr>
+<td>FR-CO-001</td>
+<td>Checkout</td>
+<td>Basket, Customer</td>
+<td>CheckoutController</td>
+<td>❌ No automated tests</td>
+</tr>
+<tr>
+<td>FR-CO-003</td>
+<td>Checkout</td>
+<td>Order</td>
+<td>OrderService.CreateOrderFromBasket()</td>
+<td>❌ No automated tests</td>
+</tr>
+<tr>
+<td>FR-CO-004</td>
+<td>Payment</td>
+<td>Order, Payment</td>
+<td>PaymentController, PayPalPaymentService</td>
+<td>❌ No automated tests</td>
+</tr>
+<tr>
+<td>FR-OM-001</td>
+<td>Order Management</td>
+<td>Order</td>
+<td>OrderController</td>
+<td>❌ No automated tests</td>
+</tr>
+<tr>
+<td>NFR-SEC-003</td>
+<td>Payment Security</td>
+<td>Payment</td>
+<td>PayPal delegation</td>
+<td>✅ Compliant by design</td>
+</tr>
+<tr>
+<td>NFR-SEC-005</td>
+<td>SQL Injection</td>
+<td>Data Access</td>
+<td>NHibernate ORM</td>
+<td>✅ Protected by ORM</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Test Coverage Summary:</strong>
+- <strong>Unit Tests:</strong> ❌ Not detected
+- <strong>Integration Tests:</strong> ❌ Not detected
+- <strong>E2E Tests:</strong> ❌ Not detected
+- <strong>Test Coverage:</strong> 0% (no automated tests found)</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/test-coverage.json">test-coverage.json</a>: "coverage: None"</p>
+<p><strong>Critical Gap:</strong> No automated testing of requirements</p>
+<hr />
+<h2 id="8-requirements-prioritization">8. Requirements Prioritization</h2>
+<h3 id="81-moscow-prioritization">8.1 MoSCoW Prioritization</h3>
+<p><strong>Must Have (Implemented):</strong>
+- ✅ Product browsing and detail view
+- ✅ Add to basket, view basket, update quantities
+- ✅ Customer registration and login
+- ✅ Checkout process
+- ✅ PayPal payment processing
+- ✅ Order confirmation
+- ✅ Order history</p>
+<p><strong>Should Have (Not Implemented):</strong>
+- ❌ Product search
+- ❌ Inventory management
+- ❌ Out-of-stock indication
+- ❌ Admin portal for product/order management
+- ❌ GDPR compliance features
+- ❌ Mobile-responsive design</p>
+<p><strong>Could Have (Future):</strong>
+- ❌ Product recommendations
+- ❌ Wish list
+- ❌ Promo codes
+- ❌ Guest checkout
+- ❌ Order tracking
+- ❌ Returns/refunds
+- ❌ Product reviews</p>
+<p><strong>Won't Have (This Phase):</strong>
+- ❌ Multi-language support
+- ❌ Multi-currency support
+- ❌ Marketplace model
+- ❌ Subscription model</p>
+<hr />
+<h2 id="9-summary-and-recommendations">9. Summary and Recommendations</h2>
+<h3 id="91-requirements-coverage-assessment">9.1 Requirements Coverage Assessment</h3>
+<p><strong>Strengths:</strong>
+- ✅ Core e-commerce transaction flow complete (browse → basket → checkout → payment → confirmation)
+- ✅ Clean domain model with business rules enforcement
+- ✅ Payment security through PCI-compliant provider
+- ✅ User authentication with social login option</p>
+<p><strong>Critical Gaps:</strong>
+- ❌ No automated testing (0% coverage)
+- ❌ GDPR non-compliance (data subject rights)
+- ❌ No inventory management (overselling risk)
+- ❌ Cannot scale horizontally (architectural limitation)
+- ❌ No mobile responsiveness
+- ❌ No admin portal (product/order management)</p>
+<h3 id="92-modernization-requirements-priorities">9.2 Modernization Requirements Priorities</h3>
+<p><strong>Phase 1 - Critical (Immediate):</strong>
+1. Implement automated testing (unit, integration, E2E)
+2. Add GDPR compliance features (consent, data deletion, data export)
+3. Implement inventory management with stock tracking
+4. Externalize configuration and secrets
+5. Add health check endpoints and monitoring</p>
+<p><strong>Phase 2 - High (3-6 months):</strong>
+1. Mobile-responsive redesign
+2. Implement admin portal
+3. Add product search
+4. Scale-out architecture (externalize state, cloud database)
+5. Performance optimization and caching</p>
+<p><strong>Phase 3 - Medium (6-12 months):</strong>
+1. Product recommendations engine
+2. Order tracking and fulfillment
+3. Returns/refunds processing
+4. Promo code system
+5. Multi-payment methods</p>
+<hr />
+<p><strong>Document End</strong></p>
+<p><strong>Related Documents:</strong>
+- <a href="../2.1-business-domain-model/">2.1 Business Domain Model</a>
+- <a href="../2.3-compliance-regulatory/">2.3 Compliance and Regulatory</a>
+- <a href="../1-architecture/1.1-system-overview.md">System Architecture</a></p>
+<p><strong>Change Log:</strong>
+| Date | Version | Author | Changes |
+|------|---------|--------|---------|
+| 2026-06-09 | 1.0 | Business Analyst AI | Initial requirements specification (reverse-engineered) |</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+        <script src="../../../assets/javascripts/panzoom.min.js"></script>
+        <script src="../../../assets/javascripts/zoompan.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

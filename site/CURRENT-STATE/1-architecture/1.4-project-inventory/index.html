@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Project Inventory - Project Documentation</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../assets/stylesheets/panzoom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    <meta name="panzoom-theme" content="mkdocs">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Project Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../EXECUTIVE-SUMMARY/" class="nav-link">Executive Summary</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Quickstart</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../QUICK-START-ARCHITECT/" class="dropdown-item">Architect</a>
+</li>
+                                    
+<li>
+    <a href="../../../QUICK-START-DEVELOPER/" class="dropdown-item">Developer</a>
+</li>
+                                    
+<li>
+    <a href="../../../QUICK-START-EXECUTIVE/" class="dropdown-item">Executive</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Current State</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Architecture</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../1.1-system-architecture/" class="dropdown-item">System Architecture</a>
+</li>
+            
+<li>
+    <a href="../1.2-data-architecture/" class="dropdown-item">Data Architecture</a>
+</li>
+            
+<li>
+    <a href="../1.3-api-integration-catalog/" class="dropdown-item">API Integration Catalog</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Project Inventory</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Business</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../2-business/2.1-business-domain-model/" class="dropdown-item">Business Domain Model</a>
+</li>
+            
+<li>
+    <a href="../../2-business/2.2-requirements-specification/" class="dropdown-item">Requirements Specification</a>
+</li>
+            
+<li>
+    <a href="../../2-business/2.3-compliance-regulatory/" class="dropdown-item">Compliance & Regulatory</a>
+</li>
+            
+<li>
+    <a href="../../2-business/2.4-user-experience-analysis/" class="dropdown-item">User Experience Analysis</a>
+</li>
+            
+<li>
+    <a href="../../2-business/2.5-localization-i18n/" class="dropdown-item">Localization & I18n</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Modernization</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Strategy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../MODERNIZATION/2-strategy/2.1-executive-summary/" class="dropdown-item">Executive Summary</a>
+</li>
+            
+<li>
+    <a href="../../../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/" class="dropdown-item">Stakeholder Matrix</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Generation Summaries</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../generation-summaries/architecture-documentation-summary/" class="dropdown-item">Architecture Documentation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../../../generation-summaries/business-documentation-summary/" class="dropdown-item">Business Documentation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../../../generation-summaries/compilation-summary/" class="dropdown-item">Compilation Summary</a>
+</li>
+                                    
+<li>
+    <a href="../../../generation-summaries/pre-analysis-summary/" class="dropdown-item">Pre-Analysis Summary</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../GLOSSARY/" class="nav-link">Glossary</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../1.3-api-integration-catalog/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../2-business/2.1-business-domain-model/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#project-inventory-agathasstorefront" class="nav-link">Project Inventory - Agathas.Storefront</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#table-of-contents" class="nav-link">Table of Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#solution-overview" class="nav-link">Solution Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#project-catalog" class="nav-link">Project Catalog</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dependency-graph" class="nav-link">Dependency Graph</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#framework-and-technology-versions" class="nav-link">Framework and Technology Versions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#build-configuration" class="nav-link">Build Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#architectural-layers" class="nav-link">Architectural Layers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#project-size-and-metrics" class="nav-link">Project Size and Metrics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#testing-projects" class="nav-link">Testing Projects</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#migration-considerations" class="nav-link">Migration Considerations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#document-metadata" class="nav-link">Document Metadata</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="project-inventory-agathasstorefront">Project Inventory - Agathas.Storefront</h1>
+<blockquote>
+<p>This document provides a comprehensive catalog of all Visual Studio projects in the Agathas.Storefront solution, including dependencies, build configurations, frameworks, and architectural layering.</p>
+</blockquote>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#solution-overview">Solution Overview</a></li>
+<li><a href="#project-catalog">Project Catalog</a></li>
+<li><a href="#dependency-graph">Dependency Graph</a></li>
+<li><a href="#framework-and-technology-versions">Framework and Technology Versions</a></li>
+<li><a href="#build-configuration">Build Configuration</a></li>
+<li><a href="#architectural-layers">Architectural Layers</a></li>
+<li><a href="#project-size-and-metrics">Project Size and Metrics</a></li>
+<li><a href="#testing-projects">Testing Projects</a></li>
+<li><a href="#migration-considerations">Migration Considerations</a></li>
+</ul>
+<hr />
+<h2 id="solution-overview">Solution Overview</h2>
+<p><strong>Solution Name:</strong> Agathas.Storefront
+<strong>Solution File:</strong> <code>Agathas.Storefront.sln</code>
+<strong>Visual Studio Version:</strong> Visual Studio 2010 (Solution Format Version 11.00)
+<strong>Total Projects:</strong> 7 (1 web application + 6 class libraries)
+<strong>Framework Versions:</strong> .NET Framework 3.5 and 4.0 (mixed)
+<strong>Solution Upgrade History:</strong> Upgraded from Visual Studio 2008 (3.5) to Visual Studio 2010</p>
+<h3 id="solution-structure-summary">Solution Structure Summary</h3>
+<div class="highlight"><pre><span></span><code>Agathas.Storefront.sln
+├── Agathas.Storefront.UI.Web.MVC (.NET 4.0) - Web Application
+├── Agathas.Storefront.Controllers (.NET 3.5) - Class Library
+├── Agathas.Storefront.Services (.NET 3.5) - Class Library
+├── Agathas.Storefront.Services.Cache (.NET 3.5) - Class Library
+├── Agathas.Storefront.Model (.NET 3.5) - Class Library
+├── Agathas.Storefront.Infrastructure (.NET 3.5) - Class Library
+└── Agathas.Storefront.Repository.NHibernate (.NET 3.5) - Class Library
+</code></pre></div>
+<p><strong>Key Characteristics:</strong>
+- Clean layered architecture with separate project per layer
+- Controllers separated from web project for better testability
+- Infrastructure project has zero dependencies (foundation layer)
+- No circular dependencies
+- ❌ <strong>No test projects</strong> detected in solution</p>
+<hr />
+<h2 id="project-catalog">Project Catalog</h2>
+<h3 id="1-agathasstorefrontuiwebmvc">1. Agathas.Storefront.UI.Web.MVC</h3>
+<p><strong>Type:</strong> ASP.NET MVC Web Application
+<strong>Framework:</strong> .NET Framework 4.0
+<strong>Output Type:</strong> Library
+<strong>GUID:</strong> <code>{8AC33CF2-FC6F-47F0-9611-2CCC2938C126}</code>
+<strong>Path:</strong> <code>Agathas.Storefront.UI.Web.MVC</code></p>
+<p><strong>Description:</strong><br />
+Web presentation layer using ASP.NET MVC 2. Serves HTML pages, hosts static content, and bootstraps the application with dependency injection configuration.</p>
+<p><strong>Responsibilities:</strong>
+- Web UI hosting and HTTP request handling
+- Static content delivery (CSS, JavaScript, images)
+- ASP.NET MVC routing configuration (<code>Global.asax.cs</code>)
+- Dependency injection bootstrapping via StructureMap
+- Global application configuration
+- Session state management
+- Master page templates and ASPX views</p>
+<p><strong>Key Technologies:</strong>
+- ASP.NET MVC 2.0
+- jQuery 1.3.2
+- StructureMap IoC container
+- ASPX View Engine (WebForms views)</p>
+<p><strong>Project Dependencies:</strong>
+- Agathas.Storefront.Controllers
+- Agathas.Storefront.Infrastructure
+- Agathas.Storefront.Model
+- Agathas.Storefront.Repository.NHibernate
+- Agathas.Storefront.Services.Cache
+- Agathas.Storefront.Services</p>
+<p><strong>Key Files:</strong>
+- <code>Global.asax.cs</code> - Application startup, routing, error handling
+- <code>Web.config</code> - Configuration (connection strings, app settings, mail settings)
+- <code>BootStrapper.cs</code> - StructureMap IoC container registration
+- <code>Views/</code> - ASPX view templates
+- <code>Content/</code> - CSS and images
+- <code>Scripts/</code> - jQuery JavaScript files</p>
+<p><strong>Modernization Priority:</strong> <strong>Critical</strong> - Upgrade to ASP.NET Core MVC</p>
+<hr />
+<h3 id="2-agathasstorefrontcontrollers">2. Agathas.Storefront.Controllers</h3>
+<p><strong>Type:</strong> Class Library
+<strong>Framework:</strong> .NET Framework 3.5
+<strong>Output Type:</strong> Library
+<strong>GUID:</strong> <code>{4400EE5D-37C3-4158-8443-67D534537C03}</code>
+<strong>Path:</strong> <code>Agathas.Storefront.Controllers</code></p>
+<p><strong>Description:</strong><br />
+MVC controllers and view models separated from web project for better testability and maintainability.</p>
+<p><strong>Responsibilities:</strong>
+- MVC controller logic (9 controllers)
+- View model definitions for presentation layer
+- Action argument handling and custom model binding
+- JSON DTOs for AJAX endpoints
+- AutoMapper configuration for controller mappings
+- Custom controller factory for IoC integration (<code>IoCControllerFactory</code>)</p>
+<p><strong>Key Technologies:</strong>
+- ASP.NET MVC 2.0 controllers
+- AutoMapper 1.0 (object-to-object mapping)
+- StructureMap (dependency injection)
+- WCF DataContracts (for JSON serialization)</p>
+<p><strong>Project Dependencies:</strong>
+- Agathas.Storefront.Infrastructure
+- Agathas.Storefront.Model
+- Agathas.Storefront.Services</p>
+<p><strong>Controllers:</strong>
+- <code>HomeController</code> - Landing page
+- <code>ProductController</code> - Product catalog and search
+- <code>BasketController</code> - Shopping basket operations
+- <code>CheckoutController</code> - Order checkout
+- <code>PaymentController</code> - Payment callbacks
+- <code>OrderController</code> - Order history
+- <code>CustomerController</code> - Account management
+- <code>AccountLogOnController</code> - Authentication
+- <code>AccountRegisterController</code> - Registration</p>
+<p><strong>Key Files:</strong>
+- <code>Controllers/</code> - 9 controller classes
+- <code>ViewModels/</code> - View model classes
+- <code>JsonDTOs/</code> - JSON request/response objects
+- <code>ActionArguments/</code> - Custom action argument handling
+- <code>AutoMapperBootStrapper.cs</code> - Mapping configuration
+- <code>IoCControllerFactory.cs</code> - Custom controller factory</p>
+<p><strong>Modernization Priority:</strong> High - Migrate to ASP.NET Core controllers</p>
+<hr />
+<h3 id="3-agathasstorefrontservices">3. Agathas.Storefront.Services</h3>
+<p><strong>Type:</strong> Class Library
+<strong>Framework:</strong> .NET Framework 3.5
+<strong>Output Type:</strong> Library
+<strong>GUID:</strong> <code>{3BEF0A3F-A420-434A-9565-FA7D1CD6A1BC}</code>
+<strong>Path:</strong> <code>Agathas.Storefront.Services</code></p>
+<p><strong>Description:</strong><br />
+Business logic services layer implementing use cases with request/response messaging pattern.</p>
+<p><strong>Responsibilities:</strong>
+- Business service implementations (<code>IProductCatalogService</code>, <code>IBasketService</code>, <code>IOrderService</code>, <code>ICustomerService</code>)
+- Service interfaces defining business operations
+- Request/response messaging patterns (CQRS-style)
+- Service view models (DTOs for service layer)
+- Domain event handlers (<code>OrderSubmittedHandler</code>)
+- AutoMapper configuration for service mappings
+- Service layer object mapping logic</p>
+<p><strong>Key Technologies:</strong>
+- AutoMapper 1.0
+- CQRS-style messaging (Request/Response objects)
+- Domain Events pattern</p>
+<p><strong>Project Dependencies:</strong>
+- Agathas.Storefront.Infrastructure
+- Agathas.Storefront.Model</p>
+<p><strong>Services:</strong>
+- <code>ProductCatalogService</code> - Product browsing, search, filtering
+- <code>BasketService</code> - Shopping basket management
+- <code>OrderService</code> - Order submission and retrieval
+- <code>CustomerService</code> - Customer account operations</p>
+<p><strong>Key Files:</strong>
+- <code>Interfaces/</code> - Service interface definitions
+- <code>Implementations/</code> - Service implementations
+- <code>ViewModels/</code> - Service layer DTOs
+- <code>Messaging/</code> - Request/Response message classes
+- <code>DomainEventHandlers/</code> - Event handler implementations
+- <code>AutoMapperBootStrapper.cs</code> - Mapping configuration</p>
+<p><strong>Modernization Priority:</strong> Medium - Add async/await, enhance with modern patterns</p>
+<hr />
+<h3 id="4-agathasstorefrontservicescache">4. Agathas.Storefront.Services.Cache</h3>
+<p><strong>Type:</strong> Class Library
+<strong>Framework:</strong> .NET Framework 3.5
+<strong>Output Type:</strong> Library
+<strong>GUID:</strong> <code>{F9D6A24B-6B55-4B5C-AEBA-6C8049CE598C}</code>
+<strong>Path:</strong> <code>Agathas.Storefront.Services.Cache</code></p>
+<p><strong>Description:</strong><br />
+Caching decorator services for performance optimization (designed but not currently activated).</p>
+<p><strong>Responsibilities:</strong>
+- Service caching decorators (Decorator pattern)
+- Cache invalidation logic
+- Performance optimization through caching
+- <strong>NOTE:</strong> <code>CachedProductCatalogService</code> exists but is NOT registered in IoC container</p>
+<p><strong>Key Technologies:</strong>
+- Decorator Pattern
+- Caching (in-memory or distributed)</p>
+<p><strong>Project Dependencies:</strong>
+- Agathas.Storefront.Services</p>
+<p><strong>Key Files:</strong>
+- <code>CachedProductCatalogService.cs</code> - Product catalog caching decorator</p>
+<p><strong>Current Status:</strong> ⚠️ <strong>Not Active</strong> - Decorator implemented but not configured in StructureMap</p>
+<p><strong>Modernization Priority:</strong> Medium - Enable caching with Redis or distributed cache</p>
+<hr />
+<h3 id="5-agathasstorefrontmodel">5. Agathas.Storefront.Model</h3>
+<p><strong>Type:</strong> Class Library
+<strong>Framework:</strong> .NET Framework 3.5
+<strong>Output Type:</strong> Library
+<strong>GUID:</strong> <code>{A909922F-F7DA-4EE6-9B36-04E3B3CA1360}</code>
+<strong>Path:</strong> <code>Agathas.Storefront.Model</code></p>
+<p><strong>Description:</strong><br />
+Domain model layer with rich entities, aggregates, and business rules following Domain-Driven Design principles.</p>
+<p><strong>Responsibilities:</strong>
+- Domain entities and aggregate roots (<code>Basket</code>, <code>Order</code>, <code>Customer</code>, <code>Product</code>, <code>ProductTitle</code>)
+- Business rules and invariant enforcement
+- Domain events (<code>OrderSubmittedEvent</code>)
+- Repository interfaces (<code>IBasketRepository</code>, <code>IOrderRepository</code>, etc.)
+- Value objects (<code>Address</code>, <code>Payment</code>)
+- Domain factories (<code>BasketItemFactory</code>, <code>OrderItemFactory</code>, <code>PaymentFactory</code>)
+- State pattern implementations (<code>IOrderState</code>, <code>OpenOrderState</code>, <code>SubmittedOrderState</code>)</p>
+<p><strong>Key Technologies:</strong>
+- Domain-Driven Design (DDD) tactical patterns
+- Aggregate Root pattern
+- Domain Events
+- State Pattern
+- Factory Pattern</p>
+<p><strong>Project Dependencies:</strong>
+- Agathas.Storefront.Infrastructure (domain base classes only)</p>
+<p><strong>Aggregates:</strong>
+- <strong>Basket</strong> - Shopping basket with basket items
+- <strong>Order</strong> - Order with order items and payment
+- <strong>Customer</strong> - Customer with delivery addresses
+- <strong>Product</strong> - Product catalog hierarchy</p>
+<p><strong>Key Files:</strong>
+- <code>Basket/</code> - Basket aggregate root and basket items
+- <code>Orders/</code> - Order aggregate with state pattern
+- <code>Customers/</code> - Customer aggregate with addresses
+- <code>Products/</code> - Product catalog entities
+- <code>Address.cs</code>, <code>AddressBusinessRules.cs</code> - Value objects</p>
+<p><strong>Modernization Priority:</strong> Low - Domain model is well-designed, minimal changes needed</p>
+<hr />
+<h3 id="6-agathasstorefrontinfrastructure">6. Agathas.Storefront.Infrastructure</h3>
+<p><strong>Type:</strong> Class Library
+<strong>Framework:</strong> .NET Framework 3.5
+<strong>Output Type:</strong> Library
+<strong>GUID:</strong> <code>{963F04CC-724D-435B-987E-8B92F7741B75}</code>
+<strong>Path:</strong> <code>Agathas.Storefront.Infrastructure</code></p>
+<p><strong>Description:</strong><br />
+Cross-cutting infrastructure concerns and technical services. This is the <strong>foundation layer</strong> with zero dependencies on application layers.</p>
+<p><strong>Responsibilities:</strong>
+- Authentication services (Forms Authentication, ASP.NET Membership, Janrain OAuth)
+- Configuration management (<code>ApplicationSettingsFactory</code>)
+- Cookie storage service
+- Domain base classes (<code>EntityBase</code>, <code>ValueObjectBase</code>, <code>AggregateRoot</code>)
+- Domain events infrastructure (static <code>DomainEvents</code> class)
+- Repository and Unit of Work abstractions (<code>IRepository&lt;T&gt;</code>, <code>IUnitOfWork</code>)
+- Email services (SMTP and text logging implementations)
+- Logging infrastructure (Log4Net adapter implementing <code>ILogger</code>)
+- Payment services (PayPal integration)
+- Querying abstractions (<code>IQuery</code>)</p>
+<p><strong>Key Technologies:</strong>
+- Log4Net 1.2.10
+- StructureMap 2.5
+- ASP.NET Forms Authentication
+- ASP.NET Membership Provider
+- Janrain Authentication API
+- PayPal Standard Payments API</p>
+<p><strong>Project Dependencies:</strong><br />
+✅ <strong>NONE</strong> - Infrastructure layer is the foundation with no upward dependencies</p>
+<p><strong>Key Files:</strong>
+- <code>Authentication/</code> - Forms Auth, Membership, Janrain implementations
+- <code>Configuration/</code> - Application settings management
+- <code>Domain/</code> - EntityBase, ValueObjectBase, AggregateRoot, DomainEvents
+- <code>Email/</code> - SMTP and logging email services
+- <code>Logging/</code> - Log4Net adapter
+- <code>Payments/</code> - PayPal payment service
+- <code>Querying/</code> - Query abstraction
+- <code>UnitOfWork/</code> - IUnitOfWork and IRepository interfaces</p>
+<p><strong>Modernization Priority:</strong> High - Migrate to modern frameworks (Serilog, .NET Core DI, Azure Key Vault)</p>
+<hr />
+<h3 id="7-agathasstorefrontrepositorynhibernate">7. Agathas.Storefront.Repository.NHibernate</h3>
+<p><strong>Type:</strong> Class Library
+<strong>Framework:</strong> .NET Framework 3.5
+<strong>Output Type:</strong> Library
+<strong>GUID:</strong> <code>{FB7B4FBD-BCC8-4734-A796-48CE0D674CE7}</code>
+<strong>Path:</strong> <code>Agathas.Storefront.Repository.NHibernate</code></p>
+<p><strong>Description:</strong><br />
+Data access implementation using NHibernate 2.1 ORM with HBM.XML mappings.</p>
+<p><strong>Responsibilities:</strong>
+- Repository implementations for all aggregates
+- NHibernate session factory configuration
+- NHibernate mapping files (HBM.XML)
+- Unit of Work implementation (<code>NHUnitOfWork</code> wrapping ISession)
+- Query translation from domain queries to NHibernate Criteria API
+- Session storage (HTTP context and thread-based)</p>
+<p><strong>Key Technologies:</strong>
+- NHibernate 2.1.0.2002
+- LinFu 1.0.3 (lazy loading dynamic proxies)
+- Iesi.Collections 1.0.1 (Set<T> support)
+- HBM.XML mappings</p>
+<p><strong>Project Dependencies:</strong>
+- Agathas.Storefront.Infrastructure
+- Agathas.Storefront.Model</p>
+<p><strong>Repositories:</strong>
+- <code>BasketRepository</code>
+- <code>OrderRepository</code>
+- <code>CustomerRepository</code>
+- <code>ProductRepository</code>
+- <code>ProductTitleRepository</code>
+- <code>CategoryRepository</code>
+- <code>DeliveryOptionRepository</code></p>
+<p><strong>Key Files:</strong>
+- <code>Repositories/</code> - Repository implementations
+- <code>Mapping/</code> - HBM.XML mapping files
+- <code>SessionStorage/</code> - HTTP and thread session storage
+- <code>NHUnitOfWork.cs</code> - Unit of Work implementation</p>
+<p><strong>Modernization Priority:</strong> High - Upgrade NHibernate to 5.x or migrate to Entity Framework Core</p>
+<hr />
+<h2 id="dependency-graph">Dependency Graph</h2>
+<h3 id="visual-dependency-graph">Visual Dependency Graph</h3>
+<div class="highlight"><pre><span></span><code>┌──────────────────────────────────────────────────────────┐
+│  Agathas.Storefront.UI.Web.MVC (.NET 4.0)              │
+│  [ASP.NET MVC Web Application]                          │
+└──────────────────────────────────────────────────────────┘
+        ↓        ↓        ↓         ↓         ↓        ↓
+        │        │        │         │         │        │
+        │        │        │         │         │        └────────────┐
+        │        │        │         │         └─────────┐           │
+        │        │        │         └──────────┐        │           │
+        │        │        └─────────┐          │        │           │
+        │        └──────────┐       │          │        │           │
+        ↓                   ↓       ↓          ↓        ↓           ↓
+┌─────────────┐   ┌───────────────────┐   ┌─────────────────────────┐
+│ Controllers │   │ Infrastructure    │   │ Model                    │
+│ (.NET 3.5)  │   │ (.NET 3.5)        │   │ (.NET 3.5)               │
+└─────────────┘   │ [Foundation]      │   │ [Domain Layer]           │
+        ↓          └───────────────────┘   └─────────────────────────┘
+        │                  ↑                          ↑       ↑
+        │                  │                          │       │
+        ↓                  │                          │       │
+┌─────────────────────────┴──────────┐               │       │
+│ Services (.NET 3.5)                │               │       │
+│ [Business Logic Layer]             │───────────────┘       │
+└────────────────────────────────────┘                       │
+        ↑                                                     │
+        │                                                     │
+┌───────────────────────┐                                    │
+│ Services.Cache        │                                    │
+│ (.NET 3.5)            │                                    │
+│ [Decorator - Unused]  │                                    │
+└───────────────────────┘                                    │
+                                                              │
+┌─────────────────────────────────────────────────────────┐ │
+│ Repository.NHibernate (.NET 3.5)                        │ │
+│ [Data Access Layer]                                     │ │
+└─────────────────────────────────────────────────────────┘ │
+                          ↓                                  │
+                          └──────────────────────────────────┘
+</code></pre></div>
+<h3 id="dependency-matrix">Dependency Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>UI.Web.MVC</th>
+<th>Controllers</th>
+<th>Services</th>
+<th>Services.Cache</th>
+<th>Model</th>
+<th>Infrastructure</th>
+<th>Repository.NHibernate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>UI.Web.MVC</strong></td>
+<td>-</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>Controllers</strong></td>
+<td>-</td>
+<td>-</td>
+<td>✅</td>
+<td>-</td>
+<td>✅</td>
+<td>✅</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Services</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>✅</td>
+<td>✅</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Services.Cache</strong></td>
+<td>-</td>
+<td>-</td>
+<td>✅</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Model</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>✅</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Infrastructure</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Repository.NHibernate</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>✅</td>
+<td>✅</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Observations:</strong>
+- ✅ <strong>No Circular Dependencies</strong> - Clean unidirectional flow
+- ✅ <strong>Infrastructure has zero dependencies</strong> - True foundation layer
+- ✅ <strong>Model only depends on Infrastructure</strong> - Clean domain layer
+- ⚠️ <strong>UI.Web.MVC depends on all projects</strong> - Web project is composition root</p>
+<h3 id="dependency-rules">Dependency Rules</h3>
+<p><strong>Allowed Dependencies (Top-Down):</strong>
+1. Presentation (UI.Web.MVC, Controllers) → Services → Model → Infrastructure
+2. Data Access (Repository.NHibernate) → Model → Infrastructure
+3. Infrastructure → (none)</p>
+<p><strong>Prohibited Dependencies:</strong>
+- ❌ Infrastructure → Any application layer
+- ❌ Model → Services or Controllers
+- ❌ Any project → UI.Web.MVC</p>
+<hr />
+<h2 id="framework-and-technology-versions">Framework and Technology Versions</h2>
+<h3 id="net-framework-versions">.NET Framework Versions</h3>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Framework Version</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UI.Web.MVC</td>
+<td><strong>.NET Framework 4.0</strong></td>
+<td>Web project upgraded to 4.0</td>
+</tr>
+<tr>
+<td>Controllers</td>
+<td>.NET Framework 3.5</td>
+<td>Original version</td>
+</tr>
+<tr>
+<td>Services</td>
+<td>.NET Framework 3.5</td>
+<td>Original version</td>
+</tr>
+<tr>
+<td>Services.Cache</td>
+<td>.NET Framework 3.5</td>
+<td>Original version</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>.NET Framework 3.5</td>
+<td>Original version</td>
+</tr>
+<tr>
+<td>Infrastructure</td>
+<td>.NET Framework 3.5</td>
+<td>Original version</td>
+</tr>
+<tr>
+<td>Repository.NHibernate</td>
+<td>.NET Framework 3.5</td>
+<td>Original version</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Framework Version Issue:</strong><br />
+⚠️ <strong>Mixed framework versions</strong> - Web project on 4.0, all libraries on 3.5. This works but is non-standard. Recommendation: Standardize on single framework version during modernization.</p>
+<h3 id="key-library-versions">Key Library Versions</h3>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Version</th>
+<th>Projects Using</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ASP.NET MVC</strong></td>
+<td>2.0</td>
+<td>UI.Web.MVC, Controllers</td>
+<td><strong>Obsolete</strong> - Released 2010</td>
+</tr>
+<tr>
+<td><strong>NHibernate</strong></td>
+<td>2.1.0.2002</td>
+<td>Repository.NHibernate</td>
+<td><strong>Very Old</strong> - Current is 5.x</td>
+</tr>
+<tr>
+<td><strong>StructureMap</strong></td>
+<td>2.5.3.0</td>
+<td>Infrastructure, UI.Web.MVC</td>
+<td><strong>Sunset</strong> - Project discontinued</td>
+</tr>
+<tr>
+<td><strong>AutoMapper</strong></td>
+<td>1.0.0.155</td>
+<td>Controllers, Services</td>
+<td><strong>Extremely Old</strong> - Current is 12.x</td>
+</tr>
+<tr>
+<td><strong>Log4Net</strong></td>
+<td>1.2.10.0</td>
+<td>Infrastructure</td>
+<td><strong>Outdated</strong> - Still viable but old</td>
+</tr>
+<tr>
+<td><strong>jQuery</strong></td>
+<td>1.3.2</td>
+<td>UI.Web.MVC</td>
+<td><strong>CRITICAL</strong> - Known CVEs, released 2009</td>
+</tr>
+<tr>
+<td><strong>LinFu</strong></td>
+<td>1.0.3.14911</td>
+<td>Repository.NHibernate</td>
+<td><strong>Old</strong> - For NHibernate proxies</td>
+</tr>
+<tr>
+<td><strong>Iesi.Collections</strong></td>
+<td>1.0.1.0</td>
+<td>Repository.NHibernate</td>
+<td><strong>Old</strong> - NHibernate dependency</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="build-configuration">Build Configuration</h2>
+<h3 id="build-configurations">Build Configurations</h3>
+<p><strong>Available Configurations:</strong>
+- <strong>Debug</strong> - Development build with symbols, no optimization
+- <strong>Release</strong> - Production build with optimization, no symbols</p>
+<p><strong>Platforms:</strong>
+- <strong>Any CPU</strong> - All projects target Any CPU (platform-agnostic IL)</p>
+<h3 id="build-output">Build Output</h3>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Output Type</th>
+<th>Assembly Name</th>
+<th>Output Path (Debug)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UI.Web.MVC</td>
+<td>Library</td>
+<td>Agathas.Storefront.UI.Web.MVC.dll</td>
+<td>bin\</td>
+</tr>
+<tr>
+<td>Controllers</td>
+<td>Library</td>
+<td>Agathas.Storefront.Controllers.dll</td>
+<td>bin\Debug\</td>
+</tr>
+<tr>
+<td>Services</td>
+<td>Library</td>
+<td>Agathas.Storefront.Services.dll</td>
+<td>bin\Debug\</td>
+</tr>
+<tr>
+<td>Services.Cache</td>
+<td>Library</td>
+<td>Agathas.Storefront.Services.Cache.dll</td>
+<td>bin\Debug\</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>Library</td>
+<td>Agathas.Storefront.Model.dll</td>
+<td>bin\Debug\</td>
+</tr>
+<tr>
+<td>Infrastructure</td>
+<td>Library</td>
+<td>Agathas.Storefront.Infrastructure.dll</td>
+<td>bin\Debug\</td>
+</tr>
+<tr>
+<td>Repository.NHibernate</td>
+<td>Library</td>
+<td>Agathas.Storefront.Repository.NHibernate.dll</td>
+<td>bin\Debug\</td>
+</tr>
+</tbody>
+</table>
+<h3 id="build-tools">Build Tools</h3>
+<p><strong>Build System:</strong> MSBuild (Visual Studio 2010)
+<strong>Compiler:</strong> C# Compiler (csc.exe) for .NET 3.5/4.0</p>
+<p><strong>Build Process:</strong>
+1. Infrastructure project (no dependencies)
+2. Model project (depends on Infrastructure)
+3. Services and Repository.NHibernate (depend on Model + Infrastructure)
+4. Services.Cache (depends on Services)
+5. Controllers (depends on Services, Model, Infrastructure)
+6. UI.Web.MVC (depends on all projects)</p>
+<p><strong>No CI/CD Detected:</strong><br />
+❌ No automated build scripts<br />
+❌ No continuous integration configuration<br />
+❌ No deployment automation</p>
+<hr />
+<h2 id="architectural-layers">Architectural Layers</h2>
+<h3 id="layer-mapping">Layer Mapping</h3>
+<table>
+<thead>
+<tr>
+<th>Architectural Layer</th>
+<th>Projects</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Presentation Layer</strong></td>
+<td>UI.Web.MVC, Controllers</td>
+<td>HTTP handling, view rendering, user input</td>
+</tr>
+<tr>
+<td><strong>Business Logic Layer</strong></td>
+<td>Services, Services.Cache</td>
+<td>Business workflows, use case orchestration</td>
+</tr>
+<tr>
+<td><strong>Domain Layer</strong></td>
+<td>Model</td>
+<td>Core business logic, entities, rules</td>
+</tr>
+<tr>
+<td><strong>Data Access Layer</strong></td>
+<td>Repository.NHibernate</td>
+<td>Database persistence, ORM</td>
+</tr>
+<tr>
+<td><strong>Infrastructure Layer</strong></td>
+<td>Infrastructure</td>
+<td>Cross-cutting concerns, technical services</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layer-responsibilities">Layer Responsibilities</h3>
+<p><strong>Presentation Layer:</strong>
+- ASP.NET MVC controllers
+- View models for presentation
+- Routing and HTTP request/response handling
+- User input validation
+- View rendering (ASPX templates)</p>
+<p><strong>Business Logic Layer:</strong>
+- Service interfaces and implementations
+- Request/response messaging
+- Transaction coordination (via Unit of Work)
+- Domain event handling
+- Business workflow orchestration</p>
+<p><strong>Domain Layer:</strong>
+- Aggregate roots and entities
+- Business rules and invariants
+- Domain events
+- Repository interfaces (defined in domain)
+- Value objects
+- Domain services</p>
+<p><strong>Data Access Layer:</strong>
+- Repository implementations
+- NHibernate ORM configuration
+- Database session management
+- Query translation</p>
+<p><strong>Infrastructure Layer:</strong>
+- Authentication and authorization
+- Logging
+- Configuration
+- Email services
+- Payment gateway integration
+- Domain base classes and abstractions</p>
+<hr />
+<h2 id="project-size-and-metrics">Project Size and Metrics</h2>
+<p><strong>Note:</strong> Cannot determine exact file counts, lines of code, or complexity metrics from static analysis of solution file alone. Requires full repository scan.</p>
+<p><strong>Estimated Relative Size (based on responsibilities):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Estimated Size</th>
+<th>Complexity</th>
+<th>Key Metric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UI.Web.MVC</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Views + config + static content</td>
+</tr>
+<tr>
+<td>Controllers</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>9 controllers × ~3-5 actions each</td>
+</tr>
+<tr>
+<td>Services</td>
+<td>Medium</td>
+<td>Medium-High</td>
+<td>4 service implementations with business logic</td>
+</tr>
+<tr>
+<td>Services.Cache</td>
+<td>Small</td>
+<td>Low</td>
+<td>Single decorator class</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>Large</td>
+<td>High</td>
+<td>15+ domain entities, aggregates, business rules</td>
+</tr>
+<tr>
+<td>Infrastructure</td>
+<td>Large</td>
+<td>Medium</td>
+<td>Many cross-cutting concerns</td>
+</tr>
+<tr>
+<td>Repository.NHibernate</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Repository implementations + HBM.XML mappings</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="testing-projects">Testing Projects</h2>
+<p><strong>Status:</strong> ❌ <strong>NO TEST PROJECTS DETECTED</strong></p>
+<p><strong>Impact:</strong>
+- High regression risk during refactoring
+- Difficult to validate modernization changes
+- Unknown code coverage
+- Manual testing burden
+- Fear of changing code</p>
+<p><strong>Recommendations:</strong>
+1. <strong>Immediate:</strong> Add unit test projects for each layer
+   - <code>Agathas.Storefront.Services.Tests</code> (xUnit/NUnit)
+   - <code>Agathas.Storefront.Model.Tests</code>
+   - <code>Agathas.Storefront.Controllers.Tests</code></p>
+<ol>
+<li><strong>Short-term:</strong> Achieve 70-80% code coverage of business logic</li>
+<li>Focus on Services layer (business workflows)</li>
+<li>Test domain entities (business rules)</li>
+<li>
+<p>Integration tests for repositories</p>
+</li>
+<li>
+<p><strong>Long-term:</strong> Full test pyramid</p>
+</li>
+<li>Unit tests (services, domain, controllers)</li>
+<li>Integration tests (database, repositories)</li>
+<li>End-to-end tests (UI automation)</li>
+</ol>
+<p><strong>Suggested Test Project Structure:</strong>
+<div class="highlight"><pre><span></span><code>Agathas.Storefront.sln
+├── (existing projects)
+├── Agathas.Storefront.Services.Tests
+├── Agathas.Storefront.Model.Tests
+├── Agathas.Storefront.Controllers.Tests
+├── Agathas.Storefront.Repository.Tests
+└── Agathas.Storefront.IntegrationTests
+</code></pre></div></p>
+<hr />
+<h2 id="migration-considerations">Migration Considerations</h2>
+<h3 id="net-framework-to-net-6-migration-path">.NET Framework to .NET 6+ Migration Path</h3>
+<p><strong>Option 1: Incremental Upgrade</strong>
+1. Upgrade all projects to .NET Framework 4.8 (latest)
+2. Migrate to .NET Standard 2.0 for class libraries
+3. Migrate to .NET 6+ for web application
+4. Migrate class libraries to .NET 6+</p>
+<p><strong>Option 2: Direct Migration</strong>
+1. Directly migrate all projects to .NET 6+
+2. Replace ASP.NET MVC 2 with ASP.NET Core MVC
+3. Replace dependencies with modern equivalents</p>
+<p><strong>Option 3: Parallel Development</strong>
+1. Build new .NET 6+ solution alongside legacy
+2. Port layer by layer (Infrastructure → Model → Services → Controllers → UI)
+3. Cutover when feature parity achieved</p>
+<p><strong>Recommended:</strong> Option 1 (Incremental) - Lower risk, gradual migration</p>
+<h3 id="dependency-modernization">Dependency Modernization</h3>
+<table>
+<thead>
+<tr>
+<th>Legacy Dependency</th>
+<th>Modern Replacement</th>
+<th>Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>StructureMap 2.5</td>
+<td>Microsoft.Extensions.DependencyInjection</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>AutoMapper 1.0</td>
+<td>AutoMapper 12.x</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Log4Net 1.2.10</td>
+<td>Serilog or Microsoft.Extensions.Logging</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>NHibernate 2.1</td>
+<td>NHibernate 5.x or Entity Framework Core</td>
+<td>High</td>
+</tr>
+<tr>
+<td>jQuery 1.3.2</td>
+<td>jQuery 3.x or modern framework (React/Vue)</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>ASP.NET MVC 2</td>
+<td>ASP.NET Core MVC</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<h3 id="project-reorganization-recommendations">Project Reorganization Recommendations</h3>
+<p><strong>Current Issues:</strong>
+- Mixed framework versions (.NET 3.5 and 4.0)
+- No test projects
+- Controllers separated from UI project (good) but could be further modularized</p>
+<p><strong>Recommended Structure (Modern):</strong>
+<div class="highlight"><pre><span></span><code>Agathas.Storefront.sln
+├── src/
+│   ├── Agathas.Storefront.Web (ASP.NET Core MVC)
+│   ├── Agathas.Storefront.API (ASP.NET Core Web API) [NEW]
+│   ├── Agathas.Storefront.Application (Services + CQRS)
+│   ├── Agathas.Storefront.Domain (Model)
+│   ├── Agathas.Storefront.Infrastructure (Infrastructure)
+│   └── Agathas.Storefront.Persistence (Repository + EF Core)
+├── tests/
+│   ├── Agathas.Storefront.Application.Tests
+│   ├── Agathas.Storefront.Domain.Tests
+│   ├── Agathas.Storefront.Infrastructure.Tests
+│   └── Agathas.Storefront.IntegrationTests
+└── docs/
+    └── (architecture documentation)
+</code></pre></div></p>
+<hr />
+<h2 id="document-metadata">Document Metadata</h2>
+<ul>
+<li><strong>Document Version:</strong> 1.0</li>
+<li><strong>Last Updated:</strong> 2026-06-09</li>
+<li><strong>Author:</strong> Software Architecture Analyzer</li>
+<li><strong>System:</strong> Agathas.Storefront E-commerce Application</li>
+<li><strong>Status:</strong> Draft</li>
+<li><strong>Next Review:</strong> Upon modernization planning</li>
+</ul>
+<hr />
+<p><strong>Note:</strong> This inventory reflects the Visual Studio 2010 solution structure circa 2010-2012. During modernization, consider restructuring projects to align with modern .NET solution organization (src/, tests/, docs/ folders) and adopt ASP.NET Core conventions.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+        <script src="../../../assets/javascripts/panzoom.min.js"></script>
+        <script src="../../../assets/javascripts/zoompan.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../../img/favicon.ico" rel="shortcut icon"/>
+<title>Compliance &amp; Regulatory - Project Documentation</title>
+<link href="../../../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../../css/fontawesome.min.css" rel="stylesheet"/>
+<link href="../../../css/brands.min.css" rel="stylesheet"/>
+<link href="../../../css/solid.min.css" rel="stylesheet"/>
+<link href="../../../css/v4-font-face.min.css" rel="stylesheet"/>
+<link href="../../../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/panzoom.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<meta name="panzoom-theme" content="mkdocs">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="../../..">Project Documentation</a>
+<!-- Expander button -->
+<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="../../..">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../EXECUTIVE-SUMMARY/">Executive Summary</a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Quickstart</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-ARCHITECT/">Architect</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-DEVELOPER/">Developer</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../QUICK-START-EXECUTIVE/">Executive</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-current="page" aria-expanded="false" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button">Current State</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Architecture</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../1-architecture/1.1-system-architecture/">System Architecture</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../1-architecture/1.2-data-architecture/">Data Architecture</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../1-architecture/1.3-api-integration-catalog/">API Integration Catalog</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../1-architecture/1.4-project-inventory/">Project Inventory</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Business</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../2.1-business-domain-model/">Business Domain Model</a>
+</li>
+<li>
+<a class="dropdown-item" href="../2.2-requirements-specification/">Requirements Specification</a>
+</li>
+<li>
+<a aria-current="page" class="dropdown-item active" href="./">Compliance &amp; Regulatory</a>
+</li>
+<li>
+<a class="dropdown-item" href="../2.4-user-experience-analysis/">User Experience Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../2.5-localization-i18n/">Localization &amp; I18n</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Modernization</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Strategy</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../MODERNIZATION/2-strategy/2.1-executive-summary/">Executive Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../MODERNIZATION/2-strategy/2.2-stakeholder-matrix/">Stakeholder Matrix</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Generation Summaries</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/architecture-documentation-summary/">Architecture Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/business-documentation-summary/">Business Documentation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/compilation-summary/">Compilation Summary</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../generation-summaries/pre-analysis-summary/">Pre-Analysis Summary</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../GLOSSARY/">Glossary</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ms-md-auto">
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#mkdocs_search_modal" data-bs-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../2.2-requirements-specification/" rel="prev">
+<i class="fa fa-arrow-left"></i> Previous
+                                </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../2.4-user-experience-analysis/" rel="next">
+                                    Next <i class="fa fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#23-compliance-and-regulatory-analysis">2.3 Compliance and Regulatory Analysis</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#executive-summary">Executive Summary</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#1-payment-card-industry-data-security-standard-pci-dss">1. Payment Card Industry Data Security Standard (PCI DSS)</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#2-general-data-protection-regulation-gdpr">2. General Data Protection Regulation (GDPR)</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#3-cookie-law-eprivacy-directive">3. Cookie Law (ePrivacy Directive)</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#4-web-content-accessibility-guidelines-wcag">4. Web Content Accessibility Guidelines (WCAG)</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#5-data-protection-and-privacy-laws-additional">5. Data Protection and Privacy Laws (Additional)</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#6-security-and-data-protection-controls">6. Security and Data Protection Controls</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#7-industry-specific-regulations">7. Industry-Specific Regulations</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#8-compliance-monitoring-and-governance">8. Compliance Monitoring and Governance</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-bs-level="2"><a class="nav-link" href="#9-summary-and-action-plan">9. Summary and Action Plan</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="23-compliance-and-regulatory-analysis">2.3 Compliance and Regulatory Analysis</h1>
+<p><strong>Document Version:</strong> 1.0<br/>
+<strong>Date:</strong> 2026-06-09<br/>
+<strong>Status:</strong> Current State Analysis</p>
+<hr/>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>This document analyzes the compliance and regulatory posture of the Agathas Storefront e-commerce platform based on code analysis, architecture review, and implemented features. </p>
+<p><strong>Overall Compliance Posture:</strong> 🟡 <strong>PARTIAL COMPLIANCE</strong></p>
+<p><strong>Key Findings:</strong>
+- ✅ PCI DSS: Compliant through payment delegation to PayPal
+- ❌ GDPR: Non-compliant (missing data subject rights, consent management, privacy controls)
+- ❌ Accessibility: Unknown compliance status (WCAG 2.0/2.1 not tested)
+- ❌ Cookie Law: Non-compliant (no cookie consent mechanism)
+- ⚠️ Data Protection: Basic security measures present, but gaps in audit logging and encryption</p>
+<p><strong>Critical Compliance Gaps:</strong>
+1. No GDPR data subject rights (erasure, portability, access)
+2. No cookie consent banner or privacy policy integration
+3. No accessibility audit or WCAG compliance verification
+4. No data protection impact assessment (DPIA)
+5. No comprehensive audit trail for data access</p>
+<hr/>
+<h2 id="1-payment-card-industry-data-security-standard-pci-dss">1. Payment Card Industry Data Security Standard (PCI DSS)</h2>
+<h3 id="11-compliance-status-compliant-through-delegation">1.1 Compliance Status: ✅ COMPLIANT (Through Delegation)</h3>
+<p><strong>Approach:</strong> Payment processing fully delegated to PayPal, a PCI DSS Level 1 Service Provider.</p>
+<p><strong>Compliance Level:</strong> SAQ A (Self-Assessment Questionnaire A) - Applicable for merchants who have fully outsourced payment processing.</p>
+<h3 id="12-implementation-evidence">1.2 Implementation Evidence</h3>
+<table>
+<thead>
+<tr>
+<th>PCI DSS Requirement</th>
+<th>Implementation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Firewall Configuration</td>
+<td>Network-level (outside application scope)</td>
+<td>✅ N/A</td>
+</tr>
+<tr>
+<td>2. Default Credentials</td>
+<td>No payment system credentials stored</td>
+<td>✅ Compliant</td>
+</tr>
+<tr>
+<td>3. Stored Cardholder Data</td>
+<td>No card data stored in application</td>
+<td>✅ Compliant</td>
+</tr>
+<tr>
+<td>4. Encryption of Cardholder Data</td>
+<td>No card data transmitted or stored</td>
+<td>✅ Compliant</td>
+</tr>
+<tr>
+<td>5. Antivirus Software</td>
+<td>Operating system level (outside application scope)</td>
+<td>⚠️ Infrastructure-dependent</td>
+</tr>
+<tr>
+<td>6. Secure Systems</td>
+<td>Application security measures present</td>
+<td>⚠️ See Security Controls</td>
+</tr>
+<tr>
+<td>7. Access Control</td>
+<td>Authentication and authorization implemented</td>
+<td>✅ Compliant</td>
+</tr>
+<tr>
+<td>8. Unique User IDs</td>
+<td>ASP.NET Membership provides unique accounts</td>
+<td>✅ Compliant</td>
+</tr>
+<tr>
+<td>9. Physical Access</td>
+<td>Datacenter level (outside application scope)</td>
+<td>✅ N/A</td>
+</tr>
+<tr>
+<td>10. Logging and Monitoring</td>
+<td>Limited audit logging</td>
+<td>⚠️ Partial</td>
+</tr>
+<tr>
+<td>11. Security Testing</td>
+<td>No automated security testing detected</td>
+<td>❌ Gap</td>
+</tr>
+<tr>
+<td>12. Security Policy</td>
+<td>No documented security policy</td>
+<td>❌ Gap</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-payment-flow-security">1.3 Payment Flow Security</h3>
+<p><strong>PayPal Integration Pattern:</strong>
+<div class="panzoom-box" data-key="alt" id="panzoom0" oncontextmenu="return false;">
+<nav class="panzoom-nav">
+<button class="panzoom-info panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm169.8-90.7c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path>
+</svg>
+</button><button class="panzoom-reset panzoom-button">
+<svg class="panzoom-icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M125.7 160l50.3 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L48 224c-17.7 0-32-14.3-32-32L16 64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"></path>
+</svg>
+</button>
+</nav>
+<div class="mermaid">sequenceDiagram
+    actor Customer
+    participant Storefront
+    participant PayPal
+
+    Customer-&gt;&gt;Storefront: Submit Order
+    Storefront-&gt;&gt;Storefront: Create Order (no payment)
+    Storefront-&gt;&gt;PayPal: Redirect with Order Details
+    Note over Storefront,PayPal: No card data passes through Storefront
+    PayPal-&gt;&gt;Customer: Present Payment UI
+    Customer-&gt;&gt;PayPal: Enter Card Details
+    PayPal-&gt;&gt;PayPal: Process Payment
+    PayPal-&gt;&gt;Storefront: Callback (Transaction ID only)
+    Storefront-&gt;&gt;Storefront: Update Order with Payment
+</div>
+<div class="panzoom-info-box panzoom-info-box-bottom panzoom-hidden">
+Hold "Alt" / "Option" to enable pan &amp; zoom
+</div>
+</div></p>
+<p><strong>Key Security Measures:</strong>
+- ✅ No credit card form fields in application
+- ✅ No card data in database schema (verified in <a href="../../analysis/data-architecture.json">data-architecture.json</a>)
+- ✅ No card data in code or configuration
+- ✅ Only transaction ID stored for reconciliation
+- ✅ HTTPS required for payment pages (IIS configuration)</p>
+<p><strong>Evidence:</strong> <a href="Agathas.Storefront.Controllers/Controllers/PaymentController.cs">PaymentController.cs</a> contains no card data handling, only PayPal transaction ID capture.</p>
+<h3 id="14-pci-dss-recommendations">1.4 PCI DSS Recommendations</h3>
+<ol>
+<li><strong>Document Compliance:</strong> Create SAQ A attestation document</li>
+<li><strong>Annual Review:</strong> Schedule annual PCI DSS compliance review</li>
+<li><strong>Security Testing:</strong> Implement quarterly vulnerability scanning (ASV scan)</li>
+<li><strong>Audit Logging:</strong> Enhance logging for payment-related operations</li>
+<li><strong>Incident Response:</strong> Document incident response plan for payment-related security events</li>
+</ol>
+<hr/>
+<h2 id="2-general-data-protection-regulation-gdpr">2. General Data Protection Regulation (GDPR)</h2>
+<h3 id="21-compliance-status-non-compliant">2.1 Compliance Status: ❌ NON-COMPLIANT</h3>
+<p><strong>Applicability:</strong> If serving customers in the European Union (EU) or European Economic Area (EEA), GDPR compliance is mandatory.</p>
+<p><strong>Overall Assessment:</strong> Application lacks fundamental GDPR requirements including data subject rights, consent management, and privacy controls.</p>
+<h3 id="22-gdpr-requirements-analysis">2.2 GDPR Requirements Analysis</h3>
+<h4 id="221-lawful-basis-for-processing">2.2.1 Lawful Basis for Processing</h4>
+<table>
+<thead>
+<tr>
+<th>Data Processing Activity</th>
+<th>Current Lawful Basis</th>
+<th>GDPR Requirement</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customer registration</td>
+<td>Implied consent</td>
+<td>Explicit consent required</td>
+<td>❌ Gap</td>
+</tr>
+<tr>
+<td>Order processing</td>
+<td>Contract performance</td>
+<td>✅ Valid basis</td>
+<td>✅ Compliant</td>
+</tr>
+<tr>
+<td>Marketing emails</td>
+<td>No mechanism</td>
+<td>Opt-in consent required</td>
+<td>❌ Not Implemented</td>
+</tr>
+<tr>
+<td>Cookie usage</td>
+<td>No consent</td>
+<td>Explicit consent required (ePrivacy)</td>
+<td>❌ Gap</td>
+</tr>
+<tr>
+<td>Analytics tracking</td>
+<td>Not detected</td>
+<td>Consent required if PII collected</td>
+<td>⚠️ Unknown</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evidence:</strong> No consent management detected in <a href="../../analysis/compliance-status.json">compliance-status.json</a></p>
+<h4 id="222-data-subject-rights-gdpr-articles-15-22">2.2.2 Data Subject Rights (GDPR Articles 15-22)</h4>
+<table>
+<thead>
+<tr>
+<th>Right</th>
+<th>Article</th>
+<th>Implementation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Right of Access</strong></td>
+<td>Art. 15</td>
+<td>No data export mechanism</td>
+<td>❌ Not Implemented</td>
+</tr>
+<tr>
+<td><strong>Right to Rectification</strong></td>
+<td>Art. 16</td>
+<td>Customer can edit profile</td>
+<td>⚠️ Partial</td>
+</tr>
+<tr>
+<td><strong>Right to Erasure</strong></td>
+<td>Art. 17</td>
+<td>No account deletion mechanism</td>
+<td>❌ Not Implemented</td>
+</tr>
+<tr>
+<td><strong>Right to Restriction</strong></td>
+<td>Art. 18</td>
+<td>No processing restriction mechanism</td>
+<td>❌ Not Implemented</td>
+</tr>
+<tr>
+<td><strong>Right to Data Portability</strong></td>
+<td>Art. 20</td>
+<td>No data export in machine-readable format</td>
+<td>❌ Not Implemented</td>
+</tr>
+<tr>
+<td><strong>Right to Object</strong></td>
+<td>Art. 21</td>
+<td>No objection mechanism (e.g., marketing)</td>
+<td>❌ Not Implemented</td>
+</tr>
+<tr>
+<td><strong>Automated Decision-Making</strong></td>
+<td>Art. 22</td>
+<td>No automated profiling detected</td>
+<td>✅ N/A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critical Gap:</strong> None of the data subject rights are implemented.</p>
+<p><strong>Recommendation:</strong> Implement customer data portal with:
+- "Download My Data" (JSON/CSV export of customer data)
+- "Delete My Account" (anonymization or deletion)
+- "Manage Privacy Settings" (consent preferences)</p>
+<h4 id="223-consent-management">2.2.3 Consent Management</h4>
+<p><strong>Current State:</strong>
+- ❌ No cookie consent banner
+- ❌ No privacy policy link during registration
+- ❌ No terms of service acceptance checkbox
+- ❌ No granular consent options (e.g., marketing emails)
+- ❌ No consent audit trail</p>
+<p><strong>GDPR Consent Requirements:</strong>
+- Must be freely given
+- Must be specific and informed
+- Must be unambiguous (clear affirmative action)
+- Must be withdrawable as easily as given
+- Must be documented (audit trail)</p>
+<p><strong>Implementation Gap:</strong> No consent management framework detected in codebase.</p>
+<p><strong>Recommendation:</strong> Implement:
+1. Cookie consent banner (required for cookies beyond strictly necessary)
+2. Privacy policy acceptance during registration
+3. Opt-in checkboxes for marketing communications
+4. Consent audit trail in database</p>
+<h4 id="224-privacy-by-design-and-default-article-25">2.2.4 Privacy by Design and Default (Article 25)</h4>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Implementation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Minimization</td>
+<td>Only essential customer data collected</td>
+<td>✅ Good</td>
+</tr>
+<tr>
+<td>Purpose Limitation</td>
+<td>No documented purpose statement</td>
+<td>❌ Gap</td>
+</tr>
+<tr>
+<td>Storage Limitation</td>
+<td>No data retention policy</td>
+<td>❌ Gap</td>
+</tr>
+<tr>
+<td>Data Accuracy</td>
+<td>Customer can update profile</td>
+<td>⚠️ Partial</td>
+</tr>
+<tr>
+<td>Integrity and Confidentiality</td>
+<td>Basic security measures</td>
+<td>⚠️ Partial (see Security Controls)</td>
+</tr>
+<tr>
+<td>Accountability</td>
+<td>No DPIA or documentation</td>
+<td>❌ Gap</td>
+</tr>
+</tbody>
+</table>
+<h4 id="225-data-protection-officer-dpo">2.2.5 Data Protection Officer (DPO)</h4>
+<p><strong>Requirement:</strong> DPO required if processing large scale personal data or special category data.</p>
+<p><strong>Current State:</strong> No DPO designated or documented.</p>
+<p><strong>Recommendation:</strong> Determine if DPO required based on processing volume and sensitivity.</p>
+<h4 id="226-data-protection-impact-assessment-dpia">2.2.6 Data Protection Impact Assessment (DPIA)</h4>
+<p><strong>Requirement:</strong> DPIA required for high-risk processing activities.</p>
+<p><strong>Current State:</strong> No DPIA documented.</p>
+<p><strong>Recommendation:</strong> Conduct DPIA for:
+- Customer personal data processing
+- Payment transaction processing (delegated to PayPal)
+- Order history and analytics</p>
+<h4 id="227-data-breach-notification">2.2.7 Data Breach Notification</h4>
+<p><strong>Requirement:</strong> Data breaches must be reported to supervisory authority within 72 hours; affected individuals notified if high risk.</p>
+<p><strong>Current State:</strong>
+- ❌ No incident response plan documented
+- ❌ No data breach notification procedure
+- ❌ No breach detection mechanisms (no security monitoring)</p>
+<p><strong>Recommendation:</strong> Implement:
+1. Incident response plan
+2. Data breach notification procedure
+3. Security monitoring and alerting (e.g., Application Insights)</p>
+<h3 id="23-gdpr-remediation-roadmap">2.3 GDPR Remediation Roadmap</h3>
+<p><strong>Phase 1 - Immediate (Critical Compliance):</strong>
+1. Add privacy policy and terms of service
+2. Implement cookie consent banner
+3. Add privacy policy acceptance during registration
+4. Implement "Delete My Account" feature with data anonymization</p>
+<p><strong>Phase 2 - Short Term (3 months):</strong>
+1. Implement "Download My Data" export feature
+2. Add consent audit trail to database
+3. Document data retention policy
+4. Conduct DPIA
+5. Implement data breach notification procedure</p>
+<p><strong>Phase 3 - Long Term (6 months):</strong>
+1. Enhance audit logging for all data access
+2. Implement comprehensive privacy portal
+3. Add marketing consent management
+4. Conduct GDPR compliance audit
+5. Designate DPO if required</p>
+<hr/>
+<h2 id="3-cookie-law-eprivacy-directive">3. Cookie Law (ePrivacy Directive)</h2>
+<h3 id="31-compliance-status-non-compliant">3.1 Compliance Status: ❌ NON-COMPLIANT</h3>
+<p><strong>Regulation:</strong> EU ePrivacy Directive (2002/58/EC) as amended, enforced in member states.</p>
+<p><strong>Requirement:</strong> Obtain informed consent before storing or accessing non-essential cookies.</p>
+<h3 id="32-cookie-usage-analysis">3.2 Cookie Usage Analysis</h3>
+<p><strong>Cookies Detected in Application:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Cookie</th>
+<th>Purpose</th>
+<th>Category</th>
+<th>Consent Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.ASPXAUTH</code></td>
+<td>Forms authentication</td>
+<td>Strictly Necessary</td>
+<td>❌ No (essential)</td>
+</tr>
+<tr>
+<td><code>Basket_{GUID}</code></td>
+<td>Shopping basket storage</td>
+<td>Functionality</td>
+<td>⚠️ Debatable (could argue essential for e-commerce)</td>
+</tr>
+<tr>
+<td>Session cookie</td>
+<td>ASP.NET session state</td>
+<td>Strictly Necessary</td>
+<td>❌ No (essential)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evidence:</strong> Cookie storage implementation in <a href="Agathas.Storefront.Infrastructure/CookieStorage/">CookieStorageService</a> folder.</p>
+<p><strong>Current State:</strong>
+- ❌ No cookie consent banner
+- ❌ No cookie policy page
+- ❌ No opt-out mechanism (except browser settings)</p>
+<p><strong>Interpretation:</strong>
+- Authentication and basket cookies could be argued as "strictly necessary" for the service
+- However, best practice is to inform users and provide cookie policy
+- If analytics cookies added in future, consent banner becomes mandatory</p>
+<p><strong>Recommendation:</strong>
+1. Implement cookie consent banner (e.g., using Cookiebot, OneTrust, or custom)
+2. Create cookie policy page explaining cookie usage
+3. Allow users to accept/reject non-essential cookies
+4. Document cookies in privacy policy</p>
+<hr/>
+<h2 id="4-web-content-accessibility-guidelines-wcag">4. Web Content Accessibility Guidelines (WCAG)</h2>
+<h3 id="41-compliance-status-unknown-not-tested">4.1 Compliance Status: ❌ UNKNOWN (Not Tested)</h3>
+<p><strong>Applicable Standards:</strong>
+- WCAG 2.0 Level AA (recommended baseline)
+- WCAG 2.1 Level AA (current standard)
+- Section 508 (U.S. federal accessibility standard)</p>
+<p><strong>Legal Requirement:</strong> Varies by jurisdiction; EU Web Accessibility Directive, U.S. ADA Title III increasingly applied to websites.</p>
+<h3 id="42-accessibility-assessment">4.2 Accessibility Assessment</h3>
+<p><strong>Testing Status:</strong> No accessibility testing detected.</p>
+<p><strong>Evidence:</strong> From <a href="../../analysis/accessibility-assessment.json">accessibility-assessment.json</a>:
+- <code>accessibility_tested: false</code>
+- <code>wcag_compliance: "Unknown"</code>
+- <code>screen_reader_support: "Unknown"</code></p>
+<h3 id="43-potential-accessibility-issues">4.3 Potential Accessibility Issues</h3>
+<p>Based on technology stack analysis (ASPX views, jQuery 1.3.2, server-side rendering):</p>
+<table>
+<thead>
+<tr>
+<th>WCAG Principle</th>
+<th>Potential Issues</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Perceivable</strong></td>
+<td>Missing alt text on images, insufficient color contrast, no captions for media</td>
+<td>🔴 HIGH</td>
+</tr>
+<tr>
+<td><strong>Operable</strong></td>
+<td>Unknown keyboard navigation, no skip links, unclear focus indicators</td>
+<td>🔴 HIGH</td>
+</tr>
+<tr>
+<td><strong>Understandable</strong></td>
+<td>No language declaration, unclear error messages</td>
+<td>🟡 MEDIUM</td>
+</tr>
+<tr>
+<td><strong>Robust</strong></td>
+<td>Missing ARIA labels, invalid HTML, screen reader compatibility unknown</td>
+<td>🔴 HIGH</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Specific Gaps (Likely):</strong>
+- ❌ No ARIA landmarks or labels
+- ❌ No skip navigation links
+- ❌ Form validation may not be screen reader accessible
+- ❌ Images likely missing alt text
+- ❌ Color contrast not verified
+- ❌ Keyboard navigation not tested</p>
+<h3 id="44-accessibility-remediation">4.4 Accessibility Remediation</h3>
+<p><strong>Phase 1 - Assessment (1-2 weeks):</strong>
+1. Conduct automated accessibility scan (e.g., axe DevTools, WAVE)
+2. Manual testing with screen reader (NVDA, JAWS)
+3. Keyboard navigation testing
+4. Color contrast verification</p>
+<p><strong>Phase 2 - Critical Fixes (1-2 months):</strong>
+1. Add alt text to all images
+2. Implement ARIA labels for interactive elements
+3. Ensure all functionality keyboard-accessible
+4. Fix color contrast issues
+5. Add skip navigation links</p>
+<p><strong>Phase 3 - Full Compliance (3-6 months):</strong>
+1. Comprehensive WCAG 2.1 Level AA remediation
+2. Screen reader testing and optimization
+3. Focus indicator styling
+4. Form error handling for screen readers
+5. WCAG 2.1 compliance certification</p>
+<hr/>
+<h2 id="5-data-protection-and-privacy-laws-additional">5. Data Protection and Privacy Laws (Additional)</h2>
+<h3 id="51-california-consumer-privacy-act-ccpa-cpra">5.1 California Consumer Privacy Act (CCPA) / CPRA</h3>
+<p><strong>Applicability:</strong> If serving California residents and meeting revenue/data volume thresholds.</p>
+<p><strong>Status:</strong> ❌ Likely Non-Compliant (if applicable)</p>
+<p><strong>Key Requirements:</strong>
+- Right to know what personal information is collected
+- Right to delete personal information
+- Right to opt-out of sale of personal information
+- Non-discrimination for exercising rights</p>
+<p><strong>Current Gaps:</strong>
+- No "Do Not Sell My Personal Information" link
+- No data deletion mechanism
+- No privacy notice disclosing data collection</p>
+<p><strong>Note:</strong> CCPA/CPRA has similar requirements to GDPR; implementing GDPR compliance addresses most CCPA requirements.</p>
+<h3 id="52-uk-data-protection-act-dpa-2018">5.2 UK Data Protection Act (DPA) 2018</h3>
+<p><strong>Applicability:</strong> If serving UK customers (post-Brexit, UK has separate data protection regime).</p>
+<p><strong>Status:</strong> ❌ Non-Compliant</p>
+<p><strong>Note:</strong> UK DPA closely mirrors GDPR; GDPR compliance generally satisfies UK DPA.</p>
+<h3 id="53-childrens-online-privacy-protection-act-coppa">5.3 Children's Online Privacy Protection Act (COPPA)</h3>
+<p><strong>Applicability:</strong> U.S. regulation for websites directed at children under 13.</p>
+<p><strong>Status:</strong> ✅ Not Applicable (e-commerce for general audience, not child-directed)</p>
+<p><strong>Current State:</strong> No age verification or parental consent mechanisms (not needed unless targeting children).</p>
+<hr/>
+<h2 id="6-security-and-data-protection-controls">6. Security and Data Protection Controls</h2>
+<h3 id="61-authentication-and-access-control">6.1 Authentication and Access Control</h3>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Implementation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User Authentication</td>
+<td>ASP.NET Forms Authentication</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Password Hashing</td>
+<td>ASP.NET Membership Provider (hashed + salted)</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Session Management</td>
+<td>ASP.NET Session with timeout</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td><code>[Authorize]</code> attributes on protected controllers</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Social Authentication</td>
+<td>Janrain integration</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Multi-Factor Authentication (MFA)</td>
+<td>Not implemented</td>
+<td>❌ Gap</td>
+</tr>
+<tr>
+<td>Password Complexity</td>
+<td>Membership provider enforces minimum requirements</td>
+<td>✅ Implemented</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendations:</strong>
+- Implement MFA for enhanced security (optional but recommended)
+- Review session timeout settings (balance security and usability)</p>
+<h3 id="62-data-security">6.2 Data Security</h3>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Implementation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTPS / TLS</td>
+<td>IIS configuration (environment-dependent)</td>
+<td>⚠️ Configuration-dependent</td>
+</tr>
+<tr>
+<td>SQL Injection Prevention</td>
+<td>NHibernate ORM (parameterized queries)</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>XSS Prevention</td>
+<td>ASP.NET request validation, HTML encoding</td>
+<td>⚠️ Partial (jQuery 1.3.2 has known XSS vulnerabilities)</td>
+</tr>
+<tr>
+<td>CSRF Protection</td>
+<td>ASP.NET AntiForgeryToken (not consistently used)</td>
+<td>⚠️ Partial</td>
+</tr>
+<tr>
+<td>Encryption at Rest</td>
+<td>Not implemented (database unencrypted)</td>
+<td>❌ Gap</td>
+</tr>
+<tr>
+<td>Encryption in Transit</td>
+<td>HTTPS (if configured)</td>
+<td>⚠️ Configuration-dependent</td>
+</tr>
+<tr>
+<td>Secure Headers</td>
+<td>Not implemented (no CSP, HSTS)</td>
+<td>❌ Gap</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evidence:</strong> From <a href="../../analysis/security-controls.json">security-controls.json</a></p>
+<p><strong>Critical Gaps:</strong>
+- No encryption at rest for database
+- No Content Security Policy (CSP) headers
+- No HTTP Strict Transport Security (HSTS) headers
+- jQuery 1.3.2 has known security vulnerabilities</p>
+<p><strong>Recommendations:</strong>
+1. Update jQuery to latest version (3.x)
+2. Implement CSP headers to prevent XSS
+3. Implement HSTS header to enforce HTTPS
+4. Consider database encryption (Transparent Data Encryption)
+5. Consistently use AntiForgeryToken in forms</p>
+<h3 id="63-audit-logging">6.3 Audit Logging</h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Implementation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User Actions Logging</td>
+<td>Not implemented</td>
+<td>❌ Gap</td>
+</tr>
+<tr>
+<td>Data Access Logging</td>
+<td>Not implemented</td>
+<td>❌ Gap</td>
+</tr>
+<tr>
+<td>Authentication Attempts</td>
+<td>Not implemented</td>
+<td>❌ Gap</td>
+</tr>
+<tr>
+<td>Configuration Changes</td>
+<td>Not tracked</td>
+<td>❌ Gap</td>
+</tr>
+<tr>
+<td>Error Logging</td>
+<td>Log4Net (errors logged)</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Security Events</td>
+<td>Not logged</td>
+<td>❌ Gap</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evidence:</strong> From <a href="../../analysis/compliance-status.json">compliance-status.json</a>: "audit_and_logging: user_actions: Not logged"</p>
+<p><strong>GDPR/Compliance Implication:</strong> Lack of audit logging makes it difficult to:
+- Detect data breaches
+- Respond to data subject access requests
+- Prove compliance with data protection requirements
+- Investigate security incidents</p>
+<p><strong>Recommendations:</strong>
+1. Implement comprehensive audit logging:
+   - User login/logout
+   - Order placement
+   - Profile changes
+   - Admin actions (when admin panel added)
+   - Failed authentication attempts
+2. Centralize logs (Application Insights, Splunk, ELK stack)
+3. Define log retention policy
+4. Implement log monitoring and alerting</p>
+<hr/>
+<h2 id="7-industry-specific-regulations">7. Industry-Specific Regulations</h2>
+<h3 id="71-e-commerce-regulations">7.1 E-Commerce Regulations</h3>
+<h4 id="consumer-protection-laws">Consumer Protection Laws</h4>
+<p><strong>Applicable:</strong> EU Consumer Rights Directive, UK Consumer Rights Act, U.S. FTC regulations</p>
+<p><strong>Requirements:</strong>
+- Clear product information and pricing
+- Right to cancel/return (cooling-off period in EU)
+- Refund policy displayed
+- Terms and conditions accessible</p>
+<p><strong>Current Status:</strong>
+- ✅ Product information clear
+- ❌ No returns/refunds policy page
+- ❌ No terms and conditions page
+- ❌ No right to cancel mechanism</p>
+<p><strong>Recommendation:</strong> Add legal pages (Terms &amp; Conditions, Returns Policy, Privacy Policy) and implement returns processing.</p>
+<h4 id="electronic-signatures-and-records">Electronic Signatures and Records</h4>
+<p><strong>Applicable:</strong> E-SIGN Act (U.S.), eIDAS (EU)</p>
+<p><strong>Current Status:</strong> ✅ Compliant (order confirmation emails serve as electronic records)</p>
+<hr/>
+<h2 id="8-compliance-monitoring-and-governance">8. Compliance Monitoring and Governance</h2>
+<h3 id="81-current-compliance-governance">8.1 Current Compliance Governance</h3>
+<p><strong>Status:</strong> ❌ No formal compliance governance</p>
+<p><strong>Gaps:</strong>
+- No documented compliance policies
+- No compliance officer/owner
+- No regular compliance reviews
+- No compliance training for developers
+- No compliance checklist for new features</p>
+<h3 id="82-recommended-compliance-framework">8.2 Recommended Compliance Framework</h3>
+<p><strong>Governance Structure:</strong>
+1. <strong>Compliance Owner:</strong> Assign individual responsible for compliance
+2. <strong>Compliance Committee:</strong> Include legal, technical, and business stakeholders
+3. <strong>Compliance Calendar:</strong> Schedule regular reviews (quarterly)
+4. <strong>Compliance Checklist:</strong> Integrate into development process</p>
+<p><strong>Compliance Activities:</strong>
+- <strong>Quarterly:</strong> Security and privacy review
+- <strong>Annually:</strong> GDPR/CCPA compliance audit, PCI DSS validation, accessibility audit
+- <strong>Per Release:</strong> Privacy impact assessment for new features collecting personal data</p>
+<hr/>
+<h2 id="9-summary-and-action-plan">9. Summary and Action Plan</h2>
+<h3 id="91-compliance-risk-matrix">9.1 Compliance Risk Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Regulation</th>
+<th>Risk Level</th>
+<th>Business Impact</th>
+<th>Remediation Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI DSS</td>
+<td>🟢 LOW</td>
+<td>Compliant via delegation</td>
+<td>✅ Maintain current approach</td>
+</tr>
+<tr>
+<td>GDPR</td>
+<td>🔴 HIGH</td>
+<td>Fines up to 4% of annual revenue OR €20 million</td>
+<td>🔴 URGENT</td>
+</tr>
+<tr>
+<td>Cookie Law</td>
+<td>🟡 MEDIUM</td>
+<td>Enforcement increasing, fines possible</td>
+<td>🟡 HIGH</td>
+</tr>
+<tr>
+<td>WCAG / Accessibility</td>
+<td>🟡 MEDIUM</td>
+<td>Lawsuits possible (ADA, EU Directive)</td>
+<td>🟡 HIGH</td>
+</tr>
+<tr>
+<td>Data Security</td>
+<td>🟡 MEDIUM</td>
+<td>Data breach risk, reputational damage</td>
+<td>🟡 HIGH</td>
+</tr>
+<tr>
+<td>Consumer Protection</td>
+<td>🔵 LOW</td>
+<td>Customer satisfaction impact</td>
+<td>🔵 MEDIUM</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-compliance-remediation-roadmap">9.2 Compliance Remediation Roadmap</h3>
+<p><strong>Phase 1: Critical Compliance (Immediate - 3 months)</strong></p>
+<p><strong>Priority: GDPR Fundamentals</strong>
+1. ✅ Add Privacy Policy and Terms of Service pages
+2. ✅ Implement cookie consent banner
+3. ✅ Add privacy policy acceptance checkbox during registration
+4. ✅ Implement "Delete My Account" feature with data anonymization
+5. ✅ Create data retention policy document
+6. ✅ Implement incident response plan for data breaches</p>
+<p><strong>Estimated Effort:</strong> 4-6 weeks development</p>
+<p><strong>Phase 2: Data Subject Rights and Security (3-6 months)</strong></p>
+<p><strong>Priority: GDPR Rights + Security Hardening</strong>
+1. ✅ Implement "Download My Data" export (JSON/CSV)
+2. ✅ Add consent audit trail to database
+3. ✅ Enhance audit logging (user actions, data access)
+4. ✅ Update jQuery and address XSS vulnerabilities
+5. ✅ Implement security headers (CSP, HSTS)
+6. ✅ Conduct DPIA
+7. ✅ Initiate accessibility audit</p>
+<p><strong>Estimated Effort:</strong> 8-10 weeks development</p>
+<p><strong>Phase 3: Full Compliance and Accessibility (6-12 months)</strong></p>
+<p><strong>Priority: Accessibility + Compliance Maturity</strong>
+1. ✅ WCAG 2.1 Level AA remediation
+2. ✅ Implement granular consent management (marketing, analytics)
+3. ✅ Add encryption at rest for database
+4. ✅ Implement MFA (optional but recommended)
+5. ✅ Establish compliance governance framework
+6. ✅ Conduct third-party compliance audit</p>
+<p><strong>Estimated Effort:</strong> 12-16 weeks development</p>
+<h3 id="93-compliance-investment-summary">9.3 Compliance Investment Summary</h3>
+<p><strong>IMPORTANT NOTE: Estimates Not Calculated</strong></p>
+<p><strong>WHY cost projections cannot be provided</strong>:
+- Development team composition and rates not documented
+- Compliance consultant rates vary widely by jurisdiction and expertise
+- Third-party tool costs (cookie consent platform, accessibility tools) depend on vendor selection
+- Legal review costs vary by firm and scope</p>
+<p><strong>WHAT data is needed for cost estimation</strong>:
+1. <strong>Development Costs:</strong>
+   - Developer hourly/daily rate
+   - Estimated development time per feature (varies by team skill level)
+   - QA and testing effort multiplier</p>
+<ol>
+<li><strong>Tool and Service Costs:</strong></li>
+<li>Cookie consent platform (e.g., OneTrust, Cookiebot) - pricing varies by traffic volume</li>
+<li>Accessibility testing tools (e.g., automated scanners, manual testing services)</li>
+<li>
+<p>Security scanning tools (e.g., Veracode, Checkmarx)</p>
+</li>
+<li>
+<p><strong>Consulting and Legal Costs:</strong></p>
+</li>
+<li>Data protection consultant/lawyer hourly rate (varies by jurisdiction)</li>
+<li>Accessibility consultant rates (for manual WCAG audit and remediation guidance)</li>
+<li>Compliance audit firm fees</li>
+</ol>
+<p><strong>WHERE to obtain data</strong>:
+- Finance department for current IT and legal service costs
+- Vendor quotes for third-party tools and services
+- Development team for effort estimates based on team capacity</p>
+<p><strong>Recommendation:</strong> Conduct detailed cost-benefit analysis with finance and legal teams before committing to compliance roadmap.</p>
+<h3 id="94-compliance-maintenance-ongoing">9.4 Compliance Maintenance (Ongoing)</h3>
+<p><strong>Monthly:</strong>
+- Review security logs for anomalies
+- Update cookie policy if new cookies added</p>
+<p><strong>Quarterly:</strong>
+- Security and privacy review
+- Compliance checklist review for new features
+- Update data retention policy if needed</p>
+<p><strong>Annually:</strong>
+- GDPR compliance audit
+- PCI DSS SAQ renewal
+- Accessibility audit (WCAG)
+- Penetration testing
+- Privacy policy and terms review</p>
+<hr/>
+<p><strong>Document End</strong></p>
+<p><strong>Related Documents:</strong>
+- <a href="../2.1-business-domain-model/">2.1 Business Domain Model</a>
+- <a href="../2.2-requirements-specification/">2.2 Requirements Specification</a>
+- <a href="../1-architecture/1.5-security-architecture.md">Security Assessment</a></p>
+<p><strong>Change Log:</strong>
+| Date | Version | Author | Changes |
+|------|---------|--------|---------|
+| 2026-06-09 | 1.0 | Business Analyst AI | Initial compliance and regulatory analysis |</p></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script src="../../../js/bootstrap.bundle.min.js"></script>
+<script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script src="../../../js/base.js"></script>
+<script src="../../../search/main.js"></script>
+<script src="../../../assets/javascripts/panzoom.min.js"></script>
+<script src="../../../assets/javascripts/zoompan.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>
